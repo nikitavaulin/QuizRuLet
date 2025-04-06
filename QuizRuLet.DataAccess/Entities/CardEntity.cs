@@ -9,4 +9,9 @@ public class CardEntity
     public string BackSide {get; set;} = string.Empty;
     
     public bool IsLearned {get; set;}
+    
+    public Guid ModuleId {get; set;}
+    
+    public ModuleEntity? Module {get; set;}
+    
 }

@@ -1,8 +1,19 @@
+using QuizRuLet.DataAccess;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+var configuration = builder.Configuration;  // инициализация конфигураций
+
 
 // Заполнение DI контейнера
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<QuizRuLetDbContext>(  // подключение бд
+    options => 
+    {
+        options.UseNpgsql(configuration.GetConnectionString(nameof(QuizRuLetDbContext)));
+    });
 
 
 // билд приложения

@@ -2,7 +2,7 @@ using System;
 
 namespace QuizRuLet.Core.Models;
 
-public class Modul
+public class Module
 {
     public Guid Id {get; set;}
     
@@ -11,7 +11,5 @@ public class Modul
     public string Description {get; set;} = string.Empty;
     
     public List<Card> Cards {get; set;} = [];
-    
-    
     
 }

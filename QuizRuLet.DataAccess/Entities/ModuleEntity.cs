@@ -1,6 +1,6 @@
 namespace QuizRuLet.DataAccess.Entities;
 
-public class ModulEntity
+public class ModuleEntity
 {
     public Guid Id {get; set;}
     
@@ -9,4 +9,8 @@ public class ModulEntity
     public string Description {get; set;} = string.Empty;
     
     public List<CardEntity> Cards {get; set;} = [];
+    
+    public Guid UserId {get; set;}
+    
+    public UserEntity? User {get; set;} 
 }

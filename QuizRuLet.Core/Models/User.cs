@@ -6,10 +6,10 @@ public class User
 {
     public Guid Id {get; set;}
     
-    public string UserName {get; set;} = string.Empty;
+    public string Login {get; set;} = string.Empty;
     
     public string Password {get; set;} = string.Empty;
     
-    public List<Modul> Moduls {get; set;} = [];
+    public List<Module> Modules {get; set;} = [];
     
 }
