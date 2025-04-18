@@ -1,0 +1,15 @@
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\bin\Debug\net9.0\QuizRuLet.DataAccess.deps.json
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\bin\Debug\net9.0\QuizRuLet.DataAccess.dll
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\bin\Debug\net9.0\QuizRuLet.DataAccess.pdb
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.csproj.AssemblyReference.cache
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.AssemblyInfoInputs.cache
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.AssemblyInfo.cs
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.sourcelink.json
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.dll
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\refint\QuizRuLet.DataAccess.dll
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.pdb
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\ref\QuizRuLet.DataAccess.dll
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\bin\Debug\net9.0\QuizRuLet.DataAccess.runtimeconfig.json
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.genruntimeconfig.cache

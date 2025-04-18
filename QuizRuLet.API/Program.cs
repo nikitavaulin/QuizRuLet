@@ -9,7 +9,7 @@ var configuration = builder.Configuration;  // инициализация кон
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<QuizRuLetDbContext>(  // подключение бд
+builder.Services.AddDbContext<QuizRuLetDbContext>(  // регистрация контекста бд
     options => 
     {
         options.UseNpgsql(configuration.GetConnectionString(nameof(QuizRuLetDbContext)));
@@ -33,3 +33,6 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+
+// dotnet aspnet-codegenerator controller -name ModulesController -async -api -m Module -dc QuizRuLetDbContext -outDir Controllers

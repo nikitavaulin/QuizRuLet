@@ -9,7 +9,7 @@ public class QuizRuLetDbContext : DbContext
 {
     public QuizRuLetDbContext(DbContextOptions<QuizRuLetDbContext> options) : base(options) {}
     
-    public DbSet<UserEntity> Users {get; set;} 
+    public DbSet<UserEntity> Users {get; set;}
     
     public DbSet<ModuleEntity> Modules {get; set;}
     
