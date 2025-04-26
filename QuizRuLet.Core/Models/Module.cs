@@ -9,6 +9,7 @@ public class Module
 {
 
     public const int MAX_MODULE_NAME_LENGTH = 50;
+    public const int MIN_MODULE_NAME_LENGTH = 3;
     public const int MAX_MODULE_DESCRIPTION_LENGTH = 350;
     
     
@@ -34,15 +35,19 @@ public class Module
     {
         var error = string.Empty; // сообщение об ошибке
         
-        if (string.IsNullOrEmpty(name) || name.Length > MAX_MODULE_NAME_LENGTH)     // валидация названия
+        if (string.IsNullOrEmpty(name) 
+            || name.Length > MIN_MODULE_NAME_LENGTH
+            || name.Length > MAX_MODULE_NAME_LENGTH)     // валидация названия
         {
-            error = "Длина названия модуля должна быть от 3 до 50 символов";
+            error = $"Длина названия модуля должна быть от {MIN_MODULE_NAME_LENGTH} до {MAX_MODULE_NAME_LENGTH} символов";
         }
         
         if (description.Length > MAX_MODULE_DESCRIPTION_LENGTH)     // валидация описания
         {
-            error = "Длина описания модуля не может быть больше 350 символов";
+            error = $"Длина описания модуля не может быть больше {MAX_MODULE_DESCRIPTION_LENGTH} символов";
         }
+        
+        // ВАЛИДАЦИЯ СПИСКА CARDS?
         
         var module = new Module(id, name, description, cards);
         

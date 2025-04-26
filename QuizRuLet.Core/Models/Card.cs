@@ -37,7 +37,7 @@ public class Card
         
         if (condition1 || condition2)
         {
-            error = "Текст на карточке не может быть пустым или больше 500 символов.";
+            error = $"Текст на карточке не может быть пустым или больше {MAX_CARD_SIDE_LENGTH} символов.";
         }
         
         var card = new Card(id, frontSide, backSide);
