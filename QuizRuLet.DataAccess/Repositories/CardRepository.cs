@@ -24,13 +24,26 @@ namespace QuizRuLet.DataAccess.Repositories
                 .ToListAsync();
         }
         
+        public async Task<List<Card>> GetCards()
+        {
+            var cardEntities = await _dbContext.Cards
+                .AsNoTracking()
+                .ToListAsync();
+            
+            var cards = cardEntities
+                .Select(c => Card.Create(c.Id, c.FrontSide, c.BackSide).Card)
+                .ToList();
+            
+            return cards;
+        }
+        
         /// <summary>
         /// Получение стопки "Знаю"/"Не знаю" карточек из конкретного модуля
         /// </summary>
         /// <param name="moduleId"></param>
         /// <param name="isLearned"></param>
         /// <returns></returns>
-        public async Task<List<CardEntity>> GetByLearningFlag(Guid moduleId, bool isLearned)
+        public async Task<List<CardEntity>> GetByLearningFlag(Guid moduleId, bool isLearned)          // FIX
         {
             return await _dbContext.Cards
                 .AsNoTracking()
@@ -44,7 +57,7 @@ namespace QuizRuLet.DataAccess.Repositories
         /// </summary>
         /// <param name="moduleId"></param>
         /// <returns></returns>
-        public async Task<List<CardEntity>> GetByModule(Guid moduleId)
+        public async Task<List<CardEntity>> GetByModule(Guid moduleId)          // FIX
         {
             return await _dbContext.Cards
                 .AsNoTracking()
@@ -57,7 +70,7 @@ namespace QuizRuLet.DataAccess.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<CardEntity?> GetById(Guid id)
+        public async Task<CardEntity?> GetById(Guid id)          // FIX
         {
             return await _dbContext.Cards
                 .AsNoTracking()
@@ -84,7 +97,7 @@ namespace QuizRuLet.DataAccess.Repositories
                 ModuleId = moduleId
             };
             
-            await _dbContext.AddAsync(cardEntity);
+            await _dbContext.Cards.AddAsync(cardEntity);
             await _dbContext.SaveChangesAsync();
         }
         

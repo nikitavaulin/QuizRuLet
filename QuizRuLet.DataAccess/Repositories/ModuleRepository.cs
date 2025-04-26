@@ -15,35 +15,25 @@ namespace QuizRuLet.DataAccess.Repositories
             _dbContext = context;
         }
         
-        /// <summary>
-        /// Добавление нового модуля
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="name"></param>
-        /// <param name="description"></param>
-        /// <param name="cards"></param>
-        /// <param name="userId"></param>
-        /// <returns></returns>
-        public async Task Add(Guid id, string name, string description, List<CardEntity> cards, Guid userId)
+        public async Task<List<QuizRuLet.Core.Models.Module>> GetModules()
         {
-            var module = new ModuleEntity
-            {
-                Id = id,
-                Name = name,
-                Description = description,
-                Cards = cards,
-                UserId = userId
-            };
+            var moduleEntities = await _dbContext.Modules
+                .AsNoTracking()
+                .OrderBy(m => m.Name)
+                .ToListAsync();
+                
+            var modules = moduleEntities
+                .Select(m => QuizRuLet.Core.Models.Module.Create(m.Id, m.Name, m.Description).Module)
+                .ToList();
             
-            await _dbContext.AddAsync(module);
-            await _dbContext.SaveChangesAsync();
-        }
+            return modules;
+        }        
         
         /// <summary>
         /// Получение всех модулей
         /// </summary>
         /// <returns></returns>
-        public async Task<List<ModuleEntity>> Get()
+        public async Task<List<ModuleEntity>> Get()          // FIX
         {
             return await _dbContext.Modules
                 .AsNoTracking()
@@ -68,7 +58,7 @@ namespace QuizRuLet.DataAccess.Repositories
         /// Получение модулей с карточками (sql join)
         /// </summary>
         /// <returns></returns>
-        public async Task<List<ModuleEntity>> GetWithCards()
+        public async Task<List<ModuleEntity>> GetWithCards()          // FIX
         {
             return await _dbContext.Modules
                 .AsNoTracking()
@@ -81,11 +71,35 @@ namespace QuizRuLet.DataAccess.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<ModuleEntity?> GetById(Guid id)
+        public async Task<ModuleEntity?> GetById(Guid id)          // FIX
         {
             return await _dbContext.Modules
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.Id == id);
+        }
+        
+        /// <summary>
+        /// Добавление нового модуля
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="description"></param>
+        /// <param name="cards"></param>
+        /// <param name="userId"></param>
+        /// <returns></returns>
+        public async Task Add(Guid id, string name, string description, List<CardEntity> cards, Guid userId)
+        {
+            var module = new ModuleEntity
+            {
+                Id = id,
+                Name = name,
+                Description = description,
+                Cards = cards,
+                UserId = userId
+            };
+            
+            await _dbContext.Modules.AddAsync(module);
+            await _dbContext.SaveChangesAsync();
         }
         
         /// <summary>

@@ -13,12 +13,11 @@ public class Module
     public const int MAX_MODULE_DESCRIPTION_LENGTH = 350;
     
     
-    private Module(Guid id, string name, string description, List<Card> cards)  // LIST????
+    private Module(Guid id, string name, string description)
     {
         Id = id;
         Name = name;
         Description = description;
-        Cards = cards;
     }
     
     
@@ -31,7 +30,7 @@ public class Module
     public List<Card> Cards {get;} = [];
     
     
-    public static (Module Module, string Error) Create(Guid id, string name, string description, List<Card> cards)
+    public static (Module Module, string Error) Create(Guid id, string name, string description)
     {
         var error = string.Empty; // сообщение об ошибке
         
@@ -49,7 +48,7 @@ public class Module
         
         // ВАЛИДАЦИЯ СПИСКА CARDS?
         
-        var module = new Module(id, name, description, cards);
+        var module = new Module(id, name, description);
         
         return (module, error);
     }

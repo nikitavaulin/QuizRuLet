@@ -15,8 +15,22 @@ namespace QuizRuLet.DataAccess.Repositories
             _dbContext = context;
         }
     
+        public async Task<List<User>> GetUsers()
+        {
+            var userEntities = await _dbContext.Users
+                .AsNoTracking()         // отключение изменения сущности
+                .OrderBy(u => u.Login)
+                .ToListAsync();
+            
+            var users = userEntities
+                .Select(u => User.Create(u.Id, u.Login, u.Password).User)
+                .ToList();
+            
+            return users;
+        }
 
-        public async Task<List<UserEntity>> Get()
+
+        public async Task<List<UserEntity>> GetUserEntities()          // FIX
         {
             return await _dbContext.Users
                 .AsNoTracking()         // отключение изменения сущности
@@ -28,7 +42,7 @@ namespace QuizRuLet.DataAccess.Repositories
         /// Получение юзеров с модулями (sql join)
         /// </summary>
         /// <returns></returns>
-        public async Task<List<UserEntity>> GetWithModules()
+        public async Task<List<UserEntity>> GetWithModules()          // FIX
         {
             return await _dbContext.Users
                 .AsNoTracking()
@@ -36,7 +50,7 @@ namespace QuizRuLet.DataAccess.Repositories
                 .ToListAsync();
         }
         
-        public async Task<UserEntity?> GetById(Guid id)
+        public async Task<UserEntity?> GetById(Guid id)          // FIX
         {
             return await _dbContext.Users
                 .AsNoTracking()
@@ -50,10 +64,9 @@ namespace QuizRuLet.DataAccess.Repositories
                 Id = id,
                 Login = login,
                 Password = password
-                // modules?
             };
             
-            await _dbContext.AddAsync(userEntity);
+            await _dbContext.Users.AddAsync(userEntity);
             await _dbContext.SaveChangesAsync();
         }
     
