@@ -64,12 +64,13 @@ namespace QuizRuLet.DataAccess.Repositories
                 .ExecuteUpdateAsync(s => s
                     .SetProperty(u => u.Login, login)
                     .SetProperty(u => u.Password, password)
-                    .SetProperty(u => u.Modules, modules));
+                    .SetProperty(u => u.Modules, modules)
+                );
             
             await _dbContext.SaveChangesAsync();
         }
         
-        public async Task Delete(Guid id, string login, string password, List<ModuleEntity> modules)
+        public async Task Delete(Guid id)
         {
             await _dbContext.Users
                 .Where(u => u.Id == id)

@@ -56,7 +56,7 @@ namespace QuizRuLet.DataAccess.Repositories
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task<List<ModuleEntity>> GetByUser(Guid userId)    // DELETE? есть замена в user repos
+        public async Task<List<ModuleEntity>> GetByUser(Guid userId)    // мб удалить? есть замена в user repos
         {
             return await _dbContext.Modules
                 .AsNoTracking()
@@ -105,7 +105,8 @@ namespace QuizRuLet.DataAccess.Repositories
                     .SetProperty(m => m.Name, name)
                     .SetProperty(m => m.Description, description)
                     .SetProperty(m => m.Cards, cards)
-                    .SetProperty(m => m.UserId, userId));
+                    .SetProperty(m => m.UserId, userId)
+                );
                     
             await _dbContext.SaveChangesAsync();
         }
@@ -119,7 +120,7 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="cards"></param>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task Delete(Guid id, string name, string description, List<CardEntity> cards, Guid userId)
+        public async Task Delete(Guid id)
         {
             await _dbContext.Modules
                 .Where(m => m.Id == id)

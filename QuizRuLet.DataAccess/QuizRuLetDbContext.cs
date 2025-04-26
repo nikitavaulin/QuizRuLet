@@ -13,7 +13,7 @@ public class QuizRuLetDbContext : DbContext
     
     public DbSet<ModuleEntity> Modules {get; set;}
     
-    public DbSet<UserEntity> Cards {get; set;}
+    public DbSet<CardEntity> Cards {get; set;}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
