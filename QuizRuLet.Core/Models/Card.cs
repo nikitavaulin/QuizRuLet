@@ -8,16 +8,7 @@ public class Card
 {
     public const int MAX_CARD_SIDE_LENGTH = 500;
     
-
-    private Card(Guid id, string frontSide, string backSide)
-    {
-        Id = id;
-        FrontSide = frontSide;
-        BackSide = backSide;
-        IsLearned = false;
-    }
-
-
+    
     public Guid Id {get;}
     
     public string FrontSide {get;} = string.Empty;
@@ -26,6 +17,16 @@ public class Card
     
     public bool IsLearned {get; set;}
     
+    
+    public Card() {}
+    
+    private Card(Guid id, string frontSide, string backSide)
+    {
+        Id = id;
+        FrontSide = frontSide;
+        BackSide = backSide;
+        IsLearned = false;
+    }
     
     public static (Card Card, string Error) Create(Guid id, string frontSide, string backSide)
     {

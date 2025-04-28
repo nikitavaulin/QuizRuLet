@@ -5,56 +5,69 @@ using QuizRuLet.DataAccess.Entities;
 
 namespace QuizRuLet.DataAccess.Repositories
 {
-    public class UserRepository
+    public class UsersRepository
     {
 
         private readonly QuizRuLetDbContext _dbContext;
 
-        public UserRepository(QuizRuLetDbContext context)
+        public UsersRepository(QuizRuLetDbContext context)
         {
             _dbContext = context;
         }
     
-        public async Task<List<User>> GetUsers()
+        #region Маппинг на доменные модели
+        private List<User> GetDomain(List<UserEntity> userEntities)
+        {
+            var user =  userEntities
+                .Select(u => User.Create(u.Id, u.Login, u.Password).User)
+                .ToList();
+                
+            return user;
+        }
+        
+        private User GetDomain(UserEntity userEntities)
+        {                
+            var user = User.Create(
+                userEntities.Id, 
+                userEntities.Login,
+                userEntities.Password
+            ).User;
+
+            return user;
+        }
+        #endregion
+    
+        public async Task<List<User>> Get()
         {
             var userEntities = await _dbContext.Users
                 .AsNoTracking()         // отключение изменения сущности
                 .OrderBy(u => u.Login)
                 .ToListAsync();
             
-            var users = userEntities
-                .Select(u => User.Create(u.Id, u.Login, u.Password).User)
-                .ToList();
-            
-            return users;
+            return GetDomain(userEntities);
         }
 
-
-        public async Task<List<UserEntity>> GetUserEntities()          // FIX
-        {
-            return await _dbContext.Users
-                .AsNoTracking()         // отключение изменения сущности
-                .OrderBy(u => u.Login)
-                .ToListAsync();
-        }
-        
         /// <summary>
         /// Получение юзеров с модулями (sql join)
         /// </summary>
         /// <returns></returns>
-        public async Task<List<UserEntity>> GetWithModules()          // FIX
+        public async Task<List<User>> GetWithModules()   
         {
-            return await _dbContext.Users
+            var userEntities = await _dbContext.Users
                 .AsNoTracking()
                 .Include(u => u.Modules)
                 .ToListAsync();
+            
+            return GetDomain(userEntities);
         }
         
-        public async Task<UserEntity?> GetById(Guid id)          // FIX
+        public async Task<User?> GetById(Guid id) 
         {
-            return await _dbContext.Users
+            var userEntity = await _dbContext.Users
                 .AsNoTracking()
                 .FirstOrDefaultAsync(u => u.Id == id);
+            
+            return GetDomain(userEntity);
         }
     
         public async Task Add(Guid id, string login, string password)
@@ -95,16 +108,5 @@ namespace QuizRuLet.DataAccess.Repositories
         // фильтры
         
         // пагинация
-    
-    
-        // public async Task<List<Module>> GetModulesAsync()
-        // {
-        //     var moduleEntities = await _dbContext.Modules
-        //         .AsNoTracking()
-        //         .ToListAsync();
-                
-        //     var modules = moduleEntities;    // FIX
-        // }
-
     }
 }

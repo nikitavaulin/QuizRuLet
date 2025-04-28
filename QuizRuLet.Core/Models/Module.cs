@@ -12,6 +12,7 @@ public class Module
     public const int MIN_MODULE_NAME_LENGTH = 3;
     public const int MAX_MODULE_DESCRIPTION_LENGTH = 350;
     
+    public Module() {}
     
     private Module(Guid id, string name, string description)
     {

@@ -4,37 +4,49 @@ using QuizRuLet.DataAccess.Entities;
 
 namespace QuizRuLet.DataAccess.Repositories
 {
-    public class CardRepository
+    public class CardsRepository
     {
         private readonly QuizRuLetDbContext _dbContext;
 
-        public CardRepository(QuizRuLetDbContext context)
+        public CardsRepository(QuizRuLetDbContext context)
         {
             _dbContext = context;
         }
+        
+        
+        #region Маппинг на доменные модели
+        private List<Card> GetDomain(List<CardEntity> cardEntities)
+        {
+            var cards = cardEntities
+                .Select(c => Card.Create(c.Id, c.FrontSide, c.BackSide).Card)
+                .ToList();
+                
+            return cards;
+        }
+        
+        private Card? GetDomain(CardEntity cardEntity)
+        {                
+            var card = Card.Create(
+                cardEntity.Id, 
+                cardEntity.FrontSide,
+                cardEntity.BackSide
+            ).Card;
+
+            return card;
+        }
+        #endregion
         
         /// <summary>
         /// Получения списка карточек (всех из БД)
         /// </summary>
         /// <returns></returns>
-        public async Task<List<CardEntity>> Get()
-        {
-            return await _dbContext.Cards
-                .AsNoTracking()
-                .ToListAsync();
-        }
-        
-        public async Task<List<Card>> GetCards()
+        public async Task<List<Card>> Get()
         {
             var cardEntities = await _dbContext.Cards
                 .AsNoTracking()
                 .ToListAsync();
             
-            var cards = cardEntities
-                .Select(c => Card.Create(c.Id, c.FrontSide, c.BackSide).Card)
-                .ToList();
-            
-            return cards;
+            return GetDomain(cardEntities);
         }
         
         /// <summary>
@@ -43,13 +55,15 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="moduleId"></param>
         /// <param name="isLearned"></param>
         /// <returns></returns>
-        public async Task<List<CardEntity>> GetByLearningFlag(Guid moduleId, bool isLearned)          // FIX
+        public async Task<List<Card>> GetByLearningFlag(Guid moduleId, bool isLearned) 
         {
-            return await _dbContext.Cards
+            var cardEntities = await _dbContext.Cards
                 .AsNoTracking()
                 .Where(c => c.ModuleId == moduleId)
                 .Where(c => c.IsLearned == isLearned)
                 .ToListAsync();
+                
+           return GetDomain(cardEntities);  
         }
         
         /// <summary>
@@ -57,12 +71,14 @@ namespace QuizRuLet.DataAccess.Repositories
         /// </summary>
         /// <param name="moduleId"></param>
         /// <returns></returns>
-        public async Task<List<CardEntity>> GetByModule(Guid moduleId)          // FIX
+        public async Task<List<Card>> GetByModule(Guid moduleId)
         {
-            return await _dbContext.Cards
+            var cardEntities = await _dbContext.Cards
                 .AsNoTracking()
                 .Where(c => c.ModuleId == moduleId)
                 .ToListAsync();
+
+            return GetDomain(cardEntities);
         }
         
         /// <summary>
@@ -70,11 +86,13 @@ namespace QuizRuLet.DataAccess.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<CardEntity?> GetById(Guid id)          // FIX
+        public async Task<Card?> GetById(Guid id)  
         {
-            return await _dbContext.Cards
+            var cardEntity = await _dbContext.Cards
                 .AsNoTracking()
                 .FirstOrDefaultAsync(c => c.Id == id);
+                
+            return GetDomain(cardEntity);
         }
         
         /// <summary>

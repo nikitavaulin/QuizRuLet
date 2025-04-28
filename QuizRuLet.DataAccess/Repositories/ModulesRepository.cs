@@ -6,76 +6,91 @@ using QuizRuLet.DataAccess.Entities;
 
 namespace QuizRuLet.DataAccess.Repositories
 {
-    public class ModuleRepository
+    public class ModulesRepository
     {
         private readonly QuizRuLetDbContext _dbContext;
 
-        public ModuleRepository(QuizRuLetDbContext context)
+        public ModulesRepository(QuizRuLetDbContext context)
         {
             _dbContext = context;
         }
         
-        public async Task<List<QuizRuLet.Core.Models.Module>> GetModules()
+        #region Маппинг на доменные модели
+        private List<Core.Models.Module> GetDomain(List<ModuleEntity> moduleEntities)
+        {
+            var modules =  moduleEntities
+                .Select(m => Core.Models.Module.Create(m.Id, m.Name, m.Description).Module)
+                .ToList();
+                
+            return modules;
+        }
+        
+        private Core.Models.Module? GetDomain(ModuleEntity moduleEntity)
+        {                
+            var module = Core.Models.Module.Create(
+                moduleEntity.Id, 
+                moduleEntity.Name,
+                moduleEntity.Description
+            ).Module;
+
+            return module;
+        }
+        #endregion
+        
+        public async Task<List<Core.Models.Module>> Get()
         {
             var moduleEntities = await _dbContext.Modules
                 .AsNoTracking()
                 .OrderBy(m => m.Name)
                 .ToListAsync();
-                
-            var modules = moduleEntities
-                .Select(m => QuizRuLet.Core.Models.Module.Create(m.Id, m.Name, m.Description).Module)
-                .ToList();
             
-            return modules;
+            return GetDomain(moduleEntities);
         }        
-        
-        /// <summary>
-        /// Получение всех модулей
-        /// </summary>
-        /// <returns></returns>
-        public async Task<List<ModuleEntity>> Get()          // FIX
-        {
-            return await _dbContext.Modules
-                .AsNoTracking()
-                .OrderBy(m => m.Name)
-                .ToListAsync();
-        }
         
         /// <summary>
         /// Получение всех модулей пользователя
         /// </summary>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task<List<ModuleEntity>> GetByUser(Guid userId)    // мб удалить? есть замена в user repos
+        public async Task<List<Core.Models.Module>> GetByUser(Guid userId)    // мб удалить? есть замена в user repos
         {
-            return await _dbContext.Modules
+            var moduleEntities = await _dbContext.Modules
                 .AsNoTracking()
                 .Where(m => m.UserId == userId)
                 .ToListAsync();
+            
+            return GetDomain(moduleEntities);
         }
         
-        /// <summary>
-        /// Получение модулей с карточками (sql join)
-        /// </summary>
-        /// <returns></returns>
-        public async Task<List<ModuleEntity>> GetWithCards()          // FIX
-        {
-            return await _dbContext.Modules
-                .AsNoTracking()
-                .Include(m => m.Cards)
-                .ToListAsync();
-        }
+        // /// <summary>
+        // /// Получение модулей с карточками (sql join)
+        // /// </summary>
+        // /// <returns></returns>
+        // public async Task<List<ModuleEntity>> GetWithCards()          // FIX
+        // {
+        //     var moduleEntities = await _dbContext.Modules
+        //         .AsNoTracking()
+        //         .Where(m => m.UserId == userId)
+        //         .ToListAsync();            
+            
+        //     return await _dbContext.Modules
+        //         .AsNoTracking()
+        //         .Include(m => m.Cards)
+        //         .ToListAsync();
+        // }
         
         /// <summary>
         /// получение модуля по id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<ModuleEntity?> GetById(Guid id)          // FIX
+        public async Task<Core.Models.Module?> GetById(Guid id)
         {
-            return await _dbContext.Modules
+            var moduleEntity = await _dbContext.Modules
                 .AsNoTracking()
                 .FirstOrDefaultAsync(m => m.Id == id);
+            
+            return GetDomain(moduleEntity);
         }
         
         /// <summary>

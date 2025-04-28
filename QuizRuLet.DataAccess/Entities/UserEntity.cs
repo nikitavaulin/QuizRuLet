@@ -1,17 +1,11 @@
 using System;
+using QuizRuLet.Core.Models;
 
 namespace QuizRuLet.DataAccess.Entities;
 
-public class UserEntity
+public class UserEntity : User
 {
-    public Guid Id {get; set;}
+    public List<ModuleEntity> Modules {get; set;} = [];     // модули пользователя
     
-    public string Login {get; set;} = string.Empty;
-    
-    public string Password {get; set;} = string.Empty;
-    
-    public List<ModuleEntity> Modules {get; set;} = [];
-    
-    
-    
+            
 }

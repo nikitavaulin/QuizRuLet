@@ -13,3 +13,6 @@ C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\ref\QuizRuLet.DataAccess.dll
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\bin\Debug\net9.0\QuizRuLet.DataAccess.runtimeconfig.json
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLet.DataAccess.genruntimeconfig.cache
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\bin\Debug\net9.0\QuizRuLet.Core.dll
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\bin\Debug\net9.0\QuizRuLet.Core.pdb
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.DataAccess\obj\Debug\net9.0\QuizRuLe.C4D4EC59.Up2Date
