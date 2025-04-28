@@ -10,15 +10,10 @@ public class Card
     
     
     public Guid Id {get;}
-    
     public string FrontSide {get;} = string.Empty;
-    
     public string BackSide {get;} = string.Empty;
-    
     public bool IsLearned {get; set;}
     
-    
-    public Card() {}
     
     private Card(Guid id, string frontSide, string backSide)
     {

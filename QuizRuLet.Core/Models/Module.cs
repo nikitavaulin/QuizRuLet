@@ -11,8 +11,13 @@ public class Module
     public const int MAX_MODULE_NAME_LENGTH = 50;
     public const int MIN_MODULE_NAME_LENGTH = 3;
     public const int MAX_MODULE_DESCRIPTION_LENGTH = 350;
+
     
-    public Module() {}
+    public Guid Id {get;}
+    public string Name {get;} = string.Empty;
+    public string Description {get;} = string.Empty;
+    public List<Card> Cards {get;} = [];
+    
     
     private Module(Guid id, string name, string description)
     {
@@ -20,15 +25,6 @@ public class Module
         Name = name;
         Description = description;
     }
-    
-    
-    public Guid Id {get;}
-    
-    public string Name {get;} = string.Empty;
-    
-    public string Description {get;} = string.Empty;
-    
-    public List<Card> Cards {get;} = [];
     
     
     public static (Module Module, string Error) Create(Guid id, string name, string description)

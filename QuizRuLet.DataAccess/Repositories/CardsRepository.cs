@@ -4,7 +4,8 @@ using QuizRuLet.DataAccess.Entities;
 
 namespace QuizRuLet.DataAccess.Repositories
 {
-    public class CardsRepository
+
+    public class CardsRepository : ICardsRepository
     {
         private readonly QuizRuLetDbContext _dbContext;
 
@@ -12,22 +13,22 @@ namespace QuizRuLet.DataAccess.Repositories
         {
             _dbContext = context;
         }
-        
-        
+
+
         #region Маппинг на доменные модели
         private List<Card> GetDomain(List<CardEntity> cardEntities)
         {
             var cards = cardEntities
                 .Select(c => Card.Create(c.Id, c.FrontSide, c.BackSide).Card)
                 .ToList();
-                
+
             return cards;
         }
-        
+
         private Card? GetDomain(CardEntity cardEntity)
-        {                
+        {
             var card = Card.Create(
-                cardEntity.Id, 
+                cardEntity.Id,
                 cardEntity.FrontSide,
                 cardEntity.BackSide
             ).Card;
@@ -35,7 +36,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return card;
         }
         #endregion
-        
+
         /// <summary>
         /// Получения списка карточек (всех из БД)
         /// </summary>
@@ -45,27 +46,27 @@ namespace QuizRuLet.DataAccess.Repositories
             var cardEntities = await _dbContext.Cards
                 .AsNoTracking()
                 .ToListAsync();
-            
+
             return GetDomain(cardEntities);
         }
-        
+
         /// <summary>
         /// Получение стопки "Знаю"/"Не знаю" карточек из конкретного модуля
         /// </summary>
         /// <param name="moduleId"></param>
         /// <param name="isLearned"></param>
         /// <returns></returns>
-        public async Task<List<Card>> GetByLearningFlag(Guid moduleId, bool isLearned) 
+        public async Task<List<Card>> GetByLearningFlag(Guid moduleId, bool isLearned)
         {
             var cardEntities = await _dbContext.Cards
                 .AsNoTracking()
                 .Where(c => c.ModuleId == moduleId)
                 .Where(c => c.IsLearned == isLearned)
                 .ToListAsync();
-                
-           return GetDomain(cardEntities);  
+
+            return GetDomain(cardEntities);
         }
-        
+
         /// <summary>
         /// Получение набора карточек из модуля
         /// </summary>
@@ -80,21 +81,21 @@ namespace QuizRuLet.DataAccess.Repositories
 
             return GetDomain(cardEntities);
         }
-        
+
         /// <summary>
         /// Получение карточки по Id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<Card?> GetById(Guid id)  
+        public async Task<Card?> GetById(Guid id)
         {
             var cardEntity = await _dbContext.Cards
                 .AsNoTracking()
                 .FirstOrDefaultAsync(c => c.Id == id);
-                
+
             return GetDomain(cardEntity);
         }
-        
+
         /// <summary>
         /// Добавление карточки 
         /// </summary>
@@ -114,11 +115,11 @@ namespace QuizRuLet.DataAccess.Repositories
                 IsLearned = isLearned,
                 ModuleId = moduleId
             };
-            
+
             await _dbContext.Cards.AddAsync(cardEntity);
             await _dbContext.SaveChangesAsync();
         }
-        
+
         /// <summary>
         /// Обновление конкретной карточки
         /// </summary>
@@ -138,11 +139,11 @@ namespace QuizRuLet.DataAccess.Repositories
                     .SetProperty(c => c.IsLearned, isLearned)
                     .SetProperty(c => c.ModuleId, moduleId)
                 );
-                            
+
             await _dbContext.SaveChangesAsync();
 
         }
-        
+
         /// <summary>
         /// Удаление карточки
         /// </summary>
@@ -153,10 +154,10 @@ namespace QuizRuLet.DataAccess.Repositories
             await _dbContext.Cards
                 .Where(c => c.Id == id)
                 .ExecuteDeleteAsync();
-                
+
             await _dbContext.SaveChangesAsync();
         }
-        
-        
+
+
     }
 }

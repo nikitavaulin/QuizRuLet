@@ -11,7 +11,12 @@ public class User
     public const int MAX_PASSWORD_LENGTH = 50;
     public const int MIN_PASSWORD_LENGTH = 6;
 
-    public User() { }   // ????
+
+    public Guid Id { get; set; }
+    public string Login { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+    public List<Module> Modules { get; set; } = [];
+
 
     private User(Guid id, string login, string password)
     {
@@ -19,16 +24,7 @@ public class User
         Login = login;
         Password = password;
     }
-
-
-    public Guid Id { get; set; }
-
-    public string Login { get; set; } = string.Empty;
-
-    public string Password { get; set; } = string.Empty;
-
-    public List<Module> Modules { get; set; } = [];
-
+    
     public static (User User, string Error) Create(Guid id, string login, string password)
     {
         var error = string.Empty;
