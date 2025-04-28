@@ -103,14 +103,14 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="cards"></param>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task Add(Guid id, string name, string description, List<CardEntity> cards, Guid userId)
+        public async Task Add(Guid id, string name, string description, Guid userId)
         {
             var module = new ModuleEntity
             {
                 Id = id,
                 Name = name,
                 Description = description,
-                Cards = cards,
+                // Cards = cards,
                 UserId = userId
             };
 
@@ -127,14 +127,14 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="cards"></param>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task Update(Guid id, string name, string description, List<CardEntity> cards, Guid userId)
+        public async Task Update(Guid id, string name, string description, Guid userId)
         {
             await _dbContext.Modules
                 .Where(m => m.Id == id)
                 .ExecuteUpdateAsync(s => s
                     .SetProperty(m => m.Name, name)
                     .SetProperty(m => m.Description, description)
-                    .SetProperty(m => m.Cards, cards)
+                    // .SetProperty(m => m.Cards, cards)
                     .SetProperty(m => m.UserId, userId)
                 );
 
