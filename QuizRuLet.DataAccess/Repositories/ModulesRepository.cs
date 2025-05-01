@@ -164,5 +164,22 @@ namespace QuizRuLet.DataAccess.Repositories
             
             return id;
         }
+
+        public async Task<Guid> Create(Core.Models.Module module, Guid userId)
+        {
+            var moduleEntity = new ModuleEntity
+            {
+                Id = module.Id,
+                Name = module.Name,
+                Description = module.Description,
+                // Cards = cards,
+                UserId = userId
+            };
+
+            await _dbContext.Modules.AddAsync(moduleEntity);
+            await _dbContext.SaveChangesAsync();
+            
+            return moduleEntity.Id;
+        }
     }
 }

@@ -163,6 +163,22 @@ namespace QuizRuLet.DataAccess.Repositories
             
             return id;
         }
-        
+
+        public async Task<Guid> Create(Card card, Guid moduleId)
+        {
+            var cardEntity = new CardEntity
+            {
+                Id = card.Id,
+                FrontSide = card.FrontSide,
+                BackSide = card.BackSide,
+                IsLearned = card.IsLearned,
+                ModuleId = moduleId
+            };
+
+            await _dbContext.Cards.AddAsync(cardEntity);
+            await _dbContext.SaveChangesAsync();
+            
+            return cardEntity.Id;
+        }
     }
 }

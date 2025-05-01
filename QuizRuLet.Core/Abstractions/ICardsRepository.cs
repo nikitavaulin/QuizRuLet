@@ -5,6 +5,7 @@ namespace QuizRuLet.DataAccess.Repositories
     public interface ICardsRepository
     {
         Task<Guid> Add(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId);
+        Task<Guid> Create(Card card, Guid moduleId);
         Task<Guid> Delete(Guid id);
         Task<List<Card>> Get();
         Task<Card?> GetById(Guid id);

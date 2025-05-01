@@ -111,6 +111,21 @@ namespace QuizRuLet.DataAccess.Repositories
             return id;
         }
 
+        public async Task<Guid> Create(User user)
+        {
+            var userEntity = new UserEntity
+            {
+                Id = user.Id,
+                Login = user.Login,
+                Password = user.Password
+            };
+
+            await _dbContext.Users.AddAsync(userEntity);
+            await _dbContext.SaveChangesAsync();
+            
+            return userEntity.Id;
+        }
+
         // фильтры
 
         // пагинация

@@ -2,6 +2,7 @@ using System;
 using System.Reflection;
 using QuizRuLet.DataAccess.Repositories;
 using QuizRuLet.Core;
+using System.Globalization;
 
 namespace QuizRuLet.Application.Services;
 
@@ -29,9 +30,9 @@ public class ModuleService
         return await _modulesRepository.GetById(id);
     }
     
-    public async Task<Core.Models.Module?> AddModule(Guid id, string name, string description, Guid userId)
+    public async Task<Guid> AddModule(Guid id, string name, string description, Guid userId)
     {
-        return await _modulesRepository.GetById(id);
+        return await _modulesRepository.Add(id, name, description, userId);
     }
 
 }
