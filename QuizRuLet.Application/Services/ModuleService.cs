@@ -30,9 +30,19 @@ public class ModuleService
         return await _modulesRepository.GetById(id);
     }
     
-    public async Task<Guid> AddModule(Guid id, string name, string description, Guid userId)
+    public async Task<Guid> CreateModule(Core.Models.Module module, Guid userId)
     {
-        return await _modulesRepository.Add(id, name, description, userId);
+        return await _modulesRepository.Create(module, userId);
+    }
+    
+    public async Task<Guid> UpdateModule(Guid id, string name, string description, Guid userId)
+    {
+        return await _modulesRepository.Update(id, name, description, userId);
+    }
+
+    public async Task<Guid> DeleteModule(Guid id)
+    {
+        return await _modulesRepository.Delete(id);
     }
 
 }
