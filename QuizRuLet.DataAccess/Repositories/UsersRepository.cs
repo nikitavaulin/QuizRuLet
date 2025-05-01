@@ -71,7 +71,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return GetDomain(userEntity);
         }
 
-        public async Task Add(Guid id, string login, string password)
+        public async Task<Guid> Add(Guid id, string login, string password)
         {
             var userEntity = new UserEntity
             {
@@ -82,9 +82,11 @@ namespace QuizRuLet.DataAccess.Repositories
 
             await _dbContext.Users.AddAsync(userEntity);
             await _dbContext.SaveChangesAsync();
+            
+            return userEntity.Id;
         }
 
-        public async Task Update(Guid id, string login, string password)
+        public async Task<Guid> Update(Guid id, string login, string password)
         {
             await _dbContext.Users
                 .Where(u => u.Id == id)
@@ -94,15 +96,19 @@ namespace QuizRuLet.DataAccess.Repositories
                 );
 
             await _dbContext.SaveChangesAsync();
+            
+            return id;
         }
 
-        public async Task Delete(Guid id)
+        public async Task<Guid> Delete(Guid id)
         {
             await _dbContext.Users
                 .Where(u => u.Id == id)
                 .ExecuteDeleteAsync();
 
             await _dbContext.SaveChangesAsync();
+            
+            return id;
         }
 
         // фильтры

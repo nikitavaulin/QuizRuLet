@@ -103,9 +103,9 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="cards"></param>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task Add(Guid id, string name, string description, Guid userId)
+        public async Task<Guid> Add(Guid id, string name, string description, Guid userId)
         {
-            var module = new ModuleEntity
+            var moduleEntity = new ModuleEntity
             {
                 Id = id,
                 Name = name,
@@ -114,8 +114,10 @@ namespace QuizRuLet.DataAccess.Repositories
                 UserId = userId
             };
 
-            await _dbContext.Modules.AddAsync(module);
+            await _dbContext.Modules.AddAsync(moduleEntity);
             await _dbContext.SaveChangesAsync();
+            
+            return moduleEntity.Id;
         }
 
         /// <summary>
@@ -127,7 +129,7 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="cards"></param>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task Update(Guid id, string name, string description, Guid userId)
+        public async Task<Guid> Update(Guid id, string name, string description, Guid userId)
         {
             await _dbContext.Modules
                 .Where(m => m.Id == id)
@@ -139,6 +141,8 @@ namespace QuizRuLet.DataAccess.Repositories
                 );
 
             await _dbContext.SaveChangesAsync();
+            
+            return id;
         }
 
         /// <summary>
@@ -150,13 +154,15 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="cards"></param>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task Delete(Guid id)
+        public async Task<Guid> Delete(Guid id)
         {
             await _dbContext.Modules
                 .Where(m => m.Id == id)
                 .ExecuteDeleteAsync();
 
             await _dbContext.SaveChangesAsync();
+            
+            return id;
         }
     }
 }

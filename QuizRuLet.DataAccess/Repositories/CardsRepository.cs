@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using Microsoft.EntityFrameworkCore;
 using QuizRuLet.Core.Models;
 using QuizRuLet.DataAccess.Entities;
@@ -105,7 +106,7 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="isLearned"></param>
         /// <param name="moduleId"></param>
         /// <returns></returns>
-        public async Task Add(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId)
+        public async Task<Guid> Add(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId)
         {
             var cardEntity = new CardEntity
             {
@@ -118,6 +119,8 @@ namespace QuizRuLet.DataAccess.Repositories
 
             await _dbContext.Cards.AddAsync(cardEntity);
             await _dbContext.SaveChangesAsync();
+            
+            return cardEntity.Id;
         }
 
         /// <summary>
@@ -129,7 +132,7 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="isLearned"></param>
         /// <param name="moduleId"></param>
         /// <returns></returns>
-        public async Task Update(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId)
+        public async Task<Guid> Update(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId)
         {
             await _dbContext.Cards
                 .Where(c => c.Id == id)
@@ -142,6 +145,7 @@ namespace QuizRuLet.DataAccess.Repositories
 
             await _dbContext.SaveChangesAsync();
 
+            return id;
         }
 
         /// <summary>
@@ -149,15 +153,16 @@ namespace QuizRuLet.DataAccess.Repositories
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task Delete(Guid id)
+        public async Task<Guid> Delete(Guid id)
         {
             await _dbContext.Cards
                 .Where(c => c.Id == id)
                 .ExecuteDeleteAsync();
 
             await _dbContext.SaveChangesAsync();
+            
+            return id;
         }
-
-
+        
     }
 }
