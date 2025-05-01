@@ -4,7 +4,7 @@ using QuizRuLet.Core.Models;
 
 namespace QuizRuLet.Application.Services;
 
-public class CardSetManualCreationService
+public class CardSetCreationService
 {
     public List<Card> Create(string inputData, string pairSeparator, string lineSeparator)
     {

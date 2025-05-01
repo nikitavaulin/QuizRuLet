@@ -30,13 +30,21 @@ public class CardService
     
     public async Task<Card> GetCardById(Guid id)
     {
-        return await _cardsRepository.GetById(id);
+        return await _cardsRepository.GetById(id);  // VALIDATION?
     }
     
     public async Task<Guid> CreateCard(Card card, Guid moduleId)
     {
         return await _cardsRepository.Create(card, moduleId);
     }
+
+    public async Task<Guid> CreateCardsSet(ICardsSetCreater creater, Guid moduleId)     // FIXME
+    {
+        var cards = creater.Create();
+    
+        return moduleId;
+    }   
+    
     
     public async Task<Guid> UpdateCard(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId)
     {
