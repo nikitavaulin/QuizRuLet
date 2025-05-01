@@ -16,6 +16,8 @@ builder.Services.AddDbContext<QuizRuLetDbContext>(  // регистрация к
     });
 
 
+// !!!!!! TODO add scoped (InterfaceRepos, Repos)
+
 // билд приложения
 var app = builder.Build();
 
