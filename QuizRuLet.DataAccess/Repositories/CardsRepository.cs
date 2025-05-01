@@ -1,6 +1,7 @@
 using System.Runtime.Serialization;
 using Microsoft.EntityFrameworkCore;
 using QuizRuLet.Core.Models;
+using QuizRuLet.Core.Abstractions;
 using QuizRuLet.DataAccess.Entities;
 
 namespace QuizRuLet.DataAccess.Repositories

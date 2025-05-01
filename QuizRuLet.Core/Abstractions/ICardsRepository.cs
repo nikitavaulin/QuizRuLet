@@ -1,6 +1,6 @@
 using QuizRuLet.Core.Models;
 
-namespace QuizRuLet.DataAccess.Repositories
+namespace QuizRuLet.Core.Abstractions
 {
     public interface ICardsRepository
     {

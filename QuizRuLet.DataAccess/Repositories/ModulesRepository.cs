@@ -2,6 +2,7 @@ using System.Data.Common;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using QuizRuLet.DataAccess.Entities;
+using QuizRuLet.Core.Abstractions;
 
 
 namespace QuizRuLet.DataAccess.Repositories

@@ -1,5 +1,7 @@
 using QuizRuLet.DataAccess;
 using Microsoft.EntityFrameworkCore;
+using QuizRuLet.DataAccess.Repositories;
+using QuizRuLet.Core.Abstractions;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;  // инициализация конфигураций
@@ -16,7 +18,14 @@ builder.Services.AddDbContext<QuizRuLetDbContext>(  // регистрация к
     });
 
 
-// !!!!!! TODO add scoped (InterfaceRepos, Repos)
+builder.Services.AddScoped<IModulesRepository, ModulesRepository>();
+builder.Services.AddScoped<ICardsRepository, CardsRepository>();
+builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+
+// !!!!!! TODO add scoped (InterfaceService, Service)
+
+
+
 
 // билд приложения
 var app = builder.Build();

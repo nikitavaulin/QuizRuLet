@@ -1,15 +1,15 @@
 
 
-namespace QuizRuLet.DataAccess.Repositories     // FIXME?
+namespace QuizRuLet.Core.Abstractions
 {
     public interface IModulesRepository
     {
         Task<Guid> Add(Guid id, string name, string description, Guid userId);
-        Task<Guid> Create(Core.Models.Module module, Guid moduleId);
+        Task<Guid> Create(Models.Module module, Guid moduleId);
         Task<Guid> Delete(Guid id);
-        Task<List<Core.Models.Module>> Get();
-        Task<Core.Models.Module?> GetById(Guid id);
-        Task<List<Core.Models.Module>> GetByUser(Guid userId);
+        Task<List<Models.Module>> Get();
+        Task<Models.Module?> GetById(Guid id);
+        Task<List<Models.Module>> GetByUser(Guid userId);
         Task<Guid> Update(Guid id, string name, string description, Guid userId);
     }
 }

@@ -1,6 +1,6 @@
 using System;
 using System.Reflection;
-using QuizRuLet.DataAccess.Repositories;
+using QuizRuLet.Core.Abstractions;
 using QuizRuLet.Core;
 using System.Globalization;
 

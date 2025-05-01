@@ -1,6 +1,6 @@
 using System;
 using QuizRuLet.Core.Models;
-using QuizRuLet.DataAccess.Repositories;
+using QuizRuLet.Core.Abstractions;
 
 namespace QuizRuLet.Application.Services;
 
