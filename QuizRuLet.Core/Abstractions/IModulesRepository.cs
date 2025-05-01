@@ -1,6 +1,6 @@
 
 
-namespace QuizRuLet.DataAccess.Repositories
+namespace QuizRuLet.DataAccess.Repositories     // FIXME?
 {
     public interface IModulesRepository
     {
