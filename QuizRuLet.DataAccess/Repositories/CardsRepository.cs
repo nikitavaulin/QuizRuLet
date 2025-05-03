@@ -85,7 +85,7 @@ namespace QuizRuLet.DataAccess.Repositories
         }
 
         /// <summary>
-        /// Получение карточки по Id
+        ///о  Получение карточки по Id
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -96,6 +96,35 @@ namespace QuizRuLet.DataAccess.Repositories
                 .FirstOrDefaultAsync(c => c.Id == id);
 
             return GetDomain(cardEntity);
+        }
+
+        /// <summary>
+        /// Получение количества карточек в модуле
+        /// </summary>
+        /// <param name="moduleId"></param>
+        /// <returns></returns>
+        public async Task<int> GetCountCardsInModule(Guid moduleId)
+        {
+            var countCards = await _dbContext.Cards
+                .AsNoTracking()
+                .CountAsync(c => c.ModuleId == moduleId);
+            
+            return countCards;           
+        }
+        
+        /// <summary>
+        /// Получение количества изученных / не изученных карточек в модуле 
+        /// </summary>
+        /// <param name="moduleId">id модуля</param>
+        /// <param name="isLearned">флаг изучен / не изучен</param>
+        /// <returns></returns>
+        public async Task<int> GetCountCardsByLearningFlagInModule(Guid moduleId, bool isLearned)
+        {
+            var countCards = await _dbContext.Cards
+                .AsNoTracking()
+                .CountAsync(c => c.ModuleId == moduleId && c.IsLearned == isLearned);
+            
+            return countCards;           
         }
 
         /// <summary>
