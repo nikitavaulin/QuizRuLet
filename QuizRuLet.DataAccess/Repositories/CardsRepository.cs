@@ -177,21 +177,18 @@ namespace QuizRuLet.DataAccess.Repositories
 
             return id;
         }
-
-        /// <summary>
-        /// Удаление карточки
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
-        public async Task<Guid> Delete(Guid id)
+        
+        public async Task<Guid> UpdateLearningFlag(Guid cardId, bool isLearned)
         {
             await _dbContext.Cards
-                .Where(c => c.Id == id)
-                .ExecuteDeleteAsync();
+                .Where(c => c.Id == cardId)
+                .ExecuteUpdateAsync(s => s
+                    .SetProperty(c => c.IsLearned, isLearned)
+                );
 
             await _dbContext.SaveChangesAsync();
-            
-            return id;
+
+            return cardId;
         }
 
         public async Task<Guid> Create(Card card, Guid moduleId)
@@ -209,6 +206,38 @@ namespace QuizRuLet.DataAccess.Repositories
             await _dbContext.SaveChangesAsync();
             
             return cardEntity.Id;
+        }
+
+        /// <summary>
+        /// Удаление карточки
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public async Task<Guid> Delete(Guid id)
+        {
+            await _dbContext.Cards
+                .Where(c => c.Id == id)
+                .ExecuteDeleteAsync();
+
+            await _dbContext.SaveChangesAsync();
+            
+            return id;
+        }
+        
+        /// <summary>
+        /// Удаление всех карточек из модуля
+        /// </summary>
+        /// <param name="moduleId"></param>
+        /// <returns></returns>
+        public async Task<Guid> DeleteByModule(Guid moduleId)
+        {
+            await _dbContext.Cards
+                .Where(c => c.ModuleId == moduleId)
+                .ExecuteDeleteAsync();
+
+            await _dbContext.SaveChangesAsync();
+            
+            return moduleId;        
         }
     }
 }

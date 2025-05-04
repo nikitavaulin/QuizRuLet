@@ -8,7 +8,6 @@ public class CardSetAiCreationService
 {
     private readonly ICardSetCreationService _creationService;
 
-
     public CardSetAiCreationService(ICardSetCreationService cardSetCreationService)
     {
         _creationService = cardSetCreationService;

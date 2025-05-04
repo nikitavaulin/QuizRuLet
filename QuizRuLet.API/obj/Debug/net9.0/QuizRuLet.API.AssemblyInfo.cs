@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuizRuLet.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4be4a9649d757badb2be3d66dcc90b00196588f5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8165302427062cae3b4dfa7ecdd0bb6960b44c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuizRuLet.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuizRuLet.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

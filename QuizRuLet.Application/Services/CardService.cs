@@ -4,7 +4,7 @@ using QuizRuLet.Core.Abstractions;
 
 namespace QuizRuLet.Application.Services;
 
-public class CardService
+public class CardService        // удалить
 {
     private readonly ICardsRepository _cardsRepository;
     
@@ -28,7 +28,7 @@ public class CardService
         return await _cardsRepository.GetByLearningFlag(moduleId, isLearned);
     }
     
-    public async Task<Card> GetCardById(Guid id)
+    public async Task<Card?> GetCardById(Guid id)
     {
         return await _cardsRepository.GetById(id);  // VALIDATION?
     }
@@ -37,14 +37,6 @@ public class CardService
     {
         return await _cardsRepository.Create(card, moduleId);
     }
-
-    public async Task<Guid> CreateCardsSet(ICardsSetCreater creater, Guid moduleId)     // FIXME
-    {
-        var cards = creater.Create();
-    
-        return moduleId;
-    }   
-    
     
     public async Task<Guid> UpdateCard(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId)
     {
