@@ -2,6 +2,7 @@ using QuizRuLet.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using QuizRuLet.DataAccess.Repositories;
 using QuizRuLet.Core.Abstractions;
+using QuizRuLet.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;  // инициализация конфигураций
@@ -23,7 +24,9 @@ builder.Services.AddScoped<ICardsRepository, CardsRepository>();
 builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 
 // !!!!!! TODO add scoped (InterfaceService, Service)
-
+builder.Services.AddScoped<IModuleService, ModuleService>();
+builder.Services.AddScoped<ILearningModuleService, LearningModuleService>();
+builder.Services.AddScoped<ICardSetCreationService, CardSetCreationService>();
 
 
 

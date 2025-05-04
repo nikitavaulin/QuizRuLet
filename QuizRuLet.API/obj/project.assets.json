@@ -2966,6 +2966,19 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "QuizRuLet.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "QuizRuLet.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QuizRuLet.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QuizRuLet.Application.dll": {}
+        }
+      },
       "QuizRuLet.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -8202,6 +8215,11 @@
         "version.txt"
       ]
     },
+    "QuizRuLet.Application/1.0.0": {
+      "type": "project",
+      "path": "../QuizRuLet.Application/QuizRuLet.Application.csproj",
+      "msbuildProject": "../QuizRuLet.Application/QuizRuLet.Application.csproj"
+    },
     "QuizRuLet.Core/1.0.0": {
       "type": "project",
       "path": "../QuizRuLet.Core/QuizRuLet.Core.csproj",
@@ -8222,6 +8240,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.4",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.4",
+      "QuizRuLet.Application >= 1.0.0",
       "QuizRuLet.Core >= 1.0.0",
       "QuizRuLet.DataAccess >= 1.0.0",
       "Swashbuckle.AspNetCore >= 8.1.0"
@@ -8259,6 +8278,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Application\\QuizRuLet.Application.csproj": {
+              "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Application\\QuizRuLet.Application.csproj"
+            },
             "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj": {
               "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj"
             },
