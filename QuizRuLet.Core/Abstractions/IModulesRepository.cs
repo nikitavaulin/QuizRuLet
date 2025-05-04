@@ -10,6 +10,6 @@ namespace QuizRuLet.Core.Abstractions
         Task<List<Models.Module>> Get();
         Task<Models.Module?> GetById(Guid id);
         Task<List<Models.Module>> GetByUser(Guid userId);
-        Task<Guid> Update(Guid id, string name, string description, Guid userId);
+        Task<Guid> Update(Guid id, string name, string description);
     }
 }

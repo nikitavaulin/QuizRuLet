@@ -38,9 +38,9 @@ public class ModuleService : IModuleService
         return await _modulesRepository.Create(module, userId);
     }
 
-    public async Task<Guid> UpdateModule(Guid id, string name, string description, Guid userId)
+    public async Task<Guid> UpdateModule(Guid id, string name, string description)
     {
-        return await _modulesRepository.Update(id, name, description, userId);
+        return await _modulesRepository.Update(id, name, description);
     }
 
     // добавление сета карточек в модуль

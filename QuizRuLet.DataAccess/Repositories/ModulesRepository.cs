@@ -64,23 +64,6 @@ namespace QuizRuLet.DataAccess.Repositories
             return GetDomain(moduleEntities);
         }
 
-        // /// <summary>
-        // /// Получение модулей с карточками (sql join)
-        // /// </summary>
-        // /// <returns></returns>
-        // public async Task<List<ModuleEntity>> GetWithCards()          // FIX
-        // {
-        //     var moduleEntities = await _dbContext.Modules
-        //         .AsNoTracking()
-        //         .Where(m => m.UserId == userId)
-        //         .ToListAsync();            
-
-        //     return await _dbContext.Modules
-        //         .AsNoTracking()
-        //         .Include(m => m.Cards)
-        //         .ToListAsync();
-        // }
-
         /// <summary>
         /// получение модуля по id
         /// </summary>
@@ -130,15 +113,13 @@ namespace QuizRuLet.DataAccess.Repositories
         /// <param name="cards"></param>
         /// <param name="userId"></param>
         /// <returns></returns>
-        public async Task<Guid> Update(Guid id, string name, string description, Guid userId)
+        public async Task<Guid> Update(Guid id, string name, string description)
         {
             await _dbContext.Modules
                 .Where(m => m.Id == id)
                 .ExecuteUpdateAsync(s => s
                     .SetProperty(m => m.Name, name)
                     .SetProperty(m => m.Description, description)
-                    // .SetProperty(m => m.Cards, cards)
-                    .SetProperty(m => m.UserId, userId)
                 );
 
             await _dbContext.SaveChangesAsync();
@@ -173,7 +154,6 @@ namespace QuizRuLet.DataAccess.Repositories
                 Id = module.Id,
                 Name = module.Name,
                 Description = module.Description,
-                // Cards = cards,
                 UserId = userId
             };
 
