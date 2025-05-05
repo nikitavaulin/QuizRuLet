@@ -26,8 +26,7 @@ builder.Services.AddScoped<IUsersRepository, UsersRepository>();
 // !!!!!! TODO add scoped (InterfaceService, Service)
 builder.Services.AddScoped<IModuleService, ModuleService>();
 builder.Services.AddScoped<ILearningModuleService, LearningModuleService>();
-builder.Services.AddScoped<ICardSetCreationService, CardSetCreationService>();
-
+builder.Services.AddScoped<IModuleProgressService, ModuleProgressService>();
 
 
 // билд приложения

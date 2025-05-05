@@ -71,6 +71,15 @@ namespace QuizRuLet.DataAccess.Repositories
 
             return GetDomain(userEntity);
         }
+        
+        public async Task<User?> GetByLogin(string login)
+        {
+            var userEntity = await _dbContext.Users
+                .AsNoTracking()
+                .FirstOrDefaultAsync(u => u.Login == login);
+
+            return GetDomain(userEntity);
+        }
 
         public async Task<Guid> Add(Guid id, string login, string password)
         {
@@ -126,9 +135,5 @@ namespace QuizRuLet.DataAccess.Repositories
             
             return userEntity.Id;
         }
-
-        // фильтры
-
-        // пагинация
     }
 }

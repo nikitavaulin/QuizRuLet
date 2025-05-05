@@ -12,8 +12,8 @@ using QuizRuLet.DataAccess;
 namespace QuizRuLet.DataAccess.Migrations
 {
     [DbContext(typeof(QuizRuLetDbContext))]
-    [Migration("20250411144120_initial")]
-    partial class initial
+    [Migration("20250505112220_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,7 +49,7 @@ namespace QuizRuLet.DataAccess.Migrations
 
                     b.HasIndex("ModuleId");
 
-                    b.ToTable("CardEntity");
+                    b.ToTable("Cards");
                 });
 
             modelBuilder.Entity("QuizRuLet.DataAccess.Entities.ModuleEntity", b =>
@@ -92,7 +92,7 @@ namespace QuizRuLet.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserEntity");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("QuizRuLet.DataAccess.Entities.CardEntity", b =>

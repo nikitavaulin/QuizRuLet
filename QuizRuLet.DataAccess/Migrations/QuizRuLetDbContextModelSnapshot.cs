@@ -46,7 +46,7 @@ namespace QuizRuLet.DataAccess.Migrations
 
                     b.HasIndex("ModuleId");
 
-                    b.ToTable("CardEntity");
+                    b.ToTable("Cards");
                 });
 
             modelBuilder.Entity("QuizRuLet.DataAccess.Entities.ModuleEntity", b =>
@@ -89,7 +89,7 @@ namespace QuizRuLet.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("UserEntity");
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("QuizRuLet.DataAccess.Entities.CardEntity", b =>

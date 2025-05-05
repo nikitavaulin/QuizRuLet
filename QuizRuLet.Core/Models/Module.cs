@@ -32,7 +32,7 @@ public class Module
         var error = string.Empty; // сообщение об ошибке
         
         if (string.IsNullOrEmpty(name) 
-            || name.Length > MIN_MODULE_NAME_LENGTH
+            || name.Length < MIN_MODULE_NAME_LENGTH
             || name.Length > MAX_MODULE_NAME_LENGTH)     // валидация названия
         {
             error = $"Длина названия модуля должна быть от {MIN_MODULE_NAME_LENGTH} до {MAX_MODULE_NAME_LENGTH} символов";
