@@ -6,6 +6,7 @@ namespace QuizRuLet.API.Contracts
     (
         Guid Id,    
         string Name,
-        string Description
+        string Description,
+        int Progress
     );
 }

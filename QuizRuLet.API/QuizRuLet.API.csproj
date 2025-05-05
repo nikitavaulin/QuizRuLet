@@ -27,8 +27,4 @@
     <ProjectReference Include="..\QuizRuLet.DataAccess\QuizRuLet.DataAccess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
 </Project>

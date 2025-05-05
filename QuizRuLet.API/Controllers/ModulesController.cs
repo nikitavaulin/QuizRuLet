@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using QuizRuLet.API.Contracts;
+using QuizRuLet.Core.Models;
 using QuizRuLet.Core.Abstractions;
 using QuizRuLet.DataAccess;
 using QuizRuLet.DataAccess.Entities;
@@ -20,18 +21,29 @@ namespace QuizRuLet.API.Controllers
     public class ModulesController : ControllerBase
     {
         private readonly IModuleService _moduleService;
+        private readonly IModuleProgressService _progressService;
         
-        public ModulesController(IModuleService moduleService)
+        public ModulesController(
+            IModuleService moduleService,
+            IModuleProgressService moduleProgressService)
         {
             _moduleService = moduleService;
+            _progressService = moduleProgressService;
         }
         
         [HttpGet]
         public async Task<ActionResult<List<ModulesResponse>>> GetModules()
         {
             var modules = await _moduleService.GetAllModules();
+            GetProgressDelegate GetModuleProgress =  _progressService.GetModuleProgressPercent;
             
-            var response = modules.Select(m => new ModulesResponse(m.Id, m.Name, m.Description));
+            
+            var response = modules.Select(async m => new ModulesResponse(
+                m.Id, 
+                m.Name, 
+                m.Description,
+                await GetModuleProgress(m.Id))
+            );
             
             return Ok(response);
         }
@@ -75,5 +87,5 @@ namespace QuizRuLet.API.Controllers
         
     }
 
-
+    public delegate Task<int> GetProgressDelegate(Guid moduleId);
 }
