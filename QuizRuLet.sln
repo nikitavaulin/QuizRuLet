@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizRuLet.DataAccess", "Qui
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizRuLet.Application", "QuizRuLet.Application\QuizRuLet.Application.csproj", "{DE9AD332-4E6C-4E08-BDF9-1EE9B51308B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizRuLet.Infrastrucrture", "QuizRuLet.Infrastrucrture\QuizRuLet.Infrastrucrture.csproj", "{E1E536F4-D572-4AFA-808E-FACDF9D5F067}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,18 @@ Global
 		{DE9AD332-4E6C-4E08-BDF9-1EE9B51308B1}.Release|x64.Build.0 = Release|Any CPU
 		{DE9AD332-4E6C-4E08-BDF9-1EE9B51308B1}.Release|x86.ActiveCfg = Release|Any CPU
 		{DE9AD332-4E6C-4E08-BDF9-1EE9B51308B1}.Release|x86.Build.0 = Release|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Debug|x64.Build.0 = Debug|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Debug|x86.Build.0 = Debug|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Release|x64.ActiveCfg = Release|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Release|x64.Build.0 = Release|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Release|x86.ActiveCfg = Release|Any CPU
+		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

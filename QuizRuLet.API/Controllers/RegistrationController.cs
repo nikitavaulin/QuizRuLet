@@ -7,5 +7,7 @@ namespace QuizRuLet.API.Controllers
     [ApiController]
     public class RegistrationController : ControllerBase
     {
+        // [HttpPost]
+        // public async Task Register()
     }
 }

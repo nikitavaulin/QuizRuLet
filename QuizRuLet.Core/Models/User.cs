@@ -14,7 +14,7 @@ public class User
 
     public Guid Id { get; set; }
     public string Login { get; set; } = string.Empty;
-    public string Password { get; set; } = string.Empty;
+    public string PasswordHash { get; set; } = string.Empty;
     public List<Module> Modules { get; set; } = [];
 
 
@@ -22,7 +22,7 @@ public class User
     {
         Id = id;
         Login = login;
-        Password = password;
+        PasswordHash = password;
     }
     
     public static (User User, string Error) Create(Guid id, string login, string password)

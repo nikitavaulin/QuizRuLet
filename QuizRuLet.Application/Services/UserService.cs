@@ -11,10 +11,12 @@ namespace QuizRuLet.Application.Services;
 public class UserService
 {
     private readonly IUsersRepository _userRepository;
+    private readonly IPasswordHasher _passwordHasher;
 
-    public UserService(IUsersRepository userRepository)
+    public UserService(IUsersRepository userRepository, IPasswordHasher passwordHasher)
     {
         _userRepository = userRepository; 
+        _passwordHasher = passwordHasher;
     }
     
     
@@ -41,6 +43,13 @@ public class UserService
     public async Task<Guid> DeleteUser(Guid id)
     {
         return await _userRepository.Delete(id);
+    }
+    
+    public async Task Register(string login, string password)
+    {
+        var hashedPassword = _passwordHasher.Generate(password);
+        
+        //..
     }
     
 }
