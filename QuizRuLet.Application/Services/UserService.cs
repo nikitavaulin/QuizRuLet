@@ -45,7 +45,7 @@ public class UserService
         return await _userRepository.Delete(id);
     }
     
-    public async Task Register(string login, string password)
+    public async Task Register(string login, string password)   // TODO
     {
         var hashedPassword = _passwordHasher.Generate(password);
         

@@ -4,7 +4,7 @@ using QuizRuLet.Core.Models;
 
 namespace QuizRuLet.Application.Services;
 
-public class CardSetAiCreationService
+public class CardSetAiCreationService   // TODO
 {
     private readonly ICardSetCreationService _creationService;
 
