@@ -23,14 +23,14 @@ public static class ApiExtensions
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Value.SecretKey))
                 };
 
-                // options.Events = new JwtBearerEvents
-                // {
-                //     OnMessageReceived = context =>
-                //     {
-                //         context.Token = context.Request.Cookies["tasty-cookies"];        // FIXXXXXXX
-                //         return Task.CompletedTask;
-                //     }
-                // };
+                options.Events = new JwtBearerEvents
+                {
+                    OnMessageReceived = context =>
+                    {
+                        context.Token = context.Request.Cookies["tasty-cookies"];        // FIXXXXXXX
+                        return Task.CompletedTask;
+                    }
+                };
             });
 
         services.AddAuthorization();

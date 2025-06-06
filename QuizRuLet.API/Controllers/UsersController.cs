@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using QuizRuLet.API.Contracts;
 using QuizRuLet.Application.Services;
 using QuizRuLet.Core.Abstractions;
+using QuizRuLet.Core.Models;
 
 namespace QuizRuLet.API.Controllers
 {
@@ -26,30 +27,15 @@ namespace QuizRuLet.API.Controllers
             _moduleService = moduleService;
             _progressService = moduleProgressService;
         }
-    
-        // public async Task<IResult> Register(UserRegisterRequest request)
-        // {
-        //     await _userService.Register(request.login, request.password);
+        
+        [HttpGet]
+        public async Task<ActionResult<UserInfoResponse>> GetUsers()
+        {
+            var users = await _userService.GetAllUsers();
+            var response = users.Select(user => new UserInfoResponse(user.Id, user.Login));
 
-        //     return Results.Ok();
-        // }
-
-        // public async Task<IResult> Login(UserLoginRequest request)
-        // {
-        //     var token = await _userService.Login(request.login, request.password);
-        //     // проверить login и пароль
-
-        //     // создать токен
-
-        //     // сохранить в куки
-        //     return Results.Ok(token);
-        // }
-    
-        // [HttpGet]
-        // public async Task<ActionResult<List<UserInfoResponse>>> GetAllUsers()
-        // {
-            
-        // }
+            return Ok(response);
+        }
     }
 
 }

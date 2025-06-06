@@ -4,6 +4,8 @@ using QuizRuLet.DataAccess.Repositories;
 using QuizRuLet.Core.Abstractions;
 using QuizRuLet.Application.Services;
 using QuizRuLet.Infrastrucrture;
+using Microsoft.AspNetCore.CookiePolicy;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;          // ссылка на конфигурации
@@ -11,6 +13,14 @@ var services = builder.Services;                    // ссылка на сер�
 
 #region  Заполнение DI контейнера
 services.AddControllers();
+
+services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)       // learn
+    .AddCookie(options => 
+    {
+        options.LoginPath = "/Account/Login";
+        options.AccessDeniedPath = "/Account/AccessDenied";
+    });
+
 services.AddSwaggerGen();
 
 services.AddDbContext<QuizRuLetDbContext>(  // регистрация контекста бд
@@ -53,5 +63,12 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCookiePolicy(new CookiePolicyOptions         // безопасность
+{
+    MinimumSameSitePolicy = SameSiteMode.Strict,
+    HttpOnly = HttpOnlyPolicy.Always,
+    Secure = CookieSecurePolicy.Always
+});
 
 app.Run();

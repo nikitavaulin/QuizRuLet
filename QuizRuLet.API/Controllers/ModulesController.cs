@@ -17,7 +17,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace QuizRuLet.API.Controllers
 {
-    [Authorize]
+    // [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class ModulesController : ControllerBase
