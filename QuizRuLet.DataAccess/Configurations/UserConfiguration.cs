@@ -16,7 +16,7 @@ public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
             // MIN LENGTH FIXME
             .IsRequired();
         
-        builder.Property(u => u.Password)
+        builder.Property(u => u.PasswordHash)
             // MAX LENGTH FIXME
             // MIN LENGTH FIXME
             .IsRequired();

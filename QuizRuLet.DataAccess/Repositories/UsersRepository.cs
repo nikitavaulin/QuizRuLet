@@ -21,7 +21,7 @@ namespace QuizRuLet.DataAccess.Repositories
         private List<User> GetDomain(List<UserEntity> userEntities)
         {
             var user = userEntities
-                .Select(u => User.Create(u.Id, u.Login, u.Password).User)
+                .Select(u => User.Create(u.Id, u.Login, u.PasswordHash).User)
                 .ToList();
 
             return user;
@@ -32,7 +32,7 @@ namespace QuizRuLet.DataAccess.Repositories
             var user = User.Create(
                 userEntities.Id,
                 userEntities.Login,
-                userEntities.Password
+                userEntities.PasswordHash
             ).User;
 
             return user;
@@ -81,13 +81,13 @@ namespace QuizRuLet.DataAccess.Repositories
             return GetDomain(userEntity);
         }
 
-        public async Task<Guid> Add(Guid id, string login, string password)
+        public async Task<Guid> Add(Guid id, string login, string passwordHash)
         {
             var userEntity = new UserEntity
             {
                 Id = id,
                 Login = login,
-                Password = password
+                PasswordHash = passwordHash
             };
 
             await _dbContext.Users.AddAsync(userEntity);
@@ -96,13 +96,13 @@ namespace QuizRuLet.DataAccess.Repositories
             return userEntity.Id;
         }
 
-        public async Task<Guid> Update(Guid id, string login, string password)
+        public async Task<Guid> Update(Guid id, string login, string passwordHash)
         {
             await _dbContext.Users
                 .Where(u => u.Id == id)
                 .ExecuteUpdateAsync(s => s
                     .SetProperty(u => u.Login, login)
-                    .SetProperty(u => u.Password, password)
+                    .SetProperty(u => u.PasswordHash, passwordHash)
                 );
 
             await _dbContext.SaveChangesAsync();
@@ -127,7 +127,7 @@ namespace QuizRuLet.DataAccess.Repositories
             {
                 Id = user.Id,
                 Login = user.Login,
-                Password = user.Password
+                PasswordHash = user.PasswordHash
             };
 
             await _dbContext.Users.AddAsync(userEntity);

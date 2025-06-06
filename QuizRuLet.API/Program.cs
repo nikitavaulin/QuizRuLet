@@ -3,31 +3,39 @@ using Microsoft.EntityFrameworkCore;
 using QuizRuLet.DataAccess.Repositories;
 using QuizRuLet.Core.Abstractions;
 using QuizRuLet.Application.Services;
+using QuizRuLet.Infrastrucrture;
 
 var builder = WebApplication.CreateBuilder(args);
-var configuration = builder.Configuration;  // инициализация конфигураций
+var configuration = builder.Configuration;          // ссылка на конфигурации
+var services = builder.Services;                    // ссылка на сервисы
 
+#region  Заполнение DI контейнера
+services.AddControllers();
+services.AddSwaggerGen();
 
-// Заполнение DI контейнера
-builder.Services.AddControllers();
-builder.Services.AddSwaggerGen();
-
-builder.Services.AddDbContext<QuizRuLetDbContext>(  // регистрация контекста бд
+services.AddDbContext<QuizRuLetDbContext>(  // регистрация контекста бд
     options => 
     {
         options.UseNpgsql(configuration.GetConnectionString(nameof(QuizRuLetDbContext)));
     });
 
+services.Configure<JwtOptions>(configuration.GetSection(nameof(JwtOptions)));       // jwt auth config
 
-builder.Services.AddScoped<IModulesRepository, ModulesRepository>();
-builder.Services.AddScoped<ICardsRepository, CardsRepository>();
-builder.Services.AddScoped<IUsersRepository, UsersRepository>();
+
+services.AddScoped<IModulesRepository, ModulesRepository>();
+services.AddScoped<ICardsRepository, CardsRepository>();
+services.AddScoped<IUsersRepository, UsersRepository>();
 
 // !!!!!! TODO add scoped (InterfaceService, Service)
-builder.Services.AddScoped<IModuleService, ModuleService>();
-builder.Services.AddScoped<ILearningModuleService, LearningModuleService>();
-builder.Services.AddScoped<IModuleProgressService, ModuleProgressService>();
+services.AddScoped<IModuleService, ModuleService>();
+services.AddScoped<IUserService, UserService>();
+services.AddScoped<ILearningModuleService, LearningModuleService>();
+services.AddScoped<IModuleProgressService, ModuleProgressService>();
 
+// auth
+services.AddScoped<IJwtProvider, JwtProvider>();
+services.AddScoped<IPasswordHasher, PasswordHasher>();
+#endregion
 
 // билд приложения
 var app = builder.Build();
@@ -41,11 +49,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// app.UseAuthorization();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
 app.Run();
-
-
-// dotnet aspnet-codegenerator controller -name ModulesController -async -api -m Module -dc QuizRuLetDbContext -outDir Controllers

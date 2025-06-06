@@ -13,9 +13,11 @@ using QuizRuLet.Core.Models;
 using QuizRuLet.Core.Abstractions;
 using QuizRuLet.DataAccess;
 using QuizRuLet.DataAccess.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace QuizRuLet.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class ModulesController : ControllerBase

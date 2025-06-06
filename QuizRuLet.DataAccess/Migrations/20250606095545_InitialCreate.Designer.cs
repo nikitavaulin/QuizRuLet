@@ -12,8 +12,8 @@ using QuizRuLet.DataAccess;
 namespace QuizRuLet.DataAccess.Migrations
 {
     [DbContext(typeof(QuizRuLetDbContext))]
-    [Migration("20250505112220_init")]
-    partial class init
+    [Migration("20250606095545_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -86,7 +86,7 @@ namespace QuizRuLet.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("PasswordHash")
                         .IsRequired()
                         .HasColumnType("text");
 

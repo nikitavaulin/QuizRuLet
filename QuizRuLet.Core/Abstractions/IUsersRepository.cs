@@ -9,6 +9,7 @@ namespace QuizRuLet.Core.Abstractions
         Task<Guid> Delete(Guid id);
         Task<List<User>> Get();
         Task<User?> GetById(Guid id);
+        Task<User?> GetByLogin(string login);
         Task<List<User>> GetWithModules();
         Task<Guid> Update(Guid id, string login, string password);
     }

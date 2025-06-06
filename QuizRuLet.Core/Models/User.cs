@@ -14,18 +14,18 @@ public class User
 
     public Guid Id { get; set; }
     public string Login { get; set; } = string.Empty;
-    public string PasswordHash { get; set; } = string.Empty;
+    public string PasswordHash { get; private set; } = string.Empty;
     public List<Module> Modules { get; set; } = [];
 
 
-    private User(Guid id, string login, string password)
+    private User(Guid id, string login, string passwordHash)
     {
         Id = id;
         Login = login;
-        PasswordHash = password;
+        PasswordHash = passwordHash;
     }
     
-    public static (User User, string Error) Create(Guid id, string login, string password)
+    public static (User User, string Error) Create(Guid id, string login, string passwordHash)
     {
         var error = string.Empty;
 
@@ -36,14 +36,14 @@ public class User
             error = $"Длина логина должна быть от {MIN_USERLOGIN_LENGTH} до {MAX_USERLOGIN_LENGTH} символов";
         }
 
-        if (string.IsNullOrEmpty(password)
-            || password.Length < MIN_PASSWORD_LENGTH     // валидация названия
-            || password.Length > MAX_PASSWORD_LENGTH)     // валидация названия
-        {
-            error = $"Длина пароля должна быть от {MIN_PASSWORD_LENGTH} до {MAX_PASSWORD_LENGTH} символов";
-        }
+        // if (string.IsNullOrEmpty(password)
+        //     || password.Length < MIN_PASSWORD_LENGTH     // валидация пароля
+        //     || password.Length > MAX_PASSWORD_LENGTH)     // валидация пароля
+        // {
+        //     error = $"Длина пароля должна быть от {MIN_PASSWORD_LENGTH} до {MAX_PASSWORD_LENGTH} символов";
+        // }
 
-        var user = new User(id, login, password);
+        var user = new User(id, login, passwordHash);
 
         return (user, error);
     }

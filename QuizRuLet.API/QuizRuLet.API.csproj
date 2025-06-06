@@ -25,6 +25,7 @@
     <ProjectReference Include="..\QuizRuLet.Application\QuizRuLet.Application.csproj" />
     <ProjectReference Include="..\QuizRuLet.Core\QuizRuLet.Core.csproj" />
     <ProjectReference Include="..\QuizRuLet.DataAccess\QuizRuLet.DataAccess.csproj" />
+    <ProjectReference Include="..\QuizRuLet.Infrastrucrture\QuizRuLet.Infrastrucrture.csproj" />
   </ItemGroup>
 
 </Project>
