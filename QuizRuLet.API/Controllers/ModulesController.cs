@@ -14,23 +14,27 @@ using QuizRuLet.Core.Abstractions;
 using QuizRuLet.DataAccess;
 using QuizRuLet.DataAccess.Entities;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace QuizRuLet.API.Controllers
 {
     // [Authorize]
     [ApiController]
-    [Route("[controller]")]
+    [Route("modules")]
     public class ModulesController : ControllerBase
     {
         private readonly IModuleService _moduleService;
         private readonly IModuleProgressService _progressService;
-        
+        private readonly ILearningModuleService _learningModuleService;
+
         public ModulesController(
             IModuleService moduleService,
-            IModuleProgressService moduleProgressService)
+            IModuleProgressService moduleProgressService,
+            ILearningModuleService learningModuleService)
         {
             _moduleService = moduleService;
             _progressService = moduleProgressService;
+            _learningModuleService = learningModuleService;
         }
         
         [HttpGet]
@@ -49,6 +53,26 @@ namespace QuizRuLet.API.Controllers
             
             return Ok(response);
         }
+
+        [HttpGet("{moduleId:guid}")]
+        public async Task<ActionResult<List<ModuleWithCardsResponse>>> GetModuleWithCard(Guid moduleId)
+        {
+            var module = await _moduleService.GetModuleById(moduleId);
+            
+            if (module is null)
+            {
+                return NotFound("Учебный модуль не найден");
+            }
+
+            var cards = (await _learningModuleService.GetAllCards(moduleId))
+                .Select(c => new CardResponse(c.FrontSide, c.BackSide, c.IsLearned))
+                .ToList();
+
+            var response = new ModuleWithCardsResponse(moduleId, module.Name, module.Description, cards);
+            
+            return Ok(response);
+        }
+        
         
         [HttpPost]  // TODO validation
         public async Task<ActionResult<Guid>> CreateModule([FromBody] ModuleCreationRequest request)
