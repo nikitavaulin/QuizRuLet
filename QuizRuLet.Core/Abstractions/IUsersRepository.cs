@@ -12,5 +12,6 @@ namespace QuizRuLet.Core.Abstractions
         Task<User?> GetByLogin(string login);
         Task<List<User>> GetWithModules();
         Task<Guid> Update(Guid id, string login, string password);
+        Task<bool> IsUserLoginExist(string login);
     }
 }

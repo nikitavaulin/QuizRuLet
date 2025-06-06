@@ -135,5 +135,13 @@ namespace QuizRuLet.DataAccess.Repositories
             
             return userEntity.Id;
         }
+        
+        public async Task<bool> IsUserLoginExist(string login)
+        {
+            var isExist = await _dbContext.Users
+                .AnyAsync(u => u.Login == login);
+
+            return isExist;
+        }
     }
 }

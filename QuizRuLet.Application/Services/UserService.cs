@@ -3,6 +3,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Data.Common;
 using System.Reflection.Metadata.Ecma335;
+using Microsoft.VisualBasic;
 using QuizRuLet.Core.Abstractions;
 using QuizRuLet.Core.Models;
 
@@ -47,15 +48,37 @@ public class UserService : IUserService
         return await _userRepository.Delete(id);
     }
 
-    public async Task Register(string login, string password)   // TODO
+    public async Task<(bool Success, string Error)> Register(string login, string password)   // TODO
     {
         // VALIDATION!
+        var error = string.Empty;
+        var result = false;
+            
+        var isUserExist = await _userRepository.IsUserLoginExist(login);
     
-        var hashedPassword = _passwordHasher.Generate(password);
+        if (isUserExist)
+        {
+            error = "Пользователь с таким логином уже зарегистрирован";
+        }
+        else if (string.IsNullOrEmpty(password)                                              // FIIIIIXX
+            || password.Length < User.MIN_PASSWORD_LENGTH     // валидация пароля
+            || password.Length > User.MAX_PASSWORD_LENGTH)     
+        {
+            error = $"Длина пароля должна быть от {User.MIN_PASSWORD_LENGTH} до {User.MAX_PASSWORD_LENGTH} символов"; 
+        }
+        else
+        {
+            var hashedPassword = _passwordHasher.Generate(password);
 
-        var user = User.Create(Guid.NewGuid(), login, hashedPassword).User;
+            var user = User.Create(Guid.NewGuid(), login, hashedPassword).User;
 
-        await _userRepository.Create(user);
+            await _userRepository.Create(user);
+
+            result = true;
+        }
+
+        return (result, error);
+
     }
 
     public async Task<string> Login(string login, string password)

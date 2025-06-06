@@ -19,9 +19,15 @@ namespace QuizRuLet.API.Controllers
         [HttpPost]
         public async Task<ActionResult> Register(UserRegisterRequest request)        // VALID????
         {
-            await _userService.Register(request.login, request.password);
-
-            return Ok();
+            var result = await _userService.Register(request.login, request.password);
+            if (result.Success)
+            {
+                return Ok();
+            }
+            else
+            {
+                return BadRequest(result.Error);
+            }
         }
     
     
