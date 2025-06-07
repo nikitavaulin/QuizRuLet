@@ -39,6 +39,7 @@ services.AddScoped<IUsersRepository, UsersRepository>();
 // !!!!!! TODO add scoped (InterfaceService, Service)
 services.AddScoped<IModuleService, ModuleService>();
 services.AddScoped<IUserService, UserService>();
+services.AddScoped<ICardService, CardService>();
 services.AddScoped<ILearningModuleService, LearningModuleService>();
 services.AddScoped<IModuleProgressService, ModuleProgressService>();
 

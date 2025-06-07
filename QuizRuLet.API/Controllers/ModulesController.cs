@@ -65,7 +65,7 @@ namespace QuizRuLet.API.Controllers
             }
 
             var cards = (await _learningModuleService.GetAllCards(moduleId))
-                .Select(c => new CardResponse(c.FrontSide, c.BackSide, c.IsLearned))
+                .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))
                 .ToList();
 
             var response = new ModuleWithCardsResponse(moduleId, module.Name, module.Description, cards);

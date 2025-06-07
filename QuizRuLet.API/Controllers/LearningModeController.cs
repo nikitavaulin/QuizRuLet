@@ -22,7 +22,7 @@ namespace QuizRuLet.API.Controllers
         public async Task<ActionResult<List<CardResponse>>> GetModuleCards([FromRoute] Guid moduleId)
         {
             var cards = (await _learningModuleService.GetAllCards(moduleId))
-                .Select(c => new CardResponse(c.FrontSide, c.BackSide, c.IsLearned))
+                .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))
                 .ToList();
 
             if (cards is null)
@@ -34,10 +34,10 @@ namespace QuizRuLet.API.Controllers
         }
 
         [HttpPatch]
-        public async Task<ActionResult> UpdateCardLearningFlag([FromBody] CardLearningFlagUpdateRequest request)
+        public async Task<ActionResult<Guid>> UpdateCardLearningFlag([FromBody] CardLearningFlagUpdateRequest request)
         {
-            await _learningModuleService.UpdateLearningFlag(request.CardId, request.IsLearned);
-            return Ok();
+            var cardId = await _learningModuleService.UpdateLearningFlag(request.CardId, request.IsLearned);
+            return Ok(cardId);
         }
         
         
