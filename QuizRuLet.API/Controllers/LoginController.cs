@@ -5,7 +5,7 @@ using QuizRuLet.Core.Abstractions;
 
 namespace QuizRuLet.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("login")]
     [ApiController]
     public class LoginController : ControllerBase
     {

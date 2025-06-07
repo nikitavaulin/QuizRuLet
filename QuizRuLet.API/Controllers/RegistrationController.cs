@@ -5,7 +5,7 @@ using QuizRuLet.Core.Abstractions;
 
 namespace QuizRuLet.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("register")]
     [ApiController]
     public class RegistrationController : ControllerBase
     {
@@ -29,9 +29,5 @@ namespace QuizRuLet.API.Controllers
                 return BadRequest(result.Error);
             }
         }
-    
-    
-        // [HttpPost]
-        // public async Task Register()
     }
 }
