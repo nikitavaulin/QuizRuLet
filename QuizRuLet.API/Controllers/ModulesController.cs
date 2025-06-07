@@ -37,18 +37,17 @@ namespace QuizRuLet.API.Controllers
             _learningModuleService = learningModuleService;
         }
         
+        
         [HttpGet]
         public async Task<ActionResult<List<ModulesResponse>>> GetModules()
         {
             var modules = await _moduleService.GetAllModules();
-            GetProgressDelegate GetModuleProgress =  _progressService.GetModuleProgressPercent;
-            
             
             var response = modules.Select(async m => new ModulesResponse(
                 m.Id, 
                 m.Name, 
                 m.Description,
-                await GetModuleProgress(m.Id))
+                await GetProgress(m.Id))
             );
             
             return Ok(response);
@@ -68,7 +67,12 @@ namespace QuizRuLet.API.Controllers
                 .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))
                 .ToList();
 
-            var response = new ModuleWithCardsResponse(moduleId, module.Name, module.Description, cards);
+            var response = new ModuleWithCardsResponse(
+                moduleId, 
+                module.Name, 
+                module.Description, 
+                await GetProgress(moduleId), 
+                cards);
             
             return Ok(response);
         }
@@ -111,7 +115,9 @@ namespace QuizRuLet.API.Controllers
             return Ok(moduleId);
         }
         
+        private async Task<int> GetProgress(Guid moduleId)
+        {
+            return await _progressService.GetModuleProgressPercent(moduleId);
+        }
     }
-
-    public delegate Task<int> GetProgressDelegate(Guid moduleId);
 }

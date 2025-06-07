@@ -18,27 +18,27 @@ namespace QuizRuLet.API.Controllers
             _learningModuleService = learningModuleService;
         }
 
-        [HttpGet]
-        public async Task<ActionResult<List<CardResponse>>> GetModuleCards([FromRoute] Guid moduleId)
-        {
-            var cards = (await _learningModuleService.GetAllCards(moduleId))
-                .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))
-                .ToList();
+        // [HttpGet]
+        // public async Task<ActionResult<List<CardResponse>>> GetModuleCards([FromRoute] Guid moduleId)
+        // {
+        //     var cards = (await _learningModuleService.GetAllCards(moduleId))
+        //         .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))
+        //         .ToList();
 
-            if (cards is null)
-            {
-                return NotFound("Модуль не найден");
-            }
+        //     if (cards is null)
+        //     {
+        //         return NotFound("Модуль не найден");
+        //     }
             
-            return cards.Count > 0 ? Ok(cards) : NoContent();     // mb fix
-        }
+        //     return cards.Count > 0 ? Ok(cards) : NoContent();     // mb fix
+        // }
 
-        [HttpPatch]
-        public async Task<ActionResult<Guid>> UpdateCardLearningFlag([FromBody] CardLearningFlagUpdateRequest request)
-        {
-            var cardId = await _learningModuleService.UpdateLearningFlag(request.CardId, request.IsLearned);
-            return Ok(cardId);
-        }
+        // [HttpPatch]
+        // public async Task<ActionResult<Guid>> UpdateCardLearningFlag([FromBody] CardLearningFlagUpdateRequest request)
+        // {
+        //     var cardId = await _learningModuleService.UpdateLearningFlag(request.CardId, request.IsLearned);
+        //     return Ok(cardId);
+        // }
         
         
     }
