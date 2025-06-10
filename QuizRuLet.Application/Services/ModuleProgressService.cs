@@ -22,7 +22,7 @@ public class ModuleProgressService : IModuleProgressService
         double countCards = await _moduleService.GetCountCards(moduleId);
         double countLearned = await GetCountCardsByLearningFlagInModule(moduleId, true);
 
-        double progressPercent = countCards / 100 * countLearned;
+        double progressPercent = countLearned / countCards;
 
 
         return (int)(progressPercent * 100);

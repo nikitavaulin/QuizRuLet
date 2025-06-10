@@ -1,6 +1,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using System.Runtime.CompilerServices;
 
 namespace QuizRuLet.Core.Models;
 
@@ -15,15 +16,15 @@ public class Card
     public bool IsLearned {get; set;}
     
     
-    private Card(Guid id, string frontSide, string backSide)
+    private Card(Guid id, string frontSide, string backSide, bool isLearned = false)
     {
         Id = id;
         FrontSide = frontSide;
         BackSide = backSide;
-        IsLearned = false;
+        IsLearned = isLearned;
     }
     
-    public static (Card Card, string Error) Create(Guid id, string frontSide, string backSide)
+    public static (Card Card, string Error) Create(Guid id, string frontSide, string backSide, bool isLearned = false)
     {
         var error = string.Empty;
         
@@ -36,7 +37,7 @@ public class Card
             error = $"Текст на карточке не может быть пустым или больше {MAX_CARD_SIDE_LENGTH} символов.";
         }
         
-        var card = new Card(id, frontSide, backSide);
+        var card = new Card(id, frontSide, backSide, isLearned);
         
         return (card, error);
     }

@@ -67,11 +67,13 @@ namespace QuizRuLet.API.Controllers
                 .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))
                 .ToList();
 
+            var progres = await GetProgress(moduleId);
+
             var response = new ModuleWithCardsResponse(
                 moduleId, 
                 module.Name, 
                 module.Description, 
-                await GetProgress(moduleId), 
+                progres, 
                 cards);
             
             return Ok(response);

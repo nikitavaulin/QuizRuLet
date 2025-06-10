@@ -21,7 +21,7 @@ namespace QuizRuLet.DataAccess.Repositories
         private List<Card> GetDomain(List<CardEntity> cardEntities)
         {
             var cards = cardEntities
-                .Select(c => Card.Create(c.Id, c.FrontSide, c.BackSide).Card)
+                .Select(c => Card.Create(c.Id, c.FrontSide, c.BackSide, c.IsLearned).Card)
                 .ToList();
 
             return cards;
@@ -32,7 +32,8 @@ namespace QuizRuLet.DataAccess.Repositories
             var card = Card.Create(
                 cardEntity.Id,
                 cardEntity.FrontSide,
-                cardEntity.BackSide
+                cardEntity.BackSide,
+                cardEntity.IsLearned
             ).Card;
 
             return card;

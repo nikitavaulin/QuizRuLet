@@ -34,7 +34,7 @@ public class CardSetCreationService : ICardSetCreationService
         var frontSide = splitPair[0];
         var backSide = splitPair[1];
 
-        var card = Card.Create(id, frontSide, backSide).Card;   // TODO VALIDATION
+        var card = Card.Create(id, frontSide, backSide, false).Card;   // TODO VALIDATION
 
         return card;
     }
