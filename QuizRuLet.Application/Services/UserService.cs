@@ -89,7 +89,7 @@ public class UserService : IUserService
         
         if (result == false)
         {
-            throw new Exception("неправильный пароль");             // FIX
+            throw new Exception("Unauthorized");             // FIX
         }
 
         var token = _jwtProvider.GenerateToken(user);

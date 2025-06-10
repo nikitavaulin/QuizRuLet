@@ -22,7 +22,7 @@ namespace QuizRuLet.API.Controllers
             var result = await _userService.Register(request.login, request.password);
             if (result.Success)
             {
-                return Ok();
+                return NoContent();
             }
             else
             {

@@ -6,6 +6,7 @@ using QuizRuLet.Application.Services;
 using QuizRuLet.Infrastrucrture;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using QuizRuLet.API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;          // ссылка на конфигурации
@@ -14,12 +15,16 @@ var services = builder.Services;                    // ссылка на сер�
 #region  Заполнение DI контейнера
 services.AddControllers();
 
-services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)       // learn
-    .AddCookie(options => 
-    {
-        options.LoginPath = "/Account/Login";
-        options.AccessDeniedPath = "/Account/AccessDenied";
-    });
+services.AddAuthentication();
+
+
+// services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)       // learn
+//     .AddCookie(options => 
+//     {
+//         options.LoginPath = "/Account/Login";                       // перенаправление на указанный путь, в случае если юзер не аутентифицирован
+//         options.AccessDeniedPath = "/Account/AccessDenied";         // перенаправление на указанный путь, в случае если юзер не имеет достаточно прав
+//     });
+
 
 services.AddSwaggerGen();
 
@@ -30,7 +35,7 @@ services.AddDbContext<QuizRuLetDbContext>(  // регистрация конте
     });
 
 services.Configure<JwtOptions>(configuration.GetSection(nameof(JwtOptions)));       // jwt auth config
-
+services.AddApiAuthentification(configuration);
 
 services.AddScoped<IModulesRepository, ModulesRepository>();
 services.AddScoped<ICardsRepository, CardsRepository>();
@@ -58,6 +63,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// Middlewares
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

@@ -18,9 +18,10 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace QuizRuLet.API.Controllers
 {
-    // [Authorize]
     [ApiController]
     [Route("modules")]
+    // [Authorize]
+    [Authorize(Roles = "User")]
     public class ModulesController : ControllerBase
     {
         private readonly IModuleService _moduleService;

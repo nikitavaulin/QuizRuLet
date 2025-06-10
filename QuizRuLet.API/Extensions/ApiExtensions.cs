@@ -9,8 +9,12 @@ namespace QuizRuLet.API.Extensions;
 
 public static class ApiExtensions
 {
-    public static void AddApiAuthentification(this IServiceCollection services, IOptions<JwtOptions> jwtOptions)
+    public static void AddApiAuthentification(
+        this IServiceCollection services, 
+        IConfiguration configuration)
     {
+        var jwtOptions = configuration.GetSection(nameof(JwtOptions)).Get<JwtOptions>();
+        
         services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
             {
@@ -20,7 +24,7 @@ public static class ApiExtensions
                     ValidateAudience = false,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Value.SecretKey))
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.SecretKey))
                 };
 
                 options.Events = new JwtBearerEvents
