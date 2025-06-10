@@ -5,7 +5,9 @@ namespace QuizRuLet.API.Contracts
         Guid Id,
         string Name,
         string Description,
-        int Progres,
+        int Progress,
+        int CountCards,
+        int CountLearned,
         List<CardResponse> Cards
     );
         

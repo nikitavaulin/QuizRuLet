@@ -47,7 +47,7 @@ namespace QuizRuLet.API.Controllers
                 m.Id, 
                 m.Name, 
                 m.Description,
-                await GetProgress(m.Id))
+                (await _progressService.GetModuleStatisticInfo(m.Id)).Progress)
             );
             
             return Ok(response);
@@ -67,13 +67,15 @@ namespace QuizRuLet.API.Controllers
                 .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))
                 .ToList();
 
-            var progres = await GetProgress(moduleId);
+            var statistic = await _progressService.GetModuleStatisticInfo(moduleId);
 
             var response = new ModuleWithCardsResponse(
                 moduleId, 
                 module.Name, 
                 module.Description, 
-                progres, 
+                statistic.Progress,
+                statistic.CountCards, 
+                statistic.CountLearned,
                 cards);
             
             return Ok(response);
@@ -117,9 +119,7 @@ namespace QuizRuLet.API.Controllers
             return Ok(moduleId);
         }
         
-        private async Task<int> GetProgress(Guid moduleId)
-        {
-            return await _progressService.GetModuleProgressPercent(moduleId);
-        }
+        
+
     }
 }

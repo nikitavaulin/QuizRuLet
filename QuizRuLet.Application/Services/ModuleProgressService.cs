@@ -32,4 +32,15 @@ public class ModuleProgressService : IModuleProgressService
     {
         return await _cardsRepository.GetCountCardsByLearningFlagInModule(moduleId, isLearned);
     }
+    
+    public async Task<(int Progress, int CountCards, int CountLearned)> GetModuleStatisticInfo(Guid moduleId)
+    {
+        var progress = await GetModuleProgressPercent(moduleId);
+        var countLearned = await GetCountCardsByLearningFlagInModule(moduleId, true);
+        var countNotLearned = await GetCountCardsByLearningFlagInModule(moduleId, false);
+
+        var countCards = countLearned + countNotLearned;
+
+        return (progress, countCards, countLearned);
+    }
 }
