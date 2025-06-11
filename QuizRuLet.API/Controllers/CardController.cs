@@ -50,5 +50,12 @@ namespace QuizRuLet.API.Controllers
             await _learningModuleService.UpdateLearningFlagInModule(moduleId, false);
             return Ok();
         }
+        
+        [HttpDelete("{cardId:guid}")]
+        public async Task<ActionResult> DeleteCard([FromRoute] Guid cardId)
+        {
+            await _cardService.DeleteCard(cardId);
+            return Ok(cardId);
+        }
     }
 }

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
@@ -10,6 +11,7 @@ namespace QuizRuLet.API.Controllers
 {
     [ApiController]
     [Route("users")]
+    [Authorize(Roles = "User")]
     public class UsersController : ControllerBase
     {
         private readonly IModuleService _moduleService;
