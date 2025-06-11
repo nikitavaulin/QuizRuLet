@@ -7,6 +7,7 @@ using QuizRuLet.Infrastrucrture;
 using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using QuizRuLet.API.Extensions;
+using QuizRuLet.Core.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;          // ссылка на конфигурации
@@ -47,6 +48,7 @@ services.AddScoped<IUserService, UserService>();
 services.AddScoped<ICardService, CardService>();
 services.AddScoped<ILearningModuleService, LearningModuleService>();
 services.AddScoped<IModuleProgressService, ModuleProgressService>();
+services.AddScoped<ICardSetCreationService, CardSetCreationService>();
 
 // auth
 services.AddScoped<IJwtProvider, JwtProvider>();
