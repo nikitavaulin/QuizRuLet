@@ -12,5 +12,7 @@ public interface IModuleService
     Task<int> GetCountCards(Guid moduleId);
     Task<Module?> GetModuleById(Guid id);
     Task<List<Module>> GetUserModules(Guid userId);
-    Task<Guid> UpdateModule(Guid id, string name, string description);
+    // Task<Guid> UpdateModule(Guid id, string name, string description);
+    Task<Guid> UpdateModuleName(Guid id, string name);
+    Task<Guid> UpdateModuleDescription(Guid id, string description);
 }

@@ -11,29 +11,27 @@ namespace QuizRuLet.API.Controllers
     [ApiController]
     public class ModuleEditController : ControllerBase
     {
-        private readonly ICardService _cardService;
+        private readonly IModuleService _moduleService;
 
-        public ModuleEditController(ICardService cardService)
+        public ModuleEditController(IModuleService moduleService)
         {
-            _cardService = cardService;
+            _moduleService = moduleService;
         }
-
-        [HttpPost]
-        public async Task<ActionResult<Guid>> CreateCard([FromRoute] Guid moduleId, [FromBody] CardCreateRequest request)
+        
+        [HttpPatch("name")]  // TODO validation
+        public async Task<ActionResult<Guid>> UpdateModuleName([FromRoute] Guid moduleId, [FromBody] ModuleNameEditRequest request)
         {
-            var cardResult = Card.Create(
-                Guid.NewGuid(),
-                request.FrontSide,
-                request.BackSide);
-                
-            if (!string.IsNullOrEmpty(cardResult.Error))
-            {
-                return BadRequest(cardResult.Error);
-            }
-
-            var cardId = await _cardService.CreateCard(cardResult.Card, moduleId);
-
-            return Ok(cardId);
+            var id = await _moduleService.UpdateModuleName(moduleId, request.Name);
+            
+            return Ok(id);
+        }
+        
+        [HttpPatch("description")]  // TODO validation
+        public async Task<ActionResult<Guid>> UpdateModuleDescription([FromRoute] Guid moduleId, [FromBody] ModuleDescriptionEditRequest request)
+        {
+            var id = await _moduleService.UpdateModuleDescription(moduleId, request.Description);
+            
+            return Ok(id);
         }
         
     }

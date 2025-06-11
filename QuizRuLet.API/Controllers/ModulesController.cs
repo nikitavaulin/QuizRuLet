@@ -114,15 +114,6 @@ namespace QuizRuLet.API.Controllers
             return Ok(moduleId);           
         }      
         
-        // PUT: Modules/id
-        [HttpPut("{moduleId:guid}")]  // TODO validation
-        public async Task<ActionResult<Guid>> UpdateModule(Guid moduleId, [FromBody] ModulesRequest request)
-        {
-            var id = await _moduleService.UpdateModule(moduleId, request.Name, request.Description);
-            
-            return Ok(id);
-        }
-        
         // DELETE: Modules/id
         [HttpDelete("{moduleId:guid}")]   // TODO validation
         public async Task<ActionResult<Guid>> DeleteModule(Guid moduleId)

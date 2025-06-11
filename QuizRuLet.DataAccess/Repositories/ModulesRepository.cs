@@ -43,7 +43,7 @@ namespace QuizRuLet.DataAccess.Repositories
         {
             var moduleEntities = await _dbContext.Modules
                 .AsNoTracking()
-                .OrderBy(m => m.Name)
+                // .OrderBy(m => m.Name)
                 .ToListAsync();
 
             return GetDomain(moduleEntities);
@@ -119,6 +119,32 @@ namespace QuizRuLet.DataAccess.Repositories
                 .Where(m => m.Id == id)
                 .ExecuteUpdateAsync(s => s
                     .SetProperty(m => m.Name, name)
+                    .SetProperty(m => m.Description, description)
+                );
+
+            await _dbContext.SaveChangesAsync();
+            
+            return id;
+        }
+        
+        public async Task<Guid> UpdateName(Guid id, string name)
+        {
+            await _dbContext.Modules
+                .Where(m => m.Id == id)
+                .ExecuteUpdateAsync(s => s
+                    .SetProperty(m => m.Name, name)
+                );
+
+            await _dbContext.SaveChangesAsync();
+            
+            return id;
+        }
+        
+        public async Task<Guid> UpdateDescription(Guid id, string description)
+        {
+            await _dbContext.Modules
+                .Where(m => m.Id == id)
+                .ExecuteUpdateAsync(s => s
                     .SetProperty(m => m.Description, description)
                 );
 
