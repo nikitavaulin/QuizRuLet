@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizRuLet.Application", "Qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizRuLet.Infrastrucrture", "QuizRuLet.Infrastrucrture\QuizRuLet.Infrastrucrture.csproj", "{E1E536F4-D572-4AFA-808E-FACDF9D5F067}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizRuLet.Tests", "QuizRuLet.Tests\QuizRuLet.Tests.csproj", "{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,18 @@ Global
 		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Release|x64.Build.0 = Release|Any CPU
 		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Release|x86.ActiveCfg = Release|Any CPU
 		{E1E536F4-D572-4AFA-808E-FACDF9D5F067}.Release|x86.Build.0 = Release|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Debug|x64.Build.0 = Debug|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Debug|x86.Build.0 = Debug|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Release|x64.ActiveCfg = Release|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Release|x64.Build.0 = Release|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Release|x86.ActiveCfg = Release|Any CPU
+		{E6078BF7-3D08-4FDE-85C1-4B34770ED3D7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

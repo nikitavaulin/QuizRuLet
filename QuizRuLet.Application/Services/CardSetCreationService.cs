@@ -2,6 +2,7 @@ using System;
 using System.Reflection;
 using QuizRuLet.Core.Models;
 using QuizRuLet.Core.Abstractions;
+using System.Security.Cryptography.X509Certificates;
 
 namespace QuizRuLet.Application.Services;
 
@@ -19,8 +20,11 @@ public class CardSetCreationService : ICardSetCreationService
 
         foreach (var pair in pairs)
         {
-            var card = GetCard(pair, pairSeparator);    // TODO VALIDATION
-            cards.Add(card);
+            if (!string.IsNullOrEmpty(pair))
+            {
+                var card = GetCard(pair, pairSeparator);    // TODO VALIDATION
+                cards.Add(card);
+            }
         }
 
         return cards;
