@@ -8,5 +8,5 @@ namespace QuizRuLet.API.Contracts
         string Name,
         string Description,
         int Progress
-    );
+    );    
 }

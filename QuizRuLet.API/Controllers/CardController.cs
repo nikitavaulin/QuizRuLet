@@ -43,5 +43,12 @@ namespace QuizRuLet.API.Controllers
             await _learningModuleService.UpdateLearningFlag(cardId, request.IsLearned);
             return Ok(cardId);
         }
+        
+        [HttpPatch("reset/{moduleId:guid}")]
+        public async Task<ActionResult> ResetCardsInModule([FromRoute] Guid moduleId)
+        {
+            await _learningModuleService.UpdateLearningFlagInModule(moduleId, false);
+            return Ok();
+        }
     }
 }

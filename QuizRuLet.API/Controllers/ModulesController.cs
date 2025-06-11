@@ -20,7 +20,6 @@ namespace QuizRuLet.API.Controllers
 {
     [ApiController]
     [Route("modules")]
-    // [Authorize]
     [Authorize(Roles = "User")]
     public class ModulesController : ControllerBase
     {
@@ -82,6 +81,19 @@ namespace QuizRuLet.API.Controllers
             return Ok(response);
         }
         
+        [HttpGet("statistic/{moduleId:guid}")]
+        public async Task<ActionResult<ModuleStatisticResponse>> GetModuleStatistic([FromRoute] Guid moduleId)
+        {
+            var statistic = await _progressService.GetModuleStatisticInfo(moduleId);
+            var response = new ModuleStatisticResponse(
+                statistic.Progress,
+                statistic.CountCards,
+                statistic.CountLearned,
+                statistic.CountCards - statistic.CountLearned
+            );
+            
+            return Ok(response);
+        }
         
         [HttpPost]  // TODO validation
         public async Task<ActionResult<Guid>> CreateModule([FromBody] ModuleCreationRequest request)
@@ -119,6 +131,7 @@ namespace QuizRuLet.API.Controllers
             
             return Ok(moduleId);
         }
+        
         
         
 

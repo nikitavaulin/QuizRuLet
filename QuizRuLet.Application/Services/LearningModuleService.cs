@@ -19,6 +19,12 @@ public class LearningModuleService : ILearningModuleService
     {
         return await _cardsRepository.UpdateLearningFlag(cardId, isLearned);
     }
+    
+    public async Task<Guid> UpdateLearningFlagInModule(Guid moduleId, bool isLearned)
+    {
+        return await _cardsRepository.UpdateLearningFlagInModule(moduleId, isLearned);
+        // return Guid.NewGuid();
+    }
 
     public async Task<List<Card>> GetCards(Guid moduleId, bool isLearned)
     {

@@ -48,7 +48,7 @@ public class UserService : IUserService
         return await _userRepository.Delete(id);
     }
 
-    public async Task<(bool Success, string Error)> Register(string login, string password)   // TODO
+    public async Task<(bool Success, string Error)> Register(string login, string password)   
     {
         var error = string.Empty;
         var result = false;

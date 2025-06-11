@@ -191,6 +191,25 @@ namespace QuizRuLet.DataAccess.Repositories
 
             return cardId;
         }
+        
+        /// <summary>
+        /// Обновление флага у всех карточек в модуле
+        /// </summary>
+        /// <param name="moduleId"></param>
+        /// <param name="isLearned"></param>
+        /// <returns></returns>
+        public async Task<Guid> UpdateLearningFlagInModule(Guid moduleId, bool isLearned)
+        {
+            await _dbContext.Cards
+                .Where(c => c.ModuleId == moduleId)
+                .ExecuteUpdateAsync(s => s
+                    .SetProperty(c => c.IsLearned, isLearned)
+                );
+                
+            await _dbContext.SaveChangesAsync();
+
+            return moduleId;   
+        }
 
         public async Task<Guid> Create(Card card, Guid moduleId)
         {
