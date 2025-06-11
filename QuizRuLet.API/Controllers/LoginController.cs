@@ -16,17 +16,19 @@ namespace QuizRuLet.API.Controllers
             _userService = userService;
         }
         
-        // public async Task<IResult> Login(UserLoginRequest request, HttpContext context)          // VALID????????
         [HttpPost]
         public async Task<ActionResult> Login(UserLoginRequest request)          // VALID????????
         {
-            // проверить login и пароль
             
-            // создание токена
-            var token = await _userService.Login(request.login, request.password);
+            var response = await _userService.Login(request.login, request.password);
+
+            if (!string.IsNullOrEmpty(response.Error))
+            {
+                return BadRequest(response.Error);
+            }
 
             // сохранение в куки
-            Response.Cookies.Append("tasty-cookies", token);            // fix 
+            Response.Cookies.Append("tasty-cookies", response.Token);
             
             return Ok();
         }

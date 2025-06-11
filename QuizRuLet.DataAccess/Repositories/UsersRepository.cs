@@ -27,12 +27,17 @@ namespace QuizRuLet.DataAccess.Repositories
             return user;
         }
 
-        private User GetDomain(UserEntity userEntities)
+        private static User? GetDomain(UserEntity? userEntity)
         {
+            if (userEntity is null)
+            {
+                return null;
+            }
+            
             var user = User.Create(
-                userEntities.Id,
-                userEntities.Login,
-                userEntities.PasswordHash
+                userEntity.Id,
+                userEntity.Login,
+                userEntity.PasswordHash
             ).User;
 
             return user;

@@ -50,50 +50,64 @@ public class UserService : IUserService
 
     public async Task<(bool Success, string Error)> Register(string login, string password)   // TODO
     {
-        // VALIDATION!
         var error = string.Empty;
         var result = false;
             
         var isUserExist = await _userRepository.IsUserLoginExist(login);
     
-        if (isUserExist)
+        if (isUserExist)                                                                     // есть ли такой юзер
         {
             error = "Пользователь с таким логином уже зарегистрирован";
         }
-        else if (string.IsNullOrEmpty(password)                                              // FIIIIIXX
-            || password.Length < User.MIN_PASSWORD_LENGTH     // валидация пароля
+        else if (string.IsNullOrEmpty(password)                                              // валидация пароля
+            || password.Length < User.MIN_PASSWORD_LENGTH     
             || password.Length > User.MAX_PASSWORD_LENGTH)     
         {
             error = $"Длина пароля должна быть от {User.MIN_PASSWORD_LENGTH} до {User.MAX_PASSWORD_LENGTH} символов"; 
         }
-        else
+        else    
         {
             var hashedPassword = _passwordHasher.Generate(password);
 
-            var user = User.Create(Guid.NewGuid(), login, hashedPassword).User;
-
-            await _userRepository.Create(user);
-
-            result = true;
+            var userCreationResult = User.Create(Guid.NewGuid(), login, hashedPassword);
+            error = userCreationResult.Error;
+            
+            if (string.IsNullOrEmpty(error))                                 // если всё успешно
+            {
+                await _userRepository.Create(userCreationResult.User);
+                result = true;
+            }
         }
 
         return (result, error);
 
     }
 
-    public async Task<string> Login(string login, string password)
+    public async Task<(string Token, string Error)> Login(string login, string password)
     {
-        var user = await _userRepository.GetByLogin(login);         // МОЖЕТ БЫТЬ NULL - FIX
-
-        var result = _passwordHasher.Verify(password, user.PasswordHash);   // верификация пароля
+        var token = "";
+        var error = "";
         
-        if (result == false)
+        var user = await _userRepository.GetByLogin(login); 
+        
+        if (user is null)
         {
-            throw new Exception("Unauthorized");             // FIX
+            error = "Пользователь не зарегистрирован в системе";
         }
-
-        var token = _jwtProvider.GenerateToken(user);
+        else
+        {
+            var result = _passwordHasher.Verify(password, user.PasswordHash);   // верификация пароля
         
-        return token;
+            if (result == false)    // неверный пароль
+            {
+                error = "Неверный пароль";
+            }
+            else
+            {
+                token = _jwtProvider.GenerateToken(user);   // создание токена, если всё успешно
+            }
+        }
+        
+        return (token, error);
     }
 }
