@@ -9,12 +9,13 @@ using QuizRuLet.Core.Abstractions;
 
 namespace QuizRuLet.Infrastrucrture;
 
+
 public class AiApiProvider : IAiApiProvider
 {
     private static readonly string API_KEY = "sk-DI75n0w7xYelb6g1ccGMvBkw8ctjZdIL5jHg4BI0Z7moILU4Wut4v68pLTaI";     // TODO
     private static readonly string API_URL = "https://api.gen-api.ru/api/v1/networks/claude-4";
 
-    public static async Task<(string Result, string Error)> SendRequestAndGetResult(string userMessage)
+    public async Task<(string Result, string Error)> SendRequestAndGetResult(string userMessage)
     {
         // Отправляем запрос и получаем request_id
         var response = await SendRequest(userMessage);
@@ -25,14 +26,14 @@ public class AiApiProvider : IAiApiProvider
         if (string.IsNullOrEmpty(error))    // если ответ получен успешно
         {
             var contentResponse = GetContentFromJson(jsonResult);     // парсинг json
-            
-            return !string.IsNullOrEmpty(contentResponse.Error) 
-                ? ("", contentResponse.Error) 
-                : (contentResponse.Result, ""); 
+
+            return !string.IsNullOrEmpty(contentResponse.Error)
+                ? ("", contentResponse.Error)
+                : (contentResponse.Result, "");
         }
 
         return ("", error);
-        
+
     }
     // public static async Task<(string Result, string Error)> SendRequestAndGetResult(string userMessage)
     // {
@@ -41,13 +42,13 @@ public class AiApiProvider : IAiApiProvider
 
     //     var error = response.Error;
     //     var responseResult = response.Response;
-        
+
     //     if (!string.IsNullOrEmpty(error))
     //     {
     //         return ("", error);
     //     }
-        
-        
+
+
     //     var initialJson = System.Text.Json.JsonDocument.Parse(responseResult);
     //     string requestId = initialJson
     //         .RootElement
@@ -57,12 +58,12 @@ public class AiApiProvider : IAiApiProvider
 
     //     // Получаем результат
     //     var result = await GetResult(requestId);
-        
+
     //     return (result, error);
     // }
 
 
-    public static async Task<(string Response, string Error)> SendRequest(string prompt)
+    public async Task<(string Response, string Error)> SendRequest(string prompt)
     {
         using (HttpClient client = new HttpClient())
         {
@@ -94,7 +95,7 @@ public class AiApiProvider : IAiApiProvider
                 // POST запрос
                 client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", API_KEY);
                 HttpResponseMessage response = await client.PostAsync(API_URL, content);
-                
+
                 // ответ
                 string responseBody = await response.Content.ReadAsStringAsync();
 
@@ -113,8 +114,8 @@ public class AiApiProvider : IAiApiProvider
             }
         }
     }
-    
-    public static (string Result, string Error) GetContentFromJson(string json)
+
+    public (string Result, string Error) GetContentFromJson(string json)
     {
         var error = string.Empty;
         var result = string.Empty;
@@ -128,7 +129,7 @@ public class AiApiProvider : IAiApiProvider
                 .GetProperty("message")
                 .GetProperty("content")
                 .GetString() ?? throw new Exception("Не удалось извлечь контент");
-                
+
         }
         catch (Exception ex)
         {
@@ -136,11 +137,11 @@ public class AiApiProvider : IAiApiProvider
         }
 
         return (result, error);
-        
+
     }
-    
-    
-    
+
+
+
     // public static async Task<string> CheckRequestStatus(string requestId)
     // {
     //     using (HttpClient client = new HttpClient())
@@ -176,8 +177,8 @@ public class AiApiProvider : IAiApiProvider
     //         }
     //     }
     // }    
-    
-    
+
+
     // public static async Task<string> GetResult(string requestId)
     // {
     //     string statusResponse = await CheckRequestStatus(requestId);

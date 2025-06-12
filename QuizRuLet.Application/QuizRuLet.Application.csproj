@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QuizRuLet.Core\QuizRuLet.Core.csproj" />
+    <ProjectReference Include="..\QuizRuLet.Infrastrucrture\QuizRuLet.Infrastrucrture.csproj" />
   </ItemGroup>
 
 </Project>

@@ -14,3 +14,5 @@ C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Application\ob
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Application\obj\Debug\net9.0\refint\QuizRuLet.Application.dll
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Application\obj\Debug\net9.0\QuizRuLet.Application.pdb
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Application\obj\Debug\net9.0\ref\QuizRuLet.Application.dll
+c:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Application\bin\Debug\net9.0\QuizRuLet.Infrastrucrture.dll
+c:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Application\bin\Debug\net9.0\QuizRuLet.Infrastrucrture.pdb

@@ -49,6 +49,11 @@ services.AddScoped<ICardService, CardService>();
 services.AddScoped<ILearningModuleService, LearningModuleService>();
 services.AddScoped<IModuleProgressService, ModuleProgressService>();
 services.AddScoped<ICardSetCreationService, CardSetCreationService>();
+services.AddScoped<ICardSetAiCreationService, CardSetAiCreationService>();
+
+// ai
+services.AddScoped<IAiApiProvider, AiApiProvider>();
+
 
 // auth
 services.AddScoped<IJwtProvider, JwtProvider>();

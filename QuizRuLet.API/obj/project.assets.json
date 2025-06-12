@@ -2957,7 +2957,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "QuizRuLet.Core": "1.0.0"
+          "QuizRuLet.Core": "1.0.0",
+          "QuizRuLet.Infrastrucrture": "1.0.0"
         },
         "compile": {
           "bin/placeholder/QuizRuLet.Application.dll": {}
@@ -8104,11 +8105,11 @@
             "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Application\\QuizRuLet.Application.csproj": {
               "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Application\\QuizRuLet.Application.csproj"
             },
-            "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj": {
-              "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj"
+            "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj": {
+              "projectPath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj"
             },
-            "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\QuizRuLet.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\QuizRuLet.DataAccess.csproj"
+            "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\QuizRuLet.DataAccess.csproj": {
+              "projectPath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\QuizRuLet.DataAccess.csproj"
             },
             "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Infrastrucrture\\QuizRuLet.Infrastrucrture.csproj": {
               "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Infrastrucrture\\QuizRuLet.Infrastrucrture.csproj"

@@ -3512,7 +3512,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
-          "QuizRuLet.Core": "1.0.0"
+          "QuizRuLet.Core": "1.0.0",
+          "QuizRuLet.Infrastrucrture": "1.0.0"
         },
         "compile": {
           "bin/placeholder/QuizRuLet.Application.dll": {}
@@ -9410,8 +9411,8 @@
             "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\QuizRuLet.API.csproj": {
               "projectPath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\QuizRuLet.API.csproj"
             },
-            "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Application\\QuizRuLet.Application.csproj": {
-              "projectPath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Application\\QuizRuLet.Application.csproj"
+            "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Application\\QuizRuLet.Application.csproj": {
+              "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Application\\QuizRuLet.Application.csproj"
             },
             "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj": {
               "projectPath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj"
