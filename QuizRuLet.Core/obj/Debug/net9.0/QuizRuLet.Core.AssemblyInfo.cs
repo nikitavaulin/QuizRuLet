@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QuizRuLet.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e325c5ae572f2cb4cede07835db17327b5872384")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14e4a9dea72535320a5da6d581130f58a975b579")]
 [assembly: System.Reflection.AssemblyProductAttribute("QuizRuLet.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QuizRuLet.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

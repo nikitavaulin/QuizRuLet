@@ -1,6 +1,6 @@
-﻿using QuizRuLet.Application.Services;
-using QuizRuLet.Core.Abstractions;
-using QuizRuLet.Core.Models;
+﻿
+
+using System.Threading.Tasks;
 
 namespace QuizRuLet.Tests;
 
@@ -31,5 +31,22 @@ public sealed class BuisnessLogicTests
         Assert.AreEqual(expectFront2, result[1].FrontSide);
         Assert.AreEqual(expectBack1, result[0].BackSide);
         Assert.AreEqual(expectBack2, result[1].BackSide);
+    }
+    
+    
+    [TestMethod]
+    public async Task SendRequest_AiApiProvider_ReturnString()
+    {
+        //arrange
+        var prompt = "Привет! Если ты меня понимаешь, скажи привет";
+
+        //act
+        var response = (await AiApiProvider.SendRequest(prompt));
+        var result = response.Response;
+        var error = response.Error;
+
+        //assert
+        Assert.IsTrue(string.IsNullOrEmpty(error));
+        Assert.IsTrue(!string.IsNullOrEmpty(result));
     }
 }

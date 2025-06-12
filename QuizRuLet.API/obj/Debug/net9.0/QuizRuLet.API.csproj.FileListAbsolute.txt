@@ -287,3 +287,4 @@ C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\bin\Debug\
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\bin\Debug\net9.0\QuizRuLet.Infrastrucrture.dll
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\bin\Debug\net9.0\QuizRuLet.Infrastrucrture.pdb
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\bin\Debug\net9.0\RestSharp.dll
