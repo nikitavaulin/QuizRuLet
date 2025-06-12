@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "redc6EEHuEU=",
+  "dgSpecHash": "DWD6nfvSiCI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Tests\\QuizRuLet.Tests.csproj",
+  "projectFilePath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Tests\\QuizRuLet.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrvau\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

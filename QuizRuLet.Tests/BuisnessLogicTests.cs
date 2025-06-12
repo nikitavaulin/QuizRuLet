@@ -41,8 +41,8 @@ public sealed class BuisnessLogicTests
         var prompt = "Привет! Если ты меня понимаешь, скажи привет";
 
         //act
-        var response = (await AiApiProvider.SendRequest(prompt));
-        var result = response.Response;
+        var response = (await AiApiProvider.SendRequestAndGetResult(prompt));
+        var result = response.Result;
         var error = response.Error;
 
         //assert
