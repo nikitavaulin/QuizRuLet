@@ -1,0 +1,24 @@
+{
+  "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "login": "user123",
+  "modules": [
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "name": "Основы JavaScript",
+      "description": "Изучение синтаксиса и базовых конструкций языка",
+      "progress": 75
+    },
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afb1",
+      "name": "Работа с DOM",
+      "description": "Манипуляции с HTML-элементами через JavaScript",
+      "progress": 40
+    },
+    {
+      "id": "3fa85f64-5717-4562-b3fc-2c963f66afb2",
+      "name": "HTTP и API",
+      "description": "Запросы к серверу, работа с REST API",
+      "progress": 100
+    }
+  ]
+}

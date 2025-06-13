@@ -1,0 +1,301 @@
+/* Основные переменные и стили для body */
+:root {
+  --bs-success-rgb: 94, 225, 82; /* Зеленый */
+  --bs-secondary-rgb: 172, 168, 168; /* Серый */
+  --bs-dark-rgb: 56, 54, 54; /* Темный фон компонентов */
+  --bs-body-color: #ACA8A8; /* Основной цвет текста */
+  --bs-body-bg: #383636; /* Основной фон страницы */
+  --bs-border-color: #716F6F; /* Цвет границ */
+  --sidebar-width: 220px; /* Ширина сайдбара */
+}
+
+body {
+  font-family: 'Inter', sans-serif; /* Убедитесь, что шрифт загружен */
+}
+
+/* Стили для сайдбара */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0; /* Убираем паддинг, логотип будет внутри */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  background-color: var(--bs-body-bg);
+  border-right: 1px solid var(--bs-border-color);
+  width: var(--sidebar-width); /* Фиксированная ширина */
+}
+
+/* Контейнер для прокручиваемого содержимого сайдбара */
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: 100vh; /* Высота на весь экран */
+  padding-top: 1rem; /* Отступ сверху */
+  overflow-x: hidden;
+  overflow-y: auto; /* Прокрутка если контента много */
+}
+
+/* Логотип в сайдбаре */
+.quizrulet-brand-sidebar {
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: .5rem 1rem;
+  color: var(--bs-body-color);
+  text-decoration: none;
+  display: block; /* Чтобы занимал всю ширину */
+  text-align: center; /* Центрирование текста */
+}
+.quizrulet-brand-sidebar .text-success { color: #5ee152 !important; }
+.quizrulet-brand-sidebar .text-secondary { color: #ACA8A8 !important; }
+
+/* Ссылки навигации в сайдбаре */
+.sidebar .nav-link {
+  font-weight: 500;
+  color: var(--bs-body-color); /* Цвет ссылок */
+  padding: .75rem 1.5rem; /* Отступы */
+}
+
+.sidebar .nav-link .fa,
+.sidebar .nav-link .fas {
+  margin-right: 8px; /* Отступ для иконок */
+}
+
+.sidebar .nav-link:hover {
+  color: #fff; /* Цвет при наведении */
+  background-color: #444; /* Фон при наведении */
+}
+
+.sidebar .nav-link.active {
+  color: #fff; /* Цвет активной ссылки */
+  background-color: #555; /* Фон активной ссылки */
+}
+
+/* Основной контент */
+main {
+  background-color: var(--bs-body-bg);
+  padding-left: var(--sidebar-width); /* Отступ слева равный ширине сайдбара */
+  min-height: 100vh;
+}
+
+/* Верхняя панель */
+.top-bar {
+  border-bottom: 1px solid var(--bs-border-color);
+  background-color: var(--bs-body-bg);
+  padding: 1rem 1.5rem;
+}
+
+/* Форма поиска */
+.search-form {
+  max-width: 300px; /* Ограничение ширины */
+}
+
+/* Поле ввода поиска */
+.form-control-dark {
+  background-color: #716F6F;
+  border: 1px solid #000;
+  color: #fff;
+}
+.form-control-dark::placeholder {
+  color: #ACA8A8;
+}
+.form-control-dark:focus {
+  border-color: #5ee152;
+  box-shadow: 0 0 0 0.25rem rgba(94, 225, 82, 0.25);
+  background-color: #716F6F;
+  color: #fff;
+}
+
+/* Кнопка поиска */
+.btn-search {
+  background-color: #716F6F;
+  border: 1px solid #000;
+  color: #ACA8A8;
+}
+.btn-search:hover {
+  background-color: #555;
+  border-color: #000;
+  color: #fff;
+}
+
+/* Кнопка "Создать модуль" */
+.btn-create {
+  border: 1px solid var(--bs-border-color);
+  color: #ACA8A8;
+  background-color: var(--bs-body-bg);
+}
+.btn-create:hover {
+  background-color: #444;
+  border-color: var(--bs-border-color);
+  color: #fff;
+}
+.btn-create svg path {
+  fill: #ACA8A8; /* Цвет иконки */
+}
+.btn-create:hover svg path {
+  fill: #fff;
+}
+
+/* Список модулей */
+.module-list {
+  padding-right: 1.5rem; /* Добавим отступ справа для контента */
+}
+
+/* Карточка модуля */
+.module-card {
+  background-color: var(--bs-body-bg);
+  border: none;
+  border-bottom: 2px solid var(--bs-border-color);
+  border-radius: 0; /* Убираем скругление для вида списка */
+  color: var(--bs-body-color);
+  padding: 1rem 0; /* Вертикальные отступы */
+  margin-bottom: 0.5rem; /* Небольшой отступ снизу */
+}
+
+/* Название модуля */
+.module-title {
+  flex-grow: 1; /* Занимает доступное пространство */
+  margin-right: 1rem; /* Отступ справа */
+}
+.module-name-link {
+  font-size: 1.5rem;
+  color: var(--bs-body-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+.module-name-link:hover {
+  color: #fff;
+}
+
+/* Информация о прогрессе */
+.module-info {
+  font-size: 0.9rem; /* Уменьшим шрифт */
+  white-space: nowrap; /* Предотвращаем перенос */
+}
+.progress {
+  height: 8px; /* Уменьшим высоту прогресс-бара */
+  background-color: #716F6F;
+  border-radius: 4px; /* Скруглим прогресс-бар */
+}
+.progress-bar {
+  background-color: #5ee152;
+}
+
+/* Действия с модулем (меню ...) */
+.module-actions {
+  margin-left: 1rem; /* Отступ слева */
+}
+
+/* Кнопка меню (...) */
+.btn-menu {
+  color: var(--bs-body-color);
+  padding: 0.3rem 0.6rem; /* Уменьшим паддинг */
+  background: transparent;
+  border: none;
+}
+.btn-menu:hover, .btn-menu:focus {
+  color: #fff;
+  background-color: #444;
+  box-shadow: none; /* Убираем тень при фокусе */
+}
+.btn-menu i {
+  font-size: 1rem; /* Размер иконки */
+}
+
+/* Выпадающее меню */
+.dropdown-menu {
+  background-color: #383636;
+  border: 1px solid #716F6F;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); /* Тень */
+}
+.dropdown-item {
+  color: #ACA8A8;
+  font-size: 0.9rem;
+  padding: .5rem 1rem; /* Отступы пунктов */
+}
+.dropdown-item i {
+  width: 16px; /* Фиксированная ширина для иконок */
+  text-align: center;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #444;
+  color: #fff;
+}
+.dropdown-divider {
+  border-top-color: var(--bs-border-color); /* Цвет разделителя */
+}
+.dropdown-item.text-danger:hover,
+.dropdown-item.text-danger:focus {
+  background-color: #dc3545; /* Красный фон для удаления */
+  color: #fff;
+}
+
+/* Адаптивность */
+@media (max-width: 767.98px) {
+  .sidebar {
+      position: static; /* Убираем фиксацию на мобильных */
+      width: 100%;
+      height: auto;
+      border-right: none;
+      border-bottom: 1px solid var(--bs-border-color);
+  }
+  main {
+      padding-left: 0; /* Убираем отступ */
+  }
+  .top-bar {
+      flex-direction: column; /* Элементы в столбец */
+      align-items: stretch !important; /* Растягиваем */
+  }
+  .search-form {
+      max-width: none; /* На всю ширину */
+      margin-bottom: 1rem !important;
+  }
+  .module-card {
+      flex-direction: column; /* Элементы в столбец */
+      align-items: flex-start !important; /* Выравнивание по левому краю */
+  }
+  .module-info {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem !important;
+      margin-right: 0 !important;
+  }
+  .module-actions {
+      margin-left: 0;
+      align-self: flex-end; /* Кнопку меню вправо */
+  }
+}
+
+.form-control::placeholder {
+  color: var(--bs-border-color);
+}
+
+.btn-next-modal {
+    background-color: #5ee152;
+}
+
+.btn-next-modal,
+.btn-back-modal {
+    border-radius: 5px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-back-modal {
+    background-color: #716F6F;
+}
+
+.btn-back-modal:hover {
+    background-color: darkgrey; /* Темнее оригинального */
+    transform: scale(1.05);
+}
+
+.btn-next-modal:hover {
+    background-color: darkgreen; /* Темнее оригинального */
+    transform: scale(1.05);
+}
+
+#modal-universal {
+  
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
+}

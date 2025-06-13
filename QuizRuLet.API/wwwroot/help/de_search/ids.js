@@ -1,0 +1,30 @@
+DR_EXPLAIN = DR_EXPLAIN || {};
+DR_EXPLAIN.searchIndex = DR_EXPLAIN.searchIndex || {};
+DR_EXPLAIN.searchIndex.ids = {
+	"1": ["Начальная... Требуется платная лицензия!", "index.htm", []],
+	"2": ["Анно... Требуется платная лицензия!", "annotatsiya.htm", []],
+	"3": ["Содер... Требуется платная лицензия!", "soderzhanie.htm", []],
+	"4": ["1 ВВЕ... Требуется платная лицензия!", "vvedenie.htm", []],
+	"5": ["1.1 Область... Требуется платная лицензия!", "oblast_primeneniya.htm", [3]],
+	"6": ["1.2 Краткое опис... Требуется платная лицензия!", "kratkoe_opisanie_vozmozhnostej.htm", [3]],
+	"7": ["1.3 Уровень подго... Требуется платная лицензия!", "uroven_podgotovki_polzovatelya.htm", [3]],
+	"8": ["1.4 Перечень эксплуат... Требуется платная лицензия!", "perechen_ehkspluatatsionnoj_dokumentatsii.htm", [3]],
+	"9": ["2 НАЗНАЧЕНИЕ И У... Требуется платная лицензия!", "naznachenie_i_usloviya_primeneniya.htm", []],
+	"10": ["2.1 Виды деятел... Требуется платная лицензия!", "vidy_deyatelnosti__funktsii.htm", [4]],
+	"11": ["2.2 Программные и аппара... Требуется платная лицензия!", "programmnye_i_apparatnye_trebovaniya_k_sisteme.htm", [4]],
+	"12": ["3 ПОДГОТОВ... Требуется платная лицензия!", "podgotovka_k_rabote.htm", []],
+	"13": ["3.1 Состав и содержание дис... Требуется платная лицензия!", "sostav_i_soderzhanie_distributivnogo_nositelya_dannykh.htm", [5]],
+	"14": ["3.2 Порядок загрузк... Требуется платная лицензия!", "poryadok_zagruzki_dannykh_i_programm.htm", [5]],
+	"15": ["3.3 Порядок проверк... Требуется платная лицензия!", "poryadok_proverki_rabotosposobnosti.htm", [5]],
+	"16": ["4 ОПИСАНИ... Требуется платная лицензия!", "opisanie_operatsij.htm", []],
+	"17": ["4.1 Создан... Требуется платная лицензия!", "sozdanie_akkaunta.htm", [6]],
+	"18": ["4.2 Авторизаци... Требуется платная лицензия!", "avtorizatsiya_polzovatelya.htm", [6]],
+	"19": ["4.3 Создание ново... Требуется платная лицензия!", "sozdanie_novogo_uchebnogo_modulya.htm", [6]],
+	"20": ["4.4 Редактировани... Требуется платная лицензия!", "redaktirovanie_uchebnogo_modulya.htm", [6]],
+	"21": ["4.5 Удаление у... Требуется платная лицензия!", "udalenie_uchebnogo_modulya.htm", [6]],
+	"22": ["4.6 Переход к изуче... Требуется платная лицензия!", "perekhod_k_izucheniyu_uchebnogo_modulya.htm", [6]],
+	"23": ["4.7 Импорт данных при за... Требуется платная лицензия!", "import_dannykh_pri_zapolnenii_uchebnogo_modulya.htm", [6]],
+	"24": ["4.8 Добавление и удал... Требуется платная лицензия!", "dobavlenie_i_udalenie_uchebnykh_kartochek.htm", [6]],
+	"25": ["5 АВАРИЙНЫ... Требуется платная лицензия!", "avarijnye_situatsii.htm", []],
+	"26": ["6 РЕКОМЕНДАЦИ... Требуется платная лицензия!", "rekomendatsii_po_osvoeniyu.htm", []]
+};

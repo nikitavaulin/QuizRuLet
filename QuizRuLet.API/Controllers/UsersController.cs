@@ -18,7 +18,6 @@ namespace QuizRuLet.API.Controllers
         private readonly IUserService _userService;
         private readonly IModuleProgressService _progressService;
 
-
         public UsersController(
             IUserService userService,
             IModuleService moduleService,
@@ -40,7 +39,7 @@ namespace QuizRuLet.API.Controllers
         }
 
         [HttpGet("{userId:guid}")]
-        public async Task<ActionResult<UserWithModulesResponse>> GetUserProfileWithModulesById(Guid userId)
+        public async Task<ActionResult<UserWithModulesResponse>> GetUserProfileWithModulesById([FromRoute] Guid userId)
         {
             var user = await _userService.GetUserById(userId);
             
@@ -49,18 +48,31 @@ namespace QuizRuLet.API.Controllers
                 return BadRequest("Пользователя не существует");
             }
 
-            var modules = (await _moduleService.GetUserModules(userId))
-                .Select(async m => new ModulesResponse(
+            var modules = await _moduleService.GetUserModules(userId);
+
+            var moduleTasks = modules.Select(async m =>
+            {
+                var progress = await _progressService.GetModuleProgressPercent(m.Id);
+                return new ModulesResponse(
                     m.Id,
                     m.Name,
                     m.Description,
-                    await _progressService.GetModuleProgressPercent(m.Id)));
-            var moduleList = Task.WhenAll(modules).Result.ToList();
-
+                    progress);
+            });
+            var moduleList = (await Task.WhenAll(moduleTasks)).ToList();
             var response = new UserWithModulesResponse(userId, user.Login, moduleList);
 
             return Ok(response);
         }
+        
+            // var modules = (await _moduleService.GetUserModules(userId))
+            //     .Select(async m => new ModulesResponse(
+            //         m.Id,
+            //         m.Name,
+            //         m.Description,
+            //         await _progressService.GetModuleProgressPercent(m.Id)));
+            // var moduleList = Task.WhenAll(modules).Result.ToList();
+
         
         // [HttpGet("{userName:string}")]
         // public async Task<ActionResult<UserWithModulesResponse>> GetUserProfileWithModules([FromRoute] string userName)

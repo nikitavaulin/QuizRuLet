@@ -1,0 +1,75 @@
+/* Стили для страницы входа */
+body {
+    background-color: #383636; /* Темно-серый фон */
+    color: #ACA8A8; /* Светло-серый текст */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Позволяет центрировать контент */
+    align-items: center;
+    justify-content: center; /* Центрирует карточку */
+    font-family: 'Inter', sans-serif; /* Убедитесь, что шрифт загружен, если используете fonts.css */
+}
+
+/* Стилизация карточки формы */
+.card {
+    background-color: #383636; /* Фон карточки */
+    border: 3px solid #5ee152; /* Зеленая рамка */
+    border-radius: 1.5rem; /* Скругленные углы */
+    color: #ACA8A8;
+}
+
+/* Стилизация полей ввода */
+.form-control {
+    background-color: #716F6F; /* Фон поля ввода */
+    border: 1px solid #000000; /* Черная рамка поля */
+    color: #ffffff; /* Белый текст в поле */
+}
+
+/* Стилизация полей ввода при фокусе */
+.form-control:focus {
+    background-color: #716F6F;
+    border-color: #5ee152; /* Зеленая рамка при фокусе */
+    box-shadow: 0 0 0 0.25rem rgba(94, 225, 82, 0.25); /* Тень при фокусе */
+    color: #ffffff;
+}
+
+/* Стилизация меток полей */
+.form-label {
+    color: #ACA8A8; /* Цвет метки */
+}
+
+/* Стилизация кнопки входа */
+.btn-custom-login {
+    background-color: #000000; /* Черный фон кнопки */
+    color: #ffffff; /* Белый текст кнопки */
+    border: none;
+}
+
+/* Стилизация кнопки входа при наведении */
+.btn-custom-login:hover {
+    background-color: #222222; /* Темнее при наведении */
+    color: #ffffff;
+}
+
+/* Стилизация логотипа */
+.quizrulet-brand {
+    font-size: 2.5rem; /* Размер шрифта логотипа */
+    font-weight: 500;
+    margin-bottom: 2rem; /* Отступ снизу */
+}
+
+/* Цвета текста в логотипе */
+.quizrulet-brand .text-success { color: #5ee152 !important; } /* Зеленый текст */
+.quizrulet-brand .text-secondary { color: #ACA8A8 !important; } /* Серый текст */
+
+/* Стилизация ссылки на регистрацию */
+.register-link a {
+    color: #ACA8A8;
+    text-decoration: none;
+}
+
+/* Стилизация ссылки на регистрацию при наведении */
+.register-link a:hover {
+    color: #ffffff;
+}
+

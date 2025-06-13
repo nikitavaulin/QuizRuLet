@@ -1,0 +1,87 @@
+.quizrulet-brand-sidebar {
+    width: fit-content !important;
+}
+
+.close-btn{
+    width: fit-content;
+    position: absolute;
+    right: 0%;
+}
+
+.number-of-pages{
+    width: fit-content  ;
+    font-size: 24px;
+}
+
+.card-container{
+    height: 500px;
+    
+}
+
+.content {
+    background-color: #716F6F;
+    height: 100%;
+    border-radius: 15px;
+    font-size: 24px;
+    color: white;
+}
+
+.svg-button {
+    background-color: white;
+    
+    border-radius: 50%;
+}
+
+.card-flip {
+    perspective: 1000px;
+    height: 100%;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+
+.flip-toggle:checked + .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-inner {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    background-color: #716F6F;
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #444;
+}
+
+.button-grey {
+    cursor: pointer;
+}
+
+.btn-back {
+    width: fit-content;
+    position: absolute;
+    left: 0%;
+    height: 4rem;
+    border-radius: 10px;
+    background-color: #716F6F;
+    border: 0px;
+    color: white;
+}

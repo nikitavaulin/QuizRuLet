@@ -1,0 +1,69 @@
+document.addEventListener('DOMContentLoaded', async function () {
+    
+    
+    let allLeanred = false;
+    let countNotLearned = 0;
+    
+    const response = await axios.get('test-gratz.json'); // Добавить ссылку
+    
+    countNotLearned = response.data.countNotLearned;
+    countLearned = response.data.countLearned
+
+    const gratzPartially = `<div class="container d-flex align-items-center min-vh-100 flex-column">
+        <a class="quizrulet-brand-sidebar p-3" href="/">
+            <span class="text-success">Quiz</span><span class="text-secondary">RuLet</span>
+        </a>
+        <a class="close-btn p-3" href="/">
+            <svg width="40" height="40" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M6.81818 1H8.25359L9.44976 1.47619L24.8804 16.8333L25.3589 16.5952L40.4306 1.59524L41.2679 1.11905L41.7464 1H43.3014L44.378 1.35714L49.4019 6.35714L49.8804 7.19048L50 7.78571V9.21429L49.5215 10.4048L34.0909 25.7619L34.3301 26.2381L41.5072 33.381L42.3445 34.3333L49.1627 41.119V41.3571H49.4019L49.8804 42.3095L50 42.7857V44.3333L49.6411 45.2857L49.4019 45.6429H49.1627V45.881H48.9234V46.119H48.6842V46.3571H48.445V46.5952H48.2057V46.8333H47.9665V47.0714H47.7273V47.3095H47.488V47.5476H47.2488V47.7857H47.0096V48.0238H46.7703V48.2619H46.5311V48.5H46.2919V48.7381H46.0526V48.9762H45.8134V49.2143H45.5742V49.4524H45.3349V49.6905H45.0957V49.9286H44.8565V50.1667L43.7799 50.7619L42.823 51L41.3876 50.881L40.1914 50.1667L25.1196 35.1667L24.6411 35.4048L9.80861 50.1667L8.73206 50.7619L7.77512 51L6.33971 50.881L5.38278 50.4048V50.1667H5.14354V49.9286H4.90431V49.6905H4.66507V49.4524H4.42584V49.2143H4.1866V48.9762H3.94737V48.7381H3.70813V48.5H3.4689V48.2619H3.22967V48.0238H2.99043V47.7857H2.7512V47.5476H2.51196V47.3095H2.27273V47.0714L1.79426 46.8333L0.837321 45.881V45.6429H0.598086L0.119617 44.6905L0 44.2143V42.6667L0.358852 41.7143L1.43541 40.5238L15.9091 26.119L15.1914 25.2857L0.837321 11L0.119617 9.80952L0 9.33333V7.78571L0.358852 6.83333L1.43541 5.64286L5.50239 1.59524L6.33971 1.11905L6.81818 1Z"
+                    fill="#716F6F" />
+            </svg>
+        </a>
+        <div class="window p-4">
+
+            <div class="modal-header align-items-center justify-content-center mb-4">
+                <h5 class="modal-title" id="createModuleLabel">Так держать! Отличная работа!</h5>
+            </div>
+            <div class="modal-body align-items-center justify-content-center d-flex p-2 mb-4">
+                <button class="btn-learn-notlearned">Подучить ${countNotLearned} карточек</button>
+                <button class="btn-learn-all">Пройти модуль заново</button>
+            </div>
+            <div class="modal-footer align-items-center justify-content-center">
+                <div class="learned m-1 p-2 align-items-center justify-content-center d-flex">Стопка Знаю ${countLearned}</div>
+                <div class="not-learned m-1 p-2 align-items-center justify-content-center d-flex">Стопка Не Знаю ${countNotLearned}</div>
+            </div>
+        </div>
+    </div>`;
+    const gratzAll = `<div class="container d-flex align-items-center min-vh-100 flex-column">
+        <a class="quizrulet-brand-sidebar p-3" href="/">
+                <span class="text-success">Quiz</span><span class="text-secondary">RuLet</span>
+        </a>
+        <a class="close-btn p-3" href="/">
+                <svg width="40" height="40" viewBox="0 0 50 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6.81818 1H8.25359L9.44976 1.47619L24.8804 16.8333L25.3589 16.5952L40.4306 1.59524L41.2679 1.11905L41.7464 1H43.3014L44.378 1.35714L49.4019 6.35714L49.8804 7.19048L50 7.78571V9.21429L49.5215 10.4048L34.0909 25.7619L34.3301 26.2381L41.5072 33.381L42.3445 34.3333L49.1627 41.119V41.3571H49.4019L49.8804 42.3095L50 42.7857V44.3333L49.6411 45.2857L49.4019 45.6429H49.1627V45.881H48.9234V46.119H48.6842V46.3571H48.445V46.5952H48.2057V46.8333H47.9665V47.0714H47.7273V47.3095H47.488V47.5476H47.2488V47.7857H47.0096V48.0238H46.7703V48.2619H46.5311V48.5H46.2919V48.7381H46.0526V48.9762H45.8134V49.2143H45.5742V49.4524H45.3349V49.6905H45.0957V49.9286H44.8565V50.1667L43.7799 50.7619L42.823 51L41.3876 50.881L40.1914 50.1667L25.1196 35.1667L24.6411 35.4048L9.80861 50.1667L8.73206 50.7619L7.77512 51L6.33971 50.881L5.38278 50.4048V50.1667H5.14354V49.9286H4.90431V49.6905H4.66507V49.4524H4.42584V49.2143H4.1866V48.9762H3.94737V48.7381H3.70813V48.5H3.4689V48.2619H3.22967V48.0238H2.99043V47.7857H2.7512V47.5476H2.51196V47.3095H2.27273V47.0714L1.79426 46.8333L0.837321 45.881V45.6429H0.598086L0.119617 44.6905L0 44.2143V42.6667L0.358852 41.7143L1.43541 40.5238L15.9091 26.119L15.1914 25.2857L0.837321 11L0.119617 9.80952L0 9.33333V7.78571L0.358852 6.83333L1.43541 5.64286L5.50239 1.59524L6.33971 1.11905L6.81818 1Z"
+                        fill="#716F6F" />
+                </svg>
+        </a>
+        <div class="window p-4">
+
+            <div class="modal-header align-items-center justify-content-center mb-4 d-flex">
+                <h5 class="modal-title">Превосходная работа!<br>Вы изучили весь модуль.</h5>
+                
+            </div>
+            <div class="modal-body align-items-center justify-content-center d-flex p-2 mb-4">
+                
+                <button class="btn-learn-all">Пройти модуль заново</button>
+            </div>
+            
+        </div>
+    </div>`;
+
+    if (countNotLearned===0){
+        document.body.insertAdjacentHTML("afterbegin", gratzAll);
+    }
+    else {
+        document.body.insertAdjacentHTML("afterbegin", gratzPartially)
+    }
+})

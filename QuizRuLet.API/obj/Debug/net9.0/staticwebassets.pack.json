@@ -1,0 +1,785 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\card.html",
+      "PackagePath": "staticwebassets\\card.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\fonts\\Gidole-Regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Gidole-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\fonts\\Inter-Regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Inter-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\fonts\\Inter18pt-Regular.woff2",
+      "PackagePath": "staticwebassets\\fonts\\Inter18pt-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\gratz.html",
+      "PackagePath": "staticwebassets\\gratz.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\gratz_all.html",
+      "PackagePath": "staticwebassets\\gratz_all.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\gratz_partially.html",
+      "PackagePath": "staticwebassets\\gratz_partially.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\annotatsiya.htm",
+      "PackagePath": "staticwebassets\\help\\annotatsiya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\avarijnye_situatsii.htm",
+      "PackagePath": "staticwebassets\\help\\avarijnye_situatsii.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\avtorizatsiya_polzovatelya.htm",
+      "PackagePath": "staticwebassets\\help\\avtorizatsiya_polzovatelya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\css\\all.css",
+      "PackagePath": "staticwebassets\\help\\css\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\css\\printed.css",
+      "PackagePath": "staticwebassets\\help\\css\\printed.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\custom.css",
+      "PackagePath": "staticwebassets\\help\\custom.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0030.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0030.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0031.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0031.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0032.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0032.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0033.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0033.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0034.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0034.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0035.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0035.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0036.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0036.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0037.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0037.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0038.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0038.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0039.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0039.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0042.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0042.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0043.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0043.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0045.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0045.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0048.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0048.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu004d.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu004d.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu004e.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu004e.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu004f.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu004f.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0050.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0050.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0051.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0051.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0052.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0052.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0054.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0054.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0057.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0057.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0059.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0059.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0410.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0410.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0411.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0411.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0412.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0412.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0413.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0413.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0414.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0414.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0415.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0415.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0417.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0417.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0418.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0418.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu041a.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu041a.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu041b.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu041b.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu041c.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu041c.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu041d.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu041d.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu041e.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu041e.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu041f.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu041f.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0420.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0420.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0421.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0421.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0422.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0422.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0423.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0423.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0424.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0424.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0425.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0425.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0426.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0426.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0427.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0427.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0428.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu0428.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu042d.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu042d.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu042f.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\0xu042f.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\ids.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\ids.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\prefixes.js",
+      "PackagePath": "staticwebassets\\help\\de_search\\prefixes.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_style.css",
+      "PackagePath": "staticwebassets\\help\\de_style.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\dobavlenie_i_udalenie_uchebnykh_kartochek.htm",
+      "PackagePath": "staticwebassets\\help\\dobavlenie_i_udalenie_uchebnykh_kartochek.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_avtorizatsiya_polzovatelya_control_1.png",
+      "PackagePath": "staticwebassets\\help\\drex_avtorizatsiya_polzovatelya_control_1.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_avtorizatsiya_polzovatelya_control_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_avtorizatsiya_polzovatelya_control_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_avtorizatsiya_polzovatelya_control_3.png",
+      "PackagePath": "staticwebassets\\help\\drex_avtorizatsiya_polzovatelya_control_3.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_avtorizatsiya_polzovatelya_control_4.png",
+      "PackagePath": "staticwebassets\\help\\drex_avtorizatsiya_polzovatelya_control_4.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_avtorizatsiya_polzovatelya_screen.png",
+      "PackagePath": "staticwebassets\\help\\drex_avtorizatsiya_polzovatelya_screen.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_avtorizatsiya_polzovatelya_screen_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_avtorizatsiya_polzovatelya_screen_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_bullet_1.png",
+      "PackagePath": "staticwebassets\\help\\drex_bullet_1.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_bullet_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_bullet_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_bullet_3.png",
+      "PackagePath": "staticwebassets\\help\\drex_bullet_3.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_bullet_4.png",
+      "PackagePath": "staticwebassets\\help\\drex_bullet_4.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_control_1.png",
+      "PackagePath": "staticwebassets\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_control_1.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_control_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_control_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_control_3.png",
+      "PackagePath": "staticwebassets\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_control_3.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_screen.png",
+      "PackagePath": "staticwebassets\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_screen.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_screen_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_dobavlenie_i_udalenie_uchebnykh_kartochek_screen_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_file_list",
+      "PackagePath": "staticwebassets\\help"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_header_custom.png",
+      "PackagePath": "staticwebassets\\help\\drex_header_custom.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_import_dannykh_pri_zapolnenii_uchebnogo_modulya_control_1.png",
+      "PackagePath": "staticwebassets\\help\\drex_import_dannykh_pri_zapolnenii_uchebnogo_modulya_control_1.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_import_dannykh_pri_zapolnenii_uchebnogo_modulya_screen.png",
+      "PackagePath": "staticwebassets\\help\\drex_import_dannykh_pri_zapolnenii_uchebnogo_modulya_screen.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_import_dannykh_pri_zapolnenii_uchebnogo_modulya_screen_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_import_dannykh_pri_zapolnenii_uchebnogo_modulya_screen_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_1.png",
+      "PackagePath": "staticwebassets\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_1.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_1_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_1_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_3.png",
+      "PackagePath": "staticwebassets\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_3.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_4.png",
+      "PackagePath": "staticwebassets\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_control_4.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_screen.png",
+      "PackagePath": "staticwebassets\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_screen.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_screen_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_screen_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_screen_3.png",
+      "PackagePath": "staticwebassets\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_screen_3.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_screen_4.png",
+      "PackagePath": "staticwebassets\\help\\drex_perekhod_k_izucheniyu_uchebnogo_modulya_screen_4.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_redaktirovanie_uchebnogo_modulya_control_1.png",
+      "PackagePath": "staticwebassets\\help\\drex_redaktirovanie_uchebnogo_modulya_control_1.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_redaktirovanie_uchebnogo_modulya_control_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_redaktirovanie_uchebnogo_modulya_control_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_redaktirovanie_uchebnogo_modulya_control_3.png",
+      "PackagePath": "staticwebassets\\help\\drex_redaktirovanie_uchebnogo_modulya_control_3.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_redaktirovanie_uchebnogo_modulya_control_4.png",
+      "PackagePath": "staticwebassets\\help\\drex_redaktirovanie_uchebnogo_modulya_control_4.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_redaktirovanie_uchebnogo_modulya_screen.png",
+      "PackagePath": "staticwebassets\\help\\drex_redaktirovanie_uchebnogo_modulya_screen.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_redaktirovanie_uchebnogo_modulya_screen_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_redaktirovanie_uchebnogo_modulya_screen_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_akkaunta_control_1.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_akkaunta_control_1.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_akkaunta_control_1_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_akkaunta_control_1_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_akkaunta_control_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_akkaunta_control_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_akkaunta_control_3.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_akkaunta_control_3.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_akkaunta_screen.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_akkaunta_screen.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_akkaunta_screen_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_akkaunta_screen_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_akkaunta_screen_3.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_akkaunta_screen_3.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_novogo_uchebnogo_modulya_control_1.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_novogo_uchebnogo_modulya_control_1.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_novogo_uchebnogo_modulya_screen.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_novogo_uchebnogo_modulya_screen.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_sozdanie_novogo_uchebnogo_modulya_screen_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_sozdanie_novogo_uchebnogo_modulya_screen_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_udalenie_uchebnogo_modulya_control_1.png",
+      "PackagePath": "staticwebassets\\help\\drex_udalenie_uchebnogo_modulya_control_1.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_udalenie_uchebnogo_modulya_control_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_udalenie_uchebnogo_modulya_control_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_udalenie_uchebnogo_modulya_control_3.png",
+      "PackagePath": "staticwebassets\\help\\drex_udalenie_uchebnogo_modulya_control_3.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_udalenie_uchebnogo_modulya_screen.png",
+      "PackagePath": "staticwebassets\\help\\drex_udalenie_uchebnogo_modulya_screen.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\drex_udalenie_uchebnogo_modulya_screen_2.png",
+      "PackagePath": "staticwebassets\\help\\drex_udalenie_uchebnogo_modulya_screen_2.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\blocks\\interface-icons\\delicious_logo.png",
+      "PackagePath": "staticwebassets\\help\\i\\blocks\\interface-icons\\delicious_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\blocks\\interface-icons\\digg-button.png",
+      "PackagePath": "staticwebassets\\help\\i\\blocks\\interface-icons\\digg-button.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\blocks\\interface-icons\\interface-icons-sprite.png",
+      "PackagePath": "staticwebassets\\help\\i\\blocks\\interface-icons\\interface-icons-sprite.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\blocks\\search\\loading.gif",
+      "PackagePath": "staticwebassets\\help\\i\\blocks\\search\\loading.gif"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\blocks\\tree\\sprite.png",
+      "PackagePath": "staticwebassets\\help\\i\\blocks\\tree\\sprite.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\null.gif",
+      "PackagePath": "staticwebassets\\help\\i\\null.gif"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\photoswipe\\default-skin.png",
+      "PackagePath": "staticwebassets\\help\\i\\photoswipe\\default-skin.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\photoswipe\\default-skin.svg",
+      "PackagePath": "staticwebassets\\help\\i\\photoswipe\\default-skin.svg"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\photoswipe\\grab.cur",
+      "PackagePath": "staticwebassets\\help\\i\\photoswipe\\grab.cur"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\photoswipe\\grabbing.cur",
+      "PackagePath": "staticwebassets\\help\\i\\photoswipe\\grabbing.cur"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\photoswipe\\preloader.gif",
+      "PackagePath": "staticwebassets\\help\\i\\photoswipe\\preloader.gif"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\i\\photoswipe\\zoom_in.cur",
+      "PackagePath": "staticwebassets\\help\\i\\photoswipe\\zoom_in.cur"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\import_dannykh_pri_zapolnenii_uchebnogo_modulya.htm",
+      "PackagePath": "staticwebassets\\help\\import_dannykh_pri_zapolnenii_uchebnogo_modulya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\index.htm",
+      "PackagePath": "staticwebassets\\help\\index.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\js\\all.js",
+      "PackagePath": "staticwebassets\\help\\js\\all.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\js\\all2.js",
+      "PackagePath": "staticwebassets\\help\\js\\all2.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\js\\drexplain.data.index.js",
+      "PackagePath": "staticwebassets\\help\\js\\drexplain.data.index.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\js\\oembed.js",
+      "PackagePath": "staticwebassets\\help\\js\\oembed.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\js\\socialscript.js",
+      "PackagePath": "staticwebassets\\help\\js\\socialscript.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\js\\tooltips.js",
+      "PackagePath": "staticwebassets\\help\\js\\tooltips.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\kratkoe_opisanie_vozmozhnostej.htm",
+      "PackagePath": "staticwebassets\\help\\kratkoe_opisanie_vozmozhnostej.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\naznachenie_i_usloviya_primeneniya.htm",
+      "PackagePath": "staticwebassets\\help\\naznachenie_i_usloviya_primeneniya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\oblast_primeneniya.htm",
+      "PackagePath": "staticwebassets\\help\\oblast_primeneniya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\opisanie_operatsij.htm",
+      "PackagePath": "staticwebassets\\help\\opisanie_operatsij.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\perechen_ehkspluatatsionnoj_dokumentatsii.htm",
+      "PackagePath": "staticwebassets\\help\\perechen_ehkspluatatsionnoj_dokumentatsii.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\perekhod_k_izucheniyu_uchebnogo_modulya.htm",
+      "PackagePath": "staticwebassets\\help\\perekhod_k_izucheniyu_uchebnogo_modulya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\podgotovka_k_rabote.htm",
+      "PackagePath": "staticwebassets\\help\\podgotovka_k_rabote.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\poryadok_proverki_rabotosposobnosti.htm",
+      "PackagePath": "staticwebassets\\help\\poryadok_proverki_rabotosposobnosti.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\poryadok_zagruzki_dannykh_i_programm.htm",
+      "PackagePath": "staticwebassets\\help\\poryadok_zagruzki_dannykh_i_programm.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\programmnye_i_apparatnye_trebovaniya_k_sisteme.htm",
+      "PackagePath": "staticwebassets\\help\\programmnye_i_apparatnye_trebovaniya_k_sisteme.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\redaktirovanie_uchebnogo_modulya.htm",
+      "PackagePath": "staticwebassets\\help\\redaktirovanie_uchebnogo_modulya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\rekomendatsii_po_osvoeniyu.htm",
+      "PackagePath": "staticwebassets\\help\\rekomendatsii_po_osvoeniyu.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\soderzhanie.htm",
+      "PackagePath": "staticwebassets\\help\\soderzhanie.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\sostav_i_soderzhanie_distributivnogo_nositelya_dannykh.htm",
+      "PackagePath": "staticwebassets\\help\\sostav_i_soderzhanie_distributivnogo_nositelya_dannykh.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\sozdanie_akkaunta.htm",
+      "PackagePath": "staticwebassets\\help\\sozdanie_akkaunta.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\sozdanie_novogo_uchebnogo_modulya.htm",
+      "PackagePath": "staticwebassets\\help\\sozdanie_novogo_uchebnogo_modulya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\udalenie_uchebnogo_modulya.htm",
+      "PackagePath": "staticwebassets\\help\\udalenie_uchebnogo_modulya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\uroven_podgotovki_polzovatelya.htm",
+      "PackagePath": "staticwebassets\\help\\uroven_podgotovki_polzovatelya.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\vidy_deyatelnosti__funktsii.htm",
+      "PackagePath": "staticwebassets\\help\\vidy_deyatelnosti__funktsii.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\vvedenie.htm",
+      "PackagePath": "staticwebassets\\help\\vvedenie.htm"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\help\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\help\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\icons\\Search.svg",
+      "PackagePath": "staticwebassets\\icons\\Search.svg"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\icons\\burger-icon.svg",
+      "PackagePath": "staticwebassets\\icons\\burger-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\icons\\image 18 (Traced).svg",
+      "PackagePath": "staticwebassets\\icons\\image 18 (Traced).svg"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\icons\\search-open.svg",
+      "PackagePath": "staticwebassets\\icons\\search-open.svg"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\images\\images.png",
+      "PackagePath": "staticwebassets\\images\\images.png"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\modal.html",
+      "PackagePath": "staticwebassets\\modal.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module.html",
+      "PackagePath": "staticwebassets\\module.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_edit.html",
+      "PackagePath": "staticwebassets\\module_edit.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\registration.html",
+      "PackagePath": "staticwebassets\\registration.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_module.js",
+      "PackagePath": "staticwebassets\\script\\edit_module.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_name_module.js",
+      "PackagePath": "staticwebassets\\script\\edit_name_module.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\flip.js",
+      "PackagePath": "staticwebassets\\script\\flip.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\gratz.js",
+      "PackagePath": "staticwebassets\\script\\gratz.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\help.js",
+      "PackagePath": "staticwebassets\\script\\help.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\import_modal.js",
+      "PackagePath": "staticwebassets\\script\\import_modal.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\index.js",
+      "PackagePath": "staticwebassets\\script\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\login_reg.js",
+      "PackagePath": "staticwebassets\\script\\login_reg.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\modal.js",
+      "PackagePath": "staticwebassets\\script\\modal.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\show_cards.js",
+      "PackagePath": "staticwebassets\\script\\show_cards.js"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\card.css",
+      "PackagePath": "staticwebassets\\styles\\card.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\fonts.css",
+      "PackagePath": "staticwebassets\\styles\\fonts.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\gratz_all.css",
+      "PackagePath": "staticwebassets\\styles\\gratz_all.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\gratz_partially.css",
+      "PackagePath": "staticwebassets\\styles\\gratz_partially.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\login.css",
+      "PackagePath": "staticwebassets\\styles\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module.css",
+      "PackagePath": "staticwebassets\\styles\\module.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module_edit.css",
+      "PackagePath": "staticwebassets\\styles\\module_edit.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\registration.css",
+      "PackagePath": "staticwebassets\\styles\\registration.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\styles.css",
+      "PackagePath": "staticwebassets\\styles\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\test-cards.json",
+      "PackagePath": "staticwebassets\\test-cards.json"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\test-gratz.json",
+      "PackagePath": "staticwebassets\\test-gratz.json"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\test-index.json",
+      "PackagePath": "staticwebassets\\test-index.json"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.QuizRuLet.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.QuizRuLet.API.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.QuizRuLet.API.props",
+      "PackagePath": "build\\QuizRuLet.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.QuizRuLet.API.props",
+      "PackagePath": "buildMultiTargeting\\QuizRuLet.API.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.QuizRuLet.API.props",
+      "PackagePath": "buildTransitive\\QuizRuLet.API.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

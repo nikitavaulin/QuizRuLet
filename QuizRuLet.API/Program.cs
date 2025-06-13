@@ -18,6 +18,17 @@ services.AddControllers();
 
 services.AddAuthentication();
 
+services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", policy =>
+    {
+        policy.WithOrigins("http://localhost:5047")
+              .AllowAnyHeader()
+              .AllowAnyMethod();
+    });
+});
+
+
 
 // services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)       // learn
 //     .AddCookie(options => 
@@ -54,6 +65,7 @@ services.AddScoped<ICardSetAiCreationService, CardSetAiCreationService>();
 // ai
 services.AddScoped<IAiApiProvider, AiApiProvider>();
 
+// 123456
 
 // auth
 services.AddScoped<IJwtProvider, JwtProvider>();
@@ -73,16 +85,21 @@ if (app.Environment.IsDevelopment())
 // Middlewares
 app.UseHttpsRedirection();
 
+app.UseCors("AllowSpecificOrigin");         // CORS
+
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.UseCookiePolicy(new CookiePolicyOptions         // безопасность
-{
-    MinimumSameSitePolicy = SameSiteMode.Strict,
-    HttpOnly = HttpOnlyPolicy.Always,
-    Secure = CookieSecurePolicy.Always
-});
+// app.UseCookiePolicy(new CookiePolicyOptions         // безопасность
+// {
+//     MinimumSameSitePolicy = SameSiteMode.None,
+//     HttpOnly = HttpOnlyPolicy.Always,
+//     Secure = CookieSecurePolicy.Always
+// });
+
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.Run();

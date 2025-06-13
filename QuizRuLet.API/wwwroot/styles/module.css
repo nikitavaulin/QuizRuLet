@@ -1,0 +1,26 @@
+.logo {
+    border-bottom: 1px solid #d9d9d9;
+    padding-left: 10px;
+}
+
+
+
+.btn-learn {
+    background-color: #5ee152;
+    border-radius: 15px;
+    height: 400px;
+}
+.placeholder{
+    background-color: var(--bs-body-bg);
+}
+
+.progress-bar {
+    background-color: #716f6f;
+    border-radius: 15px;
+    height: 400px;
+}
+
+.name {
+    font-size: 28px;
+}
+
