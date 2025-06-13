@@ -469,8 +469,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj": {
-              "projectPath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj"
+            "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj": {
+              "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj"
             },
             "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Infrastrucrture\\QuizRuLet.Infrastrucrture.csproj": {
               "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Infrastrucrture\\QuizRuLet.Infrastrucrture.csproj"

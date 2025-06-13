@@ -1,6 +1,7 @@
 using System;
 using System.Net.Mime;
 using System.Threading.Tasks;
+using Microsoft.VisualBasic;
 using QuizRuLet.Core.Abstractions;
 using QuizRuLet.Core.Models;
 using QuizRuLet.Infrastrucrture;
@@ -17,9 +18,19 @@ public class CardSetAiCreationService : ICardSetAiCreationService
     private static string CARD_FORMAT = $"Передняя сторона карточки{PAIR_SEPARATOR}Обратная сторона карточки{LINE_SEPARATOR}";
     private static string CARD_SET_FORMAT = $"{START_SEPARATOR}{CARD_FORMAT}{CARD_FORMAT}и так далее{END_SEPARATOR}";
 
+    private AiApiProvider testAI = new AiApiProvider();
+    private CardSetCreationService testCreate = new CardSetCreationService();
 
+
+    // REMOVE (TEST)
     private readonly ICardSetCreationService _creationService;
     private readonly IAiApiProvider _aiProvider;
+    public CardSetAiCreationService()
+    {
+        _creationService = testCreate;
+        _aiProvider = testAI;
+    }
+
 
     public CardSetAiCreationService(
         ICardSetCreationService cardSetCreationService,
@@ -28,15 +39,10 @@ public class CardSetAiCreationService : ICardSetAiCreationService
         _creationService = cardSetCreationService;
         _aiProvider = aiProvider;
     }
-
-    // //
-    // public CardSetAiCreationService(
-    //     CardSetCreationService cardSetCreationService,
-    //     AiApiProvider aiProvider)
-    // {
-    //     _creationService = cardSetCreationService;
-    //     _aiProvider = aiProvider;
-    // }
+    
+    
+    
+    
 
     public async Task<(List<Card>? Cards, string Error)> Create(string data, int countCards)
     {
@@ -59,7 +65,7 @@ public class CardSetAiCreationService : ICardSetAiCreationService
     {
         var response = await _aiProvider.SendRequestAndGetResult(prompt);
 
-        return !string.IsNullOrEmpty(response.Error)
+        return string.IsNullOrEmpty(response.Error)
             ? (response.Result, "")
             : ("", response.Error);
     }
@@ -97,7 +103,7 @@ public class CardSetAiCreationService : ICardSetAiCreationService
     {
         string intro = $"Я студент. Мне нужна твоя помощь. Мне нужно на основе коспекта, создать {countCards} штук флеш-карточек для запоминания. ";
         string goal1 = $"Пусть на одной стороне будет термин / дата / личность, а на другой строне будет определение / событие / краткое описание соответственно. ";
-        string goal2 = $"Старайся, чтобы на сторонах карточек было не более 3 предложений. ";
+        string goal2 = $"Старайся, чтобы на сторонах карточек было максимум одно предложение. ";
         string format = $"Результат представь в следующем формате: \n{CARD_SET_FORMAT}\n";
         string inputData = $"Вот конспект для создания набора карточек.\n{data}";
 

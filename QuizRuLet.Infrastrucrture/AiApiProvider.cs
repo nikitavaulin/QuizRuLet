@@ -82,7 +82,7 @@ public class AiApiProvider : IAiApiProvider
                         content = prompt // Текст сообщения
                     }
                 },
-                max_token_to_sample = 100,
+                max_token_to_sample = 1000,
                 temperature = 0.7
             };
 

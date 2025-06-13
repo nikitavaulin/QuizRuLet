@@ -47,7 +47,7 @@ namespace QuizRuLet.API.Controllers
                 request.Data, 
                 request.CountCards);
 
-            if (string.IsNullOrEmpty(result.Error) || result.Cards is null)
+            if (!string.IsNullOrEmpty(result.Error) || result.Cards is null)
             {
                 return BadRequest(result.Error);
             }

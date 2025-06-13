@@ -416,3 +416,5 @@ C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Tests\obj\Debu
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Tests\obj\Debug\net9.0\QuizRuLet.Tests.genruntimeconfig.cache
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Tests\obj\Debug\net9.0\ref\QuizRuLet.Tests.dll
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Tests\bin\Debug\net9.0\RestSharp.dll
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Tests\bin\Debug\net9.0\Castle.Core.dll
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.Tests\bin\Debug\net9.0\Moq.dll

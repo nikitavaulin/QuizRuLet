@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "+Uqr/ZlX1jw=",
+  "dgSpecHash": "5vo0fRXqX3s=",
   "success": true,
-  "projectFilePath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Tests\\QuizRuLet.Tests.csproj",
+  "projectFilePath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Tests\\QuizRuLet.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrvau\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\mrvau\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -123,6 +124,7 @@
     "C:\\Users\\mrvau\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\9.0.0\\microsoft.visualstudio.web.codegeneration.utils.9.0.0.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\9.0.0\\microsoft.visualstudio.web.codegenerators.mvc.9.0.0.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\mrvau\\.nuget\\packages\\moq\\4.20.72\\moq.4.20.72.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\mstest\\3.6.4\\mstest.3.6.4.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\mstest.analyzers\\3.6.4\\mstest.analyzers.3.6.4.nupkg.sha512",
     "C:\\Users\\mrvau\\.nuget\\packages\\mstest.testadapter\\3.6.4\\mstest.testadapter.3.6.4.nupkg.sha512",

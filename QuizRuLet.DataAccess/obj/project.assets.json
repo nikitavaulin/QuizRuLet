@@ -2805,11 +2805,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\QuizRuLet.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\QuizRuLet.DataAccess.csproj",
       "projectName": "QuizRuLet.DataAccess",
-      "projectPath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\QuizRuLet.DataAccess.csproj",
+      "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\QuizRuLet.DataAccess.csproj",
       "packagesPath": "C:\\Users\\mrvau\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2830,8 +2830,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj": {
-              "projectPath": "c:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj"
+            "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj": {
+              "projectPath": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.Core\\QuizRuLet.Core.csproj"
             }
           }
         }
