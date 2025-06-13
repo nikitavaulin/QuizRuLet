@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using QuizRuLet.API.Contracts;
@@ -8,6 +9,7 @@ namespace QuizRuLet.API.Controllers
 {
     [Route("cards")]
     [ApiController]
+    [Authorize(Roles = "User")]
     public class CardController : ControllerBase
     {
         private readonly ILearningModuleService _learningModuleService;

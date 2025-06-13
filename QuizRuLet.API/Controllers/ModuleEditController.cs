@@ -9,6 +9,7 @@ namespace QuizRuLet.API.Controllers
 {
     [Route("modules/edit/{moduleId:guid}")]
     [ApiController]
+    [Authorize(Roles = "User")]
     public class ModuleEditController : ControllerBase
     {
         private readonly IModuleService _moduleService;

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -9,6 +10,7 @@ namespace QuizRuLet.API.Controllers
 {
     [Route("learning-mode/{moduleId:guid}")]
     [ApiController]
+    [Authorize(Roles = "User")]
     public class LearningModeController : ControllerBase
     {
         private readonly ILearningModuleService _learningModuleService;

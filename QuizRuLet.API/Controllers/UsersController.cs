@@ -40,7 +40,7 @@ namespace QuizRuLet.API.Controllers
         }
 
         [HttpGet("{userId:guid}")]
-        public async Task<ActionResult<UserWithModulesResponse>> GetUserWithModules(Guid userId)
+        public async Task<ActionResult<UserWithModulesResponse>> GetUserProfileWithModulesById(Guid userId)
         {
             var user = await _userService.GetUserById(userId);
             
@@ -59,8 +59,31 @@ namespace QuizRuLet.API.Controllers
 
             var response = new UserWithModulesResponse(userId, user.Login, moduleList);
 
-            return response;
+            return Ok(response);
         }
+        
+        // [HttpGet("{userName:string}")]
+        // public async Task<ActionResult<UserWithModulesResponse>> GetUserProfileWithModules([FromRoute] string userName)
+        // {
+        //     var user = await _userService.GetUserByName(userName);
+            
+        //     if (user is null)
+        //     {
+        //         return BadRequest("Пользователя не существует");
+        //     }
+
+        //     var modules = (await _moduleService.GetUserModules(user.Id))
+        //         .Select(async m => new ModulesResponse(
+        //             m.Id,
+        //             m.Name,
+        //             m.Description,
+        //             await _progressService.GetModuleProgressPercent(m.Id)));
+        //     var moduleList = Task.WhenAll(modules).Result.ToList();
+
+        //     var response = new UserWithModulesResponse(user.Id, user.Login, moduleList);
+
+        //     return Ok(response);
+        // }
     }
     
 

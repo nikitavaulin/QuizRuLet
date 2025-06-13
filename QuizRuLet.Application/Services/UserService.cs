@@ -32,6 +32,11 @@ public class UserService : IUserService
     {
         return await _userRepository.GetById(id);           // TODO Validation
     }
+    
+    public async Task<User?> GetUserByName(string login)
+    {
+        return await _userRepository.GetByLogin(login);           // TODO Validation
+    }
 
     public async Task<Guid> CreateUser(User user)
     {

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using QuizRuLet.API.Contracts;
@@ -9,6 +10,7 @@ namespace QuizRuLet.API.Controllers
 {
     [Route("import")]
     [ApiController]
+    [Authorize(Roles = "User")]
     public class ImportDataController : ControllerBase
     {
         private readonly ICardService _cardService;

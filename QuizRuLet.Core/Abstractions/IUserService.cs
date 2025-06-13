@@ -8,6 +8,7 @@ public interface IUserService
     Task<Guid> DeleteUser(Guid id);
     Task<List<User>> GetAllUsers();
     Task<User> GetUserById(Guid id);
+    Task<User?> GetUserByName(string login);
     Task<(bool Success, string Error)> Register(string login, string password);
     Task<Guid> UpdateUser(Guid id, string login, string password);
     Task<(string Token, string Error)> Login(string login, string password);
