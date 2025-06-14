@@ -102,9 +102,9 @@ document.addEventListener('DOMContentLoaded', function () {
         document.querySelector('.button-green').addEventListener('click', async () => {
             if (currentIndex >= cards.length) return;
 
-            const currentCard = cards[currentIndex];    
+            const currentCard = cards[currentIndex];    //Надо придумать откуда взять cardId
             currentCard.isLearned = true;
-            // Отправить
+            await axios.post(`/cards/${cardId}`, { cardId: currentCard.id, isLearned: true }); 
             try {
                 console.log('Карточка отмечена как выученная:', currentCard);
 
@@ -120,6 +120,10 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        if (currentIndex > 0){
+            const header = document.querySelector('header');
+            header.innerHTML(`<button class="btn-back m-2">К предыдущей карточке</button>`);
+        }
 
         // Кнопка возврата на прошлую карточку
         document.querySelector('.btn-back').addEventListener('click', async () => {

@@ -50,16 +50,23 @@ namespace QuizRuLet.API.Controllers
 
             var modules = await _moduleService.GetUserModules(userId);
 
-            var moduleTasks = modules.Select(async m =>
+            var moduleList = new List<ModulesResponse>();
+            foreach (var m in modules)
             {
                 var progress = await _progressService.GetModuleProgressPercent(m.Id);
-                return new ModulesResponse(
-                    m.Id,
-                    m.Name,
-                    m.Description,
-                    progress);
-            });
-            var moduleList = (await Task.WhenAll(moduleTasks)).ToList();
+                moduleList.Add(new ModulesResponse(m.Id, m.Name, m.Description, progress));
+            }
+
+            // var moduleTasks = modules.Select(async m =>
+            // {
+            //     var progress = await _progressService.GetModuleProgressPercent(m.Id);
+            //     return new ModulesResponse(
+            //         m.Id,
+            //         m.Name,
+            //         m.Description,
+            //         progress);
+            // });
+            // var moduleList = (await Task.WhenAll(moduleTasks)).ToList();
             var response = new UserWithModulesResponse(userId, user.Login, moduleList);
 
             return Ok(response);

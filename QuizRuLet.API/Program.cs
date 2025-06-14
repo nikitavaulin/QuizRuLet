@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.CookiePolicy;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using QuizRuLet.API.Extensions;
 using QuizRuLet.Core.Models;
+using Microsoft.Net.Http.Headers;
+
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;          // ссылка на конфигурации
@@ -100,6 +102,21 @@ app.MapControllers();
 // });
 
 app.UseDefaultFiles();
-app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    OnPrepareResponse = ctx =>
+    {
+        var headers = ctx.Context.Response.GetTypedHeaders();
+
+        headers.CacheControl = new CacheControlHeaderValue
+        {
+            NoStore        = true,   // ничего не хранить
+            NoCache        = true,   // всегда перепроверять
+            MustRevalidate = true
+        };
+        ctx.Context.Response.Headers["Pragma"]  = "no-cache";
+        ctx.Context.Response.Headers["Expires"] = "0";
+    }
+});
 
 app.Run();
