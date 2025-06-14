@@ -53,8 +53,9 @@ namespace QuizRuLet.API.Controllers
             var moduleList = new List<ModulesResponse>();
             foreach (var m in modules)
             {
-                var progress = await _progressService.GetModuleProgressPercent(m.Id);
-                moduleList.Add(new ModulesResponse(m.Id, m.Name, m.Description, progress));
+                // var progress = await _progressService.GetModuleProgressPercent(m.Id);
+                var statistic = await _progressService.GetModuleStatisticInfo(m.Id);
+                moduleList.Add(new ModulesResponse(m.Id, m.Name, m.Description, statistic.Progress, statistic.CountCards));
             }
 
             // var moduleTasks = modules.Select(async m =>

@@ -1,7 +1,15 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Весь твой код внутри
-    let cards = [];         // Все карточки         
-    let currentIndex = 0;   // Текущая карточка
+    const params = new URLSearchParams(window.location.search);
+    const moduleId = params.get('id');
+
+    if (!moduleId) {
+        alert('Не передан id модуля');
+        location.href = 'index.html';
+        return;
+    }
+    console.log(moduleId);
+    let cards = [];
+    let currentIndex = 0;
     let currentCardElement = null;
     const flipButton = document.querySelector('.button-grey');
 
@@ -14,9 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Функция загрузки карточек с сервера
     async function loadCards() {
         try {
-            const response = await axios.get('/test-cards.json');
-            cards = response.data.cards || [];
-
+            const response = await axios.get(`/learning-mode/${moduleId}`);
+            cards = response.data;
+            if (cards.length === 0) {
+                showModal("Сообщение", "Все карточки пройдены, режим изучения недоступен");
+                return;
+            }
             if (cards.length > 0) {
                 showCard(cards[0]);
             } else {
@@ -29,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    
+
     // Функция обновления счетчика пройденных карточек
     function updateCounter() {
         const counter = document.querySelector('.number-of-pages');
@@ -49,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const cardHTML = `
         <label class="card-flip col-5">
         <input type="checkbox" class="flip-toggle" hidden>
-        <div class="card-inner">
+        <div class="card-inner" data-id="${card.id}" id="card-inner">
         <div class="card-front p-3">${card.frontSide}</div>
         <div class="card-back p-3">${card.backSide}</div>
         </div>
@@ -73,80 +84,85 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(currentCardElement);
     }
 
-    
 
-        document.querySelector('.button-red').addEventListener('click', async () => {
-            if (currentIndex >= cards.length) return;
-            const currentCard = cards[currentIndex];
-            currentCard.isLearned = false;
-            // Отправить
-            try {
-                // Отправляем обновление (в реальном API)
-                // Для теста мы не отправляем, но можем сохранять в консоль
-                console.log('Карточка отмечена как не выученная:', currentCard);
 
-                // Переходим к следующей карточке
-                currentIndex++;
-                if (currentIndex < cards.length) {
-                    showCard(cards[currentIndex]);
-                } else {
-                    window.location.href = "/gratz.html"; 
-                }
-            } catch (error) {
-                showModal('Ошибка', 'Не удалось сохранить изменения');
-                console.error('Ошибка при сохранении:', error);
+    document.querySelector('.button-red').addEventListener('click', async () => {
+        if (currentIndex >= cards.length) return;
+        const card_inner = document.getElementById('card-inner');
+
+        let cardId = card_inner.dataset.id;
+        const currentCard = cards[currentIndex];
+        currentCard.isLearned = false;
+        await axios.patch(`/cards/update-flag/${cardId}`, { isLearned: false });
+        try {
+
+            console.log('Карточка отмечена как не выученная:', currentCard);
+
+
+            currentIndex++;
+            if (currentIndex < cards.length) {
+                showCard(cards[currentIndex]);
+            } else {
+                window.location.href = `/gratz.html?id=${encodeURIComponent(moduleId)}`;
             }
-        });
-
-
-        document.querySelector('.button-green').addEventListener('click', async () => {
-            if (currentIndex >= cards.length) return;
-
-            const currentCard = cards[currentIndex];    //Надо придумать откуда взять cardId
-            currentCard.isLearned = true;
-            await axios.post(`/cards/${cardId}`, { cardId: currentCard.id, isLearned: true }); 
-            try {
-                console.log('Карточка отмечена как выученная:', currentCard);
-
-                currentIndex++;
-                if (currentIndex < cards.length) {
-                    showCard(cards[currentIndex]);
-                } else {
-                    window.location.href = "/gratz.html"; 
-                }
-            } catch (error) {
-                showModal('Ошибка', 'Не удалось сохранить изменения');
-                console.error('Ошибка при сохранении:', error);
-            }
-        });
-
-        if (currentIndex > 0){
-            const header = document.querySelector('header');
-            header.innerHTML(`<button class="btn-back m-2">К предыдущей карточке</button>`);
+        } catch (error) {
+            showModal('Ошибка', 'Не удалось сохранить изменения');
+            console.error('Ошибка при сохранении:', error);
         }
-
-        // Кнопка возврата на прошлую карточку
-        document.querySelector('.btn-back').addEventListener('click', async () => {
-            if (currentIndex >= cards.length) return;
-
-            const currentCard = cards[currentIndex];
+    });
 
 
-            try {
-                console.log('Карточка отмечена как выученная:', currentCard);
+    document.querySelector('.button-green').addEventListener('click', async () => {
+        if (currentIndex >= cards.length) return;
+        const card_inner = document.getElementById('card-inner');
 
-                currentIndex--;
-                if (currentIndex > -1) {
-                    showCard(cards[currentIndex]);
-                } else {
-                    return; 
-                }
-            } catch (error) {
-                showModal('Ошибка', 'Не удалось сохранить изменения');
-                console.error('Ошибка при сохранении:', error);
+        let cardId = card_inner.dataset.id;
+
+        const currentCard = cards[currentIndex];    //Надо придумать откуда взять cardId
+        currentCard.isLearned = true;
+        await axios.patch(`/cards/update-flag/${cardId}`, { isLearned: true });
+        try {
+            console.log('Карточка отмечена как выученная:', currentCard);
+
+            currentIndex++;
+            if (currentIndex < cards.length) {
+                showCard(cards[currentIndex]);
+            } else {
+                window.location.href = `/gratz.html?id=${encodeURIComponent(moduleId)}`;
             }
-        })
-    
+        } catch (error) {
+            showModal('Ошибка', 'Не удалось сохранить изменения');
+            console.error('Ошибка при сохранении:', error);
+        }
+    });
+
+    if (currentIndex > 0) {
+        const header = document.querySelector('header');
+        header.innerHTML(`<button class="btn-back m-2">К предыдущей карточке</button>`);
+    }
+
+    // Кнопка возврата на прошлую карточку
+    document.querySelector('.btn-back').addEventListener('click', async () => {
+        if (currentIndex >= cards.length) return;
+
+        const currentCard = cards[currentIndex];
+
+
+        try {
+            console.log('Карточка отмечена как выученная:', currentCard);
+
+            currentIndex--;
+            if (currentIndex > -1) {
+                showCard(cards[currentIndex]);
+            } else {
+                return;
+            }
+        } catch (error) {
+            showModal('Ошибка', 'Не удалось сохранить изменения');
+            console.error('Ошибка при сохранении:', error);
+        }
+    })
+
 
 
 

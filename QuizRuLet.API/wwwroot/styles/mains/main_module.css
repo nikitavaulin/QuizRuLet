@@ -1,0 +1,337 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.main {
+    display: flex;
+    gap: 1rem;
+    padding: 10rem 2rem 2rem;
+    background-color: transparent;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.top-main-part{
+    display: flex;
+    gap: 2rem;
+
+    background-color: transparent;
+}
+
+.left-column,
+.right-column {
+    gap: 2rem;
+    background-color: transparent;
+}
+
+.left-column {
+    width: 60%;
+    gap: 2rem;
+}
+.left-column-container{
+    gap: 2rem;
+    flex-direction: column;
+    display: flex;
+}
+/* Кнопка учить - НАЧАЛО */
+.learn-button {
+    background-color: #5EE152;
+    width: 100%;
+    height: 100px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color: white;
+    padding: 0 8%;
+    gap: 2rem;
+    font-weight: bold;
+    }
+
+/* .button-items{
+    display: flex;
+    justify-content: center;
+} */
+.rocket-icon {
+    width: 80px;
+    height: 80px;
+    fill: white;
+}
+
+.button-text {
+    font-size: 5cap;
+    text-align: center;
+    }
+/* Кнопка учить - КОНЕЦ */
+
+/* Контейнер описания - НАЧАЛО */
+.description {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    border: 2px solid #5EE152;
+    border-radius: 8px;
+    height: 100px;
+    font-size: 1.5rem;
+}
+/* Контейнер описания - КОНЕЦ */
+
+.right-column {
+    width: 40%;
+}
+.right-column-countainer{
+    height: 220px;
+    gap: 10px;
+    flex-direction: column;
+    display: flex;
+}
+
+/* Прогресс изучения - НАЧАЛО */
+.progress-bar {
+    background-color: #716F6F;
+    padding: 1rem;
+    border-radius: 8px;
+    height: 55px;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.progress {
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #2ecc71;
+}
+
+.progress-container{
+    display: flex;
+    margin-top: 0.2rem;
+    font-size: 1.5rem;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* Прогресс изучения - КОНЕЦ */
+
+/* Отображение кол-ва карточек - Начало */
+.cards-count {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.unknown-cards,
+.known-cards {
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    font-size: 2rem;
+}
+
+.red {
+    background-color: #e74c3c;
+}
+
+.green {
+    background-color: #2ecc71;
+}
+.unknown-cards p,
+.known-cards p {
+    margin: 0;
+    white-space: nowrap;
+}
+/* Отображение кол-ва карточек - Конец */
+
+/* Кнопка добавления карточек - Начало */
+.add-card-button {
+    height: 45px;
+    background-color: #333;
+    color: #ACA8A8;
+    border: 2px solid #ACA8A8;
+    padding: 0 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.plus-icon {
+    width: 30px;
+    height: 30px;
+    fill: #ACA8A8;
+}
+
+.add-button-text {
+    font-size: clamp(0.8rem, 100vw, 1.5rem);
+    text-align: center;
+    margin-right: 20%;
+}
+.add-card-button:hover {
+    background-color: #716F6F;
+}
+/* Кнопка добавления карточек - Конец */
+
+/* Блок с карточками ЗНАЮ/НЕ ЗНАЮ - Начало*/
+.card-list-UNKNOWN {
+    margin-top: 1rem;
+    background-color: #e74c3c;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.card-list-KNOWN {
+    margin-top: 1rem;
+    background-color: #2ecc71;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.card-list-title {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.card-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+.card-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    color: white;
+}
+
+.card-index {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.card-content {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+    color: white;
+}
+
+.card-term,
+.card-value {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #444;
+    color: white;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    height: auto;
+}
+/* Блок с карточками ЗНАЮ/НЕ ЗНАЮ - Конец */
+
+
+@media (max-width: 2560px) {
+    .add-button-text{
+        margin-right: 40%;
+    }
+}
+@media (max-width: 2000px) {
+    .add-button-text{
+        margin-right: 30%;
+    }
+}
+@media (max-width: 1440px) {
+    .add-button-text{
+        margin-right: 25%;
+    }
+}
+@media (max-width: 1100px) {
+    .add-button-text{
+        margin-right: 10%;
+    }
+}
+@media (max-width: 920px) {
+    .add-button-text{
+        margin-right: 10%;
+    }
+}
+@media (max-width: 830px) {
+    .add-button-text{
+        margin-right: 5%;
+    }
+}
+@media (max-width: 630px) {
+    .add-button-text{
+        margin-right: 25%;
+    }
+}
+@media (max-width: 490px) {
+    .add-button-text{
+        margin-right: 20%;
+    }
+}
+@media (max-width: 375px) {
+    .add-button-text{
+        margin-right: 8%;
+    }
+}
+@media (max-width: 320px) {
+    .add-button-text{
+        margin-right: 0%;
+    }
+}
+/* Кнопка добавления карточек - Конец*/
+
+@media (max-width: 630px) {
+    .top-main-part {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .left-column{
+        width: 100%;
+    }
+    .right-column {
+        width: 100%;
+    }
+    .right-column-countainer{
+        gap: 2rem;
+        height: 250px;
+    }
+    .cards-count{
+        gap: 2rem;
+    }
+    .card-content{
+        flex-direction: column;
+    }
+}

@@ -42,14 +42,18 @@ namespace QuizRuLet.API.Controllers
         public async Task<ActionResult<List<ModulesResponse>>> GetModules()
         {
             var modules = await _moduleService.GetAllModules();
-            
-            var response = modules.Select(async m => new ModulesResponse(
-                m.Id, 
-                m.Name, 
-                m.Description,
-                (await _progressService.GetModuleStatisticInfo(m.Id)).Progress)
-            );
-            
+            var response = new List<ModulesResponse>();
+            foreach (var m in modules)
+            {
+                var statistic = await _progressService.GetModuleStatisticInfo(m.Id);
+                response.Add(new ModulesResponse(
+                    m.Id,
+                    m.Name,
+                    m.Description,
+                    statistic.Progress,
+                    statistic.CountCards)
+                );
+            }
             return Ok(response);
         }
 

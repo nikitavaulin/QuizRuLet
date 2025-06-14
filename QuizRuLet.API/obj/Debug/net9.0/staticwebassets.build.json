@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "owFh0cpEcnA2cZatVQ7Z5x6IG7OlC4KI90ETN0WyEAg=",
+  "Hash": "Kd2johUbt5QFyLSA0nSartKjBEdMgkViBVuhiVNZLrk=",
   "Source": "QuizRuLet.API",
   "BasePath": "_content/QuizRuLet.API",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\078de0gu3q-otbhhuws59.gz",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "script/module#[.{fingerprint=otbhhuws59}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\module.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "k8dxaz02i5",
+      "Integrity": "RPfO7wjS9KpctRGC5EBj5zSnYh5PaFZAG05J6KXucI4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\module.js"
+    },
     {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\0jo9i8yk98-xfa1aq07l6.gz",
       "SourceId": "QuizRuLet.API",
@@ -120,27 +141,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\headers\\header_module_edit.css"
-    },
-    {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\1dniz6sdab-5ipweew5fc.gz",
-      "SourceId": "QuizRuLet.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
-      "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "script/edit_name_module#[.{fingerprint=5ipweew5fc}]?.js.gz",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_name_module.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "Fingerprint": "5ipweew5fc",
-      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_name_module.js"
     },
     {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\25u5ag6uxa-axnhipnzlb.gz",
@@ -311,12 +311,12 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0039.js"
     },
     {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-rt3z7jswgw.gz",
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-pyyz81ehnc.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "script/index#[.{fingerprint=rt3z7jswgw}]?.js.gz",
+      "RelativePath": "script/index#[.{fingerprint=pyyz81ehnc}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -325,8 +325,8 @@
       "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\index.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ndlwf2vflt",
-      "Integrity": "xWSBkMme4dbIiaVTcXj2l7husNppYByuqDhE/T2JvDQ=",
+      "Fingerprint": "nk6mr7fmk8",
+      "Integrity": "OU7ihmIDhJP8Yg+/QAd9zv3/AV6Lhei3XvQyMRt1i4c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\index.js"
@@ -374,12 +374,12 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0413.js"
     },
     {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-u3dc1l7fi8.gz",
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-6nb32cr44k.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "styles/module_edit#[.{fingerprint=u3dc1l7fi8}]?.css.gz",
+      "RelativePath": "styles/module_edit#[.{fingerprint=6nb32cr44k}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -388,8 +388,8 @@
       "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module_edit.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "sptzib0sqv",
-      "Integrity": "0CAvG1HSvu+Xs0YwsL374XOTTfcW8iPbH8ViMgx5KRA=",
+      "Fingerprint": "5f0hs77r6n",
+      "Integrity": "n5vf9e+YaqWI1TgqOU2fLnN0h5X6V3yBSPFdD/ATm90=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module_edit.css"
@@ -857,12 +857,12 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\icons\\burger-icon.svg"
     },
     {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-aw0087mclm.gz",
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-rqn64gp8na.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "module#[.{fingerprint=aw0087mclm}]?.html.gz",
+      "RelativePath": "module#[.{fingerprint=rqn64gp8na}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -871,8 +871,8 @@
       "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "66oipljiab",
-      "Integrity": "3ieSw7KjTcY2fpsAtnCzZzGlcmPXl2kzCuYE1Q7t7Fs=",
+      "Fingerprint": "zm66rrhy5d",
+      "Integrity": "Gz7llkktqPIFdMLWUGCG6DMgQedPrU7g1Dt9fZ5+QWk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module.html"
@@ -899,12 +899,12 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0422.js"
     },
     {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-43eyyvwue6.gz",
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-oqzlb9kh1d.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "script/edit_module#[.{fingerprint=43eyyvwue6}]?.js.gz",
+      "RelativePath": "script/edit_module#[.{fingerprint=oqzlb9kh1d}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -913,8 +913,8 @@
       "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_module.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "ehaoo7eba3",
-      "Integrity": "7oAXg9UyYRDkkt2hQh2s4fOqqjJmCuqoMh9xJwOlCVY=",
+      "Fingerprint": "kqkewpol6d",
+      "Integrity": "hLsYys/GkUTDrbBW6hy46U3hG5/AtPT3U5FYL56lAEU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_module.js"
@@ -1002,6 +1002,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\sostav_i_soderzhanie_distributivnogo_nositelya_dannykh.htm"
+    },
+    {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ecic70q6lf-j0gjca2fhi.gz",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "module_egor#[.{fingerprint=j0gjca2fhi}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_egor.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "beyrhbo7cb",
+      "Integrity": "HRweWwLeO1bfuoXUEVdtybg4SeLVpMfO3QuqpUC7Rz4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_egor.html"
     },
     {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\emndl9tcs3-hbjn13h78r.gz",
@@ -1233,6 +1254,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0421.js"
+    },
+    {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\g29rvcmi9i-uqpi4wvtjg.gz",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "styles/mains/main_module#[.{fingerprint=uqpi4wvtjg}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\mains\\main_module.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "50ozifkm4n",
+      "Integrity": "RRKdUbKlP9pGhfU4bzcNc7fDEdSzH6/MZezo1kEaezQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\mains\\main_module.css"
     },
     {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\g37mc2fnnq-zz0nnra041.gz",
@@ -1697,12 +1739,12 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\de_search\\0xu0414.js"
     },
     {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-4tldn7tka0.gz",
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-oq9pjeowbr.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "module_edit#[.{fingerprint=4tldn7tka0}]?.html.gz",
+      "RelativePath": "module_edit#[.{fingerprint=oq9pjeowbr}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1711,8 +1753,8 @@
       "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_edit.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "nq3036qjid",
-      "Integrity": "7y0p/d68uadm/Ola879nw7EeRPx3stxO4FL5egy4IpM=",
+      "Fingerprint": "6pu1vfau55",
+      "Integrity": "qow2ajpNY8Fmrw/VdtYvtliNwJHa6WectlBLUb4CZXg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_edit.html"
@@ -1737,6 +1779,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\test-index.json"
+    },
+    {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\maqup5jvy9-qm0xstdiwn.gz",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "styles/footer#[.{fingerprint=qm0xstdiwn}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\footer.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "1gulgpioe0",
+      "Integrity": "YcH26Z1p9MgyMUe1BLxd897a44GAwiTh/lNThOyuySU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\footer.css"
     },
     {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\mtk5li519v-3o4xuxa6na.gz",
@@ -1886,12 +1949,12 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\perekhod_k_izucheniyu_uchebnogo_modulya.htm"
     },
     {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-lpl62of3yd.gz",
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-ld7rdmdblq.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "script/show_cards#[.{fingerprint=lpl62of3yd}]?.js.gz",
+      "RelativePath": "script/show_cards#[.{fingerprint=ld7rdmdblq}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1900,8 +1963,8 @@
       "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\show_cards.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "j59ilharv0",
-      "Integrity": "13fS52fdtalGZJ+CkzrpyeZbU/TrVE9LuT2F69o5hIw=",
+      "Fingerprint": "ljxfhjem41",
+      "Integrity": "b2tyBDFLqB3TNSPpfe7BDzFa8aFpqI181t/X+C7P8gw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\show_cards.js"
@@ -2180,12 +2243,12 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\icons\\sprite.svg"
     },
     {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-wrx6u2u659.gz",
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-m6oz9fne50.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "index#[.{fingerprint=wrx6u2u659}]?.html.gz",
+      "RelativePath": "index#[.{fingerprint=m6oz9fne50}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -2194,8 +2257,8 @@
       "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\index.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "enduy9x3tp",
-      "Integrity": "Zmm2UrDiYMOtNxMRdpMWwQz0LJfa6XOAkW9S8+r3rPw=",
+      "Fingerprint": "0etrithvgg",
+      "Integrity": "iIPPwpPwEzF0ksk4XQPvNO2I5i/QcLosc1ifxp0D43I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\index.html"
@@ -2222,6 +2285,27 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\gratz_partially.html"
     },
     {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\t5oumj77wx-46f58ij0rb.gz",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "styles/headers/header_module#[.{fingerprint=46f58ij0rb}]?.css.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\headers\\header_module.css",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "2t6dz05bvh",
+      "Integrity": "tnbVwzDJNAA39YmkKTJHcOt8Qw4fcUxuyYVyPjOCq9c=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\headers\\header_module.css"
+    },
+    {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\tcmsbajw65-9n65w7verf.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
@@ -2243,12 +2327,12 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\help\\uroven_podgotovki_polzovatelya.htm"
     },
     {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-vtg1kc5y6g.gz",
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-wt7gu7b45o.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "card#[.{fingerprint=vtg1kc5y6g}]?.html.gz",
+      "RelativePath": "card#[.{fingerprint=wt7gu7b45o}]?.html.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -2257,8 +2341,8 @@
       "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\card.html",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "qthyip5egz",
-      "Integrity": "vrS+FtyrFrU7LosQKV4TwaBcDLRMuHx3WfTxHIwaxrQ=",
+      "Fingerprint": "uv509rioe3",
+      "Integrity": "Ns36P7a7qJixqJoUKWwz+wvX14HBiLc7wirx6fxCQ/k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\card.html"
@@ -2621,12 +2705,12 @@
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\test-gratz.json"
     },
     {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-sxyglkv1ut.gz",
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-qlfsue3xgq.gz",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "script/gratz#[.{fingerprint=sxyglkv1ut}]?.js.gz",
+      "RelativePath": "script/gratz#[.{fingerprint=qlfsue3xgq}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -2635,8 +2719,8 @@
       "RelatedAsset": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\gratz.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "lazckyme86",
-      "Integrity": "rXlWL+aRWNU3UIHXs9QfPii5v3wP+FelKTZvOkyl+uE=",
+      "Fingerprint": "rs8weby6kc",
+      "Integrity": "i27sNk7wPW97JxPkMHCfcX6XJrs2Y2NRvvI/NK8adl8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\gratz.js"
@@ -2698,8 +2782,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vtg1kc5y6g",
-      "Integrity": "cx/3iDFCp7MZXh2dEvdm5TNIHfhaKwqs8mC/9Q/BvC8=",
+      "Fingerprint": "wt7gu7b45o",
+      "Integrity": "XGpVw41+IhLhjuiru9zDYQ2HYKxw6S4bqNXSuzm5LC4=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\card.html"
@@ -6121,8 +6205,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wrx6u2u659",
-      "Integrity": "fHYtzGjKitgb2mwxoNgvw4p/HfV2O5jcrlF7oVkAM/0=",
+      "Fingerprint": "m6oz9fne50",
+      "Integrity": "Lpp26lH8wxtPluCxas+VQkxRouZXoCioW9Lg5um/2Z8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
@@ -6205,11 +6289,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "4tldn7tka0",
-      "Integrity": "qHKdLOL+0p0bnSsSuMXUraKQRkJQMQ9YDUrNehuHe8M=",
+      "Fingerprint": "oq9pjeowbr",
+      "Integrity": "kGim04VjEbkGxbxe7gS+pGH2+q4/EHKZDHVyZGcWWys=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\module_edit.html"
+    },
+    {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_egor.html",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "module_egor#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "j0gjca2fhi",
+      "Integrity": "LVRXUWHPfJjIL7+Ja9lbEaZwZVLLCR39VUk3n/mROSA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\module_egor.html"
     },
     {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module.html",
@@ -6226,8 +6331,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "aw0087mclm",
-      "Integrity": "dhc14uoA9kfNhx1v/EfOL7HdyneU4AIBUOvlsEWtLiA=",
+      "Fingerprint": "rqn64gp8na",
+      "Integrity": "Te4w1upWPB7ZUCASiSNZl7JceqgFnEpmKtj77KFS5oQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\module.html"
@@ -6268,32 +6373,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "43eyyvwue6",
-      "Integrity": "0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I=",
+      "Fingerprint": "oqzlb9kh1d",
+      "Integrity": "MNfd1AfjZoJBLZO+O7tQSE7CjKDi8lEalHwZYVj4M5Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script\\edit_module.js"
-    },
-    {
-      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_name_module.js",
-      "SourceId": "QuizRuLet.API",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\",
-      "BasePath": "_content/QuizRuLet.API",
-      "RelativePath": "script/edit_name_module#[.{fingerprint}]?.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "Fingerprint": "5ipweew5fc",
-      "Integrity": "47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\script\\edit_name_module.js"
     },
     {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\flip.js",
@@ -6331,8 +6415,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "sxyglkv1ut",
-      "Integrity": "4ElO7iMbjhlQ8BmyJ2b/qFGYIUe+jWS35ynJXT0UgbQ=",
+      "Fingerprint": "qlfsue3xgq",
+      "Integrity": "/oM1t4zUtwwfHusJlq/vlXo6UY/FWDnCEyw7IMMWHHg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script\\gratz.js"
@@ -6394,8 +6478,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rt3z7jswgw",
-      "Integrity": "4a4LQb3dRdbk8IHMLDN9y4e5Clppet8R+JYSNiDakZU=",
+      "Fingerprint": "pyyz81ehnc",
+      "Integrity": "wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO+FV6+b1FE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script\\index.js"
@@ -6443,6 +6527,27 @@
       "OriginalItemSpec": "wwwroot\\script\\modal.js"
     },
     {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\module.js",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "script/module#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "otbhhuws59",
+      "Integrity": "5MBG+WeTn4vc0Z+aUxvDx/sQFTHdJExfUegFaVM308k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\script\\module.js"
+    },
+    {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\show_cards.js",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
@@ -6457,8 +6562,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "lpl62of3yd",
-      "Integrity": "l/o1/Low/SrdiT+8xnqiPXotdLsI1pEq7ias4pDOwqU=",
+      "Fingerprint": "ld7rdmdblq",
+      "Integrity": "58zHFVGWiLTsXoCtYMNfB/xxHKpFymaT2SH2aRl+CcQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\script\\show_cards.js"
@@ -6504,6 +6609,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\styles\\fonts.css"
+    },
+    {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\footer.css",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "styles/footer#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qm0xstdiwn",
+      "Integrity": "cgFKb0AZev0A//aYypsg7cIpzuRPgZwH9b1EBXXbbMg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\footer.css"
     },
     {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\gratz_all.css",
@@ -6569,6 +6695,27 @@
       "OriginalItemSpec": "wwwroot\\styles\\headers\\header_module_edit.css"
     },
     {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\headers\\header_module.css",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "styles/headers/header_module#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "46f58ij0rb",
+      "Integrity": "DJxl1ldEQnl/WdH9vZPv2krdodTA8yG7f9jj9PHOPhs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\headers\\header_module.css"
+    },
+    {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\login.css",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
@@ -6611,6 +6758,27 @@
       "OriginalItemSpec": "wwwroot\\styles\\mains\\main_module-edit.css"
     },
     {
+      "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\mains\\main_module.css",
+      "SourceId": "QuizRuLet.API",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\",
+      "BasePath": "_content/QuizRuLet.API",
+      "RelativePath": "styles/mains/main_module#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "uqpi4wvtjg",
+      "Integrity": "1oabYlxT3BsqYxwfZQkx6n44bQOUe1nfKlgWvX4mPBY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\styles\\mains\\main_module.css"
+    },
+    {
       "Identity": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module_edit.css",
       "SourceId": "QuizRuLet.API",
       "SourceType": "Discovered",
@@ -6625,8 +6793,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "u3dc1l7fi8",
-      "Integrity": "pu3c+94olK6FNqF6LGhtfOjNfJ+nnGmclI94/pEeYbM=",
+      "Fingerprint": "6nb32cr44k",
+      "Integrity": "sv/YkOVxmTllmcOkVVaMEWD7KxzSzNxZjgXOkhiyJGg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\styles\\module_edit.css"
@@ -6761,12 +6929,12 @@
   "Endpoints": [
     {
       "Route": "card.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-vtg1kc5y6g.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-wt7gu7b45o.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000167982530"
+          "Quality": "0.000165809982"
         }
       ],
       "ResponseHeaders": [
@@ -6776,15 +6944,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5952"
+          "Value": "6030"
         },
         {
           "Name": "ETag",
-          "Value": "\"vrS+FtyrFrU7LosQKV4TwaBcDLRMuHx3WfTxHIwaxrQ=\""
+          "Value": "\"Ns36P7a7qJixqJoUKWwz+wvX14HBiLc7wirx6fxCQ/k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:35 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6804,13 +6972,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"cx/3iDFCp7MZXh2dEvdm5TNIHfhaKwqs8mC/9Q/BvC8=\""
+          "Value": "W/\"XGpVw41+IhLhjuiru9zDYQ2HYKxw6S4bqNXSuzm5LC4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cx/3iDFCp7MZXh2dEvdm5TNIHfhaKwqs8mC/9Q/BvC8="
+          "Value": "sha256-XGpVw41+IhLhjuiru9zDYQ2HYKxw6S4bqNXSuzm5LC4="
         }
       ]
     },
@@ -6825,7 +6993,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14700"
+          "Value": "14778"
         },
         {
           "Name": "Content-Type",
@@ -6833,11 +7001,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cx/3iDFCp7MZXh2dEvdm5TNIHfhaKwqs8mC/9Q/BvC8=\""
+          "Value": "\"XGpVw41+IhLhjuiru9zDYQ2HYKxw6S4bqNXSuzm5LC4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:35 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6847,13 +7015,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-cx/3iDFCp7MZXh2dEvdm5TNIHfhaKwqs8mC/9Q/BvC8="
+          "Value": "sha256-XGpVw41+IhLhjuiru9zDYQ2HYKxw6S4bqNXSuzm5LC4="
         }
       ]
     },
     {
       "Route": "card.html.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-vtg1kc5y6g.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-wt7gu7b45o.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6862,7 +7030,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5952"
+          "Value": "6030"
         },
         {
           "Name": "Content-Type",
@@ -6870,11 +7038,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vrS+FtyrFrU7LosQKV4TwaBcDLRMuHx3WfTxHIwaxrQ=\""
+          "Value": "\"Ns36P7a7qJixqJoUKWwz+wvX14HBiLc7wirx6fxCQ/k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:35 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6892,18 +7060,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-vrS+FtyrFrU7LosQKV4TwaBcDLRMuHx3WfTxHIwaxrQ="
+          "Value": "sha256-Ns36P7a7qJixqJoUKWwz+wvX14HBiLc7wirx6fxCQ/k="
         }
       ]
     },
     {
-      "Route": "card.vtg1kc5y6g.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-vtg1kc5y6g.gz",
+      "Route": "card.wt7gu7b45o.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-wt7gu7b45o.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000167982530"
+          "Quality": "0.000165809982"
         }
       ],
       "ResponseHeaders": [
@@ -6913,15 +7081,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5952"
+          "Value": "6030"
         },
         {
           "Name": "ETag",
-          "Value": "\"vrS+FtyrFrU7LosQKV4TwaBcDLRMuHx3WfTxHIwaxrQ=\""
+          "Value": "\"Ns36P7a7qJixqJoUKWwz+wvX14HBiLc7wirx6fxCQ/k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:35 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6941,13 +7109,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"cx/3iDFCp7MZXh2dEvdm5TNIHfhaKwqs8mC/9Q/BvC8=\""
+          "Value": "W/\"XGpVw41+IhLhjuiru9zDYQ2HYKxw6S4bqNXSuzm5LC4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vtg1kc5y6g"
+          "Value": "wt7gu7b45o"
         },
         {
           "Name": "label",
@@ -6955,12 +7123,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-cx/3iDFCp7MZXh2dEvdm5TNIHfhaKwqs8mC/9Q/BvC8="
+          "Value": "sha256-XGpVw41+IhLhjuiru9zDYQ2HYKxw6S4bqNXSuzm5LC4="
         }
       ]
     },
     {
-      "Route": "card.vtg1kc5y6g.html",
+      "Route": "card.wt7gu7b45o.html",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\card.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -6970,7 +7138,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14700"
+          "Value": "14778"
         },
         {
           "Name": "Content-Type",
@@ -6978,11 +7146,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"cx/3iDFCp7MZXh2dEvdm5TNIHfhaKwqs8mC/9Q/BvC8=\""
+          "Value": "\"XGpVw41+IhLhjuiru9zDYQ2HYKxw6S4bqNXSuzm5LC4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:35 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6992,7 +7160,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vtg1kc5y6g"
+          "Value": "wt7gu7b45o"
         },
         {
           "Name": "label",
@@ -7000,13 +7168,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-cx/3iDFCp7MZXh2dEvdm5TNIHfhaKwqs8mC/9Q/BvC8="
+          "Value": "sha256-XGpVw41+IhLhjuiru9zDYQ2HYKxw6S4bqNXSuzm5LC4="
         }
       ]
     },
     {
-      "Route": "card.vtg1kc5y6g.html.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-vtg1kc5y6g.gz",
+      "Route": "card.wt7gu7b45o.html.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ttlhf15lem-wt7gu7b45o.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -7015,7 +7183,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5952"
+          "Value": "6030"
         },
         {
           "Name": "Content-Type",
@@ -7023,11 +7191,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"vrS+FtyrFrU7LosQKV4TwaBcDLRMuHx3WfTxHIwaxrQ=\""
+          "Value": "\"Ns36P7a7qJixqJoUKWwz+wvX14HBiLc7wirx6fxCQ/k=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:35 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:09 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7045,7 +7213,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vtg1kc5y6g"
+          "Value": "wt7gu7b45o"
         },
         {
           "Name": "label",
@@ -7053,7 +7221,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-vrS+FtyrFrU7LosQKV4TwaBcDLRMuHx3WfTxHIwaxrQ="
+          "Value": "sha256-Ns36P7a7qJixqJoUKWwz+wvX14HBiLc7wirx6fxCQ/k="
         }
       ]
     },
@@ -40863,12 +41031,12 @@
     },
     {
       "Route": "index.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-wrx6u2u659.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-m6oz9fne50.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000402414487"
+          "Quality": "0.000402576490"
         }
       ],
       "ResponseHeaders": [
@@ -40878,15 +41046,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2484"
+          "Value": "2483"
         },
         {
           "Name": "ETag",
-          "Value": "\"Zmm2UrDiYMOtNxMRdpMWwQz0LJfa6XOAkW9S8+r3rPw=\""
+          "Value": "\"iIPPwpPwEzF0ksk4XQPvNO2I5i/QcLosc1ifxp0D43I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:28:38 GMT"
+          "Value": "Sat, 14 Jun 2025 15:06:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -40906,13 +41074,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"fHYtzGjKitgb2mwxoNgvw4p/HfV2O5jcrlF7oVkAM/0=\""
+          "Value": "W/\"Lpp26lH8wxtPluCxas+VQkxRouZXoCioW9Lg5um/2Z8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fHYtzGjKitgb2mwxoNgvw4p/HfV2O5jcrlF7oVkAM/0="
+          "Value": "sha256-Lpp26lH8wxtPluCxas+VQkxRouZXoCioW9Lg5um/2Z8="
         }
       ]
     },
@@ -40927,7 +41095,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6752"
+          "Value": "6676"
         },
         {
           "Name": "Content-Type",
@@ -40935,11 +41103,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fHYtzGjKitgb2mwxoNgvw4p/HfV2O5jcrlF7oVkAM/0=\""
+          "Value": "\"Lpp26lH8wxtPluCxas+VQkxRouZXoCioW9Lg5um/2Z8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:28:38 GMT"
+          "Value": "Sat, 14 Jun 2025 15:06:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -40949,13 +41117,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-fHYtzGjKitgb2mwxoNgvw4p/HfV2O5jcrlF7oVkAM/0="
+          "Value": "sha256-Lpp26lH8wxtPluCxas+VQkxRouZXoCioW9Lg5um/2Z8="
         }
       ]
     },
     {
       "Route": "index.html.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-wrx6u2u659.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-m6oz9fne50.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -40964,7 +41132,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2484"
+          "Value": "2483"
         },
         {
           "Name": "Content-Type",
@@ -40972,11 +41140,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Zmm2UrDiYMOtNxMRdpMWwQz0LJfa6XOAkW9S8+r3rPw=\""
+          "Value": "\"iIPPwpPwEzF0ksk4XQPvNO2I5i/QcLosc1ifxp0D43I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:28:38 GMT"
+          "Value": "Sat, 14 Jun 2025 15:06:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -40994,18 +41162,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Zmm2UrDiYMOtNxMRdpMWwQz0LJfa6XOAkW9S8+r3rPw="
+          "Value": "sha256-iIPPwpPwEzF0ksk4XQPvNO2I5i/QcLosc1ifxp0D43I="
         }
       ]
     },
     {
-      "Route": "index.wrx6u2u659.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-wrx6u2u659.gz",
+      "Route": "index.m6oz9fne50.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-m6oz9fne50.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000402414487"
+          "Quality": "0.000402576490"
         }
       ],
       "ResponseHeaders": [
@@ -41015,15 +41183,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2484"
+          "Value": "2483"
         },
         {
           "Name": "ETag",
-          "Value": "\"Zmm2UrDiYMOtNxMRdpMWwQz0LJfa6XOAkW9S8+r3rPw=\""
+          "Value": "\"iIPPwpPwEzF0ksk4XQPvNO2I5i/QcLosc1ifxp0D43I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:28:38 GMT"
+          "Value": "Sat, 14 Jun 2025 15:06:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -41043,13 +41211,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"fHYtzGjKitgb2mwxoNgvw4p/HfV2O5jcrlF7oVkAM/0=\""
+          "Value": "W/\"Lpp26lH8wxtPluCxas+VQkxRouZXoCioW9Lg5um/2Z8=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wrx6u2u659"
+          "Value": "m6oz9fne50"
         },
         {
           "Name": "label",
@@ -41057,12 +41225,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fHYtzGjKitgb2mwxoNgvw4p/HfV2O5jcrlF7oVkAM/0="
+          "Value": "sha256-Lpp26lH8wxtPluCxas+VQkxRouZXoCioW9Lg5um/2Z8="
         }
       ]
     },
     {
-      "Route": "index.wrx6u2u659.html",
+      "Route": "index.m6oz9fne50.html",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\index.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -41072,7 +41240,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6752"
+          "Value": "6676"
         },
         {
           "Name": "Content-Type",
@@ -41080,11 +41248,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"fHYtzGjKitgb2mwxoNgvw4p/HfV2O5jcrlF7oVkAM/0=\""
+          "Value": "\"Lpp26lH8wxtPluCxas+VQkxRouZXoCioW9Lg5um/2Z8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:28:38 GMT"
+          "Value": "Sat, 14 Jun 2025 15:06:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -41094,7 +41262,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wrx6u2u659"
+          "Value": "m6oz9fne50"
         },
         {
           "Name": "label",
@@ -41102,13 +41270,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-fHYtzGjKitgb2mwxoNgvw4p/HfV2O5jcrlF7oVkAM/0="
+          "Value": "sha256-Lpp26lH8wxtPluCxas+VQkxRouZXoCioW9Lg5um/2Z8="
         }
       ]
     },
     {
-      "Route": "index.wrx6u2u659.html.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-wrx6u2u659.gz",
+      "Route": "index.m6oz9fne50.html.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\szklv054l9-m6oz9fne50.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -41117,7 +41285,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2484"
+          "Value": "2483"
         },
         {
           "Name": "Content-Type",
@@ -41125,11 +41293,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Zmm2UrDiYMOtNxMRdpMWwQz0LJfa6XOAkW9S8+r3rPw=\""
+          "Value": "\"iIPPwpPwEzF0ksk4XQPvNO2I5i/QcLosc1ifxp0D43I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:28:38 GMT"
+          "Value": "Sat, 14 Jun 2025 15:06:00 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -41147,7 +41315,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "wrx6u2u659"
+          "Value": "m6oz9fne50"
         },
         {
           "Name": "label",
@@ -41155,7 +41323,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Zmm2UrDiYMOtNxMRdpMWwQz0LJfa6XOAkW9S8+r3rPw="
+          "Value": "sha256-iIPPwpPwEzF0ksk4XQPvNO2I5i/QcLosc1ifxp0D43I="
         }
       ]
     },
@@ -42054,8 +42222,8 @@
       ]
     },
     {
-      "Route": "module_edit.4tldn7tka0.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-4tldn7tka0.gz",
+      "Route": "module_edit.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-oq9pjeowbr.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -42074,15 +42242,15 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7y0p/d68uadm/Ola879nw7EeRPx3stxO4FL5egy4IpM=\""
+          "Value": "\"qow2ajpNY8Fmrw/VdtYvtliNwJHa6WectlBLUb4CZXg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 11:57:22 GMT"
+          "Value": "Sat, 14 Jun 2025 16:01:20 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -42098,26 +42266,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"qHKdLOL+0p0bnSsSuMXUraKQRkJQMQ9YDUrNehuHe8M=\""
+          "Value": "W/\"kGim04VjEbkGxbxe7gS+pGH2+q4/EHKZDHVyZGcWWys=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "4tldn7tka0"
-        },
-        {
-          "Name": "label",
-          "Value": "module_edit.html"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-qHKdLOL+0p0bnSsSuMXUraKQRkJQMQ9YDUrNehuHe8M="
+          "Value": "sha256-kGim04VjEbkGxbxe7gS+pGH2+q4/EHKZDHVyZGcWWys="
         }
       ]
     },
     {
-      "Route": "module_edit.4tldn7tka0.html",
+      "Route": "module_edit.html",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_edit.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -42127,7 +42287,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "38822"
+          "Value": "38802"
         },
         {
           "Name": "Content-Type",
@@ -42135,35 +42295,27 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qHKdLOL+0p0bnSsSuMXUraKQRkJQMQ9YDUrNehuHe8M=\""
+          "Value": "\"kGim04VjEbkGxbxe7gS+pGH2+q4/EHKZDHVyZGcWWys=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 11:57:22 GMT"
+          "Value": "Sat, 14 Jun 2025 16:01:20 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "4tldn7tka0"
-        },
-        {
-          "Name": "label",
-          "Value": "module_edit.html"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-qHKdLOL+0p0bnSsSuMXUraKQRkJQMQ9YDUrNehuHe8M="
+          "Value": "sha256-kGim04VjEbkGxbxe7gS+pGH2+q4/EHKZDHVyZGcWWys="
         }
       ]
     },
     {
-      "Route": "module_edit.4tldn7tka0.html.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-4tldn7tka0.gz",
+      "Route": "module_edit.html.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-oq9pjeowbr.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -42180,11 +42332,164 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7y0p/d68uadm/Ola879nw7EeRPx3stxO4FL5egy4IpM=\""
+          "Value": "\"qow2ajpNY8Fmrw/VdtYvtliNwJHa6WectlBLUb4CZXg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 11:57:22 GMT"
+          "Value": "Sat, 14 Jun 2025 16:01:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qow2ajpNY8Fmrw/VdtYvtliNwJHa6WectlBLUb4CZXg="
+        }
+      ]
+    },
+    {
+      "Route": "module_edit.oq9pjeowbr.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-oq9pjeowbr.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000083857442"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11924"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qow2ajpNY8Fmrw/VdtYvtliNwJHa6WectlBLUb4CZXg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 16:01:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"kGim04VjEbkGxbxe7gS+pGH2+q4/EHKZDHVyZGcWWys=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oq9pjeowbr"
+        },
+        {
+          "Name": "label",
+          "Value": "module_edit.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kGim04VjEbkGxbxe7gS+pGH2+q4/EHKZDHVyZGcWWys="
+        }
+      ]
+    },
+    {
+      "Route": "module_edit.oq9pjeowbr.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_edit.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "38802"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kGim04VjEbkGxbxe7gS+pGH2+q4/EHKZDHVyZGcWWys=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 16:01:20 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oq9pjeowbr"
+        },
+        {
+          "Name": "label",
+          "Value": "module_edit.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kGim04VjEbkGxbxe7gS+pGH2+q4/EHKZDHVyZGcWWys="
+        }
+      ]
+    },
+    {
+      "Route": "module_edit.oq9pjeowbr.html.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-oq9pjeowbr.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11924"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qow2ajpNY8Fmrw/VdtYvtliNwJHa6WectlBLUb4CZXg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 16:01:20 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -42202,7 +42507,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "4tldn7tka0"
+          "Value": "oq9pjeowbr"
         },
         {
           "Name": "label",
@@ -42210,18 +42515,18 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7y0p/d68uadm/Ola879nw7EeRPx3stxO4FL5egy4IpM="
+          "Value": "sha256-qow2ajpNY8Fmrw/VdtYvtliNwJHa6WectlBLUb4CZXg="
         }
       ]
     },
     {
-      "Route": "module_edit.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-4tldn7tka0.gz",
+      "Route": "module_egor.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ecic70q6lf-j0gjca2fhi.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000083857442"
+          "Quality": "0.000583430572"
         }
       ],
       "ResponseHeaders": [
@@ -42231,15 +42536,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11924"
+          "Value": "1713"
         },
         {
           "Name": "ETag",
-          "Value": "\"7y0p/d68uadm/Ola879nw7EeRPx3stxO4FL5egy4IpM=\""
+          "Value": "\"HRweWwLeO1bfuoXUEVdtybg4SeLVpMfO3QuqpUC7Rz4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 11:57:22 GMT"
+          "Value": "Sat, 14 Jun 2025 14:42:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -42259,19 +42564,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"qHKdLOL+0p0bnSsSuMXUraKQRkJQMQ9YDUrNehuHe8M=\""
+          "Value": "W/\"LVRXUWHPfJjIL7+Ja9lbEaZwZVLLCR39VUk3n/mROSA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qHKdLOL+0p0bnSsSuMXUraKQRkJQMQ9YDUrNehuHe8M="
+          "Value": "sha256-LVRXUWHPfJjIL7+Ja9lbEaZwZVLLCR39VUk3n/mROSA="
         }
       ]
     },
     {
-      "Route": "module_edit.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_edit.html",
+      "Route": "module_egor.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_egor.html",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -42280,7 +42585,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "38822"
+          "Value": "6747"
         },
         {
           "Name": "Content-Type",
@@ -42288,11 +42593,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"qHKdLOL+0p0bnSsSuMXUraKQRkJQMQ9YDUrNehuHe8M=\""
+          "Value": "\"LVRXUWHPfJjIL7+Ja9lbEaZwZVLLCR39VUk3n/mROSA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 11:57:22 GMT"
+          "Value": "Sat, 14 Jun 2025 14:42:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -42302,13 +42607,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-qHKdLOL+0p0bnSsSuMXUraKQRkJQMQ9YDUrNehuHe8M="
+          "Value": "sha256-LVRXUWHPfJjIL7+Ja9lbEaZwZVLLCR39VUk3n/mROSA="
         }
       ]
     },
     {
-      "Route": "module_edit.html.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\llogjpwrgr-4tldn7tka0.gz",
+      "Route": "module_egor.html.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ecic70q6lf-j0gjca2fhi.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -42317,7 +42622,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "11924"
+          "Value": "1713"
         },
         {
           "Name": "Content-Type",
@@ -42325,11 +42630,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7y0p/d68uadm/Ola879nw7EeRPx3stxO4FL5egy4IpM=\""
+          "Value": "\"HRweWwLeO1bfuoXUEVdtybg4SeLVpMfO3QuqpUC7Rz4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 11:57:22 GMT"
+          "Value": "Sat, 14 Jun 2025 14:42:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -42347,18 +42652,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-7y0p/d68uadm/Ola879nw7EeRPx3stxO4FL5egy4IpM="
+          "Value": "sha256-HRweWwLeO1bfuoXUEVdtybg4SeLVpMfO3QuqpUC7Rz4="
         }
       ]
     },
     {
-      "Route": "module.aw0087mclm.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-aw0087mclm.gz",
+      "Route": "module_egor.j0gjca2fhi.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ecic70q6lf-j0gjca2fhi.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.001479289941"
+          "Quality": "0.000583430572"
         }
       ],
       "ResponseHeaders": [
@@ -42368,15 +42673,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "675"
+          "Value": "1713"
         },
         {
           "Name": "ETag",
-          "Value": "\"3ieSw7KjTcY2fpsAtnCzZzGlcmPXl2kzCuYE1Q7t7Fs=\""
+          "Value": "\"HRweWwLeO1bfuoXUEVdtybg4SeLVpMfO3QuqpUC7Rz4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 18:44:38 GMT"
+          "Value": "Sat, 14 Jun 2025 14:42:04 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -42396,26 +42701,179 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"dhc14uoA9kfNhx1v/EfOL7HdyneU4AIBUOvlsEWtLiA=\""
+          "Value": "W/\"LVRXUWHPfJjIL7+Ja9lbEaZwZVLLCR39VUk3n/mROSA=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "aw0087mclm"
+          "Value": "j0gjca2fhi"
         },
         {
           "Name": "label",
-          "Value": "module.html"
+          "Value": "module_egor.html"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dhc14uoA9kfNhx1v/EfOL7HdyneU4AIBUOvlsEWtLiA="
+          "Value": "sha256-LVRXUWHPfJjIL7+Ja9lbEaZwZVLLCR39VUk3n/mROSA="
         }
       ]
     },
     {
-      "Route": "module.aw0087mclm.html",
+      "Route": "module_egor.j0gjca2fhi.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_egor.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6747"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LVRXUWHPfJjIL7+Ja9lbEaZwZVLLCR39VUk3n/mROSA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:42:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j0gjca2fhi"
+        },
+        {
+          "Name": "label",
+          "Value": "module_egor.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LVRXUWHPfJjIL7+Ja9lbEaZwZVLLCR39VUk3n/mROSA="
+        }
+      ]
+    },
+    {
+      "Route": "module_egor.j0gjca2fhi.html.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\ecic70q6lf-j0gjca2fhi.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1713"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HRweWwLeO1bfuoXUEVdtybg4SeLVpMfO3QuqpUC7Rz4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:42:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "j0gjca2fhi"
+        },
+        {
+          "Name": "label",
+          "Value": "module_egor.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HRweWwLeO1bfuoXUEVdtybg4SeLVpMfO3QuqpUC7Rz4="
+        }
+      ]
+    },
+    {
+      "Route": "module.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-rqn64gp8na.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000599161174"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1668"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gz7llkktqPIFdMLWUGCG6DMgQedPrU7g1Dt9fZ5+QWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:44:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Te4w1upWPB7ZUCASiSNZl7JceqgFnEpmKtj77KFS5oQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Te4w1upWPB7ZUCASiSNZl7JceqgFnEpmKtj77KFS5oQ="
+        }
+      ]
+    },
+    {
+      "Route": "module.html",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -42425,7 +42883,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1539"
+          "Value": "6047"
         },
         {
           "Name": "Content-Type",
@@ -42433,11 +42891,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dhc14uoA9kfNhx1v/EfOL7HdyneU4AIBUOvlsEWtLiA=\""
+          "Value": "\"Te4w1upWPB7ZUCASiSNZl7JceqgFnEpmKtj77KFS5oQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 18:44:38 GMT"
+          "Value": "Sat, 14 Jun 2025 15:44:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Te4w1upWPB7ZUCASiSNZl7JceqgFnEpmKtj77KFS5oQ="
+        }
+      ]
+    },
+    {
+      "Route": "module.html.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-rqn64gp8na.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1668"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gz7llkktqPIFdMLWUGCG6DMgQedPrU7g1Dt9fZ5+QWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:44:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Gz7llkktqPIFdMLWUGCG6DMgQedPrU7g1Dt9fZ5+QWk="
+        }
+      ]
+    },
+    {
+      "Route": "module.rqn64gp8na.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-rqn64gp8na.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000599161174"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1668"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Gz7llkktqPIFdMLWUGCG6DMgQedPrU7g1Dt9fZ5+QWk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:44:29 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Te4w1upWPB7ZUCASiSNZl7JceqgFnEpmKtj77KFS5oQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rqn64gp8na"
+        },
+        {
+          "Name": "label",
+          "Value": "module.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Te4w1upWPB7ZUCASiSNZl7JceqgFnEpmKtj77KFS5oQ="
+        }
+      ]
+    },
+    {
+      "Route": "module.rqn64gp8na.html",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6047"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Te4w1upWPB7ZUCASiSNZl7JceqgFnEpmKtj77KFS5oQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:44:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -42447,7 +43050,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "aw0087mclm"
+          "Value": "rqn64gp8na"
         },
         {
           "Name": "label",
@@ -42455,13 +43058,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-dhc14uoA9kfNhx1v/EfOL7HdyneU4AIBUOvlsEWtLiA="
+          "Value": "sha256-Te4w1upWPB7ZUCASiSNZl7JceqgFnEpmKtj77KFS5oQ="
         }
       ]
     },
     {
-      "Route": "module.aw0087mclm.html.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-aw0087mclm.gz",
+      "Route": "module.rqn64gp8na.html.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-rqn64gp8na.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -42470,7 +43073,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "675"
+          "Value": "1668"
         },
         {
           "Name": "Content-Type",
@@ -42478,11 +43081,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"3ieSw7KjTcY2fpsAtnCzZzGlcmPXl2kzCuYE1Q7t7Fs=\""
+          "Value": "\"Gz7llkktqPIFdMLWUGCG6DMgQedPrU7g1Dt9fZ5+QWk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 18:44:38 GMT"
+          "Value": "Sat, 14 Jun 2025 15:44:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -42500,7 +43103,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "aw0087mclm"
+          "Value": "rqn64gp8na"
         },
         {
           "Name": "label",
@@ -42508,144 +43111,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-3ieSw7KjTcY2fpsAtnCzZzGlcmPXl2kzCuYE1Q7t7Fs="
-        }
-      ]
-    },
-    {
-      "Route": "module.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-aw0087mclm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.001479289941"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "675"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3ieSw7KjTcY2fpsAtnCzZzGlcmPXl2kzCuYE1Q7t7Fs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 18:44:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"dhc14uoA9kfNhx1v/EfOL7HdyneU4AIBUOvlsEWtLiA=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-dhc14uoA9kfNhx1v/EfOL7HdyneU4AIBUOvlsEWtLiA="
-        }
-      ]
-    },
-    {
-      "Route": "module.html",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1539"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"dhc14uoA9kfNhx1v/EfOL7HdyneU4AIBUOvlsEWtLiA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 18:44:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-dhc14uoA9kfNhx1v/EfOL7HdyneU4AIBUOvlsEWtLiA="
-        }
-      ]
-    },
-    {
-      "Route": "module.html.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\bnrrxqq0kr-aw0087mclm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "675"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"3ieSw7KjTcY2fpsAtnCzZzGlcmPXl2kzCuYE1Q7t7Fs=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 18:44:38 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-3ieSw7KjTcY2fpsAtnCzZzGlcmPXl2kzCuYE1Q7t7Fs="
+          "Value": "sha256-Gz7llkktqPIFdMLWUGCG6DMgQedPrU7g1Dt9fZ5+QWk="
         }
       ]
     },
@@ -42948,13 +43414,13 @@
       ]
     },
     {
-      "Route": "script/edit_module.43eyyvwue6.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-43eyyvwue6.gz",
+      "Route": "script/edit_module.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-oqzlb9kh1d.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000209161263"
+          "Quality": "0.000204540806"
         }
       ],
       "ResponseHeaders": [
@@ -42964,19 +43430,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4780"
+          "Value": "4888"
         },
         {
           "Name": "ETag",
-          "Value": "\"7oAXg9UyYRDkkt2hQh2s4fOqqjJmCuqoMh9xJwOlCVY=\""
+          "Value": "\"hLsYys/GkUTDrbBW6hy46U3hG5/AtPT3U5FYL56lAEU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:41:27 GMT"
+          "Value": "Sat, 14 Jun 2025 15:59:55 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -42992,26 +43458,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I=\""
+          "Value": "W/\"MNfd1AfjZoJBLZO+O7tQSE7CjKDi8lEalHwZYVj4M5Y=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "43eyyvwue6"
-        },
-        {
-          "Name": "label",
-          "Value": "script/edit_module.js"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I="
+          "Value": "sha256-MNfd1AfjZoJBLZO+O7tQSE7CjKDi8lEalHwZYVj4M5Y="
         }
       ]
     },
     {
-      "Route": "script/edit_module.43eyyvwue6.js",
+      "Route": "script/edit_module.js",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_module.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -43021,7 +43479,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "18547"
+          "Value": "18902"
         },
         {
           "Name": "Content-Type",
@@ -43029,11 +43487,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I=\""
+          "Value": "\"MNfd1AfjZoJBLZO+O7tQSE7CjKDi8lEalHwZYVj4M5Y=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:41:27 GMT"
+          "Value": "Sat, 14 Jun 2025 15:59:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-MNfd1AfjZoJBLZO+O7tQSE7CjKDi8lEalHwZYVj4M5Y="
+        }
+      ]
+    },
+    {
+      "Route": "script/edit_module.js.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-oqzlb9kh1d.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4888"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hLsYys/GkUTDrbBW6hy46U3hG5/AtPT3U5FYL56lAEU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:59:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hLsYys/GkUTDrbBW6hy46U3hG5/AtPT3U5FYL56lAEU="
+        }
+      ]
+    },
+    {
+      "Route": "script/edit_module.oqzlb9kh1d.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-oqzlb9kh1d.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000204540806"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4888"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hLsYys/GkUTDrbBW6hy46U3hG5/AtPT3U5FYL56lAEU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:59:55 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"MNfd1AfjZoJBLZO+O7tQSE7CjKDi8lEalHwZYVj4M5Y=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oqzlb9kh1d"
+        },
+        {
+          "Name": "label",
+          "Value": "script/edit_module.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-MNfd1AfjZoJBLZO+O7tQSE7CjKDi8lEalHwZYVj4M5Y="
+        }
+      ]
+    },
+    {
+      "Route": "script/edit_module.oqzlb9kh1d.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_module.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18902"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"MNfd1AfjZoJBLZO+O7tQSE7CjKDi8lEalHwZYVj4M5Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:59:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -43043,7 +43646,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "43eyyvwue6"
+          "Value": "oqzlb9kh1d"
         },
         {
           "Name": "label",
@@ -43051,13 +43654,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I="
+          "Value": "sha256-MNfd1AfjZoJBLZO+O7tQSE7CjKDi8lEalHwZYVj4M5Y="
         }
       ]
     },
     {
-      "Route": "script/edit_module.43eyyvwue6.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-43eyyvwue6.gz",
+      "Route": "script/edit_module.oqzlb9kh1d.js.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-oqzlb9kh1d.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -43066,7 +43669,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4780"
+          "Value": "4888"
         },
         {
           "Name": "Content-Type",
@@ -43074,11 +43677,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"7oAXg9UyYRDkkt2hQh2s4fOqqjJmCuqoMh9xJwOlCVY=\""
+          "Value": "\"hLsYys/GkUTDrbBW6hy46U3hG5/AtPT3U5FYL56lAEU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:41:27 GMT"
+          "Value": "Sat, 14 Jun 2025 15:59:55 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -43096,7 +43699,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "43eyyvwue6"
+          "Value": "oqzlb9kh1d"
         },
         {
           "Name": "label",
@@ -43104,442 +43707,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-7oAXg9UyYRDkkt2hQh2s4fOqqjJmCuqoMh9xJwOlCVY="
-        }
-      ]
-    },
-    {
-      "Route": "script/edit_module.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-43eyyvwue6.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000209161263"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4780"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7oAXg9UyYRDkkt2hQh2s4fOqqjJmCuqoMh9xJwOlCVY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:41:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I="
-        }
-      ]
-    },
-    {
-      "Route": "script/edit_module.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_module.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "18547"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:41:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I="
-        }
-      ]
-    },
-    {
-      "Route": "script/edit_module.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\d2faxr0ecl-43eyyvwue6.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4780"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"7oAXg9UyYRDkkt2hQh2s4fOqqjJmCuqoMh9xJwOlCVY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:41:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-7oAXg9UyYRDkkt2hQh2s4fOqqjJmCuqoMh9xJwOlCVY="
-        }
-      ]
-    },
-    {
-      "Route": "script/edit_name_module.5ipweew5fc.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\1dniz6sdab-5ipweew5fc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "1.000000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 08:51:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "label",
-          "Value": "script/edit_name_module.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": "script/edit_name_module.5ipweew5fc.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_name_module.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 08:51:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "label",
-          "Value": "script/edit_name_module.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": "script/edit_name_module.5ipweew5fc.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\1dniz6sdab-5ipweew5fc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 08:51:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ipweew5fc"
-        },
-        {
-          "Name": "label",
-          "Value": "script/edit_name_module.js.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": "script/edit_name_module.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\1dniz6sdab-5ipweew5fc.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "1.000000000000"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 08:51:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": "script/edit_name_module.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_name_module.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 08:51:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
-        }
-      ]
-    },
-    {
-      "Route": "script/edit_name_module.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\1dniz6sdab-5ipweew5fc.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "0"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 08:51:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU="
+          "Value": "sha256-hLsYys/GkUTDrbBW6hy46U3hG5/AtPT3U5FYL56lAEU="
         }
       ]
     },
@@ -43843,12 +44011,12 @@
     },
     {
       "Route": "script/gratz.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-sxyglkv1ut.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-qlfsue3xgq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000597014925"
+          "Quality": "0.000504032258"
         }
       ],
       "ResponseHeaders": [
@@ -43858,15 +44026,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1674"
+          "Value": "1983"
         },
         {
           "Name": "ETag",
-          "Value": "\"rXlWL+aRWNU3UIHXs9QfPii5v3wP+FelKTZvOkyl+uE=\""
+          "Value": "\"i27sNk7wPW97JxPkMHCfcX6XJrs2Y2NRvvI/NK8adl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 14:25:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -43886,13 +44054,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4ElO7iMbjhlQ8BmyJ2b/qFGYIUe+jWS35ynJXT0UgbQ=\""
+          "Value": "W/\"/oM1t4zUtwwfHusJlq/vlXo6UY/FWDnCEyw7IMMWHHg=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4ElO7iMbjhlQ8BmyJ2b/qFGYIUe+jWS35ynJXT0UgbQ="
+          "Value": "sha256-/oM1t4zUtwwfHusJlq/vlXo6UY/FWDnCEyw7IMMWHHg="
         }
       ]
     },
@@ -43907,7 +44075,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5833"
+          "Value": "6995"
         },
         {
           "Name": "Content-Type",
@@ -43915,11 +44083,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4ElO7iMbjhlQ8BmyJ2b/qFGYIUe+jWS35ynJXT0UgbQ=\""
+          "Value": "\"/oM1t4zUtwwfHusJlq/vlXo6UY/FWDnCEyw7IMMWHHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 14:25:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -43929,13 +44097,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4ElO7iMbjhlQ8BmyJ2b/qFGYIUe+jWS35ynJXT0UgbQ="
+          "Value": "sha256-/oM1t4zUtwwfHusJlq/vlXo6UY/FWDnCEyw7IMMWHHg="
         }
       ]
     },
     {
       "Route": "script/gratz.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-sxyglkv1ut.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-qlfsue3xgq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -43944,7 +44112,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1674"
+          "Value": "1983"
         },
         {
           "Name": "Content-Type",
@@ -43952,11 +44120,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"rXlWL+aRWNU3UIHXs9QfPii5v3wP+FelKTZvOkyl+uE=\""
+          "Value": "\"i27sNk7wPW97JxPkMHCfcX6XJrs2Y2NRvvI/NK8adl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 14:25:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -43974,18 +44142,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-rXlWL+aRWNU3UIHXs9QfPii5v3wP+FelKTZvOkyl+uE="
+          "Value": "sha256-i27sNk7wPW97JxPkMHCfcX6XJrs2Y2NRvvI/NK8adl8="
         }
       ]
     },
     {
-      "Route": "script/gratz.sxyglkv1ut.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-sxyglkv1ut.gz",
+      "Route": "script/gratz.qlfsue3xgq.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-qlfsue3xgq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000597014925"
+          "Quality": "0.000504032258"
         }
       ],
       "ResponseHeaders": [
@@ -43995,15 +44163,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1674"
+          "Value": "1983"
         },
         {
           "Name": "ETag",
-          "Value": "\"rXlWL+aRWNU3UIHXs9QfPii5v3wP+FelKTZvOkyl+uE=\""
+          "Value": "\"i27sNk7wPW97JxPkMHCfcX6XJrs2Y2NRvvI/NK8adl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 14:25:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44023,13 +44191,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4ElO7iMbjhlQ8BmyJ2b/qFGYIUe+jWS35ynJXT0UgbQ=\""
+          "Value": "W/\"/oM1t4zUtwwfHusJlq/vlXo6UY/FWDnCEyw7IMMWHHg=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sxyglkv1ut"
+          "Value": "qlfsue3xgq"
         },
         {
           "Name": "label",
@@ -44037,12 +44205,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4ElO7iMbjhlQ8BmyJ2b/qFGYIUe+jWS35ynJXT0UgbQ="
+          "Value": "sha256-/oM1t4zUtwwfHusJlq/vlXo6UY/FWDnCEyw7IMMWHHg="
         }
       ]
     },
     {
-      "Route": "script/gratz.sxyglkv1ut.js",
+      "Route": "script/gratz.qlfsue3xgq.js",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\gratz.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -44052,7 +44220,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5833"
+          "Value": "6995"
         },
         {
           "Name": "Content-Type",
@@ -44060,11 +44228,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4ElO7iMbjhlQ8BmyJ2b/qFGYIUe+jWS35ynJXT0UgbQ=\""
+          "Value": "\"/oM1t4zUtwwfHusJlq/vlXo6UY/FWDnCEyw7IMMWHHg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 14:25:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44074,7 +44242,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sxyglkv1ut"
+          "Value": "qlfsue3xgq"
         },
         {
           "Name": "label",
@@ -44082,13 +44250,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4ElO7iMbjhlQ8BmyJ2b/qFGYIUe+jWS35ynJXT0UgbQ="
+          "Value": "sha256-/oM1t4zUtwwfHusJlq/vlXo6UY/FWDnCEyw7IMMWHHg="
         }
       ]
     },
     {
-      "Route": "script/gratz.sxyglkv1ut.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-sxyglkv1ut.gz",
+      "Route": "script/gratz.qlfsue3xgq.js.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\zamijooene-qlfsue3xgq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -44097,7 +44265,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1674"
+          "Value": "1983"
         },
         {
           "Name": "Content-Type",
@@ -44105,11 +44273,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"rXlWL+aRWNU3UIHXs9QfPii5v3wP+FelKTZvOkyl+uE=\""
+          "Value": "\"i27sNk7wPW97JxPkMHCfcX6XJrs2Y2NRvvI/NK8adl8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 14:25:29 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44127,7 +44295,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "sxyglkv1ut"
+          "Value": "qlfsue3xgq"
         },
         {
           "Name": "label",
@@ -44135,7 +44303,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-rXlWL+aRWNU3UIHXs9QfPii5v3wP+FelKTZvOkyl+uE="
+          "Value": "sha256-i27sNk7wPW97JxPkMHCfcX6XJrs2Y2NRvvI/NK8adl8="
         }
       ]
     },
@@ -44737,12 +44905,12 @@
     },
     {
       "Route": "script/index.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-rt3z7jswgw.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-pyyz81ehnc.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000545256270"
+          "Quality": "0.000539083558"
         }
       ],
       "ResponseHeaders": [
@@ -44752,15 +44920,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1833"
+          "Value": "1854"
         },
         {
           "Name": "ETag",
-          "Value": "\"xWSBkMme4dbIiaVTcXj2l7husNppYByuqDhE/T2JvDQ=\""
+          "Value": "\"OU7ihmIDhJP8Yg+/QAd9zv3/AV6Lhei3XvQyMRt1i4c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:24:25 GMT"
+          "Value": "Sat, 14 Jun 2025 14:53:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44780,13 +44948,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4a4LQb3dRdbk8IHMLDN9y4e5Clppet8R+JYSNiDakZU=\""
+          "Value": "W/\"wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO+FV6+b1FE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4a4LQb3dRdbk8IHMLDN9y4e5Clppet8R+JYSNiDakZU="
+          "Value": "sha256-wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO+FV6+b1FE="
         }
       ]
     },
@@ -44801,7 +44969,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5457"
+          "Value": "5535"
         },
         {
           "Name": "Content-Type",
@@ -44809,11 +44977,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4a4LQb3dRdbk8IHMLDN9y4e5Clppet8R+JYSNiDakZU=\""
+          "Value": "\"wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO+FV6+b1FE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:24:25 GMT"
+          "Value": "Sat, 14 Jun 2025 14:53:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44823,13 +44991,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4a4LQb3dRdbk8IHMLDN9y4e5Clppet8R+JYSNiDakZU="
+          "Value": "sha256-wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO+FV6+b1FE="
         }
       ]
     },
     {
       "Route": "script/index.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-rt3z7jswgw.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-pyyz81ehnc.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -44838,7 +45006,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1833"
+          "Value": "1854"
         },
         {
           "Name": "Content-Type",
@@ -44846,11 +45014,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xWSBkMme4dbIiaVTcXj2l7husNppYByuqDhE/T2JvDQ=\""
+          "Value": "\"OU7ihmIDhJP8Yg+/QAd9zv3/AV6Lhei3XvQyMRt1i4c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:24:25 GMT"
+          "Value": "Sat, 14 Jun 2025 14:53:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44868,18 +45036,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-xWSBkMme4dbIiaVTcXj2l7husNppYByuqDhE/T2JvDQ="
+          "Value": "sha256-OU7ihmIDhJP8Yg+/QAd9zv3/AV6Lhei3XvQyMRt1i4c="
         }
       ]
     },
     {
-      "Route": "script/index.rt3z7jswgw.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-rt3z7jswgw.gz",
+      "Route": "script/index.pyyz81ehnc.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-pyyz81ehnc.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000545256270"
+          "Quality": "0.000539083558"
         }
       ],
       "ResponseHeaders": [
@@ -44889,15 +45057,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1833"
+          "Value": "1854"
         },
         {
           "Name": "ETag",
-          "Value": "\"xWSBkMme4dbIiaVTcXj2l7husNppYByuqDhE/T2JvDQ=\""
+          "Value": "\"OU7ihmIDhJP8Yg+/QAd9zv3/AV6Lhei3XvQyMRt1i4c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:24:25 GMT"
+          "Value": "Sat, 14 Jun 2025 14:53:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44917,13 +45085,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"4a4LQb3dRdbk8IHMLDN9y4e5Clppet8R+JYSNiDakZU=\""
+          "Value": "W/\"wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO+FV6+b1FE=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rt3z7jswgw"
+          "Value": "pyyz81ehnc"
         },
         {
           "Name": "label",
@@ -44931,12 +45099,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4a4LQb3dRdbk8IHMLDN9y4e5Clppet8R+JYSNiDakZU="
+          "Value": "sha256-wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO+FV6+b1FE="
         }
       ]
     },
     {
-      "Route": "script/index.rt3z7jswgw.js",
+      "Route": "script/index.pyyz81ehnc.js",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\index.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -44946,7 +45114,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5457"
+          "Value": "5535"
         },
         {
           "Name": "Content-Type",
@@ -44954,11 +45122,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4a4LQb3dRdbk8IHMLDN9y4e5Clppet8R+JYSNiDakZU=\""
+          "Value": "\"wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO+FV6+b1FE=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:24:25 GMT"
+          "Value": "Sat, 14 Jun 2025 14:53:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44968,7 +45136,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rt3z7jswgw"
+          "Value": "pyyz81ehnc"
         },
         {
           "Name": "label",
@@ -44976,13 +45144,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-4a4LQb3dRdbk8IHMLDN9y4e5Clppet8R+JYSNiDakZU="
+          "Value": "sha256-wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO+FV6+b1FE="
         }
       ]
     },
     {
-      "Route": "script/index.rt3z7jswgw.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-rt3z7jswgw.gz",
+      "Route": "script/index.pyyz81ehnc.js.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\5zpbhd247j-pyyz81ehnc.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -44991,7 +45159,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1833"
+          "Value": "1854"
         },
         {
           "Name": "Content-Type",
@@ -44999,11 +45167,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"xWSBkMme4dbIiaVTcXj2l7husNppYByuqDhE/T2JvDQ=\""
+          "Value": "\"OU7ihmIDhJP8Yg+/QAd9zv3/AV6Lhei3XvQyMRt1i4c=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:24:25 GMT"
+          "Value": "Sat, 14 Jun 2025 14:53:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -45021,7 +45189,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "rt3z7jswgw"
+          "Value": "pyyz81ehnc"
         },
         {
           "Name": "label",
@@ -45029,7 +45197,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-xWSBkMme4dbIiaVTcXj2l7husNppYByuqDhE/T2JvDQ="
+          "Value": "sha256-OU7ihmIDhJP8Yg+/QAd9zv3/AV6Lhei3XvQyMRt1i4c="
         }
       ]
     },
@@ -45630,13 +45798,13 @@
       ]
     },
     {
-      "Route": "script/show_cards.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-lpl62of3yd.gz",
+      "Route": "script/module.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\078de0gu3q-otbhhuws59.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000584453536"
+          "Quality": "0.001011122346"
         }
       ],
       "ResponseHeaders": [
@@ -45646,15 +45814,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1710"
+          "Value": "988"
         },
         {
           "Name": "ETag",
-          "Value": "\"13fS52fdtalGZJ+CkzrpyeZbU/TrVE9LuT2F69o5hIw=\""
+          "Value": "\"RPfO7wjS9KpctRGC5EBj5zSnYh5PaFZAG05J6KXucI4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:39 GMT"
+          "Value": "Sat, 14 Jun 2025 15:38:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -45674,13 +45842,311 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"l/o1/Low/SrdiT+8xnqiPXotdLsI1pEq7ias4pDOwqU=\""
+          "Value": "W/\"5MBG+WeTn4vc0Z+aUxvDx/sQFTHdJExfUegFaVM308k=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-l/o1/Low/SrdiT+8xnqiPXotdLsI1pEq7ias4pDOwqU="
+          "Value": "sha256-5MBG+WeTn4vc0Z+aUxvDx/sQFTHdJExfUegFaVM308k="
+        }
+      ]
+    },
+    {
+      "Route": "script/module.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\module.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3208"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5MBG+WeTn4vc0Z+aUxvDx/sQFTHdJExfUegFaVM308k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5MBG+WeTn4vc0Z+aUxvDx/sQFTHdJExfUegFaVM308k="
+        }
+      ]
+    },
+    {
+      "Route": "script/module.js.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\078de0gu3q-otbhhuws59.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "988"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RPfO7wjS9KpctRGC5EBj5zSnYh5PaFZAG05J6KXucI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RPfO7wjS9KpctRGC5EBj5zSnYh5PaFZAG05J6KXucI4="
+        }
+      ]
+    },
+    {
+      "Route": "script/module.otbhhuws59.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\078de0gu3q-otbhhuws59.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001011122346"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "988"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RPfO7wjS9KpctRGC5EBj5zSnYh5PaFZAG05J6KXucI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"5MBG+WeTn4vc0Z+aUxvDx/sQFTHdJExfUegFaVM308k=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "otbhhuws59"
+        },
+        {
+          "Name": "label",
+          "Value": "script/module.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5MBG+WeTn4vc0Z+aUxvDx/sQFTHdJExfUegFaVM308k="
+        }
+      ]
+    },
+    {
+      "Route": "script/module.otbhhuws59.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\module.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3208"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5MBG+WeTn4vc0Z+aUxvDx/sQFTHdJExfUegFaVM308k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "otbhhuws59"
+        },
+        {
+          "Name": "label",
+          "Value": "script/module.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5MBG+WeTn4vc0Z+aUxvDx/sQFTHdJExfUegFaVM308k="
+        }
+      ]
+    },
+    {
+      "Route": "script/module.otbhhuws59.js.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\078de0gu3q-otbhhuws59.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "988"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RPfO7wjS9KpctRGC5EBj5zSnYh5PaFZAG05J6KXucI4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:38:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "otbhhuws59"
+        },
+        {
+          "Name": "label",
+          "Value": "script/module.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RPfO7wjS9KpctRGC5EBj5zSnYh5PaFZAG05J6KXucI4="
+        }
+      ]
+    },
+    {
+      "Route": "script/show_cards.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-ld7rdmdblq.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000566251416"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1765"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"b2tyBDFLqB3TNSPpfe7BDzFa8aFpqI181t/X+C7P8gw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 13:41:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"58zHFVGWiLTsXoCtYMNfB/xxHKpFymaT2SH2aRl+CcQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-58zHFVGWiLTsXoCtYMNfB/xxHKpFymaT2SH2aRl+CcQ="
         }
       ]
     },
@@ -45695,7 +46161,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6355"
+          "Value": "6569"
         },
         {
           "Name": "Content-Type",
@@ -45703,11 +46169,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"l/o1/Low/SrdiT+8xnqiPXotdLsI1pEq7ias4pDOwqU=\""
+          "Value": "\"58zHFVGWiLTsXoCtYMNfB/xxHKpFymaT2SH2aRl+CcQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:39 GMT"
+          "Value": "Sat, 14 Jun 2025 13:41:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -45717,13 +46183,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-l/o1/Low/SrdiT+8xnqiPXotdLsI1pEq7ias4pDOwqU="
+          "Value": "sha256-58zHFVGWiLTsXoCtYMNfB/xxHKpFymaT2SH2aRl+CcQ="
         }
       ]
     },
     {
       "Route": "script/show_cards.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-lpl62of3yd.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-ld7rdmdblq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -45732,7 +46198,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1710"
+          "Value": "1765"
         },
         {
           "Name": "Content-Type",
@@ -45740,11 +46206,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"13fS52fdtalGZJ+CkzrpyeZbU/TrVE9LuT2F69o5hIw=\""
+          "Value": "\"b2tyBDFLqB3TNSPpfe7BDzFa8aFpqI181t/X+C7P8gw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:39 GMT"
+          "Value": "Sat, 14 Jun 2025 13:41:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -45762,18 +46228,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-13fS52fdtalGZJ+CkzrpyeZbU/TrVE9LuT2F69o5hIw="
+          "Value": "sha256-b2tyBDFLqB3TNSPpfe7BDzFa8aFpqI181t/X+C7P8gw="
         }
       ]
     },
     {
-      "Route": "script/show_cards.lpl62of3yd.js",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-lpl62of3yd.gz",
+      "Route": "script/show_cards.ld7rdmdblq.js",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-ld7rdmdblq.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000584453536"
+          "Quality": "0.000566251416"
         }
       ],
       "ResponseHeaders": [
@@ -45783,15 +46249,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1710"
+          "Value": "1765"
         },
         {
           "Name": "ETag",
-          "Value": "\"13fS52fdtalGZJ+CkzrpyeZbU/TrVE9LuT2F69o5hIw=\""
+          "Value": "\"b2tyBDFLqB3TNSPpfe7BDzFa8aFpqI181t/X+C7P8gw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:39 GMT"
+          "Value": "Sat, 14 Jun 2025 13:41:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -45811,13 +46277,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"l/o1/Low/SrdiT+8xnqiPXotdLsI1pEq7ias4pDOwqU=\""
+          "Value": "W/\"58zHFVGWiLTsXoCtYMNfB/xxHKpFymaT2SH2aRl+CcQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lpl62of3yd"
+          "Value": "ld7rdmdblq"
         },
         {
           "Name": "label",
@@ -45825,12 +46291,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-l/o1/Low/SrdiT+8xnqiPXotdLsI1pEq7ias4pDOwqU="
+          "Value": "sha256-58zHFVGWiLTsXoCtYMNfB/xxHKpFymaT2SH2aRl+CcQ="
         }
       ]
     },
     {
-      "Route": "script/show_cards.lpl62of3yd.js",
+      "Route": "script/show_cards.ld7rdmdblq.js",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\show_cards.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -45840,7 +46306,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6355"
+          "Value": "6569"
         },
         {
           "Name": "Content-Type",
@@ -45848,11 +46314,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"l/o1/Low/SrdiT+8xnqiPXotdLsI1pEq7ias4pDOwqU=\""
+          "Value": "\"58zHFVGWiLTsXoCtYMNfB/xxHKpFymaT2SH2aRl+CcQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:39 GMT"
+          "Value": "Sat, 14 Jun 2025 13:41:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -45862,7 +46328,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lpl62of3yd"
+          "Value": "ld7rdmdblq"
         },
         {
           "Name": "label",
@@ -45870,13 +46336,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-l/o1/Low/SrdiT+8xnqiPXotdLsI1pEq7ias4pDOwqU="
+          "Value": "sha256-58zHFVGWiLTsXoCtYMNfB/xxHKpFymaT2SH2aRl+CcQ="
         }
       ]
     },
     {
-      "Route": "script/show_cards.lpl62of3yd.js.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-lpl62of3yd.gz",
+      "Route": "script/show_cards.ld7rdmdblq.js.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\oi1eoccd7k-ld7rdmdblq.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -45885,7 +46351,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1710"
+          "Value": "1765"
         },
         {
           "Name": "Content-Type",
@@ -45893,11 +46359,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"13fS52fdtalGZJ+CkzrpyeZbU/TrVE9LuT2F69o5hIw=\""
+          "Value": "\"b2tyBDFLqB3TNSPpfe7BDzFa8aFpqI181t/X+C7P8gw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 05:04:39 GMT"
+          "Value": "Sat, 14 Jun 2025 13:41:02 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -45915,7 +46381,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "lpl62of3yd"
+          "Value": "ld7rdmdblq"
         },
         {
           "Name": "label",
@@ -45923,7 +46389,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-13fS52fdtalGZJ+CkzrpyeZbU/TrVE9LuT2F69o5hIw="
+          "Value": "sha256-b2tyBDFLqB3TNSPpfe7BDzFa8aFpqI181t/X+C7P8gw="
         }
       ]
     },
@@ -45952,7 +46418,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -46005,7 +46471,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -46042,7 +46508,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -46089,7 +46555,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -46150,7 +46616,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -46195,7 +46661,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 13 Jun 2025 17:37:46 GMT"
+          "Value": "Sat, 14 Jun 2025 13:05:07 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -46520,6 +46986,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-lEQdu4fL0PSJFFopGzqq0yC3Uh5MsKzNMqlaOgRSCh8="
+        }
+      ]
+    },
+    {
+      "Route": "styles/footer.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\maqup5jvy9-qm0xstdiwn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002890173410"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "345"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YcH26Z1p9MgyMUe1BLxd897a44GAwiTh/lNThOyuySU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:41:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cgFKb0AZev0A//aYypsg7cIpzuRPgZwH9b1EBXXbbMg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cgFKb0AZev0A//aYypsg7cIpzuRPgZwH9b1EBXXbbMg="
+        }
+      ]
+    },
+    {
+      "Route": "styles/footer.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\footer.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "797"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cgFKb0AZev0A//aYypsg7cIpzuRPgZwH9b1EBXXbbMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:41:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cgFKb0AZev0A//aYypsg7cIpzuRPgZwH9b1EBXXbbMg="
+        }
+      ]
+    },
+    {
+      "Route": "styles/footer.css.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\maqup5jvy9-qm0xstdiwn.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "345"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YcH26Z1p9MgyMUe1BLxd897a44GAwiTh/lNThOyuySU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:41:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YcH26Z1p9MgyMUe1BLxd897a44GAwiTh/lNThOyuySU="
+        }
+      ]
+    },
+    {
+      "Route": "styles/footer.qm0xstdiwn.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\maqup5jvy9-qm0xstdiwn.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002890173410"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "345"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YcH26Z1p9MgyMUe1BLxd897a44GAwiTh/lNThOyuySU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:41:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"cgFKb0AZev0A//aYypsg7cIpzuRPgZwH9b1EBXXbbMg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qm0xstdiwn"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/footer.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cgFKb0AZev0A//aYypsg7cIpzuRPgZwH9b1EBXXbbMg="
+        }
+      ]
+    },
+    {
+      "Route": "styles/footer.qm0xstdiwn.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\footer.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "797"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cgFKb0AZev0A//aYypsg7cIpzuRPgZwH9b1EBXXbbMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:41:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qm0xstdiwn"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/footer.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cgFKb0AZev0A//aYypsg7cIpzuRPgZwH9b1EBXXbbMg="
+        }
+      ]
+    },
+    {
+      "Route": "styles/footer.qm0xstdiwn.css.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\maqup5jvy9-qm0xstdiwn.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "345"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YcH26Z1p9MgyMUe1BLxd897a44GAwiTh/lNThOyuySU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:41:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qm0xstdiwn"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/footer.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YcH26Z1p9MgyMUe1BLxd897a44GAwiTh/lNThOyuySU="
         }
       ]
     },
@@ -47418,6 +48182,304 @@
       ]
     },
     {
+      "Route": "styles/headers/header_module.46f58ij0rb.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\t5oumj77wx-46f58ij0rb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001201923077"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "831"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tnbVwzDJNAA39YmkKTJHcOt8Qw4fcUxuyYVyPjOCq9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:40:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"DJxl1ldEQnl/WdH9vZPv2krdodTA8yG7f9jj9PHOPhs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "46f58ij0rb"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/headers/header_module.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DJxl1ldEQnl/WdH9vZPv2krdodTA8yG7f9jj9PHOPhs="
+        }
+      ]
+    },
+    {
+      "Route": "styles/headers/header_module.46f58ij0rb.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\headers\\header_module.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2109"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DJxl1ldEQnl/WdH9vZPv2krdodTA8yG7f9jj9PHOPhs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:40:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "46f58ij0rb"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/headers/header_module.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DJxl1ldEQnl/WdH9vZPv2krdodTA8yG7f9jj9PHOPhs="
+        }
+      ]
+    },
+    {
+      "Route": "styles/headers/header_module.46f58ij0rb.css.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\t5oumj77wx-46f58ij0rb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "831"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tnbVwzDJNAA39YmkKTJHcOt8Qw4fcUxuyYVyPjOCq9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:40:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "46f58ij0rb"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/headers/header_module.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-tnbVwzDJNAA39YmkKTJHcOt8Qw4fcUxuyYVyPjOCq9c="
+        }
+      ]
+    },
+    {
+      "Route": "styles/headers/header_module.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\t5oumj77wx-46f58ij0rb.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001201923077"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "831"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tnbVwzDJNAA39YmkKTJHcOt8Qw4fcUxuyYVyPjOCq9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:40:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"DJxl1ldEQnl/WdH9vZPv2krdodTA8yG7f9jj9PHOPhs=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DJxl1ldEQnl/WdH9vZPv2krdodTA8yG7f9jj9PHOPhs="
+        }
+      ]
+    },
+    {
+      "Route": "styles/headers/header_module.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\headers\\header_module.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2109"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DJxl1ldEQnl/WdH9vZPv2krdodTA8yG7f9jj9PHOPhs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:40:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DJxl1ldEQnl/WdH9vZPv2krdodTA8yG7f9jj9PHOPhs="
+        }
+      ]
+    },
+    {
+      "Route": "styles/headers/header_module.css.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\t5oumj77wx-46f58ij0rb.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "831"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"tnbVwzDJNAA39YmkKTJHcOt8Qw4fcUxuyYVyPjOCq9c=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:40:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-tnbVwzDJNAA39YmkKTJHcOt8Qw4fcUxuyYVyPjOCq9c="
+        }
+      ]
+    },
+    {
       "Route": "styles/login.css",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\9pwkhqbxu6-tlp023wkvm.gz",
       "Selectors": [
@@ -48014,13 +49076,13 @@
       ]
     },
     {
-      "Route": "styles/module_edit.css",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-u3dc1l7fi8.gz",
+      "Route": "styles/mains/main_module.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\g29rvcmi9i-uqpi4wvtjg.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000681663258"
+          "Quality": "0.000674308833"
         }
       ],
       "ResponseHeaders": [
@@ -48030,15 +49092,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1466"
+          "Value": "1482"
         },
         {
           "Name": "ETag",
-          "Value": "\"0CAvG1HSvu+Xs0YwsL374XOTTfcW8iPbH8ViMgx5KRA=\""
+          "Value": "\"RRKdUbKlP9pGhfU4bzcNc7fDEdSzH6/MZezo1kEaezQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:42:06 GMT"
+          "Value": "Sat, 14 Jun 2025 14:40:42 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -48058,18 +49120,324 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"pu3c+94olK6FNqF6LGhtfOjNfJ+nnGmclI94/pEeYbM=\""
+          "Value": "W/\"1oabYlxT3BsqYxwfZQkx6n44bQOUe1nfKlgWvX4mPBY=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pu3c+94olK6FNqF6LGhtfOjNfJ+nnGmclI94/pEeYbM="
+          "Value": "sha256-1oabYlxT3BsqYxwfZQkx6n44bQOUe1nfKlgWvX4mPBY="
         }
       ]
     },
     {
-      "Route": "styles/module_edit.css",
+      "Route": "styles/mains/main_module.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\mains\\main_module.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6407"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1oabYlxT3BsqYxwfZQkx6n44bQOUe1nfKlgWvX4mPBY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:40:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-1oabYlxT3BsqYxwfZQkx6n44bQOUe1nfKlgWvX4mPBY="
+        }
+      ]
+    },
+    {
+      "Route": "styles/mains/main_module.css.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\g29rvcmi9i-uqpi4wvtjg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1482"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RRKdUbKlP9pGhfU4bzcNc7fDEdSzH6/MZezo1kEaezQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:40:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-RRKdUbKlP9pGhfU4bzcNc7fDEdSzH6/MZezo1kEaezQ="
+        }
+      ]
+    },
+    {
+      "Route": "styles/mains/main_module.uqpi4wvtjg.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\g29rvcmi9i-uqpi4wvtjg.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000674308833"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1482"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RRKdUbKlP9pGhfU4bzcNc7fDEdSzH6/MZezo1kEaezQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:40:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"1oabYlxT3BsqYxwfZQkx6n44bQOUe1nfKlgWvX4mPBY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uqpi4wvtjg"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/mains/main_module.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1oabYlxT3BsqYxwfZQkx6n44bQOUe1nfKlgWvX4mPBY="
+        }
+      ]
+    },
+    {
+      "Route": "styles/mains/main_module.uqpi4wvtjg.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\mains\\main_module.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6407"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"1oabYlxT3BsqYxwfZQkx6n44bQOUe1nfKlgWvX4mPBY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:40:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uqpi4wvtjg"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/mains/main_module.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-1oabYlxT3BsqYxwfZQkx6n44bQOUe1nfKlgWvX4mPBY="
+        }
+      ]
+    },
+    {
+      "Route": "styles/mains/main_module.uqpi4wvtjg.css.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\g29rvcmi9i-uqpi4wvtjg.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1482"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"RRKdUbKlP9pGhfU4bzcNc7fDEdSzH6/MZezo1kEaezQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 14:40:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "uqpi4wvtjg"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/mains/main_module.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-RRKdUbKlP9pGhfU4bzcNc7fDEdSzH6/MZezo1kEaezQ="
+        }
+      ]
+    },
+    {
+      "Route": "styles/module_edit.6nb32cr44k.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-6nb32cr44k.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000664010624"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1505"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n5vf9e+YaqWI1TgqOU2fLnN0h5X6V3yBSPFdD/ATm90=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:54:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"sv/YkOVxmTllmcOkVVaMEWD7KxzSzNxZjgXOkhiyJGg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6nb32cr44k"
+        },
+        {
+          "Name": "label",
+          "Value": "styles/module_edit.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sv/YkOVxmTllmcOkVVaMEWD7KxzSzNxZjgXOkhiyJGg="
+        }
+      ]
+    },
+    {
+      "Route": "styles/module_edit.6nb32cr44k.css",
       "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module_edit.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -48079,7 +49447,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4255"
+          "Value": "4343"
         },
         {
           "Name": "Content-Type",
@@ -48087,121 +49455,21 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pu3c+94olK6FNqF6LGhtfOjNfJ+nnGmclI94/pEeYbM=\""
+          "Value": "\"sv/YkOVxmTllmcOkVVaMEWD7KxzSzNxZjgXOkhiyJGg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:42:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-pu3c+94olK6FNqF6LGhtfOjNfJ+nnGmclI94/pEeYbM="
-        }
-      ]
-    },
-    {
-      "Route": "styles/module_edit.css.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-u3dc1l7fi8.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1466"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0CAvG1HSvu+Xs0YwsL374XOTTfcW8iPbH8ViMgx5KRA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:42:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0CAvG1HSvu+Xs0YwsL374XOTTfcW8iPbH8ViMgx5KRA="
-        }
-      ]
-    },
-    {
-      "Route": "styles/module_edit.u3dc1l7fi8.css",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-u3dc1l7fi8.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000681663258"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1466"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0CAvG1HSvu+Xs0YwsL374XOTTfcW8iPbH8ViMgx5KRA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:42:06 GMT"
+          "Value": "Sat, 14 Jun 2025 15:54:05 GMT"
         },
         {
           "Name": "Cache-Control",
           "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"pu3c+94olK6FNqF6LGhtfOjNfJ+nnGmclI94/pEeYbM=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "u3dc1l7fi8"
+          "Value": "6nb32cr44k"
         },
         {
           "Name": "label",
@@ -48209,13 +49477,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pu3c+94olK6FNqF6LGhtfOjNfJ+nnGmclI94/pEeYbM="
+          "Value": "sha256-sv/YkOVxmTllmcOkVVaMEWD7KxzSzNxZjgXOkhiyJGg="
         }
       ]
     },
     {
-      "Route": "styles/module_edit.u3dc1l7fi8.css",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module_edit.css",
+      "Route": "styles/module_edit.6nb32cr44k.css.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-6nb32cr44k.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -48224,7 +49492,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4255"
+          "Value": "1505"
         },
         {
           "Name": "Content-Type",
@@ -48232,56 +49500,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pu3c+94olK6FNqF6LGhtfOjNfJ+nnGmclI94/pEeYbM=\""
+          "Value": "\"n5vf9e+YaqWI1TgqOU2fLnN0h5X6V3yBSPFdD/ATm90=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:42:06 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "u3dc1l7fi8"
-        },
-        {
-          "Name": "label",
-          "Value": "styles/module_edit.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pu3c+94olK6FNqF6LGhtfOjNfJ+nnGmclI94/pEeYbM="
-        }
-      ]
-    },
-    {
-      "Route": "styles/module_edit.u3dc1l7fi8.css.gz",
-      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-u3dc1l7fi8.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1466"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0CAvG1HSvu+Xs0YwsL374XOTTfcW8iPbH8ViMgx5KRA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sat, 14 Jun 2025 12:42:06 GMT"
+          "Value": "Sat, 14 Jun 2025 15:54:05 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -48299,7 +49522,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "u3dc1l7fi8"
+          "Value": "6nb32cr44k"
         },
         {
           "Name": "label",
@@ -48307,7 +49530,144 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0CAvG1HSvu+Xs0YwsL374XOTTfcW8iPbH8ViMgx5KRA="
+          "Value": "sha256-n5vf9e+YaqWI1TgqOU2fLnN0h5X6V3yBSPFdD/ATm90="
+        }
+      ]
+    },
+    {
+      "Route": "styles/module_edit.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-6nb32cr44k.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000664010624"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1505"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n5vf9e+YaqWI1TgqOU2fLnN0h5X6V3yBSPFdD/ATm90=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:54:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"sv/YkOVxmTllmcOkVVaMEWD7KxzSzNxZjgXOkhiyJGg=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sv/YkOVxmTllmcOkVVaMEWD7KxzSzNxZjgXOkhiyJGg="
+        }
+      ]
+    },
+    {
+      "Route": "styles/module_edit.css",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module_edit.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4343"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sv/YkOVxmTllmcOkVVaMEWD7KxzSzNxZjgXOkhiyJGg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:54:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sv/YkOVxmTllmcOkVVaMEWD7KxzSzNxZjgXOkhiyJGg="
+        }
+      ]
+    },
+    {
+      "Route": "styles/module_edit.css.gz",
+      "AssetFile": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\obj\\Debug\\net9.0\\compressed\\6itblwiak1-6nb32cr44k.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1505"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n5vf9e+YaqWI1TgqOU2fLnN0h5X6V3yBSPFdD/ATm90=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 14 Jun 2025 15:54:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-n5vf9e+YaqWI1TgqOU2fLnN0h5X6V3yBSPFdD/ATm90="
         }
       ]
     },

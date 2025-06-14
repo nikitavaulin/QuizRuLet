@@ -677,16 +677,16 @@
       "PackagePath": "staticwebassets\\module_edit_egor.html"
     },
     {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_egor.html",
+      "PackagePath": "staticwebassets\\module_egor.html"
+    },
+    {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\registration.html",
       "PackagePath": "staticwebassets\\registration.html"
     },
     {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_module.js",
       "PackagePath": "staticwebassets\\script\\edit_module.js"
-    },
-    {
-      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\edit_name_module.js",
-      "PackagePath": "staticwebassets\\script\\edit_name_module.js"
     },
     {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\flip.js",
@@ -717,6 +717,10 @@
       "PackagePath": "staticwebassets\\script\\modal.js"
     },
     {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\module.js",
+      "PackagePath": "staticwebassets\\script\\module.js"
+    },
+    {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\script\\show_cards.js",
       "PackagePath": "staticwebassets\\script\\show_cards.js"
     },
@@ -729,12 +733,20 @@
       "PackagePath": "staticwebassets\\styles\\fonts.css"
     },
     {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\footer.css",
+      "PackagePath": "staticwebassets\\styles\\footer.css"
+    },
+    {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\gratz_all.css",
       "PackagePath": "staticwebassets\\styles\\gratz_all.css"
     },
     {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\gratz_partially.css",
       "PackagePath": "staticwebassets\\styles\\gratz_partially.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\headers\\header_module.css",
+      "PackagePath": "staticwebassets\\styles\\headers\\header_module.css"
     },
     {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\headers\\header_module_edit.css",
@@ -747,6 +759,10 @@
     {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\mains\\main_module-edit.css",
       "PackagePath": "staticwebassets\\styles\\mains\\main_module-edit.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\mains\\main_module.css",
+      "PackagePath": "staticwebassets\\styles\\mains\\main_module.css"
     },
     {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module.css",

@@ -57,14 +57,14 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     const response = await axios.get(`/users/${userId}`);
     const modules = response.data.modules;
     const name = response.data.login;
-
+    
     const username = document.querySelector(".username_text");
     username.innerHTML = "";
     username.insertAdjacentText("beforeend", name);
     const container = document.querySelector(".module-list");
     container.innerHTML = "";
     modules.forEach((element) => {
-      showModule(element.name, element.progress, element.id);
+      showModule(element.name, element.progress, element.id, element.countCards);
     });
 
   }
@@ -106,16 +106,16 @@ document.addEventListener("DOMContentLoaded", async function (e) {
 
   });
 
-  function showModule(name, progress, id) {
+  function showModule(name, progress, id, countCards) {
     const container = document.querySelector(".module-list");
 
     const moduleHTML = `
         <div class="module-card d-flex justify-content-between align-items-center flex-wrap id="${id}"">
         <div class="module-title mb-2 mb-md-0">
-        <a class="module-name-link" href="module.html">${name}</a>
+        <a class="module-name-link" href="/module.html?id=${encodeURIComponent(id)}">${name}</a>
         </div>
         <div class="module-info d-flex align-items-center mb-2 mb-md-0 me-md-3">
-        <span class="me-3">Карточек: 0</span>
+        <span class="me-3">Карточек: ${countCards}</span>
                 <div class="progress me-2" style="width: 100px;">
                 <div class="progress-bar" role="progressbar" style="width: ${progress}%;" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>

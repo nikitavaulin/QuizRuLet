@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (bsModal) {
           bsModal.hide();
         }
+        console.log(123);
         const response = await axios.post(`/import/save/${moduleId}`, { cards: cards });
-
         try {
           if (response.status === 200) {
             showModal("Сообщение", "Карточки успешно сохранены");
@@ -291,6 +291,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     createCardBody.textContent = 'Создать новую карточку'; // Текст кнопки
     createCardBody.setAttribute('data-bs-toggle', 'modal'); // Атрибуты для открытия модального окна
     createCardBody.setAttribute('data-bs-target', '#newCard');
+createCardBody.setAttribute('id','createNewCard');
 
     createCardButton.appendChild(createCardBody); // Добавляем div внутрь li
     cardListElement.appendChild(createCardButton); // Добавляем кнопку в начало списка
@@ -370,14 +371,15 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     try {
-      const response = await axios.patch(`/modules/edit/${moduleId}`, {
+      const responseModal = await axios.patch(`/modules/edit/${moduleId}`, {
         name: name,
         description: description
       });
 
 
-      if (response.status === 200) {
+      if (responseModal.status === 200) {
         const modalEl = document.getElementById('editModal');
+        
         const modal = bootstrap.Modal.getInstance(modalEl);
         modal.hide(); // Закрываем модальное окно
         updateModuleName(name, description);
@@ -440,11 +442,18 @@ document.addEventListener('DOMContentLoaded', async function () {
   })
 
   // Инициализация при загрузке страницы
-  
+
   await fetchCards(); // Получить и отобразить список карточек
   createNewCard();
+
+  const learnBtn = document.getElementById('btn-learn');
+  
+  learnBtn.addEventListener('click', function (e) {
+    window.location.href = `/card.html?id=${encodeURIComponent(moduleId)}`;
+  })
+
+  // Выделение выбранной карточки в сайдбаре
   document.querySelectorAll('.card').forEach(card => {
-    console.log(123);
     card.addEventListener('click', function () {
       // Убираем выделение у всех карточек
       document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
