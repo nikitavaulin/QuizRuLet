@@ -31,6 +31,14 @@ services.AddCors(options =>
 });
 
 
+services.AddSingleton<IConfiguration>(provider =>
+        new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .Build());
+
+
+services.Configure<AiApiOptions>(configuration.GetSection("AiApi"));
 
 // services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)       // learn
 //     .AddCookie(options => 

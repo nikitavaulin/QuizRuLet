@@ -18,18 +18,10 @@ public class CardSetAiCreationService : ICardSetAiCreationService
     private static string CARD_FORMAT = $"Передняя сторона карточки{PAIR_SEPARATOR}Обратная сторона карточки{LINE_SEPARATOR}";
     private static string CARD_SET_FORMAT = $"{START_SEPARATOR}{CARD_FORMAT}{CARD_FORMAT}и так далее{END_SEPARATOR}";
 
-    private AiApiProvider testAI = new AiApiProvider();
-    private CardSetCreationService testCreate = new CardSetCreationService();
 
 
-    // REMOVE (TEST)
     private readonly ICardSetCreationService _creationService;
     private readonly IAiApiProvider _aiProvider;
-    public CardSetAiCreationService()
-    {
-        _creationService = testCreate;
-        _aiProvider = testAI;
-    }
 
 
     public CardSetAiCreationService(
@@ -40,10 +32,6 @@ public class CardSetAiCreationService : ICardSetAiCreationService
         _aiProvider = aiProvider;
     }
     
-    
-    
-    
-
     public async Task<(List<Card>? Cards, string Error)> Create(string data, int countCards)
     {
         string prompt = GetPrompt(data, countCards);

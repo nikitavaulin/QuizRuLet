@@ -2116,13 +2116,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script\index.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO\u002BFV6\u002Bb1FE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5535"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO\u002BFV6\u002Bb1FE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 14:53:07 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"5535"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO\u002BFV6\u002Bb1FE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 16:39:28 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/script/index.pyyz81ehnc.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script\index.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"pyyz81ehnc"},{"Name":"integrity","Value":"sha256-wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO\u002BFV6\u002Bb1FE="},{"Name":"label","Value":"_content/QuizRuLet.API/script/index.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5535"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO\u002BFV6\u002Bb1FE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 14:53:07 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"5535"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022wWdtOCNmXlJ2FOr/cFKWDvkWP53ts5cOIO\u002BFV6\u002Bb1FE=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 16:39:28 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/script/login_reg.h7t5rcddq7.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script\login_reg.js'))</AssetFile>

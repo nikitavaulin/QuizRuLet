@@ -4,6 +4,8 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Diagnostics;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Microsoft.VisualBasic;
 using QuizRuLet.Core.Abstractions;
 
@@ -12,8 +14,16 @@ namespace QuizRuLet.Infrastrucrture;
 
 public class AiApiProvider : IAiApiProvider
 {
-    private static readonly string API_KEY = "sk-DI75n0w7xYelb6g1ccGMvBkw8ctjZdIL5jHg4BI0Z7moILU4Wut4v68pLTaI";     // TODO
+    private readonly IConfiguration _configuration;
+    private readonly AiApiOptions _aiApiOptions;
     private static readonly string API_URL = "https://api.gen-api.ru/api/v1/networks/claude-4";
+
+    
+    public AiApiProvider(IOptions<AiApiOptions> aiApiOptions)
+    {
+        _aiApiOptions = aiApiOptions.Value;
+    }
+    
 
     public async Task<(string Result, string Error)> SendRequestAndGetResult(string userMessage)
     {
@@ -35,32 +45,6 @@ public class AiApiProvider : IAiApiProvider
         return ("", error);
 
     }
-    // public static async Task<(string Result, string Error)> SendRequestAndGetResult(string userMessage)
-    // {
-    //     // Отправляем запрос и получаем request_id
-    //     var response = await SendRequest(userMessage);
-
-    //     var error = response.Error;
-    //     var responseResult = response.Response;
-
-    //     if (!string.IsNullOrEmpty(error))
-    //     {
-    //         return ("", error);
-    //     }
-
-
-    //     var initialJson = System.Text.Json.JsonDocument.Parse(responseResult);
-    //     string requestId = initialJson
-    //         .RootElement
-    //         .GetProperty("request_id")
-    //         .GetInt64()
-    //         .ToString();
-
-    //     // Получаем результат
-    //     var result = await GetResult(requestId);
-
-    //     return (result, error);
-    // }
 
 
     public async Task<(string Response, string Error)> SendRequest(string prompt)
@@ -92,8 +76,9 @@ public class AiApiProvider : IAiApiProvider
 
             try
             {
+                var apiKey = _aiApiOptions.ApiKey; 
                 // POST запрос
-                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", API_KEY);
+                client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", apiKey);
                 HttpResponseMessage response = await client.PostAsync(API_URL, content);
 
                 // ответ
@@ -141,67 +126,5 @@ public class AiApiProvider : IAiApiProvider
     }
 
 
-
-    // public static async Task<string> CheckRequestStatus(string requestId)
-    // {
-    //     using (HttpClient client = new HttpClient())
-    //     {
-    //         // Установка авторизации через Authorization Header
-    //         client.DefaultRequestHeaders.Add("X-API-Key", API_KEY);
-    //         client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", API_KEY);
-
-    //         // Формируем URL для проверки статуса
-    //         string statusUrl = $"https://api.anthropic.com/v1/requests/{requestId}"; 
-
-    //         try
-    //         {
-    //             // Отправляем GET-запрос
-    //             HttpResponseMessage response = await client.GetAsync(statusUrl);
-
-    //             // Читаем ответ
-    //             string responseBody = await response.Content.ReadAsStringAsync();
-
-    //             // Возвращаем результат
-    //             if (response.IsSuccessStatusCode)
-    //             {
-    //                 return responseBody;
-    //             }
-    //             else
-    //             {
-    //                 throw new Exception($"Error: {response.StatusCode}, Details: {responseBody}");
-    //             }
-    //         }
-    //         catch (Exception ex)
-    //         {
-    //             throw new Exception($"An error occurred while checking the request status: {ex.Message}");
-    //         }
-    //     }
-    // }    
-
-
-    // public static async Task<string> GetResult(string requestId)
-    // {
-    //     string statusResponse = await CheckRequestStatus(requestId);
-    //     var statusJson = System.Text.Json.JsonDocument.Parse(statusResponse);
-
-    //     // Проверяем статус
-    //     string status = statusJson.RootElement.GetProperty("status").GetString();
-    //     if (status == "completed")
-    //     {
-    //         // Извлекаем результат
-    //         string result = statusJson.RootElement.GetProperty("completion").GetString();
-    //         return result;
-    //     }
-    //     else if (status == "processing")
-    //     {
-    //         // Если запрос еще обрабатывается, ждем и повторяем проверку
-    //         await Task.Delay(2000); // Ждем 2 секунды перед повторной проверкой
-    //         return await GetResult(requestId);
-    //     }
-    //     else
-    //     {
-    //         throw new Exception($"Unexpected status: {status}");
-    //     }
-    // }    
 
 }
