@@ -9,4 +9,10 @@ namespace QuizRuLet.API.Contracts
     (
         string Description
     );
+    
+    public record ModuleEditRequest 
+    (
+        string Name,
+        string Description
+    );
 }

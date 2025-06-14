@@ -1,5 +1,13 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
+  // 1. достаём ?id=...
+  const params = new URLSearchParams(window.location.search);
+  const moduleId = params.get('id');
 
+  if (!moduleId) {
+    alert('Не передан id модуля');
+    location.href = 'index.html';
+    return;
+  }
   // --- Инициализация Bootstrap Tooltips (если нужны) ---
   var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
   var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -113,18 +121,18 @@ document.addEventListener('DOMContentLoaded', function () {
         cards = response.data.cards;
         console.log(cards);
         if (true) {
-          
+
           let previewText = '';
           cards.forEach(card => {
             console.log(card);
-            previewText += enumerator + ') ' + card.frontSide.slice(0,15)+'..' + ' | ' + card.backSide.slice(0,25)+'..' + '\n';
+            previewText += enumerator + ') ' + card.frontSide.slice(0, 15) + '..' + ' | ' + card.backSide.slice(0, 25) + '..' + '\n';
             enumerator++;
           });
           previewPre.textContent = previewText;
         } else if (previewPre) {
           previewPre.textContent = 'Данные здесь...';
         }
-        
+
       }
 
       // if (importTextarea) importTextarea.addEventListener('input', updatePreview);
@@ -139,6 +147,51 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function createNewCard() {
+
+    const frontTextarea = document.getElementById('front');
+    const backTextarea = document.getElementById('back');
+    const createCardBtn = document.getElementById('createCardBtn');
+
+
+    createCardBtn.addEventListener('click', async (e) => {
+
+
+      const frontSide = frontTextarea.value.trim();
+      const backSide = backTextarea.value.trim();
+
+
+      if (!frontSide || !backSide) {
+        alert('Пожалуйста, заполните обе стороны карточки.');
+        return;
+      }
+      try {
+
+        const response = await axios.post(`/cards/${moduleId}`, {
+          frontSide,
+          backSide,
+        });
+
+
+        if (response.status === 200) {
+
+          const modal = bootstrap.Modal.getInstance(document.getElementById('newCard'));
+          modal.hide();
+
+
+          showModal("Сообщение", "Карточка успешно создана!");
+          fetchCards();
+        } else {
+          throw new Error('Ошибка при создании карточки');
+        }
+      } catch (error) {
+
+        console.error('Error creating card:', error);
+        alert('Произошла ошибка при создании карточки. Попробуйте снова.');
+      }
+    });
+  }
+
   // --- Инициализация всех модальных окон при загрузке страницы ---
   document.querySelectorAll('.modal').forEach(modalElement => {
     // Каждый раз, когда модальное окно открывается, инициализируем его логику шагов
@@ -147,5 +200,140 @@ document.addEventListener('DOMContentLoaded', function () {
       initializeModalSteps(modalElement);
     });
   });
+
+  // Инициализация переменных
+
+  const cardListElement = document.querySelector('.sidebarList ul.nav.flex-column'); // Левый блок для списка карточек
+  const cardDetailsElement = document.querySelector('.card-show'); // Правый блок для деталей карточки
+
+  // Функция для получения списка карточек
+  async function fetchCards() {
+    try {
+      const response = await axios.get(`/modules/${moduleId}`);
+      console.log(response);
+      if (response.status === 200) {
+        const moduleData = response.data;
+        renderCardList(moduleData.cards);
+        updateModuleName(response.data.name, response.data.description);
+      } else {
+        throw new Error('Ошибка при получении списка карточек');
+      }
+    } catch (error) {
+      console.error('Ошибка:', error);
+      alert('Произошла ошибка при загрузке карточек.');
+    }
+  }
+
+  // Функция для отображения списка карточек
+  function renderCardList(cards) {
+
+
+    cardListElement.innerHTML = '';
+
+    // Создаем кнопку "Создать новую карточку"
+    const createCardButton = document.createElement('li');
+    createCardButton.classList.add('card', 'm-2'); // Добавляем стилизацию
+
+    const createCardBody = document.createElement('div');
+    createCardBody.classList.add('card-body'); // Используем существующий класс для стилизации
+    createCardBody.textContent = 'Создать новую карточку'; // Текст кнопки
+    createCardBody.setAttribute('data-bs-toggle', 'modal'); // Атрибуты для открытия модального окна
+    createCardBody.setAttribute('data-bs-target', '#newCard');
+
+    createCardButton.appendChild(createCardBody); // Добавляем div внутрь li
+    cardListElement.appendChild(createCardButton); // Добавляем кнопку в начало списка
+
+    // Добавляем остальные карточки
+    cards.forEach(card => {
+      const listItem = document.createElement('li');
+      listItem.classList.add('card', 'm-2'); // Используем существующие классы для стилизации
+
+      const cardBody = document.createElement('div');
+      cardBody.classList.add('card-body'); // Добавляем класс для стилизации
+      cardBody.textContent = card.frontSide; // Отображаем переднюю сторону как название
+      cardBody.dataset.cardId = card.id; // Сохраняем ID карточки для дальнейшего использования
+
+      // Обработчик клика на карточку
+      cardBody.addEventListener('click', () => {
+        renderCardDetails(card.frontSide, card.backSide);
+      });
+
+      listItem.appendChild(cardBody); // Добавляем div внутрь li
+      cardListElement.appendChild(listItem); // Добавляем карточку в список
+    });
+  }
+
+  function updateModuleName(name, desc) {
+    let moduleName = document.getElementById('module-name');
+    moduleName.setAttribute('data-bs-original-title', desc);
+    moduleName.innerHTML = `${name}
+              <i
+                class="fa-solid fa-pen ms-2"
+                data-bs-toggle="modal"
+                data-bs-target="#editModal"
+              ></i>`;
+
+    let nameModal = document.getElementById('moduleName');
+    let descriptionModal = document.getElementById('moduleDescription');
+    nameModal.value = name;
+    descriptionModal.value = desc;
+    console.log(nameModal, descriptionModal);
+  }
+
+  // Функция для отображения деталей карточки в правом блоке
+  function renderCardDetails(front, back) {
+    const termTextarea = document.querySelector('.card-termin .card-txt');
+    const meaningTextarea = document.querySelector('.card-meaning .card-txt');
+
+    // Заполняем текстовые поля в правом блоке
+    termTextarea.value = front;
+    meaningTextarea.value = back;
+
+    // Если нужно, добавляем дополнительные детали (например, выучена или нет)
+    console.log('Карточка загружена:', card);
+  }
+
+
+
+  document.getElementById('saveModuleBtn').addEventListener('click', async function () {
+    const name = document.getElementById('moduleName').value.trim();
+    const description = document.getElementById('moduleDescription').value.trim();
+
+    // Простая валидация
+    if (!name || !description) {
+      showModal('Ошибка', 'Пожалуйста, заполните все поля');
+      return;
+    }
+
+
+
+    try {
+      const response = await axios.patch(`/modules/edit/${moduleId}`, {
+        name: name,
+        description: description
+      });
+      console.log(response);
+
+      if (response.status === 200) {
+        const modalEl = document.getElementById('editModal');
+        const modal = bootstrap.Modal.getInstance(modalEl);
+        modal.hide(); // Закрываем модальное окно
+        updateModuleName(name, description);
+
+        // Здесь можно обновить интерфейс или вызвать callback
+      }
+    } catch (error) {
+      console.error('Ошибка при сохранении:', error);
+      alert('Не удалось сохранить изменения');
+    }
+  });
+
+
+
+
+  // Инициализация при загрузке страницы
+
+  await fetchCards(); // Получить и отобразить список карточек
+  createNewCard();
 
 });

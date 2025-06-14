@@ -48,6 +48,11 @@ public class ModuleService : IModuleService
     {
         return await _modulesRepository.UpdateDescription(id, description);
     }
+    
+    public async Task<Guid> UpdateModule(Guid id, string name, string description)
+    {
+        return await _modulesRepository.Update(id, name, description);
+    }
 
     // добавление сета карточек в модуль
     public async Task<Guid> AddCardsToModule(List<Card> cards, Guid moduleId)

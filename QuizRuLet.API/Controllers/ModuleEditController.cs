@@ -35,6 +35,12 @@ namespace QuizRuLet.API.Controllers
             return Ok(id);
         }
         
+        [HttpPatch]
+        public async Task<ActionResult<Guid>> UpdateModuleNameAndDescription([FromRoute] Guid moduleId, [FromBody] ModuleEditRequest request)
+        {
+            var id = await _moduleService.UpdateModule(moduleId, request.Name, request.Description);
+            return Ok(id);
+        }
         
 
     }

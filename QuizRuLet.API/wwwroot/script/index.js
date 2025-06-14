@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", async function (e) {
+  
+
+  
+
   function getCookie(name) {
     const cookies = document.cookie.split("; ");
     let decoded = null;
@@ -64,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     });
     
   }
-  const deleteBtn = document.querySelector("#delete-btn");
+  
 
   document.body.addEventListener('click', async function (e) {
     const btn = e.target.closest('.delete-btn');
@@ -76,6 +80,25 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     try {
         await axios.delete(`/modules/${moduleId}`);
         await showListModules();
+    } catch (err) {
+        console.error(err);
+        alert('Не удалось удалить модуль. Попробуйте ещё раз.');
+    }
+    
+  });
+
+ 
+
+  document.body.addEventListener('click', async function (e) {
+    const btn = e.target.closest('.edit-btn');
+    if (!btn) return;
+    const moduleId = btn.dataset.id
+    || btn.closest('.module-card')?.dataset.id;
+    
+    if (!moduleId) return; 
+    try {
+        window.location.href = `/module_edit.html?id=${encodeURIComponent(moduleId)}`;
+
     } catch (err) {
         console.error(err);
         alert('Не удалось удалить модуль. Попробуйте ещё раз.');
@@ -104,7 +127,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end">
                 
-                <li><a class="dropdown-item" href="#"><i class="fas fa-edit me-2"></i> Редактировать</a></li>
+                <li><a class="dropdown-item edit-btn" href="#" data-id="${id}"><i class="fas fa-edit me-2"></i> Редактировать</a></li>
                 <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item text-danger delete-btn" href="#" data-id="${id}"><i class="fas fa-trash-alt me-2"></i> Удалить</a></li>
                 </ul>

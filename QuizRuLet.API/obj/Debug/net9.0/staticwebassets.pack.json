@@ -645,6 +645,10 @@
       "PackagePath": "staticwebassets\\icons\\search-open.svg"
     },
     {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\icons\\sprite.svg",
+      "PackagePath": "staticwebassets\\icons\\sprite.svg"
+    },
+    {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\images\\images.png",
       "PackagePath": "staticwebassets\\images\\images.png"
     },
@@ -667,6 +671,10 @@
     {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_edit.html",
       "PackagePath": "staticwebassets\\module_edit.html"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\module_edit_egor.html",
+      "PackagePath": "staticwebassets\\module_edit_egor.html"
     },
     {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\registration.html",
@@ -729,8 +737,16 @@
       "PackagePath": "staticwebassets\\styles\\gratz_partially.css"
     },
     {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\headers\\header_module_edit.css",
+      "PackagePath": "staticwebassets\\styles\\headers\\header_module_edit.css"
+    },
+    {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\login.css",
       "PackagePath": "staticwebassets\\styles\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\mains\\main_module-edit.css",
+      "PackagePath": "staticwebassets\\styles\\mains\\main_module-edit.css"
     },
     {
       "Id": "C:\\Users\\mrvau\\source\\repos\\quizrulet\\backend\\QuizRuLet\\QuizRuLet.API\\wwwroot\\styles\\module.css",

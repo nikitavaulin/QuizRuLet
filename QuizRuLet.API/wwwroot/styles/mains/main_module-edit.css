@@ -1,0 +1,76 @@
+.main-container {
+  display: flex;
+}
+
+/* Левая часть */
+.side-bar-menu {
+    flex-direction: column;
+    width: 150px;
+    border-right: 2px solid #D9D9D9;
+}
+
+.cards {
+    gap: 1rem;
+    margin: 0.5rem;
+    padding: 0;
+}
+
+.card {
+  background-color: #716F6F;
+  border-radius: 4px;
+  border: 1px solid #ACA8A8;
+  justify-content: space-between;
+  width: 14rem;
+  height: 5rem;
+  padding: 1rem; 
+  display: flex;
+  padding: 2px;
+}
+
+/* Кнопка удаления карточки */
+.rubish-bin {
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+    padding: 0;
+}
+
+.icon-rubbishn:hover {
+  fill: white;
+}
+
+.rubish-bin svg {
+  width: 15px;
+  height: 15px;
+  color: #ACA8A8;
+}
+
+/* Правая часть */
+.right-part-main {
+  display: flex;
+  margin: 1rem;
+  width: 100%;
+}
+
+.value-termin-part {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  color: white;
+}
+
+.card-term, .card-value {
+  width: 50%; /* Занимают по 50% ширины */
+  padding: 0.5rem;
+  border: 2px solid #716F6F; /* Граница */
+  border-radius: 4px; /* Круглые края */
+  background-color: #ACA8A8; /* Фон */
+  color: white;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  height: 40vh;
+}

@@ -2898,6 +2898,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\icons\search-open.svg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\icons\sprite.svg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuizRuLet.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuizRuLet.API</BasePath>
+      <RelativePath>icons/sprite.svg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>qi1f2jzxk4</Fingerprint>
+      <Integrity>cpMhPB2idBQpEu5LGWiCsU7QRWtV/Dcb2wSHGNuJvgI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\icons\sprite.svg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\images.png'))">
       <SourceType>Package</SourceType>
       <SourceId>QuizRuLet.API</SourceId>
@@ -3000,11 +3018,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ud4euoz3r1</Fingerprint>
-      <Integrity>sjsj94c4aagcL4PVX054Kswp6DBqxytH1DBUxIcB57Q=</Integrity>
+      <Fingerprint>ul6pnjq0vy</Fingerprint>
+      <Integrity>sjCYUtmdXz9keB8w9K4kza7CezQmpDw25/HdqW95glo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\module_edit.html'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\module_edit_egor.html'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuizRuLet.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuizRuLet.API</BasePath>
+      <RelativePath>module_edit_egor.html</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>nt0u0jy4m9</Fingerprint>
+      <Integrity>VVS9cVRKYh+f1He7iiuf01sYjOk0uh62kB19wOw6cp0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\module_edit_egor.html'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\registration.html'))">
       <SourceType>Package</SourceType>
@@ -3036,8 +3072,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kiryjvu8p5</Fingerprint>
-      <Integrity>NJGzFeCtEiblqAnT4USsbJt5pwgraUwEyiNkfpP+Zw8=</Integrity>
+      <Fingerprint>kuee16tna4</Fingerprint>
+      <Integrity>VLSFAYf26PnOVH7/Cwi6CePUIbwL2mdjJeSJHYtl7oM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script\edit_module.js'))</OriginalItemSpec>
@@ -3054,8 +3090,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>i7ondoe7tu</Fingerprint>
-      <Integrity>svh2t7dWXS+tuTLKOF0+PtFFHHEXS+p/uCg1SrlNYEQ=</Integrity>
+      <Fingerprint>5ipweew5fc</Fingerprint>
+      <Integrity>47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script\edit_name_module.js'))</OriginalItemSpec>
@@ -3144,8 +3180,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>1njuvidf0w</Fingerprint>
-      <Integrity>7VVJKeAgIQFeY3gWcRXB8XrQT366IQhQ71+flUjDCS8=</Integrity>
+      <Fingerprint>0yi0vi1843</Fingerprint>
+      <Integrity>GIkkMyUC+s3Ya1S7MOgCCXsFs9NL0YLMvLNCgns+Z+8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script\index.js'))</OriginalItemSpec>
@@ -3276,6 +3312,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\gratz_partially.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\headers\header_module_edit.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuizRuLet.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuizRuLet.API</BasePath>
+      <RelativePath>styles/headers/header_module_edit.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>z39zvvmcxp</Fingerprint>
+      <Integrity>ISync2CfzJbVrQYl7gdJOasDkngK5LUBYijFL+vGV8M=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\headers\header_module_edit.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\login.css'))">
       <SourceType>Package</SourceType>
       <SourceId>QuizRuLet.API</SourceId>
@@ -3293,6 +3347,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\login.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\mains\main_module-edit.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>QuizRuLet.API</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/QuizRuLet.API</BasePath>
+      <RelativePath>styles/mains/main_module-edit.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fg7izfj7r0</Fingerprint>
+      <Integrity>P4Ua9kAbZUlWBWQov6uPOTqPyiEstTMxAZXDw9AyeIQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\mains\main_module-edit.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\module.css'))">
       <SourceType>Package</SourceType>
@@ -3324,8 +3396,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>mhoh8u2699</Fingerprint>
-      <Integrity>xokW4KIHH2ulScqDpM3CrKneeI+y7oV40qg/Oe3+Lp8=</Integrity>
+      <Fingerprint>n8iykclbsv</Fingerprint>
+      <Integrity>KRtWLh85qIWm6F89UU7QIvm2DypaL/NZiIB/muMGqBQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\module_edit.css'))</OriginalItemSpec>

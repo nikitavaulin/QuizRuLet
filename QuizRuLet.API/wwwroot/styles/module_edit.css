@@ -1,89 +1,81 @@
-.card{
-    --bs-card-border-color: var(--bs-body-bg);
-    height: 100px;
-    
+.card {
+  --bs-card-border-color: var(--bs-body-bg);
+  height: 100px;
 }
-.card-body{
-    background-color: #716F6F;
-    border-radius: 10px;
-    border-color: var(--bs-body-bg);
-   
+.card-body {
+  background-color: #716f6f;
+  border-radius: 10px;
+  border-color: var(--bs-body-bg);
 }
 
 #sidebarMenu {
-            height: 100vh; /* Высота на весь экран */
-            display: flex;
-            flex-direction: column;
-            overflow: hidden; /* Предотвращаем прокрутку всего сайдбара */
-        }
-        
-        .quizrulet-brand-sidebar {
-            display: flex;
-            border-bottom: solid 1px;
-            height: auto; /* Автоматическая высота для лого */
-            overflow: visible; /* Лого не должно скроллиться */
-        }
-        
-        #sidebarMenu ul.nav.flex-column {
-            flex: 1;
-            overflow-y: auto; /* Добавляем вертикальную прокрутку только для списка */
-            padding-right: 5px; /* Отступ для скроллбара */
-        }
-        
-        #sidebarMenu .help {
-            height: auto; /* Автоматическая высота для блока справки */
-            padding: 10px 0; /* Отступы для блока справки */
-            position: sticky;
-            bottom: 0;
-            background-color: inherit; /* Наследуем цвет фона */
-        }
-
-.sidebarList{
-    max-height: calc(100vh - 150px); /* Высота с учетом лого и справки 1*/
-    overflow-y: scroll;
+  height: 100vh; /* Высота на весь экран */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Предотвращаем прокрутку всего сайдбара */
 }
 
-.card-termin, .card-meaning{
-    
-    min-height: 60%;
-    
+.quizrulet-brand-sidebar {
+  display: flex;
+  border-bottom: solid 1px;
+  height: auto; /* Автоматическая высота для лого */
+  overflow: visible; /* Лого не должно скроллиться */
 }
 
-.card-txt{
-    background-color: #716F6F;
-    height: 50%;
-    border-radius: 20px;
-    border-width: 0;
-    width: 100%;
-    padding: 10px;
-    font-size: 24px;
-    resize: none;
+#sidebarMenu ul.nav.flex-column {
+  flex: 1;
+  overflow-y: auto; /* Добавляем вертикальную прокрутку только для списка */
+  padding-right: 5px; /* Отступ для скроллбара */
 }
 
-.card-txt::placeholder{
-    color: white;
+#sidebarMenu .help {
+  height: auto; /* Автоматическая высота для блока справки */
+  padding: 10px 0; /* Отступы для блока справки */
+  position: sticky;
+  bottom: 0;
+  background-color: inherit; /* Наследуем цвет фона */
 }
 
+.sidebarList {
+  max-height: calc(100vh - 150px); /* Высота с учетом лого и справки 1*/
+  overflow-y: scroll;
+}
 
+.card-termin,
+.card-meaning {
+  min-height: 100%;
+}
+
+.card-txt {
+  background-color: #716f6f;
+  height: 50%;
+  border-radius: 20px;
+  border-width: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  resize: none;
+}
+
+.card-txt::placeholder {
+  color: white;
+}
 
 .btn-learn,
-.btn-import{
-    background-color: #5ee152;
-    color: black;
-    font-size: 18px;
+.btn-import {
+  background-color: #5ee152;
+  color: black;
+  font-size: 18px;
 }
-
-
 
 .btn-learn:hover,
-.btn-import:hover{
-    background-color: darkgreen;
-    color: black;
+.btn-import:hover {
+  background-color: darkgreen;
+  color: black;
 }
 
-
-.module-name{
-    font-size: 26px;
+.module-name {
+  font-size: 26px;
 }
 
 .tooltip-inner {
@@ -106,56 +98,53 @@
 }
 
 .steps {
-    color: white;
+  color: white;
 }
 
 .step-title {
   font-size: 16px;
-  
 }
 
-.step-content{
-    display: none;
-
+.step-content {
+  display: none;
 }
 
 .step-content.active {
-    display: block;
-    
+  display: block;
 }
 
 .step.active .step-number {
-    background-color: #5ee152;
+  background-color: #5ee152;
 }
 
 #preview {
-    border: 1px solid grey;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-
-}.btn-next-modal {
-    background-color: #5ee152;
+  border: 1px solid grey;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+.btn-next-modal {
+  background-color: #5ee152;
 }
 
 .btn-next-modal,
 .btn-back-modal {
-    border-radius: 5px;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-back-modal {
-    background-color: #716F6F;
+  background-color: #716f6f;
 }
 
 .btn-back-modal:hover {
-    background-color: darkgrey; /* Темнее оригинального */
-    transform: scale(1.05);
+  background-color: darkgrey; /* Темнее оригинального */
+  transform: scale(1.05);
 }
 
 .btn-next-modal:hover {
-    background-color: darkgreen; /* Темнее оригинального */
-    transform: scale(1.05);
+  background-color: darkgreen; /* Темнее оригинального */
+  transform: scale(1.05);
 }
 
 /* button:hover{
@@ -164,5 +153,49 @@
 } */
 
 #moduleDescription {
-    resize: none;
+  resize: none;
 }
+
+.buttons-bottom {
+  position: absolute;
+  bottom: 1%;
+  left: 90%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.button-delete-card,
+.button-save-card {
+  height: 4rem;
+  width: fit-content;
+}
+
+.button-delete-card {
+  background-color: #f44336;
+  color: white;
+}
+
+.button-save-card {
+  color: white;
+  background-color: #5ee152;
+}
+
+.button-delete-card:hover{
+    background-color: #f44336;
+}
+.button-save-card:hover {
+    background-color: #5ee152;
+}
+
+.card-body {
+    border: 0px;
+    color: white;
+    
+}   
+
+textarea {
+color: white;}

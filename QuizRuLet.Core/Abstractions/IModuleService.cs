@@ -15,4 +15,5 @@ public interface IModuleService
     // Task<Guid> UpdateModule(Guid id, string name, string description);
     Task<Guid> UpdateModuleName(Guid id, string name);
     Task<Guid> UpdateModuleDescription(Guid id, string description);
+    Task<Guid> UpdateModule(Guid id, string name, string description);
 }

@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    transition: all .3s;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background-color: #383636;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #383636;
+  border-bottom: 2px solid #D9D9D9;
+  padding: 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1000;
+  gap: 0.3rem;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.quiz {
+  color: #5EE152;
+}
+
+.rulet {
+  color: #ACA8A8;
+}
+
+.header-container{
+  display: flex;
+}
+
+/* Иконки - НАЧАЛО */
+.btn-import-ai-manual-learn svg, .nav-toggle svg, .nav-item-learn-and-import svg, .edit-button svg, .nav-item svg, .card-plus svg{
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-menu, .icon-search{
+  width: 28px;
+  height: 28px;
+  justify-content: center;
+  align-items: center;
+}
+/* Иконки - КОНЕЦ */
+
+
+
+
+
+
+/* Кнопки, меню- НАЧАЛО */
+.nav{
+  display: flex;
+}
+.nav-list{
+  display: flex;
+  padding: 0;
+  gap: 1rem;
+}
+/* Кнопка меню, домой, редактирования */
+.nav-item, .edit-button, .card-plus {
+  border: 2px, solid, #ACA8A8;
+  border-radius: 8px;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  fill: #ACA8A8;
+}
+.edit-button:hover{
+  background-color: #716F6F;
+}
+
+/* Кнопка ручного импорта/ии-импорта/учить - НАЧАЛО */
+.btn-import-ai-manual-learn{
+  height: 40px;
+  background-color: #5EE152;
+  border: 2px solid white;
+  padding: 0 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.btn-import-ai-manual-learn:hover{
+  background-color: #47BB3D;
+}
+.icon-manual-ai-import-learn{
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+.button-text{
+  font-size: 2rem;
+  text-align: center;
+  color: white;
+}
+.nav-toggle, .search-toggle{
+  border: 2px, solid, #ACA8A8;
+  border-radius: 8px;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+  display: flex;
+  fill: #ACA8A8;
+}
+
+.card-plus:hover {
+  background-color: #716F6F;
+}
+
+.nav-item:hover {
+  background-color: #716F6F;
+}
+
+/*  Поиск - НАЧАЛО*/
+
+.search { 
+  display: flex;
+  align-items: center;
+  position: relative; /* Для абсолютного позиционирования формы */
+  margin-left: 1rem;
+}
+
+.search-toggle {
+  border: 2px solid #ACA8A8;
+  border-radius: 8px;
+  height: 40px;
+  width: 133px;
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: space-between;
+  display: flex;
+  fill: #ACA8A8;
+}
+
+.search-form {
+  position: absolute;
+  left: 42px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+} 
+
+.search-form input[type="search"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  color: #ACA8A8;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+@media (max-width: 350px) {
+  .search{
+    margin-left: 0.3rem;
+  }
+  .header{
+    padding: 0.5rem 1.5rem;
+  }
+}
+/*  Поиск - КОНЕЦ*/
+
+/* Кнопка ручного импорта/ии-импорта/учить - КОНЕЦ */
+
+/* Адаптив для кнопок - НАЧАЛО */
+.nav-toggle{
+  display: none;
+}
+@media (max-width: 830px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #383636;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 3rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-list.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+/* Адаптив для кнопок - КОНЕЦ */
+/* Кнопки, меню- КОНЕЦ */
+
+
+
+
+
+
+
+
+
+
+
+/* Вторая строка хедера - название модуля и кнопка редактирования - НАЧАЛО */
+.module-title-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center; 
+  position: relative; 
+}
+
+.module-title {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  text-align: center;
+  line-height: 1.5rem;
+  display: block;
+  text-align: center;
+  flex-grow: 1; 
+}
+
+.module-title.placeholder {
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+.button-container{
+  display: flex;
+}
+/* Вторая строка хедера - название модуля и кнопка редактирования - КОНЕЦ */
