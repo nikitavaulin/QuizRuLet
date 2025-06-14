@@ -199,3 +199,26 @@
 
 textarea {
 color: white;}
+
+
+/* Простое выделение цветом */
+.card.selected {
+    background-color: #5ee152;
+}
+
+/* Выделение с рамкой */
+.card.selected {
+    border: 2px solid #5ee152;
+    border-radius: 10px;
+}
+
+/* Выделение с тенью */
+.card.selected {
+    box-shadow: 0 0 10px #5ee152;
+}
+
+/* Изменение цвета текста */
+.card.selected {
+    color: #fff;
+    background-color: #3c3;
+}

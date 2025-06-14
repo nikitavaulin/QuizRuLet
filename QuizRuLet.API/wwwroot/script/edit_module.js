@@ -438,9 +438,19 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
   })
-  // Инициализация при загрузке страницы
 
+  // Инициализация при загрузке страницы
+  
   await fetchCards(); // Получить и отобразить список карточек
   createNewCard();
+  document.querySelectorAll('.card').forEach(card => {
+    console.log(123);
+    card.addEventListener('click', function () {
+      // Убираем выделение у всех карточек
+      document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
+      // Добавляем класс выбранной карточке
+      card.classList.add('selected');
+    });
+  });
 
 });

@@ -2040,17 +2040,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-UYP6bSaCaIjRfyHrtDXXpqzwlTJh70JOzGif4Vi3hiw="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2780"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022UYP6bSaCaIjRfyHrtDXXpqzwlTJh70JOzGif4Vi3hiw=\u0022"},{"Name":"Last-Modified","Value":"Fri, 13 Jun 2025 18:44:51 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/script/edit_module.j3o4fdg0yd.js">
+    <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/script/edit_module.43eyyvwue6.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script\edit_module.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"j3o4fdg0yd"},{"Name":"integrity","Value":"sha256-/xX1TQmeqJZVjkqhdovIFKuXJF5efS\u002B3cJNm\u002B0LXYdQ="},{"Name":"label","Value":"_content/QuizRuLet.API/script/edit_module.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"18122"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022/xX1TQmeqJZVjkqhdovIFKuXJF5efS\u002B3cJNm\u002B0LXYdQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 12:15:50 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"43eyyvwue6"},{"Name":"integrity","Value":"sha256-0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I="},{"Name":"label","Value":"_content/QuizRuLet.API/script/edit_module.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"18547"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00220DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 12:41:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/script/edit_module.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script\edit_module.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-/xX1TQmeqJZVjkqhdovIFKuXJF5efS\u002B3cJNm\u002B0LXYdQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"18122"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022/xX1TQmeqJZVjkqhdovIFKuXJF5efS\u002B3cJNm\u002B0LXYdQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 12:15:50 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-0DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"18547"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u00220DkdkVz1ZuAtbuS3tWcfZZTxoS0r/B6iR0SW9DpY40I=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 12:41:27 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/script/edit_name_module.5ipweew5fc.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\script\edit_name_module.js'))</AssetFile>
@@ -2259,14 +2259,14 @@
     <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/styles/module_edit.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\module_edit.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-KRtWLh85qIWm6F89UU7QIvm2DypaL/NZiIB/muMGqBQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"3803"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022KRtWLh85qIWm6F89UU7QIvm2DypaL/NZiIB/muMGqBQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 08:37:25 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pu3c\u002B94olK6FNqF6LGhtfOjNfJ\u002BnnGmclI94/pEeYbM="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"4255"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pu3c\u002B94olK6FNqF6LGhtfOjNfJ\u002BnnGmclI94/pEeYbM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 12:42:06 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/styles/module_edit.n8iykclbsv.css">
+    <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/styles/module_edit.u3dc1l7fi8.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\module_edit.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"n8iykclbsv"},{"Name":"integrity","Value":"sha256-KRtWLh85qIWm6F89UU7QIvm2DypaL/NZiIB/muMGqBQ="},{"Name":"label","Value":"_content/QuizRuLet.API/styles/module_edit.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"3803"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022KRtWLh85qIWm6F89UU7QIvm2DypaL/NZiIB/muMGqBQ=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 08:37:25 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"u3dc1l7fi8"},{"Name":"integrity","Value":"sha256-pu3c\u002B94olK6FNqF6LGhtfOjNfJ\u002BnnGmclI94/pEeYbM="},{"Name":"label","Value":"_content/QuizRuLet.API/styles/module_edit.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"4255"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022pu3c\u002B94olK6FNqF6LGhtfOjNfJ\u002BnnGmclI94/pEeYbM=\u0022"},{"Name":"Last-Modified","Value":"Sat, 14 Jun 2025 12:42:06 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/QuizRuLet.API/styles/registration.97xkgom2uk.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\styles\registration.css'))</AssetFile>
