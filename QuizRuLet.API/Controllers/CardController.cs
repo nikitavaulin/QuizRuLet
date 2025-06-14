@@ -39,12 +39,21 @@ namespace QuizRuLet.API.Controllers
             return Ok(cardId);
         }
         
-        [HttpPatch("{cardId:guid}")]
+        [HttpPatch("update-flag/{cardId:guid}")]
         public async Task<ActionResult<Guid>> UpdateCardLearningFlag([FromRoute] Guid cardId, [FromBody] CardLearningFlagUpdateRequest request)
         {
             await _learningModuleService.UpdateLearningFlag(cardId, request.IsLearned);
             return Ok(cardId);
         }
+        
+        [HttpPatch("update/{cardId:guid}")]
+        public async Task<ActionResult<Guid>> UpdateCardSides([FromRoute] Guid cardId, [FromBody] CardRequest request)
+        {
+            await _cardService.UpdatePartlyCard(cardId, request.FrontSide, request.BackSide);
+            return Ok(cardId);
+        }
+        
+        
         
         [HttpPatch("reset/{moduleId:guid}")]
         public async Task<ActionResult> ResetCardsInModule([FromRoute] Guid moduleId)

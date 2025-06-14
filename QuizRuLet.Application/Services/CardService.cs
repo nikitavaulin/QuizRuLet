@@ -43,6 +43,13 @@ public class CardService : ICardService
     {
         return await _cardsRepository.Update(id, frontSide, backSide, isLearned, moduleId);
     }
+    
+    public async Task<Guid> UpdatePartlyCard(Guid id, string frontSide, string backSide)
+    {
+        return await _cardsRepository.UpdatePartly(id, frontSide, backSide);
+    }
+    
+    
 
     public async Task<Guid> DeleteCard(Guid id)
     {

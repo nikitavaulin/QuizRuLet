@@ -33,8 +33,7 @@
         >
           <!--левый блок1-->
           <div class="position-sticky">
-            <a
-              class="quizrulet-brand-sidebar d-flex justify-content-center align-items-center mb-3"
+            <a class="quizrulet-brand-sidebar d-flex justify-content-center align-items-center mb-3" href="/index.html"
             >
               <span class="text-success">Quiz</span
               ><span class="text-secondary">RuLet</span>
@@ -162,7 +161,8 @@
                 rows="10"
                 type="form-control"
                 placeholder="Введите термин"
-              ></textarea>
+                data-id=""
+              >Выберите карточку из списка слева или создайте новую</textarea>
             </div>
             <div class="card-meaning col-6 pl-2 ps-md-3">
               <textarea
@@ -170,15 +170,17 @@
                 rows="10"
                 type="form-control"
                 placeholder="Введите значение"
-              ></textarea>
+              >Выберите карточку из списка слева или создайте новую</textarea>
             </div>
           </div>
           <div class="buttons-bottom ">
             <div
               class="btn button-delete-card align-items-center justify-content-center d-flex"
+id = "delete-card"
             >Удалить карточку</div>
             <div
             class="btn button-save-card align-items-center justify-content-center d-flex"
+id = "save-card"
             >Сохранить карточку</div>
         </div>
           </div>

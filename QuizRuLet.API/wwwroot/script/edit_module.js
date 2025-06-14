@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     let updatePreview;
 
     async function showStep(step) {
+      let cards;
       // Обновляем активные шаги
       steps.forEach(s => {
         s.classList.toggle('active', parseInt(s.dataset.step) === step);
@@ -77,13 +78,25 @@ document.addEventListener('DOMContentLoaded', async function () {
     });
 
     // Кнопка "Вперед"
-    nextBtn.addEventListener('click', () => {
+    nextBtn.addEventListener('click', async () => {
       if (currentStep < steps.length) {
         goToStep(currentStep + 1);
       } else {
         const bsModal = bootstrap.Modal.getInstance(modalElement);
         if (bsModal) {
           bsModal.hide();
+        }
+        const response = await axios.post(`/import/save/${moduleId}`, {cards: cards});
+        
+        try {
+          if (response.status === 200) {
+            showModal("Сообщение", "Карточки успешно сохранены");
+            fetchCards();
+          }
+        }
+        catch {
+          showModal("Ошибка", "Не удалось сохранить карточки в модуле");
+          return;
         }
         // Или отправить форму
         // modalElement.querySelector('form').submit();
@@ -93,13 +106,13 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Инициализация при первом запуске или сбросе
     showStep(currentStep);
 
-
+    // Обработка данных для импорта
     if (modalElement.id === 'importModal') {
       const importTextarea = modalElement.querySelector('.step-content[data-step="1"] textarea');
       const separatorSelect = modalElement.querySelector('.step-content[data-step="2"] #separator_inline');
       const separatorLinesSelect = modalElement.querySelector('.step-content[data-step="2"] #separator_line');
       const previewPre = modalElement.querySelector('#preview');
-      let cards = [];
+      cards = [];
 
       updatePreview = async () => {
         let text = importTextarea ? importTextarea.value : '';
@@ -109,30 +122,36 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         text = text.replaceAll(separatorLines, "*LINES*");
         text = text.replaceAll(separator, "*PAIR*");
-        console.log(text);
+        
 
-        // cards = await axios.post("/test-cards.json", { // Адрес дописать
-        //   data: text,
-        //   lineSeparator: separatorLines,
-        //   pairSeparator: separator
-        // })
+        const response = await axios.post("/import", { // Адрес дописать
+          data: text,
+          lineSeparator: "*LINES*",
+          pairSeparator: "*PAIR*"
+        })
+        
+        try {
+          if (response.status === 200) {
+            cards = response.data;
+            
+            if (true) {
 
-        const response = await axios.get("/test-cards.json");
-        cards = response.data.cards;
-        console.log(cards);
-        if (true) {
-
-          let previewText = '';
-          cards.forEach(card => {
-            console.log(card);
-            previewText += enumerator + ') ' + card.frontSide.slice(0, 15) + '..' + ' | ' + card.backSide.slice(0, 25) + '..' + '\n';
-            enumerator++;
-          });
-          previewPre.textContent = previewText;
-        } else if (previewPre) {
-          previewPre.textContent = 'Данные здесь...';
+              let previewText = '';
+              cards.forEach(card => {
+                
+                previewText += enumerator + ') ' + card.frontSide.slice(0, 15) + '..' + ' | ' + card.backSide.slice(0, 25) + '..' + '\n';
+                enumerator++;
+              });
+              previewPre.textContent = previewText;
+            } else if (previewPre) {
+              previewPre.textContent = 'Данные здесь...';
+            }
+          }
         }
-
+        catch {
+          showModal("Ошибка", "Не удалость импортировать данные");
+          return;
+        }
       }
 
       // if (importTextarea) importTextarea.addEventListener('input', updatePreview);
@@ -210,7 +229,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   async function fetchCards() {
     try {
       const response = await axios.get(`/modules/${moduleId}`);
-      console.log(response);
+
       if (response.status === 200) {
         const moduleData = response.data;
         renderCardList(moduleData.cards);
@@ -255,14 +274,14 @@ document.addEventListener('DOMContentLoaded', async function () {
 
       // Обработчик клика на карточку
       cardBody.addEventListener('click', () => {
-        renderCardDetails(card.frontSide, card.backSide);
+        renderCardDetails(card.frontSide, card.backSide, card.id);
       });
 
       listItem.appendChild(cardBody); // Добавляем div внутрь li
       cardListElement.appendChild(listItem); // Добавляем карточку в список
     });
   }
-
+  // Функция для обновления названия и описания модуля
   function updateModuleName(name, desc) {
     let moduleName = document.getElementById('module-name');
     moduleName.setAttribute('data-bs-original-title', desc);
@@ -277,11 +296,11 @@ document.addEventListener('DOMContentLoaded', async function () {
     let descriptionModal = document.getElementById('moduleDescription');
     nameModal.value = name;
     descriptionModal.value = desc;
-    console.log(nameModal, descriptionModal);
+
   }
 
   // Функция для отображения деталей карточки в правом блоке
-  function renderCardDetails(front, back) {
+  function renderCardDetails(front, back, cardId) {
     const termTextarea = document.querySelector('.card-termin .card-txt');
     const meaningTextarea = document.querySelector('.card-meaning .card-txt');
 
@@ -289,12 +308,14 @@ document.addEventListener('DOMContentLoaded', async function () {
     termTextarea.value = front;
     meaningTextarea.value = back;
 
-    // Если нужно, добавляем дополнительные детали (например, выучена или нет)
-    console.log('Карточка загружена:', card);
+    termTextarea.dataset.id = cardId;
+    
+
+
   }
 
 
-
+  //Сохранение измененных названия и описания
   document.getElementById('saveModuleBtn').addEventListener('click', async function () {
     const name = document.getElementById('moduleName').value.trim();
     const description = document.getElementById('moduleDescription').value.trim();
@@ -305,14 +326,22 @@ document.addEventListener('DOMContentLoaded', async function () {
       return;
     }
 
+    if (name.length > 50 || name.length < 3) {
+      showModal('Ошибка', "Имя модуля должно содержать от 3 до 50 символов");
+      return;
+    }
 
+    if (description.length > 350) {
+      showModal('Ошибка', "Описание модуля должно содержать не более 350 символов");
+      return;
+    }
 
     try {
       const response = await axios.patch(`/modules/edit/${moduleId}`, {
         name: name,
         description: description
       });
-      console.log(response);
+      
 
       if (response.status === 200) {
         const modalEl = document.getElementById('editModal');
@@ -324,13 +353,58 @@ document.addEventListener('DOMContentLoaded', async function () {
       }
     } catch (error) {
       console.error('Ошибка при сохранении:', error);
-      alert('Не удалось сохранить изменения');
+      showModal("Сообщение", "Не удалось сохранить изменения");
     }
   });
 
+  const deleteBtn = document.getElementById("delete-card");
+  const saveBtn = document.getElementById("save-card");
 
 
+  deleteBtn.addEventListener('click', async function (e) { // Кнопка удаления внизу страницы
+    e.preventDefault();
+    const cardTxt = document.querySelector('.card-termin .card-txt')
+    
+    const cardId = cardTxt.dataset.id;
+    
+    try {
+      const response = await axios.delete(`/cards/${cardId}`);
+      if (response.status === 200) {
+        showModal("Сообщение", "Карточка удалена");
+      }
+      fetchCards();
+    }
+    catch (error) {
+      console.error('Ошибка при удалении:', error);
+      showModal("Сообщение", "Не удалось удалить карточку");
+    }
+  })
 
+  saveBtn.addEventListener('click', async function (e) { // Кнопка сохранения внизу страницы
+    e.preventDefault();
+    const cardTxtTermin = document.querySelector('.card-termin .card-txt');
+    const cardTxtMeaning = document.querySelector('.card-meaning .card-txt');
+    const cardTermin = cardTxtTermin.value.trim();
+    const cardMeaning = cardTxtMeaning.value.trim();
+    
+    const cardId = cardTxtTermin.dataset.id;
+    
+    try {
+      const response = await axios.patch(`/cards/update/${cardId}`, {
+        frontSide: cardTermin,
+        backSide: cardMeaning
+      });
+      if (response.status === 200) {
+        showModal("Сообщение", "Карточка изменена");
+      }
+      fetchCards();
+    }
+    catch (error) {
+      console.error('Ошибка при изменении:', error);
+      showModal("Сообщение", "Не удалось изменить карточку");
+    }
+
+  })
   // Инициализация при загрузке страницы
 
   await fetchCards(); // Получить и отобразить список карточек

@@ -412,7 +412,7 @@ C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\net9.0\compressed\1cpje6846t-z39zvvmcxp.gz
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\net9.0\compressed\zgtixo26uw-fg7izfj7r0.gz
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\net9.0\compressed\5zpbhd247j-0yi0vi1843.gz
-C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\net9.0\compressed\llogjpwrgr-ul6pnjq0vy.gz
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\net9.0\compressed\6itblwiak1-n8iykclbsv.gz
 C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\net9.0\compressed\1dniz6sdab-5ipweew5fc.gz
-C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\net9.0\compressed\d2faxr0ecl-kuee16tna4.gz
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\net9.0\compressed\llogjpwrgr-z6ziew494v.gz
+C:\Users\mrvau\source\repos\quizrulet\backend\QuizRuLet\QuizRuLet.API\obj\Debug\net9.0\compressed\d2faxr0ecl-0vwr2qy5hw.gz

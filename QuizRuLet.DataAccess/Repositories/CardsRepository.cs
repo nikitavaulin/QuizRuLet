@@ -179,6 +179,20 @@ namespace QuizRuLet.DataAccess.Repositories
             return id;
         }
         
+        public async Task<Guid> UpdatePartly(Guid id, string frontSide, string backSide)
+        {
+            await _dbContext.Cards
+                .Where(c => c.Id == id)
+                .ExecuteUpdateAsync(s => s
+                    .SetProperty(c => c.FrontSide, frontSide)
+                    .SetProperty(c => c.BackSide, backSide)
+                );
+
+            await _dbContext.SaveChangesAsync();
+
+            return id;
+        }
+        
         public async Task<Guid> UpdateLearningFlag(Guid cardId, bool isLearned)
         {
             await _dbContext.Cards

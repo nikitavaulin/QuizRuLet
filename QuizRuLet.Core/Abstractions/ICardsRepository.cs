@@ -17,5 +17,6 @@ namespace QuizRuLet.Core.Abstractions
         Task<Guid> Update(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId);
         Task<Guid> UpdateLearningFlag(Guid cardId, bool isLearned);
         Task<Guid> UpdateLearningFlagInModule(Guid moduleId, bool isLearned);
+        Task<Guid> UpdatePartly(Guid id, string frontSide, string backSide);
     }
 }
