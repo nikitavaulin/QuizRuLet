@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (bsModal) {
           bsModal.hide();
         }
-        const response = await axios.post(`/import/save/${moduleId}`, {cards: cards});
-        
+        const response = await axios.post(`/import/save/${moduleId}`, { cards: cards });
+
         try {
           if (response.status === 200) {
             showModal("Сообщение", "Карточки успешно сохранены");
@@ -118,40 +118,46 @@ document.addEventListener('DOMContentLoaded', async function () {
         let text = importTextarea ? importTextarea.value : '';
         let separator = separatorSelect ? separatorSelect.value : '';
         let separatorLines = separatorLinesSelect ? separatorLinesSelect.value : '';
-        let enumerator = 1;
+
 
         text = text.replaceAll(separatorLines, "*LINES*");
         text = text.replaceAll(separator, "*PAIR*");
-        
+
 
         const response = await axios.post("/import", { // Адрес дописать
           data: text,
           lineSeparator: "*LINES*",
           pairSeparator: "*PAIR*"
         })
-        
-        try {
-          if (response.status === 200) {
-            cards = response.data;
-            
-            if (true) {
+        const previewText = separatingPreview(response);
+        previewPre.textContent = previewText;
+      }
+    }
+    if (modalElement.id === 'importAiModal') {
+      const importTextarea = modalElement.querySelector('.step-content[data-step="1"] textarea');
+      const countArea = modalElement.querySelector('.step-content[data-step="2"] #count');
 
-              let previewText = '';
-              cards.forEach(card => {
-                
-                previewText += enumerator + ') ' + card.frontSide.slice(0, 15) + '..' + ' | ' + card.backSide.slice(0, 25) + '..' + '\n';
-                enumerator++;
-              });
-              previewPre.textContent = previewText;
-            } else if (previewPre) {
-              previewPre.textContent = 'Данные здесь...';
-            }
-          }
+      const previewPre = modalElement.querySelector('#preview');
+      cards = [];
+
+      updatePreview = async () => {
+        let text = importTextarea ? importTextarea.value : '';
+        let count = countArea ? countArea.value : '';
+        console.log(count);
+        let previewText = "";
+        text = text.replaceAll("\n", " ");
+        const response = await axios.post("/import/ai", { // Адрес дописать
+          data: text,
+          countCards: count
+        })
+        console.log(response);
+        try {
+          previewText = separatingPreview(response);
         }
-        catch {
-          showModal("Ошибка", "Не удалость импортировать данные");
-          return;
+        catch (error) {
+          console.log(error);
         }
+        previewPre.textContent = previewText;
       }
 
       // if (importTextarea) importTextarea.addEventListener('input', updatePreview);
@@ -163,6 +169,33 @@ document.addEventListener('DOMContentLoaded', async function () {
       // Лучше: обновить предпросмотр, когда `showStep` показывает шаг 3.
 
       // Также, можно вызывать updatePreview при каждом изменении шага, если это нужно.
+    }
+  }
+
+  function separatingPreview(response) {
+    try {
+      let enumerator = 1;
+      let previewText = '';
+      if (response.status === 200) {
+        cards = response.data;
+
+        if (true) {
+
+          cards.forEach(card => {
+
+            previewText += enumerator + ') ' + card.frontSide.slice(0, 15) + '..' + ' | ' + card.backSide.slice(0, 25) + '..' + '\n';
+            enumerator++;
+          });
+        } else if (previewPre) {
+          previewPre.textContent = 'Данные здесь...';
+        }
+        return previewText;
+      }
+    }
+    catch (error) {
+      showModal("Ошибка", "Не удалость импортировать данные");
+      console.log(error);
+      return;
     }
   }
 
@@ -309,7 +342,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     meaningTextarea.value = back;
 
     termTextarea.dataset.id = cardId;
-    
+
 
 
   }
@@ -341,7 +374,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         name: name,
         description: description
       });
-      
+
 
       if (response.status === 200) {
         const modalEl = document.getElementById('editModal');
@@ -364,9 +397,9 @@ document.addEventListener('DOMContentLoaded', async function () {
   deleteBtn.addEventListener('click', async function (e) { // Кнопка удаления внизу страницы
     e.preventDefault();
     const cardTxt = document.querySelector('.card-termin .card-txt')
-    
+
     const cardId = cardTxt.dataset.id;
-    
+
     try {
       const response = await axios.delete(`/cards/${cardId}`);
       if (response.status === 200) {
@@ -386,9 +419,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     const cardTxtMeaning = document.querySelector('.card-meaning .card-txt');
     const cardTermin = cardTxtTermin.value.trim();
     const cardMeaning = cardTxtMeaning.value.trim();
-    
+
     const cardId = cardTxtTermin.dataset.id;
-    
+
     try {
       const response = await axios.patch(`/cards/update/${cardId}`, {
         frontSide: cardTermin,

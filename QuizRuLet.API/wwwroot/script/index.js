@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", async function (e) {
-  
 
-  
+
+
 
   function getCookie(name) {
     const cookies = document.cookie.split("; ");
@@ -56,59 +56,59 @@ document.addEventListener("DOMContentLoaded", async function (e) {
 
     const response = await axios.get(`/users/${userId}`);
     const modules = response.data.modules;
-    
+    const name = response.data.login;
 
-    const username = document.querySelector("#username");
-
-    username.insertAdjacentText("beforeend", response.data.login);
+    const username = document.querySelector(".username_text");
+    username.innerHTML = "";
+    username.insertAdjacentText("beforeend", name);
     const container = document.querySelector(".module-list");
     container.innerHTML = "";
     modules.forEach((element) => {
       showModule(element.name, element.progress, element.id);
     });
-    
+
   }
-  
+
 
   document.body.addEventListener('click', async function (e) {
     const btn = e.target.closest('.delete-btn');
     if (!btn) return;
     const moduleId = btn.dataset.id
-    || btn.closest('.module-card')?.dataset.id;
-    
-    if (!moduleId) return; 
+      || btn.closest('.module-card')?.dataset.id;
+
+    if (!moduleId) return;
     try {
-        await axios.delete(`/modules/${moduleId}`);
-        await showListModules();
+      await axios.delete(`/modules/${moduleId}`);
+      await showListModules();
     } catch (err) {
-        console.error(err);
-        alert('Не удалось удалить модуль. Попробуйте ещё раз.');
+      console.error(err);
+      alert('Не удалось удалить модуль. Попробуйте ещё раз.');
     }
-    
+
   });
 
- 
+
 
   document.body.addEventListener('click', async function (e) {
     const btn = e.target.closest('.edit-btn');
     if (!btn) return;
     const moduleId = btn.dataset.id
-    || btn.closest('.module-card')?.dataset.id;
-    
-    if (!moduleId) return; 
+      || btn.closest('.module-card')?.dataset.id;
+
+    if (!moduleId) return;
     try {
-        window.location.href = `/module_edit.html?id=${encodeURIComponent(moduleId)}`;
+      window.location.href = `/module_edit.html?id=${encodeURIComponent(moduleId)}`;
 
     } catch (err) {
-        console.error(err);
-        alert('Не удалось удалить модуль. Попробуйте ещё раз.');
+      console.error(err);
+      alert('Не удалось удалить модуль. Попробуйте ещё раз.');
     }
-    
+
   });
 
   function showModule(name, progress, id) {
     const container = document.querySelector(".module-list");
-    
+
     const moduleHTML = `
         <div class="module-card d-flex justify-content-between align-items-center flex-wrap id="${id}"">
         <div class="module-title mb-2 mb-md-0">
@@ -137,15 +137,15 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     container.insertAdjacentHTML("beforeend", moduleHTML);
   }
 
-  
+
   const moduleForm = document.getElementById("moduleForm");
   moduleForm.addEventListener("submit", async function (e) {
     e.preventDefault();
     const name = document.getElementById("moduleName").value.trim();
     const desc = document.getElementById("moduleDesc").value.trim();
     const progress = 0;
-    
-    
+
+
 
     if (name !== "") console.log("!name");
 
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
       userId: userId,
     });
     await showListModules();
-    
+
     // Очистить форму и закрыть модалку
     document.getElementById("moduleForm").reset();
     const modal = bootstrap.Modal.getInstance(

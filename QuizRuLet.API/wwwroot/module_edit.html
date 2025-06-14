@@ -277,6 +277,10 @@ id = "save-card"
                             <span class="step-number">2</span>
                             <span class="step-title">Предпросмотр</span>
                         </div>
+<div class="step d-flex flex-column align-items-center" data-step="3">
+                            <span class="step-number">3</span>
+                            <span class="step-title">Предпросмотр</span>
+                        </div>
                     </div>
                 </div>
                 <div class="step-content active p-4" data-step="1">
@@ -285,10 +289,15 @@ id = "save-card"
                     <textarea class="form-control" rows="5" placeholder="Ваш текст..."></textarea>
                 </div>
 
+                <div class="step-content active p-4" data-step="2">
+                    <h4>Шаг 2: Выбрать количество карточек</h4>
+                    
+                    <p>Введите количество карточек.</p>
+                    <textarea class="form-control" rows="1" placeholder="Количество карточек" id="count"></textarea>
+                </div>
 
-
-                <div class="step-content p-4" data-step="2">
-                    <h4>Шаг 2: Предпросмотр</h4>
+                <div class="step-content p-4" data-step="3">
+                    <h4>Шаг 3: Предпросмотр</h4>
                     <p>Посмотрите, как будут выглядеть ваши данные:</p>
                     <pre class="p-2 rounded" id="preview">Данные здесь...</pre>
                 </div>
