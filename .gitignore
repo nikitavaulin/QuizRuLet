@@ -8,6 +8,8 @@
 
 # ADDED
 appsettings.json
+**/bin/
+**/obj/
 
 # User-specific files
 *.rsuser
