@@ -8,6 +8,7 @@
 
 # ADDED
 appsettings.json
+appsettings.Development.json
 **/bin/
 **/obj/
 
@@ -15,7 +16,7 @@ appsettings.json
 *.rsuser
 *.suo
 *.user
-*.userosscache
+*.userosscachegi
 *.sln.docstates
 
 # User-specific files (MonoDevelop/Xamarin Studio)
