@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     const response = await axios.get(`/users/${userId}`);
     const modules = response.data.modules;
     const name = response.data.login;
-    
+
     const username = document.querySelector(".username_text");
     username.innerHTML = "";
     username.insertAdjacentText("beforeend", name);
@@ -136,6 +136,26 @@ document.addEventListener("DOMContentLoaded", async function (e) {
                 `;
     container.insertAdjacentHTML("beforeend", moduleHTML);
   }
+  function clearAllCookies() {
+    // Получаем все доступные куки для текущего домена
+    const cookies = document.cookie.split(";");
+
+    // Проходимся по каждому куки и устанавливаем его срок действия в прошлое
+    cookies.forEach(cookie => {
+      const cookieName = cookie.split("=")[0].trim();
+      document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`;
+    });
+
+    console.log("Все куки успешно удалены.");
+  }
+
+  const logoutBtn = document.getElementById('logout').addEventListener('click', function(e) {
+    e.preventDefault();
+    clearAllCookies();
+    window.location.href = "login.html";
+  })
+
+
 
 
   const moduleForm = document.getElementById("moduleForm");
