@@ -9,7 +9,6 @@ public class Card
 {
     public const int MAX_CARD_SIDE_LENGTH = 500;
     
-    
     public Guid Id {get;}
     public string FrontSide {get;} = string.Empty;
     public string BackSide {get;} = string.Empty;
@@ -42,3 +41,4 @@ public class Card
         return (card, error);
     }
 }
+

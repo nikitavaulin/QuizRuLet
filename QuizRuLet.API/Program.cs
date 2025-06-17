@@ -40,13 +40,6 @@ services.AddSingleton<IConfiguration>(provider =>
 
 services.Configure<AiApiOptions>(configuration.GetSection("AiApi"));
 
-// services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)       // learn
-//     .AddCookie(options => 
-//     {
-//         options.LoginPath = "/Account/Login";                       // перенаправление на указанный путь, в случае если юзер не аутентифицирован
-//         options.AccessDeniedPath = "/Account/AccessDenied";         // перенаправление на указанный путь, в случае если юзер не имеет достаточно прав
-//     });
-
 
 services.AddSwaggerGen();
 

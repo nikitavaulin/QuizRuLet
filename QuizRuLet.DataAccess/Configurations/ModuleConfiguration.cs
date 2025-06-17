@@ -14,6 +14,7 @@ public class ModuleConfiguration : IEntityTypeConfiguration<ModuleEntity>
             .HasMany(m => m.Cards)
             .WithOne(c => c.Module)
             .HasForeignKey(c => c.ModuleId);
+            
     }
 }
 

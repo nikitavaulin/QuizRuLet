@@ -99,7 +99,7 @@ namespace QuizRuLet.API.Controllers
             return Ok(response);
         }
         
-        [HttpPost]  // TODO validation
+        [HttpPost]
         public async Task<ActionResult<Guid>> CreateModule([FromBody] ModuleCreationRequest request)
         {
             var (module, error) = Core.Models.Module.Create(
