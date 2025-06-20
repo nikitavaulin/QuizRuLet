@@ -24,10 +24,7 @@ namespace QuizRuLet.API.Controllers
             {
                 return Ok();
             }
-            else
-            {
-                return BadRequest(response.Error);
-            }
+            return BadRequest(response.Error);
         }
     }
 }

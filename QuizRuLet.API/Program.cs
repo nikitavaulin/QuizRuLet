@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using QuizRuLet.API.Extensions;
 using QuizRuLet.Core.Models;
 using Microsoft.Net.Http.Headers;
+using SameSiteMode = Microsoft.AspNetCore.Http.SameSiteMode;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,18 +21,7 @@ services.AddControllers();
 
 services.AddAuthentication();
 
-services.AddCors(options =>
-{
-    options.AddPolicy("AllowSpecificOrigin", policy =>
-    {
-        policy.WithOrigins("http://localhost:5047")
-              .AllowAnyHeader()
-              .AllowAnyMethod();
-    });
-});
-
-
-services.AddSingleton<IConfiguration>(provider =>
+services.AddSingleton<IConfiguration>(provider =>       // конфигурация аппсетингов для извлечения ключей и настроек
         new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -41,12 +31,12 @@ services.AddSingleton<IConfiguration>(provider =>
 services.Configure<AiApiOptions>(configuration.GetSection("AiApi"));
 
 
-services.AddSwaggerGen();
+services.AddSwaggerGen();   // swagger
 
 services.AddDbContext<QuizRuLetDbContext>(  // регистрация контекста бд
     options => 
     {
-        options.UseNpgsql(configuration.GetConnectionString(nameof(QuizRuLetDbContext)));
+        options.UseNpgsql(configuration.GetConnectionString(nameof(QuizRuLetDbContext)));   // postgres
     });
 
 services.Configure<JwtOptions>(configuration.GetSection(nameof(JwtOptions)));       // jwt auth config
@@ -68,7 +58,6 @@ services.AddScoped<ICardSetAiCreationService, CardSetAiCreationService>();
 // ai
 services.AddScoped<IAiApiProvider, AiApiProvider>();
 
-// 123456
 
 // auth
 services.AddScoped<IJwtProvider, JwtProvider>();
@@ -85,23 +74,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-// Middlewares
+#region  Middlewares
 app.UseHttpsRedirection();
-
-app.UseCors("AllowSpecificOrigin");         // CORS
 
 app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
 
-// app.UseCookiePolicy(new CookiePolicyOptions         // безопасность
-// {
-//     MinimumSameSitePolicy = SameSiteMode.None,
-//     HttpOnly = HttpOnlyPolicy.Always,
-//     Secure = CookieSecurePolicy.Always
-// });
-
+// Статические файлы (фронтенд)
 app.UseDefaultFiles();
 app.UseStaticFiles(new StaticFileOptions
 {
@@ -115,9 +96,11 @@ app.UseStaticFiles(new StaticFileOptions
             NoCache        = true,   // всегда перепроверять
             MustRevalidate = true
         };
-        ctx.Context.Response.Headers["Pragma"]  = "no-cache";
+        ctx.Context.Response.Headers["Pragma"]  = "no-cache";   // отключене кэширования страницы
         ctx.Context.Response.Headers["Expires"] = "0";
     }
 });
+
+#endregion
 
 app.Run();

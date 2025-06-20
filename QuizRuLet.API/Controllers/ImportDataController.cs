@@ -64,20 +64,27 @@ namespace QuizRuLet.API.Controllers
         }
         
         [HttpPost("save/{moduleId:guid}")]
-        public async Task<ActionResult> SaveCardsFromDataSet([FromRoute] Guid moduleId, [FromBody] CardSetSaveRequest request)
+        public async Task<ActionResult<string>> SaveCardsFromDataSet([FromRoute] Guid moduleId, [FromBody] CardSetSaveRequest request)
         {
+            bool wasError = false;
             foreach (var card in request.Cards)
             {
-                await _cardService.CreateCard(
-                    Card.Create(
+                var cardCreation = Card.Create(
                         Guid.NewGuid(),
                         card.FrontSide,
-                        card.BackSide).Card,
-                    moduleId   
-                );
+                        card.BackSide);
+                        
+                if (!string.IsNullOrEmpty(cardCreation.Error))
+                {
+                    wasError = true;
+                }
+                else
+                {
+                    await _cardService.CreateCard(cardCreation.Card, moduleId);
+                }
             }
-
-            return Ok();
+            string resultMsg = wasError ? "Созданы не все карточки из-за некорректности данных" : "Все карточки успешно созданы";
+            return Ok(resultMsg);
         }
     }
 

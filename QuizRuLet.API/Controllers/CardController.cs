@@ -49,8 +49,15 @@ namespace QuizRuLet.API.Controllers
         [HttpPatch("update/{cardId:guid}")]
         public async Task<ActionResult<Guid>> UpdateCardSides([FromRoute] Guid cardId, [FromBody] CardRequest request)
         {
-            await _cardService.UpdatePartlyCard(cardId, request.FrontSide, request.BackSide);
-            return Ok(cardId);
+            var error = Card.Create(Guid.NewGuid(), request.FrontSide, request.BackSide).Error;
+            
+            if (string.IsNullOrEmpty(error))
+            {
+                await _cardService.UpdatePartlyCard(cardId, request.FrontSide, request.BackSide);
+                return Ok(cardId);
+            }
+            return BadRequest(error);
+             
         }
         
         
