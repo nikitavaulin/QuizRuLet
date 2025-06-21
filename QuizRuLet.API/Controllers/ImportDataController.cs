@@ -30,12 +30,17 @@ namespace QuizRuLet.API.Controllers
         [HttpPost]
         public async Task<ActionResult<List<CardResponse>>> ImportDataSet([FromBody] CardsDataImportRequest request)
         {
-            var cards = _cardSetCreationService.Create(
+            var (Cards, Error) = _cardSetCreationService.Create(
                 request.Data, 
                 request.PairSeparator, 
                 request.LineSeparator);
-
-            var response = cards
+            
+            if (!string.IsNullOrEmpty(Error) || Cards is null)
+            {
+                return BadRequest(Error);
+            }
+            
+            var response = Cards
                 .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))
                 .ToList();
 
@@ -45,16 +50,16 @@ namespace QuizRuLet.API.Controllers
         [HttpPost("ai")]
         public async Task<ActionResult<List<CardResponse>>> ImportAiDataSet([FromBody] CardsDataAiImportRequest request)
         {
-            var result = await _cardSetAiCreationService.Create(
+            var (Cards, Error) = await _cardSetAiCreationService.Create(
                 request.Data, 
                 request.CountCards);
 
-            if (!string.IsNullOrEmpty(result.Error) || result.Cards is null)
+            if (!string.IsNullOrEmpty(Error) || Cards is null)
             {
-                return BadRequest(result.Error);
+                return BadRequest(Error);
             }
 
-            var cards = result.Cards;
+            var cards = Cards;
 
             var response = cards
                 .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))

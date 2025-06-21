@@ -41,9 +41,9 @@ public class CardSetAiCreationService : ICardSetAiCreationService
         if (string.IsNullOrEmpty(response.Error))
         {
             var cardSetString = GetCardSetString(response.Result);
-            var cards = _creationService.Create(cardSetString, PAIR_SEPARATOR, LINE_SEPARATOR);
+            var cardCreation = _creationService.Create(cardSetString, PAIR_SEPARATOR, LINE_SEPARATOR);
 
-            return (cards, "");
+            return cardCreation;
         }
 
         return (null, response.Error);

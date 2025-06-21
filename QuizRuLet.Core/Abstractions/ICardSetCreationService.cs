@@ -4,5 +4,5 @@ namespace QuizRuLet.Core.Abstractions;
 
 public interface ICardSetCreationService
 {
-    List<Card> Create(string inputData, string pairSeparator, string lineSeparator);
+    (List<Card>? Cards, string Error) Create(string inputData, string pairSeparator, string lineSeparator);
 }

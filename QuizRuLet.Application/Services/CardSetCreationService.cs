@@ -8,9 +8,24 @@ namespace QuizRuLet.Application.Services;
 
 public class CardSetCreationService : ICardSetCreationService
 {
-    public List<Card> Create(string inputData, string pairSeparator, string lineSeparator)
+    public (List<Card>? Cards, string Error) Create(string inputData, string pairSeparator, string lineSeparator)
     {
-        return GetCardsSet(inputData, pairSeparator, lineSeparator);
+        (List<Card>? Cards, string Error) result = (null, "");
+        try
+        {
+            var cards = GetCardsSet(inputData, pairSeparator, lineSeparator);
+            result = (cards, "");
+        }
+        catch(IndexOutOfRangeException ex)
+        {
+            result = (null, "Ошибка при обработке текста разделителями.");
+        }
+        catch(Exception ex)
+        {
+            result = (null, ex.Message);
+        }
+
+        return result;
     }
 
     private List<Card> GetCardsSet(string inputData, string pairSeparator, string lineSeparator)
@@ -22,15 +37,19 @@ public class CardSetCreationService : ICardSetCreationService
         {
             if (!string.IsNullOrEmpty(pair))
             {
-                var card = GetCard(pair, pairSeparator);    // TODO VALIDATION
-                cards.Add(card);
+                var cardCreation = GetCard(pair, pairSeparator);    // TODO VALIDATION
+                
+                if (!string.IsNullOrEmpty(cardCreation.Error)) 
+                    throw new Exception(cardCreation.Error);
+                    
+                cards.Add(cardCreation.Card);
             }
         }
 
         return cards;
     }
 
-    private Card GetCard(string pair, string pairSeparator)
+    private (Card Card, string Error) GetCard(string pair, string pairSeparator)
     {
         var splitPair = pair.Split(pairSeparator);      // разбили на термин и определение
 
@@ -38,8 +57,8 @@ public class CardSetCreationService : ICardSetCreationService
         var frontSide = splitPair[0];
         var backSide = splitPair[1];
 
-        var card = Card.Create(id, frontSide, backSide, false).Card;   // TODO VALIDATION
+        var cardCreation = Card.Create(id, frontSide, backSide, false);   // TODO VALIDATION
 
-        return card;
+        return cardCreation;
     }
 }
