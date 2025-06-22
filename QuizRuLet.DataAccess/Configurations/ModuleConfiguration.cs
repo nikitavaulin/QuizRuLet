@@ -10,6 +10,8 @@ public class ModuleConfiguration : IEntityTypeConfiguration<ModuleEntity>
     public void Configure(EntityTypeBuilder<ModuleEntity> builder)
     {
         builder.HasKey(m => m.Id);
+        
+        // настройка связей (1 ко многим)
         builder
             .HasMany(m => m.Cards)
             .WithOne(c => c.Module)

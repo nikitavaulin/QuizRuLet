@@ -47,7 +47,7 @@ public class CardService : ICardService
     /// Обновление сторон карточки
     public async Task<Guid> UpdateCardSides(Guid id, string frontSide, string backSide)
     {
-        return await _cardsRepository.UpdatePartly(id, frontSide, backSide);
+        return await _cardsRepository.UpdateSides(id, frontSide, backSide);
     }
 
     /// Удаление карточки по ID

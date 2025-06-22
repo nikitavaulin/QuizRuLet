@@ -12,16 +12,12 @@ public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
         builder.HasKey(u => u.Id);
         
         builder.Property(u => u.Login)
-            // MAX LENGTH FIXME
-            // MIN LENGTH FIXME
             .IsRequired();
         
         builder.Property(u => u.PasswordHash)
-            // MAX LENGTH FIXME
-            // MIN LENGTH FIXME
             .IsRequired();
         
-        // настройка связей
+        // настройка связей (1 ко многим)
         builder
             .HasMany(u => u.Modules)
             .WithOne(m => m.User);

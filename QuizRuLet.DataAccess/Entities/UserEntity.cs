@@ -1,6 +1,3 @@
-using System;
-using QuizRuLet.Core.Models;
-
 namespace QuizRuLet.DataAccess.Entities
 {
     /// <summary>

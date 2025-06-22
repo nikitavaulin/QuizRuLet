@@ -9,6 +9,8 @@ public class CardConfiguration : IEntityTypeConfiguration<CardEntity>
     public void Configure(EntityTypeBuilder<CardEntity> builder)
     {
         builder.HasKey(c => c.Id);
+        
+        // настройка связей
         builder
             .HasOne(c => c.Module)
             .WithMany(m => m.Cards);

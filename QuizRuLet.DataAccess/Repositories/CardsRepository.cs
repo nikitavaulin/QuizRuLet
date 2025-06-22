@@ -9,8 +9,9 @@ namespace QuizRuLet.DataAccess.Repositories
 
     public class CardsRepository : ICardsRepository
     {
-        private readonly QuizRuLetDbContext _dbContext;
+        private readonly QuizRuLetDbContext _dbContext;     // контекст БД 
 
+        // Внедрение зависимостей
         public CardsRepository(QuizRuLetDbContext context)
         {
             _dbContext = context;
@@ -18,7 +19,8 @@ namespace QuizRuLet.DataAccess.Repositories
 
 
         #region Маппинг на доменные модели
-        private List<Card> GetDomain(List<CardEntity> cardEntities)
+        /// Преобразование списка сущностей базы данных в список доменных моделей
+        private static List<Card> GetDomain(List<CardEntity> cardEntities)
         {
             var cards = cardEntities
                 .Select(c => Card.Create(c.Id, c.FrontSide, c.BackSide, c.IsLearned).Card)
@@ -27,8 +29,11 @@ namespace QuizRuLet.DataAccess.Repositories
             return cards;
         }
 
-        private Card? GetDomain(CardEntity cardEntity)
+        /// Преобразование сущности базы данных в доменную моделей
+        private static Card? GetDomain(CardEntity? cardEntity)
         {
+            if (cardEntity is null) return null;
+            
             var card = Card.Create(
                 cardEntity.Id,
                 cardEntity.FrontSide,
@@ -40,10 +45,7 @@ namespace QuizRuLet.DataAccess.Repositories
         }
         #endregion
 
-        /// <summary>
         /// Получения списка карточек (всех из БД)
-        /// </summary>
-        /// <returns></returns>
         public async Task<List<Card>> Get()
         {
             var cardEntities = await _dbContext.Cards
@@ -53,12 +55,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return GetDomain(cardEntities);
         }
 
-        /// <summary>
         /// Получение стопки "Знаю"/"Не знаю" карточек из конкретного модуля
-        /// </summary>
-        /// <param name="moduleId"></param>
-        /// <param name="isLearned"></param>
-        /// <returns></returns>
         public async Task<List<Card>> GetByLearningFlag(Guid moduleId, bool isLearned)
         {
             var cardEntities = await _dbContext.Cards
@@ -70,11 +67,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return GetDomain(cardEntities);
         }
 
-        /// <summary>
         /// Получение набора карточек из модуля
-        /// </summary>
-        /// <param name="moduleId"></param>
-        /// <returns></returns>
         public async Task<List<Card>> GetByModule(Guid moduleId)
         {
             var cardEntities = await _dbContext.Cards
@@ -85,11 +78,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return GetDomain(cardEntities);
         }
 
-        /// <summary>
-        ///о  Получение карточки по Id
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
+        /// Получение карточки по Id
         public async Task<Card?> GetById(Guid id)
         {
             var cardEntity = await _dbContext.Cards
@@ -99,11 +88,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return GetDomain(cardEntity);
         }
 
-        /// <summary>
         /// Получение количества карточек в модуле
-        /// </summary>
-        /// <param name="moduleId"></param>
-        /// <returns></returns>
         public async Task<int> GetCountCardsInModule(Guid moduleId)
         {
             var countCards = await _dbContext.Cards
@@ -113,12 +98,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return countCards;           
         }
         
-        /// <summary>
         /// Получение количества изученных / не изученных карточек в модуле 
-        /// </summary>
-        /// <param name="moduleId">id модуля</param>
-        /// <param name="isLearned">флаг изучен / не изучен</param>
-        /// <returns></returns>
         public async Task<int> GetCountCardsByLearningFlagInModule(Guid moduleId, bool isLearned)
         {
             var countCards = await _dbContext.Cards
@@ -128,41 +108,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return countCards;           
         }
 
-        /// <summary>
-        /// Добавление карточки 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="frontSide"></param>
-        /// <param name="backSide"></param>
-        /// <param name="isLearned"></param>
-        /// <param name="moduleId"></param>
-        /// <returns></returns>
-        public async Task<Guid> Add(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId)
-        {
-            var cardEntity = new CardEntity
-            {
-                Id = id,
-                FrontSide = frontSide,
-                BackSide = backSide,
-                IsLearned = isLearned,
-                ModuleId = moduleId
-            };
-
-            await _dbContext.Cards.AddAsync(cardEntity);
-            await _dbContext.SaveChangesAsync();
-            
-            return cardEntity.Id;
-        }
-
-        /// <summary>
-        /// Обновление конкретной карточки
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="frontSide"></param>
-        /// <param name="backSide"></param>
-        /// <param name="isLearned"></param>
-        /// <param name="moduleId"></param>
-        /// <returns></returns>
+        /// Полное обновление конкретной карточки
         public async Task<Guid> Update(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId)
         {
             await _dbContext.Cards
@@ -179,7 +125,8 @@ namespace QuizRuLet.DataAccess.Repositories
             return id;
         }
         
-        public async Task<Guid> UpdatePartly(Guid id, string frontSide, string backSide)
+        /// Обновление сторон карточки    
+        public async Task<Guid> UpdateSides(Guid id, string frontSide, string backSide)
         {
             await _dbContext.Cards
                 .Where(c => c.Id == id)
@@ -193,6 +140,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return id;
         }
         
+        /// Обновление флага изученности у конкретной карточки
         public async Task<Guid> UpdateLearningFlag(Guid cardId, bool isLearned)
         {
             await _dbContext.Cards
@@ -206,12 +154,8 @@ namespace QuizRuLet.DataAccess.Repositories
             return cardId;
         }
         
-        /// <summary>
+        
         /// Обновление флага у всех карточек в модуле
-        /// </summary>
-        /// <param name="moduleId"></param>
-        /// <param name="isLearned"></param>
-        /// <returns></returns>
         public async Task<Guid> UpdateLearningFlagInModule(Guid moduleId, bool isLearned)
         {
             await _dbContext.Cards
@@ -225,6 +169,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return moduleId;   
         }
 
+        /// Создание карточки в БД
         public async Task<Guid> Create(Card card, Guid moduleId)
         {
             var cardEntity = new CardEntity
@@ -242,11 +187,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return cardEntity.Id;
         }
 
-        /// <summary>
         /// Удаление карточки
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns></returns>
         public async Task<Guid> Delete(Guid id)
         {
             await _dbContext.Cards
@@ -258,11 +199,7 @@ namespace QuizRuLet.DataAccess.Repositories
             return id;
         }
         
-        /// <summary>
         /// Удаление всех карточек из модуля
-        /// </summary>
-        /// <param name="moduleId"></param>
-        /// <returns></returns>
         public async Task<Guid> DeleteByModule(Guid moduleId)
         {
             await _dbContext.Cards
