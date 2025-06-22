@@ -60,7 +60,7 @@ namespace QuizRuLet.API.Controllers
             
             if (string.IsNullOrEmpty(error))
             {
-                await _cardService.UpdatePartlyCard(cardId, request.FrontSide, request.BackSide);
+                await _cardService.UpdateCardSides(cardId, request.FrontSide, request.BackSide);
                 return Ok(cardId);
             }
             return BadRequest(error);

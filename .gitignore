@@ -11,6 +11,7 @@ appsettings.json
 appsettings.Development.json
 **/bin/
 **/obj/
+.vscode
 
 # User-specific files
 *.rsuser
