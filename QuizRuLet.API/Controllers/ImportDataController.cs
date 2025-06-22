@@ -27,8 +27,10 @@ namespace QuizRuLet.API.Controllers
             _cardSetAiCreationService = cardSetAiCreationService;
         }
     
+        /// Создание набора карточек на основе текста в формате термин-определение 
+        /// POST: /import 200, 400
         [HttpPost]
-        public async Task<ActionResult<List<CardResponse>>> ImportDataSet([FromBody] CardsDataImportRequest request)
+        public ActionResult<List<CardResponse>> ImportDataSet([FromBody] CardsDataImportRequest request)
         {
             var (Cards, Error) = _cardSetCreationService.Create(
                 request.Data, 
@@ -40,13 +42,15 @@ namespace QuizRuLet.API.Controllers
                 return BadRequest(Error);
             }
             
-            var response = Cards
+            var response = Cards                                                                    // формирование ответа с предпросмотром
                 .Select(c => new CardResponse(c.Id, c.FrontSide, c.BackSide, c.IsLearned))
                 .ToList();
 
             return Ok(response);
         }
         
+        /// Создание набора карточек на основе произвольного текста с помощью ИИ
+        /// POST: /import/ai 200, 400
         [HttpPost("ai")]
         public async Task<ActionResult<List<CardResponse>>> ImportAiDataSet([FromBody] CardsDataAiImportRequest request)
         {
@@ -68,10 +72,14 @@ namespace QuizRuLet.API.Controllers
             return Ok(response);
         }
         
+        /// Сохранение карточек из предпросмотра
+        /// POST: /import/save/{moduleId}  200, 400
         [HttpPost("save/{moduleId:guid}")]
         public async Task<ActionResult<string>> SaveCardsFromDataSet([FromRoute] Guid moduleId, [FromBody] CardSetSaveRequest request)
         {
-            bool wasError = false;
+            if (request.Cards is null) return BadRequest();
+        
+            bool wasError = false;                  // флаг, была ли хоть одна ошибка
             foreach (var card in request.Cards)
             {
                 var cardCreation = Card.Create(
@@ -79,13 +87,13 @@ namespace QuizRuLet.API.Controllers
                         card.FrontSide,
                         card.BackSide);
                         
-                if (!string.IsNullOrEmpty(cardCreation.Error))
+                if (!string.IsNullOrEmpty(cardCreation.Error))  // есть ли ошибка
                 {
-                    wasError = true;
+                    wasError = true; 
                 }
                 else
                 {
-                    await _cardService.CreateCard(cardCreation.Card, moduleId);
+                    await _cardService.CreateCard(cardCreation.Card, moduleId);     // сохранение в бд
                 }
             }
             string resultMsg = wasError ? "Созданы не все карточки из-за некорректности данных" : "Все карточки успешно созданы";

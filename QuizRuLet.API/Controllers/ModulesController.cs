@@ -38,14 +38,19 @@ namespace QuizRuLet.API.Controllers
         }
         
         
+        /// Получение всех модулей
+        /// GET: /modules 200, 404
         [HttpGet]
         public async Task<ActionResult<List<ModulesResponse>>> GetModules()
         {
             var modules = await _moduleService.GetAllModules();
+            
+            if (modules is null) return NotFound();
+            
             var response = new List<ModulesResponse>();
             foreach (var m in modules)
             {
-                var statistic = await _progressService.GetModuleStatisticInfo(m.Id);
+                var statistic = await _progressService.GetModuleStatisticInfo(m.Id);    // вычисление статистики модуля
                 response.Add(new ModulesResponse(
                     m.Id,
                     m.Name,
@@ -57,6 +62,8 @@ namespace QuizRuLet.API.Controllers
             return Ok(response);
         }
 
+        /// Получение конкретного модуля с его карточками
+        /// GET: /modules/{moduleId} 200, 400
         [HttpGet("{moduleId:guid}")]
         public async Task<ActionResult<List<ModuleWithCardsResponse>>> GetModuleWithCard(Guid moduleId)
         {
@@ -85,6 +92,8 @@ namespace QuizRuLet.API.Controllers
             return Ok(response);
         }
         
+        /// Получение статистики модуля
+        /// GET: /modules/statistic/{moduleId} 200      
         [HttpGet("statistic/{moduleId:guid}")]
         public async Task<ActionResult<ModuleStatisticResponse>> GetModuleStatistic([FromRoute] Guid moduleId)
         {
@@ -99,6 +108,8 @@ namespace QuizRuLet.API.Controllers
             return Ok(response);
         }
         
+        /// Создание нового модуля
+        /// GET: /modules 200, 400          
         [HttpPost]
         public async Task<ActionResult<Guid>> CreateModule([FromBody] ModuleCreationRequest request)
         {
@@ -118,9 +129,10 @@ namespace QuizRuLet.API.Controllers
             return Ok(moduleId);           
         }      
         
-        // DELETE: Modules/id
-        [HttpDelete("{moduleId:guid}")]   // TODO validation
-        public async Task<ActionResult<Guid>> DeleteModule(Guid moduleId)
+        /// Удаление модуля
+        /// DELETE: /modules/{moduleId} 200 
+        [HttpDelete("{moduleId:guid}")]
+        public async Task<ActionResult<Guid>> DeleteModule([FromRoute] Guid moduleId)
         {
             var id = await _moduleService.DeleteModule(moduleId);
             

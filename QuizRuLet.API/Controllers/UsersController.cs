@@ -29,15 +29,26 @@ namespace QuizRuLet.API.Controllers
             _progressService = moduleProgressService;
         }
 
+        // Получение всех пользователей
+        // GET: /users 200, 404
         [HttpGet]
         public async Task<ActionResult<UserInfoResponse>> GetUsers()
         {
             var users = await _userService.GetAllUsers();
-            var response = users.Select(user => new UserInfoResponse(user.Id, user.Login));
+            
+            if (users is null)
+            {
+                return NotFound();
+            }
+            
+            var response = users.Select(user => new UserInfoResponse(user.Id, user.Login));      // формирование ответа
 
             return Ok(response);
         }
-
+        
+        
+        // Получение конкретного пользователя по ID
+        // GET: /users/{userId}  200, 400
         [HttpGet("{userId:guid}")]
         public async Task<ActionResult<UserWithModulesResponse>> GetUserProfileWithModulesById([FromRoute] Guid userId)
         {
@@ -57,7 +68,7 @@ namespace QuizRuLet.API.Controllers
                 moduleList.Add(new ModulesResponse(m.Id, m.Name, m.Description, statistic.Progress, statistic.CountCards));
             }
 
-            var response = new UserWithModulesResponse(userId, user.Login, moduleList);
+            var response = new UserWithModulesResponse(userId, user.Login, moduleList);         // формирование ответа
 
             return Ok(response);
         }

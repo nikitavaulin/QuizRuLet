@@ -37,7 +37,7 @@ public class CardSetCreationService : ICardSetCreationService
         {
             if (!string.IsNullOrEmpty(pair))
             {
-                var cardCreation = GetCard(pair, pairSeparator);    // TODO VALIDATION
+                var cardCreation = GetCard(pair, pairSeparator);
                 
                 if (!string.IsNullOrEmpty(cardCreation.Error)) 
                     throw new Exception(cardCreation.Error);
@@ -57,7 +57,7 @@ public class CardSetCreationService : ICardSetCreationService
         var frontSide = splitPair[0];
         var backSide = splitPair[1];
 
-        var cardCreation = Card.Create(id, frontSide, backSide, false);   // TODO VALIDATION
+        var cardCreation = Card.Create(id, frontSide, backSide, false);
 
         return cardCreation;
     }

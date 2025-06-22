@@ -19,22 +19,27 @@ namespace QuizRuLet.API.Controllers
             _moduleService = moduleService;
         }
         
-        [HttpPatch("name")]  // TODO validation
+        
+        /// Изменение имени модуля
+        /// PATCH: /modules/edit/{moduleId}/name  200
+        [HttpPatch("name")]
         public async Task<ActionResult<Guid>> UpdateModuleName([FromRoute] Guid moduleId, [FromBody] ModuleNameEditRequest request)
         {
             var id = await _moduleService.UpdateModuleName(moduleId, request.Name);
-            
             return Ok(id);
         }
         
-        [HttpPatch("description")]  // TODO validation
+        /// Изменение описания модуля
+        /// PATCH: /modules/edit/{moduleId}/description  200
+        [HttpPatch("description")]
         public async Task<ActionResult<Guid>> UpdateModuleDescription([FromRoute] Guid moduleId, [FromBody] ModuleDescriptionEditRequest request)
         {
             var id = await _moduleService.UpdateModuleDescription(moduleId, request.Description);
-            
             return Ok(id);
         }
         
+        /// Изменение имени и описания
+        /// PATCH: /modules/edit/{moduleId}  200
         [HttpPatch]
         public async Task<ActionResult<Guid>> UpdateModuleNameAndDescription([FromRoute] Guid moduleId, [FromBody] ModuleEditRequest request)
         {

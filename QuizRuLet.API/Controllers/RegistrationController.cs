@@ -16,6 +16,8 @@ namespace QuizRuLet.API.Controllers
             _userService = userService;
         }
         
+        // регистрация пользователя
+        // POST: /register 200, 400
         [HttpPost]
         public async Task<ActionResult> Register(UserRegisterRequest request)   
         {

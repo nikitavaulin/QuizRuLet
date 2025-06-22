@@ -21,6 +21,9 @@ namespace QuizRuLet.API.Controllers
             _cardService = cardService;
         }
 
+
+        /// Создание карточки в модуле
+        /// POST: /cards/{moduleId} 200, 400
         [HttpPost("{moduleId:guid}")]
         public async Task<ActionResult<Guid>> CreateCard([FromRoute] Guid moduleId, [FromBody] CardCreateRequest request)
         {
@@ -39,6 +42,8 @@ namespace QuizRuLet.API.Controllers
             return Ok(cardId);
         }
         
+        /// Изменение статуса "знаю"\"не знаю"
+        /// PATCH: /cards/update-flag/{cardId} 200, 400
         [HttpPatch("update-flag/{cardId:guid}")]
         public async Task<ActionResult<Guid>> UpdateCardLearningFlag([FromRoute] Guid cardId, [FromBody] CardLearningFlagUpdateRequest request)
         {
@@ -46,10 +51,12 @@ namespace QuizRuLet.API.Controllers
             return Ok(cardId);
         }
         
+        /// Изменение сторон карточек
+        /// PATCH: /cards/update/{cardId} 200, 400
         [HttpPatch("update/{cardId:guid}")]
         public async Task<ActionResult<Guid>> UpdateCardSides([FromRoute] Guid cardId, [FromBody] CardRequest request)
         {
-            var error = Card.Create(Guid.NewGuid(), request.FrontSide, request.BackSide).Error;
+            var error = Card.Create(Guid.NewGuid(), request.FrontSide, request.BackSide).Error; // валидация новых сторон
             
             if (string.IsNullOrEmpty(error))
             {
@@ -60,8 +67,8 @@ namespace QuizRuLet.API.Controllers
              
         }
         
-        
-        
+        /// Перевод всех карточек в модуле в состояние "не знаю"
+        /// PATCH: /cards/reset/{moduleId} 200
         [HttpPatch("reset/{moduleId:guid}")]
         public async Task<ActionResult> ResetCardsInModule([FromRoute] Guid moduleId)
         {
@@ -69,6 +76,9 @@ namespace QuizRuLet.API.Controllers
             return Ok();
         }
         
+        
+        /// Удаление карточки
+        /// DELETe: /cards/{cardId} 200
         [HttpDelete("{cardId:guid}")]
         public async Task<ActionResult> DeleteCard([FromRoute] Guid cardId)
         {

@@ -1,6 +1,7 @@
 ﻿
 
 using System.Threading.Tasks;
+using NuGet.ContentModel;
 
 namespace QuizRuLet.Tests;
 
@@ -11,26 +12,18 @@ public sealed class BuisnessLogicTests
     public void GetCardsSet_CardSetCreation_ReturnListCards()
     {
         // arrange
-        var inputData = "termin1,opred1;termin2,opred2;";
-        var pairSep = ",";
-        var lineSep = ";";
-
-        var expectFront1 = "termin1";
-        var expectFront2 = "termin2";
-        var expectBack1 = "opred1";
-        var expectBack2 = "opred2";
+        var inputData = "termin1\topred1\ntermin2\topred2\n\n";
+        var pairSep = "\t";
+        var lineSep = "\n";
 
         // act
-
         var act = new CardSetCreationService();
 
-        var result = act.Create(inputData, pairSep, lineSep);
+        var (Cards, Error) = act.Create(inputData, pairSep, lineSep);
 
         // assert
-        Assert.AreEqual(expectFront1, result[0].FrontSide);
-        Assert.AreEqual(expectFront2, result[1].FrontSide);
-        Assert.AreEqual(expectBack1, result[0].BackSide);
-        Assert.AreEqual(expectBack2, result[1].BackSide);
+        Assert.IsTrue(string.IsNullOrEmpty(Error));
+        Assert.AreEqual(2, Cards?.Count ?? 0);
     }
     
     

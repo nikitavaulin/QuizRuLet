@@ -22,6 +22,8 @@ namespace QuizRuLet.API.Controllers
             _cardService = cardService;
         }
 
+        /// Получение только неизученных карточек модуля
+        /// GET: /learning-mode/{moduleId} 200, 204, 404
         [HttpGet]
         public async Task<ActionResult<List<CardResponse>>> GetNotLearnedCards([FromRoute] Guid moduleId)
         {
