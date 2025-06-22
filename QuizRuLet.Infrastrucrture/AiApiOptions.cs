@@ -4,5 +4,5 @@ namespace QuizRuLet.Infrastrucrture;
 
 public class AiApiOptions
 {
-    public string ApiKey { get; set; }
+    public required string ApiKey { get; set; }
 }
