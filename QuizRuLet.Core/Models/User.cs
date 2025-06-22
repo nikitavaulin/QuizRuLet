@@ -2,50 +2,50 @@ using System;
 using System.Data.Common;
 using System.Runtime.InteropServices;
 
-namespace QuizRuLet.Core.Models;
-
-public class User
+namespace QuizRuLet.Core.Models
 {
-    public const int MAX_USERLOGIN_LENGTH = 30;
-    public const int MIN_USERLOGIN_LENGTH = 3;
-    public const int MAX_PASSWORD_LENGTH = 50;
-    public const int MIN_PASSWORD_LENGTH = 6;
-
-
-    public Guid Id { get; set; }
-    public string Login { get; set; } = string.Empty;
-    public string PasswordHash { get; private set; } = string.Empty;
-    public List<Module> Modules { get; set; } = [];
-
-
-    private User(Guid id, string login, string passwordHash)
+    /// <summary>
+    /// Класс доменной области: Пользователь
+    /// </summary>
+    public class User
     {
-        Id = id;
-        Login = login;
-        PasswordHash = passwordHash;
-    }
-    
-    public static (User User, string Error) Create(Guid id, string login, string passwordHash)
-    {
-        var error = string.Empty;
+        // константы для валидации
+        public const int MAX_USERLOGIN_LENGTH = 30;
+        public const int MIN_USERLOGIN_LENGTH = 3;
+        public const int MAX_PASSWORD_LENGTH = 50;
+        public const int MIN_PASSWORD_LENGTH = 6;
 
-        if (string.IsNullOrEmpty(login)
-            || login.Length < MIN_USERLOGIN_LENGTH     // валидация названия
-            || login.Length > MAX_USERLOGIN_LENGTH)     // валидация названия
+        // поля
+        public Guid Id { get; set; }                                        // Уникальный ID
+        public string Login { get; set; } = string.Empty;                   // Логин (username пользователя)
+        public string PasswordHash { get; private set; } = string.Empty;    // Хэшированный пароль
+
+        private User(Guid id, string login, string passwordHash)
         {
-            error = $"Длина логина должна быть от {MIN_USERLOGIN_LENGTH} до {MAX_USERLOGIN_LENGTH} символов";
+            Id = id;
+            Login = login;
+            PasswordHash = passwordHash;
         }
 
-        // if (string.IsNullOrEmpty(password)
-        //     || password.Length < MIN_PASSWORD_LENGTH     // валидация пароля
-        //     || password.Length > MAX_PASSWORD_LENGTH)     // валидация пароля
-        // {
-        //     error = $"Длина пароля должна быть от {MIN_PASSWORD_LENGTH} до {MAX_PASSWORD_LENGTH} символов";
-        // }
+        // Создание пользователя    
+        public static (User User, string Error) Create(Guid id, string login, string passwordHash)
+        {
+            // сообщение об ошибке
+            var error = string.Empty;
 
-        var user = new User(id, login, passwordHash);
+            // валидация названия
+            if (string.IsNullOrEmpty(login)                 
+                || login.Length < MIN_USERLOGIN_LENGTH     
+                || login.Length > MAX_USERLOGIN_LENGTH)
+            {
+                error = $"Длина логина должна быть от {MIN_USERLOGIN_LENGTH} до {MAX_USERLOGIN_LENGTH} символов";
+            }
 
-        return (user, error);
+            // создание объекта
+            var user = new User(id, login, passwordHash);
+
+            return (user, error);
+        }
+
     }
-
 }
