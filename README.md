@@ -5,7 +5,6 @@
 2) Entity Framework Core (9.0.4)
 3) PostgreSQL
 4) Swashbuckle (Swagger)
-5) Docker (soon)
 
 Технологический стек для Frontend:
 1) HTML
