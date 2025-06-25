@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   const moduleId = params.get('id');
 
   if (!moduleId) {
-    alert('Не передан id модуля');
+    showModal("Ошибка", 'Не передан id модуля');
     location.href = 'index.html';
     return;
   }
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (bsModal) {
           bsModal.hide();
         }
-        console.log(123);
+
         const response = await axios.post(`/import/save/${moduleId}`, { cards: cards });
         try {
           if (response.status === 200) {
@@ -116,21 +116,51 @@ document.addEventListener('DOMContentLoaded', async function () {
 
       updatePreview = async () => {
         let text = importTextarea ? importTextarea.value : '';
-        let separator = separatorSelect ? separatorSelect.value : '';
-        let separatorLines = separatorLinesSelect ? separatorLinesSelect.value : '';
+        let separator = separatorSelect.value;
+        let separatorLines = separatorLinesSelect.value;
+
+        if (separatorLines.length === 0 || separator.length === 0) { showModal("Ошибка", "Выберите все разделители") }
+
+       
+
+
+        text = text.replace(/\r?\n/g, "*LINES*");
 
 
         text = text.replaceAll(separatorLines, "*LINES*");
+
+
         text = text.replaceAll(separator, "*PAIR*");
+        try {
+          const response = await axios.post("/import", { // Адрес дописать
+            data: text,
+            lineSeparator: "*LINES*",
+            pairSeparator: "*PAIR*"
+          })
+          text = [];
+          const previewText = separatingPreview(response);
+          previewPre.textContent = previewText;
+        }
+        catch (error) {
+          if (error.response) {
+            // Сервер вернул ответ (например, 400, 409 и т.д.)
+            const { status, data } = error.response;
+            if (status === 400 || status === 409) {
+              showModal(
+                "Ошибка",
+                typeof data === "string" ? data + "\nПопробуйте выбрать оба разделителя" : JSON.stringify(data) + "\nПопробуйте выбрать оба разделителя"
+              );
+            } else {
+              showModal("Ошибка", "Неизвестная ошибка сервера");
+            }
+          } else if (error.request) {
 
+            showModal("Ошибка", "Сервер не отвечает");
+          } else {
 
-        const response = await axios.post("/import", { // Адрес дописать
-          data: text,
-          lineSeparator: "*LINES*",
-          pairSeparator: "*PAIR*"
-        })
-        const previewText = separatingPreview(response);
-        previewPre.textContent = previewText;
+            showModal("Ошибка", "Произошла ошибка: " + error.message);
+          }
+        }
       }
     }
     if (modalElement.id === 'importAiModal') {
@@ -143,32 +173,41 @@ document.addEventListener('DOMContentLoaded', async function () {
       updatePreview = async () => {
         let text = importTextarea ? importTextarea.value : '';
         let count = countArea ? countArea.value : '';
-        console.log(count);
+
         let previewText = "";
         text = text.replaceAll("\n", " ");
-        const response = await axios.post("/import/ai", { // Адрес дописать
-          data: text,
-          countCards: count
-        })
-        console.log(response);
         try {
+          const response = await axios.post("/import/ai", { // Адрес дописать
+            data: text,
+            countCards: count
+          })
+
           previewText = separatingPreview(response);
         }
         catch (error) {
-          console.log(error);
+          if (error.response) {
+            // Сервер вернул ответ (например, 400, 409 и т.д.)
+            const { status, data } = error.response;
+            if (status === 400 || status === 409) {
+              showModal(
+                "Ошибка",
+                typeof data === "string" ? data : JSON.stringify(data)
+              );
+            } else {
+              showModal("Ошибка", "Неизвестная ошибка сервера");
+            }
+          } else if (error.request) {
+
+            showModal("Ошибка", "Сервер не отвечает");
+          } else {
+
+            showModal("Ошибка", "Произошла ошибка: " + error.message);
+          }
         }
         previewPre.textContent = previewText;
       }
 
-      // if (importTextarea) importTextarea.addEventListener('input', updatePreview);
-      // if (separatorSelect) separatorSelect.addEventListener('input', updatePreview);
-      // if (separatorLinesSelect) separatorLinesSelect.addEventListener('input', updatePreview);
 
-      // Обновить предпросмотр при переходе на шаг 3 или при открытии модалки (если уже на шаге 3)
-      // Это можно привязать к событию showStep, но для простоты примера оставим так.
-      // Лучше: обновить предпросмотр, когда `showStep` показывает шаг 3.
-
-      // Также, можно вызывать updatePreview при каждом изменении шага, если это нужно.
     }
   }
 
@@ -182,19 +221,37 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (true) {
 
           cards.forEach(card => {
-
-            previewText += enumerator + ') ' + card.frontSide.slice(0, 15) + '..' + ' | ' + card.backSide.slice(0, 25) + '..' + '\n';
+            card.frontSide.length > 15 ? card.frontSide = card.frontSide.slice(0, 15) + '..' : card.frontSide;
+            card.backSide.length > 15 ? card.backSide = card.backSide.slice(0, 15) + '..' : card.backSide;
+            previewText += enumerator + ') ' + card.frontSide + ' | ' + card.backSide + '\n';
             enumerator++;
           });
         } else if (previewPre) {
           previewPre.textContent = 'Данные здесь...';
         }
+        cards = [];
         return previewText;
       }
     }
     catch (error) {
-      showModal("Ошибка", "Не удалость импортировать данные");
-      console.log(error);
+      if (error.response) {
+        // Сервер вернул ответ (например, 400, 409 и т.д.)
+        const { status, data } = error.response;
+        if (status === 400 || status === 409) {
+          showModal(
+            "Ошибка",
+            typeof data === "string" ? data : JSON.stringify(data)
+          );
+        } else {
+          showModal("Ошибка", "Неизвестная ошибка сервера");
+        }
+      } else if (error.request) {
+
+        showModal("Ошибка", "Сервер не отвечает");
+      } else {
+
+        showModal("Ошибка", "Произошла ошибка: " + error.message);
+      }
       return;
     }
   }
@@ -214,7 +271,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 
       if (!frontSide || !backSide) {
-        alert('Пожалуйста, заполните обе стороны карточки.');
+        showModal("Ошибка", 'Пожалуйста, заполните обе стороны карточки.');
         return;
       }
       try {
@@ -237,9 +294,24 @@ document.addEventListener('DOMContentLoaded', async function () {
           throw new Error('Ошибка при создании карточки');
         }
       } catch (error) {
+        if (error.response) {
+          // Сервер вернул ответ (например, 400, 409 и т.д.)
+          const { status, data } = error.response;
+          if (status === 400 || status === 409) {
+            showModal(
+              "Ошибка",
+              typeof data === "string" ? data : JSON.stringify(data)
+            );
+          } else {
+            showModal("Ошибка", "Неизвестная ошибка сервера");
+          }
+        } else if (error.request) {
 
-        console.error('Error creating card:', error);
-        alert('Произошла ошибка при создании карточки. Попробуйте снова.');
+          showModal("Ошибка", "Сервер не отвечает");
+        } else {
+
+          showModal("Ошибка", "Произошла ошибка: " + error.message);
+        }
       }
     });
   }
@@ -271,8 +343,8 @@ document.addEventListener('DOMContentLoaded', async function () {
         throw new Error('Ошибка при получении списка карточек');
       }
     } catch (error) {
-      console.error('Ошибка:', error);
-      alert('Произошла ошибка при загрузке карточек.');
+
+      showModal("Ошибка", 'Произошла ошибка при загрузке карточек.');
     }
   }
 
@@ -291,7 +363,8 @@ document.addEventListener('DOMContentLoaded', async function () {
     createCardBody.textContent = 'Создать новую карточку'; // Текст кнопки
     createCardBody.setAttribute('data-bs-toggle', 'modal'); // Атрибуты для открытия модального окна
     createCardBody.setAttribute('data-bs-target', '#newCard');
-createCardBody.setAttribute('id','createNewCard');
+    createCardBody.setAttribute('id', 'createNewCard');
+
 
     createCardButton.appendChild(createCardBody); // Добавляем div внутрь li
     cardListElement.appendChild(createCardButton); // Добавляем кнопку в начало списка
@@ -314,6 +387,7 @@ createCardBody.setAttribute('id','createNewCard');
       listItem.appendChild(cardBody); // Добавляем div внутрь li
       cardListElement.appendChild(listItem); // Добавляем карточку в список
     });
+    updateSideBarSelected();
   }
   // Функция для обновления названия и описания модуля
   function updateModuleName(name, desc) {
@@ -341,7 +415,8 @@ createCardBody.setAttribute('id','createNewCard');
     // Заполняем текстовые поля в правом блоке
     termTextarea.value = front;
     meaningTextarea.value = back;
-
+    termTextarea.removeAttribute('readonly');
+    meaningTextarea.removeAttribute('readonly');
     termTextarea.dataset.id = cardId;
 
 
@@ -379,16 +454,33 @@ createCardBody.setAttribute('id','createNewCard');
 
       if (responseModal.status === 200) {
         const modalEl = document.getElementById('editModal');
-        
+
         const modal = bootstrap.Modal.getInstance(modalEl);
-        modal.hide(); // Закрываем модальное окно
+        modal.hide();
         updateModuleName(name, description);
 
-        // Здесь можно обновить интерфейс или вызвать callback
+
       }
     } catch (error) {
-      console.error('Ошибка при сохранении:', error);
-      showModal("Сообщение", "Не удалось сохранить изменения");
+
+      if (error.response) {
+        // Сервер вернул ответ (например, 400, 409 и т.д.)
+        const { status, data } = error.response;
+        if (status === 400 || status === 409) {
+          showModal(
+            "Ошибка",
+            typeof data === "string" ? data : JSON.stringify(data)
+          );
+        } else {
+          showModal("Ошибка", "Неизвестная ошибка сервера");
+        }
+      } else if (error.request) {
+
+        showModal("Ошибка", "Сервер не отвечает");
+      } else {
+
+        showModal("Ошибка", "Произошла ошибка: " + error.message);
+      }
     }
   });
 
@@ -410,8 +502,24 @@ createCardBody.setAttribute('id','createNewCard');
       fetchCards();
     }
     catch (error) {
-      console.error('Ошибка при удалении:', error);
-      showModal("Сообщение", "Не удалось удалить карточку");
+      if (error.response) {
+        // Сервер вернул ответ (например, 400, 409 и т.д.)
+        const { status, data } = error.response;
+        if (status === 400 || status === 409) {
+          showModal(
+            "Ошибка",
+            typeof data === "string" ? data : JSON.stringify(data)
+          );
+        } else {
+          showModal("Ошибка", "Неизвестная ошибка сервера");
+        }
+      } else if (error.request) {
+
+        showModal("Ошибка", "Сервер не отвечает");
+      } else {
+
+        showModal("Ошибка", "Произошла ошибка: " + error.message);
+      }
     }
   })
 
@@ -435,8 +543,24 @@ createCardBody.setAttribute('id','createNewCard');
       fetchCards();
     }
     catch (error) {
-      console.error('Ошибка при изменении:', error);
-      showModal("Сообщение", "Не удалось изменить карточку");
+      if (error.response) {
+        // Сервер вернул ответ (например, 400, 409 и т.д.)
+        const { status, data } = error.response;
+        if (status === 400 || status === 409) {
+          showModal(
+            "Ошибка",
+            typeof data === "string" ? data : JSON.stringify(data)
+          );
+        } else {
+          showModal("Ошибка", "Неизвестная ошибка сервера");
+        }
+      } else if (error.request) {
+
+        showModal("Ошибка", "Сервер не отвечает");
+      } else {
+
+        showModal("Ошибка", "Произошла ошибка: " + error.message);
+      }
     }
 
   })
@@ -447,19 +571,23 @@ createCardBody.setAttribute('id','createNewCard');
   createNewCard();
 
   const learnBtn = document.getElementById('btn-learn');
-  
+
   learnBtn.addEventListener('click', function (e) {
     window.location.href = `/card.html?id=${encodeURIComponent(moduleId)}`;
   })
 
   // Выделение выбранной карточки в сайдбаре
-  document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', function () {
-      // Убираем выделение у всех карточек
-      document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
-      // Добавляем класс выбранной карточке
-      card.classList.add('selected');
+  function updateSideBarSelected() {
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', function (event) {
+        // Убираем выделение у всех карточек
+        document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
+        // Добавляем класс выбранной карточке
+        if (event.target.id !== "createNewCard")
+          card.classList.add('selected');
+      });
     });
-  });
+  }
 
+  updateSideBarSelected();
 });

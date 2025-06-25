@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const cardToPush = `<li class="card-item">
         <span class="card-index">${enumerator}</span>
         <div class="card-content">
-          <textarea class="card-term autoresize">${card.frontSide}</textarea><textarea class="card-value autoresize">${card.backSide}</textarea>
+          <textarea class="card-term autoresize" readonly>${card.frontSide}</textarea><textarea class="card-value autoresize" readonly>${card.backSide}</textarea>
         </div>
       </li>`
             enumerator++;

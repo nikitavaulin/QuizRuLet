@@ -1,16 +1,35 @@
 
 
 async function loginFunc(userLogin, userPass) {
-  const response = await axios.post("/login", {
-    login: userLogin,
-    password: userPass,
-  });
+  try {
+    const response = await axios.post("/login", {
+      login: userLogin,
+      password: userPass,
+    });
 
-  if (response.status === 200) {
-    
-    window.location.href = "/index.html";
-  } else {
-    alert(response.text());
+    if (response.status === 200) {
+      window.location.href = "/index.html";
+    }
+  }
+  catch (error) {
+    if (error.response) {
+      // Сервер вернул ответ (например, 400, 409 и т.д.)
+      const { status, data } = error.response;
+      if (status === 400 || status === 409) {
+        showModal(
+          "Ошибка",
+          typeof data === "string" ? data : JSON.stringify(data)
+        );
+      } else {
+        showModal("Ошибка", "Неизвестная ошибка сервера");
+      }
+    } else if (error.request) {
+  
+      showModal("Ошибка", "Сервер не отвечает");
+    } else {
+  
+      showModal("Ошибка", "Произошла ошибка: " + error.message);
+    }
   }
 }
 
@@ -28,8 +47,8 @@ if (regButton) {
       .getElementById("passwordConfirmInput")
       .value.trim();
 
-    if (login === "") {
-      showModal("Ошибка", "Логин пустой");
+    if (login === "" || pass === "" || secondPass === "") {
+      showModal("Ошибка", "Заполните все поля");
       return;
     }
 
@@ -50,21 +69,21 @@ if (regButton) {
       if (error.response) {
         // Сервер вернул ответ (например, 400, 409 и т.д.)
         const { status, data } = error.response;
-        // console.error("Ошибка регистрации:", status, data);
+
 
         if (status === 400 || status === 409) {
           showModal(
             "Ошибка",
-            typeof data === "string"   ? data : JSON.stringify(data)
+            typeof data === "string" ? data : JSON.stringify(data)
           );
         } else {
           showModal("Ошибка", "Неизвестная ошибка сервера");
         }
       } else if (error.request) {
-        // Запрос был отправлен, но нет ответа (сетевая ошибка)
+
         showModal("Ошибка", "Сервер не отвечает");
       } else {
-        // Неожиданная JS-ошибка
+
         showModal("Ошибка", "Произошла ошибка: " + error.message);
       }
     }
@@ -79,8 +98,15 @@ if (loginButton) {
     const loginValue = userLogin.value.trim();
     const passValue = userPass.value.trim();
 
+    if (loginValue === "" || passValue === "") {
+      showModal("Ошибка", "Заполните все поля");
+      return;
+    }
+
+
+
     await loginFunc(loginValue, passValue);
 
-    // await login(userLogin, userPass);
+
   });
 }

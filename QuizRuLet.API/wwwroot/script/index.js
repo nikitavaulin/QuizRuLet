@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
       await showListModules();
     } catch (err) {
       console.error(err);
-      alert('Не удалось удалить модуль. Попробуйте ещё раз.');
+      showModal("Ошибка", 'Не удалось удалить модуль. Попробуйте ещё раз.');
     }
 
   });
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     console.log("Все куки успешно удалены.");
   }
 
-  const logoutBtn = document.getElementById('logout').addEventListener('click', function(e) {
+  const logoutBtn = document.getElementById('logout').addEventListener('click', function (e) {
     e.preventDefault();
     clearAllCookies();
     window.location.href = "login.html";
@@ -163,17 +163,38 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     e.preventDefault();
     const name = document.getElementById("moduleName").value.trim();
     const desc = document.getElementById("moduleDesc").value.trim();
-    const progress = 0;
 
 
 
-    if (name !== "") console.log("!name");
 
-    const response = await axios.post("/modules", {
-      name: name,
-      description: desc,
-      userId: userId,
-    });
+    
+    try {
+      const response = await axios.post("/modules", {
+        name: name,
+        description: desc,
+        userId: userId,
+      });
+    }
+    catch (error) {
+      if (error.response) {
+        // Сервер вернул ответ (например, 400, 409 и т.д.)
+        const { status, data } = error.response;
+        if (status === 400 || status === 409) {
+          showModal(
+            "Ошибка",
+            typeof data === "string" ? data : JSON.stringify(data)
+          );
+        } else {
+          showModal("Ошибка", "Неизвестная ошибка сервера");
+        }
+      } else if (error.request) {
+
+        showModal("Ошибка", "Сервер не отвечает");
+      } else {
+
+        showModal("Ошибка", "Произошла ошибка: " + error.message);
+      }
+    }
     await showListModules();
 
     // Очистить форму и закрыть модалку

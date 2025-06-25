@@ -2,6 +2,7 @@
   --bs-card-border-color: var(--bs-body-bg);
   height: 100px;
 }
+
 .card-body {
   background-color: #716f6f;
   border-radius: 10px;
@@ -9,35 +10,45 @@
 }
 
 #sidebarMenu {
-  height: 100vh; /* Высота на весь экран */
+  height: 100vh;
+  /* Высота на весь экран */
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Предотвращаем прокрутку всего сайдбара */
+  overflow: hidden;
+  /* Предотвращаем прокрутку всего сайдбара */
 }
 
 .quizrulet-brand-sidebar {
   display: flex;
   border-bottom: solid 1px;
-  height: auto; /* Автоматическая высота для лого */
-  overflow: visible; /* Лого не должно скроллиться */
+  height: auto;
+  /* Автоматическая высота для лого */
+  overflow: visible;
+  /* Лого не должно скроллиться */
 }
 
 #sidebarMenu ul.nav.flex-column {
   flex: 1;
-  overflow-y: auto; /* Добавляем вертикальную прокрутку только для списка */
-  padding-right: 5px; /* Отступ для скроллбара */
+  overflow-y: auto;
+  /* Добавляем вертикальную прокрутку только для списка */
+  padding-right: 5px;
+  /* Отступ для скроллбара */
 }
 
 #sidebarMenu .help {
-  height: auto; /* Автоматическая высота для блока справки */
-  padding: 10px 0; /* Отступы для блока справки */
+  height: auto;
+  /* Автоматическая высота для блока справки */
+  padding: 10px 0;
+  /* Отступы для блока справки */
   position: sticky;
   bottom: 0;
-  background-color: inherit; /* Наследуем цвет фона */
+  background-color: inherit;
+  /* Наследуем цвет фона */
 }
 
 .sidebarList {
-  max-height: calc(100vh - 150px); /* Высота с учетом лого и справки 1*/
+  max-height: calc(100vh - 150px);
+  /* Высота с учетом лого и справки 1*/
   overflow-y: scroll;
 }
 
@@ -122,6 +133,7 @@
   font-family: "Inter", sans-serif;
   font-size: 16px;
 }
+
 .btn-next-modal {
   background-color: #5ee152;
 }
@@ -138,12 +150,14 @@
 }
 
 .btn-back-modal:hover {
-  background-color: darkgrey; /* Темнее оригинального */
+  background-color: darkgrey;
+  /* Темнее оригинального */
   transform: scale(1.05);
 }
 
 .btn-next-modal:hover {
-  background-color: darkgreen; /* Темнее оригинального */
+  background-color: darkgreen;
+  /* Темнее оригинального */
   transform: scale(1.05);
 }
 
@@ -159,7 +173,7 @@
 .buttons-bottom {
   position: absolute;
   bottom: 1%;
-  left: 90%;
+  left: 88%;
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
@@ -180,51 +194,52 @@
 }
 
 .button-save-card {
-  color: white;
+  color: black;
   background-color: #5ee152;
 }
 
-.button-delete-card:hover{
-    background-color: #f44336;
+.button-delete-card:hover {
+  background-color: #f44336;
 }
+
 .button-save-card:hover {
-    background-color: #5ee152;
+  background-color: #5ee152;
 }
 
 .card-body {
-    border: 0px;
-    color: white;
-    
-}   
+  border: 0px;
+  color: white;
+
+}
 
 textarea {
-color: white;}
-
-
-/* Простое выделение цветом */
-.card.selected {
-    background-color: #5ee152;
+  color: white;
 }
+
+
+
 
 /* Выделение с рамкой */
 .card.selected {
-    border: 2px solid #5ee152;
-    border-radius: 10px;
+  border: 2px solid #5ee152;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #5ee152;
 }
 
-/* Выделение с тенью */
-.card.selected {
-    box-shadow: 0 0 10px #5ee152;
+.card:hover {
+  box-shadow: 0 0 10px #5ee152;
 }
 
-/* Изменение цвета текста */
-.card.selected {
-    color: #fff;
-    background-color: #3c3;
+#createNewCard {
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #4CAF50;
+  border: 0px !important;
 }
 
-#createNewCard{
-font-size: 20px;
-font-weight: bold;
-background-color: #4CAF50;
+.fa-floppy-disk,
+.fa-trash,
+.fa-hourglass-start {
+  padding: 5px;
 }
+
