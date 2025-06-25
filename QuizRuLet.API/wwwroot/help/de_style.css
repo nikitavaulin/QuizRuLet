@@ -96,13 +96,13 @@ direction: ltr;
 text-align: left;
 text-indent: 0;
 margin-left: 0;
-line-height: 1.700;
-margin-top: 0pt;
-margin-bottom: 0pt;
+line-height: 1.303;
+margin-top: 16pt;
+margin-bottom: 8pt;
 }
 h3
 {
-font-family:"Times New Roman";
+font-family:"Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 font-size: 12pt;color:#000000;
 font-style:normal;
 text-decoration:none;
@@ -391,9 +391,9 @@ padding-left:0;padding-top:5px;padding-right:10px;padding-bottom:5px;
 div.de_026A006CB7
 {
 text-align:left;}
-div.de_03FDC443AD
+div.de_0781524CBD
 {
-text-align:left;text-indent:0;margin-left:0;}
+text-align:justify;margin-top:0pt;margin-bottom:0pt;}
 div.de_2765CAD4AA
 {
 text-indent:0;margin-top:0pt;margin-bottom:0pt;}
@@ -427,15 +427,9 @@ direction:ltr;text-align:left;text-indent:0;margin-left:0;margin-top:0pt;margin-
 div.de_C54D9B1CE1
 {
 direction:ltr;text-align:left;text-indent:0;margin-left:0;}
-div.de_CA399BD1A8
-{
-text-align:right;text-indent:0;margin-left:1px;}
 div.de_D8A905EC7A
 {
 margin-top:0pt;margin-bottom:0pt;}
-div.de_E931529BA0
-{
-text-align:left;text-indent:0;margin-left:50px;}
 div.de_F5E25F2BBC
 {
 text-align:left;margin-top:0pt;margin-bottom:0pt;}
@@ -445,17 +439,40 @@ margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;}
 img.de_F0AFF5680A
 {
 margin-top: 0; margin-right: 8px; margin-bottom: 8px; margin-left: 8px;}
-span.de_4CD179DA38
+span.de_01B51FFE3E
 {
-	font-family: "Calibri";
-	font-size: 11pt;
+	font-family: "Times New Roman";
+	font-size: 13pt;
+	color:#111827;
+}
+span.de_17657BAC5D
+{
+	font-family: "Times New Roman";
+	font-size: 13pt;
+	color:#2c2c36;
+}
+span.de_3BF5F9D9F2
+{
+	font-family: "Symbol";
+	font-size: 13pt;
 	color:#000000;
 }
-span.de_8F8E6357B9
+span.de_3DD2D79DD8
 {
-	font-family: "system-ui";
-	font-size: 12pt;
-	color:#111827;
+	font-family: "Times New Roman";
+	font-size: 13pt;
+}
+span.de_60AEE46EEA
+{
+	font-weight:normal;
+}
+span.de_7EA41EC2FA
+{
+	font-size: 16pt;
+}
+span.de_A2F40654B9
+{
+	font-family: "Times New Roman";
 }
 span.de_CAB14B116D
 {
@@ -469,26 +486,20 @@ span.de_E71183D815
 	font-size: 13pt;
 	color:#000000;
 }
-span.de_F3B83B8B7F
-{
-	font-family: "system-ui";
-	font-size: 12pt;
-	color:#2c2c36;
-}
 .list-element {
 	list-style-type: none;
 }
-.list-counter-e5acdbd3-bf44-4809-b86e-0cfc6ffdb98f-0 > div > * {
+.list-counter-c4773f85-474b-42f3-b966-0d674ca4ef42-0 > div > * {
 	text-indent: 0px;}
-.list-counter-e5acdbd3-bf44-4809-b86e-0cfc6ffdb98f-0 > div > div[class='list-marker']:before {
+.list-counter-c4773f85-474b-42f3-b966-0d674ca4ef42-0 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-e5acdbd3-bf44-4809-b86e-0cfc6ffdb98f-0, decimal) '.\00a0';
-	counter-increment: list-counter-e5acdbd3-bf44-4809-b86e-0cfc6ffdb98f-0;
+	content: '' counter(list-counter-c4773f85-474b-42f3-b966-0d674ca4ef42-0, decimal) '.\00a0';
+	counter-increment: list-counter-c4773f85-474b-42f3-b966-0d674ca4ef42-0;
 }
-.list-counter-e5acdbd3-bf44-4809-b86e-0cfc6ffdb98f-0 > div > div[class='list-marker-chm'] {
+.list-counter-c4773f85-474b-42f3-b966-0d674ca4ef42-0 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -496,17 +507,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-0 > div > * {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-0 > div > * {
 	text-indent: 0px;}
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-0 > div > div[class='list-marker']:before {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-0 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-0, disc) '\00a0';
-	counter-increment: list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-0;
+	content: '' counter(list-counter-ebac343c-d510-46f1-9062-988a83f97abe-0, disc) '\00a0';
+	counter-increment: list-counter-ebac343c-d510-46f1-9062-988a83f97abe-0;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-0 > div > div[class='list-marker-chm'] {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-0 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -514,17 +525,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-1 > div > * {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-1 > div > * {
 	text-indent: 0px;}
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-1 > div > div[class='list-marker']:before {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-1 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-1, disc) '\00a0';
-	counter-increment: list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-1;
+	content: '' counter(list-counter-ebac343c-d510-46f1-9062-988a83f97abe-1, disc) '\00a0';
+	counter-increment: list-counter-ebac343c-d510-46f1-9062-988a83f97abe-1;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-1 > div > div[class='list-marker-chm'] {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-1 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -532,17 +543,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-2 > div > * {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-2 > div > * {
 	text-indent: 0px;}
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-2 > div > div[class='list-marker']:before {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-2 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-2, disc) '\00a0';
-	counter-increment: list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-2;
+	content: '' counter(list-counter-ebac343c-d510-46f1-9062-988a83f97abe-2, disc) '\00a0';
+	counter-increment: list-counter-ebac343c-d510-46f1-9062-988a83f97abe-2;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-2 > div > div[class='list-marker-chm'] {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-2 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -550,17 +561,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-3 > div > * {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-3 > div > * {
 	text-indent: 0px;}
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-3 > div > div[class='list-marker']:before {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-3 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-3, disc) '\00a0';
-	counter-increment: list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-3;
+	content: '' counter(list-counter-ebac343c-d510-46f1-9062-988a83f97abe-3, disc) '\00a0';
+	counter-increment: list-counter-ebac343c-d510-46f1-9062-988a83f97abe-3;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-3 > div > div[class='list-marker-chm'] {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-3 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -568,17 +579,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-4 > div > * {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-4 > div > * {
 	text-indent: 0px;}
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-4 > div > div[class='list-marker']:before {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-4 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-4, disc) '\00a0';
-	counter-increment: list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-4;
+	content: '' counter(list-counter-ebac343c-d510-46f1-9062-988a83f97abe-4, disc) '\00a0';
+	counter-increment: list-counter-ebac343c-d510-46f1-9062-988a83f97abe-4;
 }
-.list-counter-ffb9434a-6328-4cd5-bd45-0dd78a2685fa-4 > div > div[class='list-marker-chm'] {
+.list-counter-ebac343c-d510-46f1-9062-988a83f97abe-4 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -586,17 +597,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-217187fb-14d5-46ab-8b9c-24c83c2140ec-0 > div > * {
+.list-counter-abe36af7-cc07-443b-a251-d1260b6c87d9-0 > div > * {
 	text-indent: 0px;}
-.list-counter-217187fb-14d5-46ab-8b9c-24c83c2140ec-0 > div > div[class='list-marker']:before {
+.list-counter-abe36af7-cc07-443b-a251-d1260b6c87d9-0 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-217187fb-14d5-46ab-8b9c-24c83c2140ec-0, decimal) '.\00a0';
-	counter-increment: list-counter-217187fb-14d5-46ab-8b9c-24c83c2140ec-0;
+	content: '' counter(list-counter-abe36af7-cc07-443b-a251-d1260b6c87d9-0, decimal) '.\00a0';
+	counter-increment: list-counter-abe36af7-cc07-443b-a251-d1260b6c87d9-0;
 }
-.list-counter-217187fb-14d5-46ab-8b9c-24c83c2140ec-0 > div > div[class='list-marker-chm'] {
+.list-counter-abe36af7-cc07-443b-a251-d1260b6c87d9-0 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -604,17 +615,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-f811c84d-417e-438e-a05f-a84b639fcb44-0 > div > * {
+.list-counter-13dbc332-8e08-43fa-b0cf-f43f14869362-0 > div > * {
 	text-indent: 0px;}
-.list-counter-f811c84d-417e-438e-a05f-a84b639fcb44-0 > div > div[class='list-marker']:before {
+.list-counter-13dbc332-8e08-43fa-b0cf-f43f14869362-0 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-f811c84d-417e-438e-a05f-a84b639fcb44-0, decimal) '.\00a0';
-	counter-increment: list-counter-f811c84d-417e-438e-a05f-a84b639fcb44-0;
+	content: '' counter(list-counter-13dbc332-8e08-43fa-b0cf-f43f14869362-0, decimal) '.\00a0';
+	counter-increment: list-counter-13dbc332-8e08-43fa-b0cf-f43f14869362-0;
 }
-.list-counter-f811c84d-417e-438e-a05f-a84b639fcb44-0 > div > div[class='list-marker-chm'] {
+.list-counter-13dbc332-8e08-43fa-b0cf-f43f14869362-0 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -622,17 +633,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-c238b7b4-4dd9-4be4-96e5-37314e9ffd9b-0 > div > * {
+.list-counter-f09c7a52-f25a-43a8-be2a-179903c05b7d-0 > div > * {
 	text-indent: 0px;}
-.list-counter-c238b7b4-4dd9-4be4-96e5-37314e9ffd9b-0 > div > div[class='list-marker']:before {
+.list-counter-f09c7a52-f25a-43a8-be2a-179903c05b7d-0 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-c238b7b4-4dd9-4be4-96e5-37314e9ffd9b-0, decimal) '.\00a0';
-	counter-increment: list-counter-c238b7b4-4dd9-4be4-96e5-37314e9ffd9b-0;
+	content: '' counter(list-counter-f09c7a52-f25a-43a8-be2a-179903c05b7d-0, decimal) '.\00a0';
+	counter-increment: list-counter-f09c7a52-f25a-43a8-be2a-179903c05b7d-0;
 }
-.list-counter-c238b7b4-4dd9-4be4-96e5-37314e9ffd9b-0 > div > div[class='list-marker-chm'] {
+.list-counter-f09c7a52-f25a-43a8-be2a-179903c05b7d-0 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -640,17 +651,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-1265e542-fd51-42d5-acdd-dd272bcd5e00-0 > div > * {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-0 > div > * {
 	text-indent: 0px;}
-.list-counter-1265e542-fd51-42d5-acdd-dd272bcd5e00-0 > div > div[class='list-marker']:before {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-0 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-1265e542-fd51-42d5-acdd-dd272bcd5e00-0, decimal) '.\00a0';
-	counter-increment: list-counter-1265e542-fd51-42d5-acdd-dd272bcd5e00-0;
+	content: '' counter(list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-0, decimal) '.\00a0';
+	counter-increment: list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-0;
 }
-.list-counter-1265e542-fd51-42d5-acdd-dd272bcd5e00-0 > div > div[class='list-marker-chm'] {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-0 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -658,17 +669,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-0 > div > * {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-1 > div > * {
 	text-indent: 0px;}
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-0 > div > div[class='list-marker']:before {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-1 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-a18108ba-8321-40c0-9390-d53811dd7243-0, decimal) '.\00a0';
-	counter-increment: list-counter-a18108ba-8321-40c0-9390-d53811dd7243-0;
+	content: '' counter(list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-1, disc) '\00a0';
+	counter-increment: list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-1;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-0 > div > div[class='list-marker-chm'] {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-1 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -676,17 +687,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-1 > div > * {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-2 > div > * {
 	text-indent: 0px;}
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-1 > div > div[class='list-marker']:before {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-2 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-a18108ba-8321-40c0-9390-d53811dd7243-1, disc) '\00a0';
-	counter-increment: list-counter-a18108ba-8321-40c0-9390-d53811dd7243-1;
+	content: '' counter(list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-2, disc) '\00a0';
+	counter-increment: list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-2;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-1 > div > div[class='list-marker-chm'] {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-2 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -694,17 +705,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-2 > div > * {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-3 > div > * {
 	text-indent: 0px;}
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-2 > div > div[class='list-marker']:before {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-3 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-a18108ba-8321-40c0-9390-d53811dd7243-2, disc) '\00a0';
-	counter-increment: list-counter-a18108ba-8321-40c0-9390-d53811dd7243-2;
+	content: '' counter(list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-3, disc) '\00a0';
+	counter-increment: list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-3;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-2 > div > div[class='list-marker-chm'] {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-3 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -712,17 +723,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-3 > div > * {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-4 > div > * {
 	text-indent: 0px;}
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-3 > div > div[class='list-marker']:before {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-4 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-a18108ba-8321-40c0-9390-d53811dd7243-3, disc) '\00a0';
-	counter-increment: list-counter-a18108ba-8321-40c0-9390-d53811dd7243-3;
+	content: '' counter(list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-4, disc) '\00a0';
+	counter-increment: list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-4;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-3 > div > div[class='list-marker-chm'] {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-4 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -730,17 +741,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-4 > div > * {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-5 > div > * {
 	text-indent: 0px;}
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-4 > div > div[class='list-marker']:before {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-5 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-a18108ba-8321-40c0-9390-d53811dd7243-4, disc) '\00a0';
-	counter-increment: list-counter-a18108ba-8321-40c0-9390-d53811dd7243-4;
+	content: '' counter(list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-5, disc) '\00a0';
+	counter-increment: list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-5;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-4 > div > div[class='list-marker-chm'] {
+.list-counter-18fd8f04-6dec-4b21-bf50-f7e0487aa189-5 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -748,17 +759,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-5 > div > * {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-0 > div > * {
 	text-indent: 0px;}
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-5 > div > div[class='list-marker']:before {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-0 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-a18108ba-8321-40c0-9390-d53811dd7243-5, disc) '\00a0';
-	counter-increment: list-counter-a18108ba-8321-40c0-9390-d53811dd7243-5;
+	content: '' counter(list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-0, decimal) '.\00a0';
+	counter-increment: list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-0;
 }
-.list-counter-a18108ba-8321-40c0-9390-d53811dd7243-5 > div > div[class='list-marker-chm'] {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-0 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -766,17 +777,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-0 > div > * {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-1 > div > * {
 	text-indent: 0px;}
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-0 > div > div[class='list-marker']:before {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-1 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-0, decimal) '.\00a0';
-	counter-increment: list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-0;
+	content: '' counter(list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-1, disc) '\00a0';
+	counter-increment: list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-1;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-0 > div > div[class='list-marker-chm'] {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-1 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -784,17 +795,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-1 > div > * {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-2 > div > * {
 	text-indent: 0px;}
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-1 > div > div[class='list-marker']:before {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-2 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-1, disc) '\00a0';
-	counter-increment: list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-1;
+	content: '' counter(list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-2, disc) '\00a0';
+	counter-increment: list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-2;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-1 > div > div[class='list-marker-chm'] {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-2 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -802,17 +813,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-2 > div > * {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-3 > div > * {
 	text-indent: 0px;}
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-2 > div > div[class='list-marker']:before {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-3 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-2, disc) '\00a0';
-	counter-increment: list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-2;
+	content: '' counter(list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-3, disc) '\00a0';
+	counter-increment: list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-3;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-2 > div > div[class='list-marker-chm'] {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-3 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -820,17 +831,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-3 > div > * {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-4 > div > * {
 	text-indent: 0px;}
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-3 > div > div[class='list-marker']:before {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-4 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-3, disc) '\00a0';
-	counter-increment: list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-3;
+	content: '' counter(list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-4, disc) '\00a0';
+	counter-increment: list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-4;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-3 > div > div[class='list-marker-chm'] {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-4 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;
@@ -838,35 +849,17 @@ span.de_F3B83B8B7F
 	margin: 0;
 	*display: inline;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-4 > div > * {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-5 > div > * {
 	text-indent: 0px;}
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-4 > div > div[class='list-marker']:before {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-5 > div > div[class='list-marker']:before {
 	display: inline-block;
 	text-align: left;
 	padding: 0;
 	margin: 0;
-	content: '' counter(list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-4, disc) '\00a0';
-	counter-increment: list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-4;
+	content: '' counter(list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-5, disc) '\00a0';
+	counter-increment: list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-5;
 }
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-4 > div > div[class='list-marker-chm'] {
-	display: inline-block;
-	text-align: left;
-	zoom: 1;
-	padding: 0;
-	margin: 0;
-	*display: inline;
-}
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-5 > div > * {
-	text-indent: 0px;}
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-5 > div > div[class='list-marker']:before {
-	display: inline-block;
-	text-align: left;
-	padding: 0;
-	margin: 0;
-	content: '' counter(list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-5, disc) '\00a0';
-	counter-increment: list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-5;
-}
-.list-counter-8eb148d5-00c1-4245-b0f9-467f37db51eb-5 > div > div[class='list-marker-chm'] {
+.list-counter-0dd5b961-85ba-4312-b8f9-be1eb368b490-5 > div > div[class='list-marker-chm'] {
 	display: inline-block;
 	text-align: left;
 	zoom: 1;

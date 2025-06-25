@@ -1,6 +1,7 @@
 .footer {
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
     height: 50px;
     background-color: #383636;
@@ -9,6 +10,7 @@
     align-items: center;
     z-index: 1000;
     border-top: 2px solid #5EE152;
+    position: fixed;
 }
 
 .footer-content {
