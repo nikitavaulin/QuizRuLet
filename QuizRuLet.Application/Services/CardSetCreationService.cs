@@ -8,19 +8,21 @@ namespace QuizRuLet.Application.Services;
 
 public class CardSetCreationService : ICardSetCreationService
 {
+    // Создание набора карточек
     public (List<Card>? Cards, string Error) Create(string inputData, string pairSeparator, string lineSeparator)
     {
-        (List<Card>? Cards, string Error) result = (null, "");
+        (List<Card>? Cards, string Error) result = (null, "");  // инициализация результата
+
         try
         {
-            var cards = GetCardsSet(inputData, pairSeparator, lineSeparator);
+            var cards = GetCardsSet(inputData, pairSeparator, lineSeparator);       // получение набора карточек
             result = (cards, "");
         }
-        catch(IndexOutOfRangeException ex)
+        catch (IndexOutOfRangeException)
         {
             result = (null, "Ошибка при обработке текста разделителями.");
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             result = (null, ex.Message);
         }
@@ -28,35 +30,40 @@ public class CardSetCreationService : ICardSetCreationService
         return result;
     }
 
-    private List<Card> GetCardsSet(string inputData, string pairSeparator, string lineSeparator)
+    // Создание списка карточек
+    private static List<Card> GetCardsSet(string inputData, string pairSeparator, string lineSeparator)
     {
-        var pairs = inputData.Split(lineSeparator);     // разбили на пары
+        var pairs = inputData.Split(lineSeparator);                 // разделение текста на карточки
         var cards = new List<Card>();
 
-        foreach (var pair in pairs)
+        foreach (var pair in pairs) 
         {
-            if (!string.IsNullOrEmpty(pair))
+            if (!string.IsNullOrEmpty(pair))                        // проверка, что строка не пустая
             {
-                var cardCreation = GetCard(pair, pairSeparator);
+                var cardCreation = GetCard(pair, pairSeparator);    // получение объекта карточки
                 
-                if (!string.IsNullOrEmpty(cardCreation.Error)) 
-                    throw new Exception(cardCreation.Error);
+                // если есть ошибка, выбрасываем исключение
+                if (!string.IsNullOrEmpty(cardCreation.Error)) throw new Exception(cardCreation.Error);
                     
-                cards.Add(cardCreation.Card);
+                cards.Add(cardCreation.Card);                       // добавление созданной карточки в список
             }
         }
 
         return cards;
     }
 
-    private (Card Card, string Error) GetCard(string pair, string pairSeparator)
+    // Создание объекта карточки
+    private static (Card Card, string Error) GetCard(string pair, string pairSeparator)
     {
-        var splitPair = pair.Split(pairSeparator);      // разбили на термин и определение
+        // разделение пары
+        var splitPair = pair.Split(pairSeparator);
 
+        // поля карточек        
         var id = Guid.NewGuid();
         var frontSide = splitPair[0];
         var backSide = splitPair[1];
 
+        // создание карточки
         var cardCreation = Card.Create(id, frontSide, backSide, false);
 
         return cardCreation;

@@ -5,57 +5,54 @@ using QuizRuLet.Core.Abstractions;
 namespace QuizRuLet.Application.Services;
 
 public class CardService : ICardService
-// удалить
 {
-    private readonly ICardsRepository _cardsRepository;
+    private readonly ICardsRepository _cardsRepository;     // репозиторий карточек
 
+    // Внедрение зависимостей
     public CardService(ICardsRepository cardsRepository)
     {
-        _cardsRepository = cardsRepository;
+        _cardsRepository = cardsRepository; 
     }
 
+    /// Получение всех карточек из базы данных
     public async Task<List<Card>> GetAllCards()
     {
         return await _cardsRepository.Get();
     }
 
+    /// Получение всех карточек из базы данных
     public async Task<List<Card>> GetCardsByModule(Guid moduleId)
     {
-        return await _cardsRepository.GetByModule(moduleId);
+        return await _cardsRepository.GetByModule(moduleId); 
     }
 
+    /// Получение карточек с заданным флагом изученности в модуле
     public async Task<List<Card>> GetCardsByLearningFlag(Guid moduleId, bool isLearned)
     {
-        return await _cardsRepository.GetByLearningFlag(moduleId, isLearned);
+        return await _cardsRepository.GetByLearningFlag(moduleId, isLearned); 
     }
 
+    /// Получение карточки по ID
     public async Task<Card?> GetCardById(Guid id)
     {
-        return await _cardsRepository.GetById(id);  // VALIDATION?
+        return await _cardsRepository.GetById(id); 
     }
 
+    /// Создание новой карточки и привязка её к модулю
     public async Task<Guid> CreateCard(Card card, Guid moduleId)
     {
-        return await _cardsRepository.Create(card, moduleId);
+        return await _cardsRepository.Create(card, moduleId); 
     }
 
-    public async Task<Guid> UpdateCard(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId)
+    /// Обновление сторон карточки
+    public async Task<Guid> UpdateCardSides(Guid id, string frontSide, string backSide)
     {
-        return await _cardsRepository.Update(id, frontSide, backSide, isLearned, moduleId);
+        return await _cardsRepository.UpdateSides(id, frontSide, backSide);
     }
-    
-    public async Task<Guid> UpdatePartlyCard(Guid id, string frontSide, string backSide)
-    {
-        return await _cardsRepository.UpdatePartly(id, frontSide, backSide);
-    }
-    
-    
 
+    /// Удаление карточки по ID
     public async Task<Guid> DeleteCard(Guid id)
     {
         return await _cardsRepository.Delete(id);
     }
-
-
-
 }

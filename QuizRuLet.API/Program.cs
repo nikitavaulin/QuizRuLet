@@ -21,7 +21,8 @@ services.AddControllers();
 
 services.AddAuthentication();
 
-services.AddSingleton<IConfiguration>(provider =>       // конфигурация аппсетингов для извлечения ключей и настроек
+// конфигурация аппсетингов для извлечения ключей и настроек
+services.AddSingleton<IConfiguration>(provider =>       
         new ConfigurationBuilder()
             .SetBasePath(Directory.GetCurrentDirectory())
             .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
@@ -42,11 +43,12 @@ services.AddDbContext<QuizRuLetDbContext>(  // регистрация конте
 services.Configure<JwtOptions>(configuration.GetSection(nameof(JwtOptions)));       // jwt auth config
 services.AddApiAuthentification(configuration);
 
+// репозитории
 services.AddScoped<IModulesRepository, ModulesRepository>();
 services.AddScoped<ICardsRepository, CardsRepository>();
 services.AddScoped<IUsersRepository, UsersRepository>();
 
-// !!!!!! TODO add scoped (InterfaceService, Service)
+// сервисы
 services.AddScoped<IModuleService, ModuleService>();
 services.AddScoped<IUserService, UserService>();
 services.AddScoped<ICardService, CardService>();
@@ -67,7 +69,7 @@ services.AddScoped<IPasswordHasher, PasswordHasher>();
 // билд приложения
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Конфигурация пайплайна HTTP запросов
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -103,4 +105,5 @@ app.UseStaticFiles(new StaticFileOptions
 
 #endregion
 
-app.Run();
+// запуск приложения
+app.Run();  

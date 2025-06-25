@@ -10,6 +10,5 @@ public interface ICardService
     Task<Card?> GetCardById(Guid id);
     Task<List<Card>> GetCardsByLearningFlag(Guid moduleId, bool isLearned);
     Task<List<Card>> GetCardsByModule(Guid moduleId);
-    Task<Guid> UpdateCard(Guid id, string frontSide, string backSide, bool isLearned, Guid moduleId);
-    Task<Guid> UpdatePartlyCard(Guid id, string frontSide, string backSide);
+    Task<Guid> UpdateCardSides(Guid id, string frontSide, string backSide);
 }

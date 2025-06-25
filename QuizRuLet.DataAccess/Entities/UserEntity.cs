@@ -1,8 +1,8 @@
-using System;
-using QuizRuLet.Core.Models;
-
 namespace QuizRuLet.DataAccess.Entities
 {
+    /// <summary>
+    /// Сущность пользователя в БД
+    /// </summary>
     public class UserEntity
     {
         public Guid Id {get; set;}
