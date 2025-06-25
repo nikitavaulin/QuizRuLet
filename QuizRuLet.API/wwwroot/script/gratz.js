@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     let allLeanred = false;
     let countNotLearned = 0;
 
-    const response = await axios.get(`modules/statistic/${moduleId}`); // Добавить ссылку
+    const response = await axios.get(`modules/statistic/${moduleId}`); 
 
     countNotLearned = response.data.countNotLearned;
     countLearned = response.data.countLearned

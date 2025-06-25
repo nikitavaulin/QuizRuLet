@@ -8,20 +8,25 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
     console.log(moduleId);
+    
     let cards = [];
     let currentIndex = 0;
     let currentCardElement = null;
     const flipButton = document.querySelector('.button-grey');
-
+    let countNotLearned;
+    let countLearned;
 
     flipButton.addEventListener('click', () => {
         currentCardElement.checked = !currentCardElement.checked;
     });
-
-
+    
+    
     // Функция загрузки карточек с сервера
     async function loadCards() {
         try {
+            const stat = await axios.get(`modules/statistic/${moduleId}`); 
+            countNotLearned = stat.data.countNotLearned;
+            countLearned = stat.data.countLearned;
             const response = await axios.get(`/learning-mode/${moduleId}`);
             cards = response.data;
             if (cards.length === 0) {
@@ -45,6 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateCounter() {
         const counter = document.querySelector('.number-of-pages');
         counter.textContent = `${currentIndex + 1}/${cards.length}`;
+        const notLearnedPlace = document.querySelector('.count-not-learned');
+        const learnedPlace = document.querySelector('.count-learned');
+        notLearnedPlace.textContent = countNotLearned;
+        learnedPlace.textContent = countLearned;
     }
     // Показываем текущую карточку
     function showCard(card) {
@@ -81,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
         currentCardElement = newCard.querySelector('.flip-toggle');
-        console.log(currentCardElement);
+        
     }
 
 
@@ -93,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let cardId = card_inner.dataset.id;
         const currentCard = cards[currentIndex];
         currentCard.isLearned = false;
+        
         await axios.patch(`/cards/update-flag/${cardId}`, { isLearned: false });
         try {
 
@@ -118,6 +128,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let cardId = card_inner.dataset.id;
 
+        countLearned++;
+        countNotLearned--;
         const currentCard = cards[currentIndex];    //Надо придумать откуда взять cardId
         currentCard.isLearned = true;
         await axios.patch(`/cards/update-flag/${cardId}`, { isLearned: true });
@@ -163,7 +175,9 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-
+    document.querySelector('.close-btn').addEventListener('click', function () {
+        window.location.href = `/module.html?id=${encodeURIComponent(moduleId)}`;
+    } )
 
 
 

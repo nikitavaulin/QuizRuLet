@@ -174,7 +174,12 @@ document.addEventListener('DOMContentLoaded', async function () {
         let text = importTextarea ? importTextarea.value : '';
         let count = countArea ? countArea.value : '';
 
+        if (text.length > 2500) {
+          showModal("Ошибка", "Длина конспекта не должна превышать 2500 символов");
+          return;
+        }
         let previewText = "";
+        text = text.replace(/\r?\n/g, " ");
         text = text.replaceAll("\n", " ");
         try {
           const response = await axios.post("/import/ai", { // Адрес дописать

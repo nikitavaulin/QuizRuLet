@@ -85,3 +85,28 @@
     border: 0px;
     color: white;
 }
+
+.center-wrapper {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.count-learned,
+.count-not-learned {
+    width: fit-content;
+    margin-inline: 25px;
+    font-size: 24px;
+
+}
+
+.count-learned {
+    color: #5ee152;
+}
+
+.count-not-learned {
+    color: #F44336;
+}
