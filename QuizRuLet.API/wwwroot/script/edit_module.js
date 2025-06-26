@@ -8,11 +8,15 @@ document.addEventListener('DOMContentLoaded', async function () {
     location.href = 'index.html';
     return;
   }
-  // --- Инициализация Bootstrap Tooltips (если нужны) ---
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl);
-  });
+
+  function isInteger(str) {
+    if (!str.trim()) return false;
+
+    const num = Number(str);
+
+    return Number.isInteger(num);
+  }
+
 
   // --- Функция для инициализации логики шагов внутри конкретного модального окна ---
   async function initializeModalSteps(modalElement) {
@@ -20,17 +24,17 @@ document.addEventListener('DOMContentLoaded', async function () {
     const contents = modalElement.querySelectorAll('.step-content');
     const prevBtn = modalElement.querySelector('.btn-back-modal');
     const nextBtn = modalElement.querySelector('.btn-next-modal');
-
     // Если элементы для шагов не найдены, значит, это модальное окно без шагов, выходим.
     if (steps.length === 0 || !prevBtn || !nextBtn) {
       return;
     }
 
+    let cards = [];
     let currentStep = 1; // Всегда начинаем с первого шага для данного модального окна
     let updatePreview;
 
     async function showStep(step) {
-      let cards;
+
       // Обновляем активные шаги
       steps.forEach(s => {
         s.classList.toggle('active', parseInt(s.dataset.step) === step);
@@ -50,9 +54,13 @@ document.addEventListener('DOMContentLoaded', async function () {
       nextBtn.classList.toggle('btn-primary', step < steps.length);
       nextBtn.classList.toggle('btn-success', step === steps.length);
 
-      // --- Дополнительно: вызов updatePreview() только на шаге 3 ---
+
       if (step === 3 && updatePreview) {
-        await updatePreview(); // Вызываем обновление превью, если это шаг 3 и модалка importModal
+        const previewPre = modalElement.querySelector('#preview');
+        if (previewPre) {
+          previewPre.innerHTML = '<i class="fa-solid fa-hourglass-start"></i> Загрузка...';
+        }
+        await updatePreview();
       }
     }
 
@@ -70,15 +78,14 @@ document.addEventListener('DOMContentLoaded', async function () {
       });
     });
 
-    // Кнопка "Назад"
-    prevBtn.addEventListener('click', () => {
+
+    const handlePrevClick = () => {
       if (currentStep > 1) {
         goToStep(currentStep - 1);
       }
-    });
+    };
 
-    // Кнопка "Вперед"
-    nextBtn.addEventListener('click', async () => {
+    const handleNextClick = async () => {
       if (currentStep < steps.length) {
         goToStep(currentStep + 1);
       } else {
@@ -87,6 +94,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           bsModal.hide();
         }
 
+        console.log(cards);
         const response = await axios.post(`/import/save/${moduleId}`, { cards: cards });
         try {
           if (response.status === 200) {
@@ -98,10 +106,22 @@ document.addEventListener('DOMContentLoaded', async function () {
           showModal("Ошибка", "Не удалось сохранить карточки в модуле");
           return;
         }
-        // Или отправить форму
-        // modalElement.querySelector('form').submit();
       }
-    });
+    };
+    prevBtn.addEventListener('click', handlePrevClick);
+    nextBtn.addEventListener('click', handleNextClick);
+
+    modalElement.addEventListener('hidden.bs.modal', () => {
+      prevBtn.removeEventListener('click', handlePrevClick);
+      nextBtn.removeEventListener('click', handleNextClick);
+
+      // Очищаем поля ввода, чтобы модальное окно было "чистым" при следующем открытии
+      modalElement.querySelectorAll('textarea, input').forEach(input => input.value = '');
+      const preview = modalElement.querySelector('#preview');
+      if (preview) {
+        preview.textContent = 'Данные здесь...';
+      }
+    }, { once: true });
 
     // Инициализация при первом запуске или сбросе
     showStep(currentStep);
@@ -112,7 +132,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       const separatorSelect = modalElement.querySelector('.step-content[data-step="2"] #separator_inline');
       const separatorLinesSelect = modalElement.querySelector('.step-content[data-step="2"] #separator_line');
       const previewPre = modalElement.querySelector('#preview');
-      cards = [];
+
 
       updatePreview = async () => {
         let text = importTextarea ? importTextarea.value : '';
@@ -121,25 +141,24 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         if (separatorLines.length === 0 || separator.length === 0) { showModal("Ошибка", "Выберите все разделители") }
 
-       
-
-
         text = text.replace(/\r?\n/g, "*LINES*");
-
-
         text = text.replaceAll(separatorLines, "*LINES*");
-
-
         text = text.replaceAll(separator, "*PAIR*");
+
         try {
           const response = await axios.post("/import", { // Адрес дописать
             data: text,
             lineSeparator: "*LINES*",
             pairSeparator: "*PAIR*"
           })
-          text = [];
-          const previewText = separatingPreview(response);
-          previewPre.textContent = previewText;
+          const result = separatingPreview(response);
+          if (result) {
+            previewPre.textContent = result.previewText;
+            cards = result.parsedCards; // <-- ГЛАВНЫЙ ФИКС
+          } else {
+            previewPre.textContent = "Не удалось обработать данные.";
+            cards = [];
+          }
         }
         catch (error) {
           if (error.response) {
@@ -166,13 +185,17 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (modalElement.id === 'importAiModal') {
       const importTextarea = modalElement.querySelector('.step-content[data-step="1"] textarea');
       const countArea = modalElement.querySelector('.step-content[data-step="2"] #count');
-
       const previewPre = modalElement.querySelector('#preview');
-      cards = [];
+
 
       updatePreview = async () => {
         let text = importTextarea ? importTextarea.value : '';
         let count = countArea ? countArea.value : '';
+
+        if (!isInteger(count)) {
+          showModal("Ошибка", "Вы ввели не целое число");
+          return;
+        }
 
         if (text.length > 2500) {
           showModal("Ошибка", "Длина конспекта не должна превышать 2500 символов");
@@ -182,12 +205,20 @@ document.addEventListener('DOMContentLoaded', async function () {
         text = text.replace(/\r?\n/g, " ");
         text = text.replaceAll("\n", " ");
         try {
-          const response = await axios.post("/import/ai", { // Адрес дописать
+          const response = await axios.post("/import/ai", {
             data: text,
             countCards: count
           })
 
-          previewText = separatingPreview(response);
+          const result = separatingPreview(response);
+          if (result) {
+            previewPre.textContent = result.previewText;
+            cards = result.parsedCards;
+          } else {
+
+            previewPre.textContent = "Ошибка обработки данных.";
+            cards = [];
+          }
         }
         catch (error) {
           if (error.response) {
@@ -209,7 +240,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             showModal("Ошибка", "Произошла ошибка: " + error.message);
           }
         }
-        previewPre.textContent = previewText;
+        
       }
 
 
@@ -221,21 +252,22 @@ document.addEventListener('DOMContentLoaded', async function () {
       let enumerator = 1;
       let previewText = '';
       if (response.status === 200) {
-        cards = response.data;
+        const parsedCards = response.data;
 
-        if (true) {
+        parsedCards.forEach(card => {
+          const front = card.frontSide.length > 15 ? card.frontSide.slice(0, 15) + '..' : card.frontSide;
+          const back = card.backSide.length > 15 ? card.backSide.slice(0, 15) + '..' : card.backSide;
+          previewText += `${enumerator}) ${front} | ${back}\n`;
+          enumerator++;
+        });
 
-          cards.forEach(card => {
-            card.frontSide.length > 15 ? card.frontSide = card.frontSide.slice(0, 15) + '..' : card.frontSide;
-            card.backSide.length > 15 ? card.backSide = card.backSide.slice(0, 15) + '..' : card.backSide;
-            previewText += enumerator + ') ' + card.frontSide + ' | ' + card.backSide + '\n';
-            enumerator++;
-          });
-        } else if (previewPre) {
-          previewPre.textContent = 'Данные здесь...';
-        }
-        cards = [];
-        return previewText;
+
+        return {
+          previewText: previewText,
+          parsedCards: parsedCards
+        };
+
+
       }
     }
     catch (error) {
@@ -381,7 +413,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
       const cardBody = document.createElement('div');
       cardBody.classList.add('card-body'); // Добавляем класс для стилизации
-      cardBody.textContent = card.frontSide; // Отображаем переднюю сторону как название
+      cardBody.textContent = card.frontSide.slice(0,20)+"..."; // Отображаем переднюю сторону как название
       cardBody.dataset.cardId = card.id; // Сохраняем ID карточки для дальнейшего использования
 
       // Обработчик клика на карточку
@@ -593,6 +625,23 @@ document.addEventListener('DOMContentLoaded', async function () {
       });
     });
   }
+
+
+
+  const importModal = document.getElementById('importModal');
+  const aiImportModal = document.getElementById('importAiModal');
+  const textarea = document.getElementById('textArea');
+  const aiTextarea = document.getElementById('aiTextArea');
+
+  importModal.addEventListener('hidden.bs.modal', function () {
+    textarea.value = '';
+    currentStep = 1;
+  })
+  aiImportModal.addEventListener('hidden.bs.modal', function () {
+    aiTextarea.value = '';
+    currentStep = 1;
+  })
+
 
   updateSideBarSelected();
 });

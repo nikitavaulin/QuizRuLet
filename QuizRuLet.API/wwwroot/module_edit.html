@@ -228,7 +228,7 @@ id = "save-card"
                 <div class="step-content active p-4" data-step="1">
                     <h4>Шаг 1: Добавить данные</h4>
                     <p>Введите текст.</p>
-                    <textarea class="form-control" rows="5" placeholder="Пример ввода:
+                    <textarea class="form-control" id="textArea" rows="5" placeholder="Пример ввода:
 Термин - Определение
 Термин - Определение"></textarea>
                 </div>
@@ -281,7 +281,7 @@ id = "save-card"
 
                         <div class="step d-flex flex-column align-items-center" data-step="2">
                             <span class="step-number">2</span>
-                            <span class="step-title">Предпросмотр</span>
+                            <span class="step-title">Количество</span>
                         </div>
 <div class="step d-flex flex-column align-items-center" data-step="3">
                             <span class="step-number">3</span>
@@ -292,10 +292,10 @@ id = "save-card"
                 <div class="step-content active p-4" data-step="1">
                     <h4>Шаг 1: Добавить данные</h4>
                     <p>Введите текст. Максимальная длина не более 2500 символов.</p>
-                    <textarea class="form-control" rows="5" placeholder="Ваш текст..."></textarea>
+                    <textarea class="form-control" rows="5" placeholder="Ваш текст..." id="aiTextArea"></textarea>
                 </div>
 
-                <div class="step-content active p-4" data-step="2">
+                <div class="step-content p-4" data-step="2">
                     <h4>Шаг 2: Выбрать количество карточек</h4>
                     
                     <p>Введите количество карточек.</p>
