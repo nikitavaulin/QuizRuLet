@@ -29,10 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
             countLearned = stat.data.countLearned;
             const response = await axios.get(`/learning-mode/${moduleId}`);
             cards = response.data;
-            if (cards.length === 0) {
-                showModal("Сообщение", "Все карточки пройдены, режим изучения недоступен");
-                return;
+            if (cards.length === 0 && countNotLearned === 0){
+                window.location.href = `/gratz.html?id=${encodeURIComponent(moduleId)}`;
             }
+            // if (cards.length === 0) {
+            //     showModal("Сообщение", "Все карточки пройдены, режим изучения недоступен");
+            //     return;
+            // }
             if (cards.length > 0) {
                 showCard(cards[0]);
             } else {
@@ -167,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
         } catch (error) {
-            checkError(error);
+            checkError(error);  
         }
     })
 
