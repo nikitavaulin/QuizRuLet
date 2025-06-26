@@ -87,6 +87,8 @@
 
 .module-name {
   font-size: 26px;
+  display: flex;
+  flex-direction: row;
 }
 
 .tooltip-inner {
@@ -243,3 +245,54 @@ textarea {
   padding: 5px;
 }
 
+.fa-bars {
+  display: none !important;
+}
+
+@media (max-width: 767.98px) {
+  .module-name {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+    
+  }
+  .fa-bars {
+    display: flex !important;
+    margin-right: 10px;
+  }
+  .btn-import {
+    margin-right: 5px;
+  }
+  
+  .buttons-bottom {
+    transform: translate(-50%, -50%);
+    left: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: calc(-1 * var(--sidebar-width)); 
+    width: var(--sidebar-width); 
+    height: 100vh; 
+    z-index: 1030; 
+    transition: left 0.3s ease-in-out; 
+    border-right: 1px solid var(--bs-border-color);
+  }
+  
+  .sidebar.show {
+    left: 0; /* Показываем сайдбар, сдвигая его в видимую область */
+  }
+  .card-txt {
+    height: 100%;
+  }
+  
+}

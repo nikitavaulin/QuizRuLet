@@ -1,16 +1,24 @@
 /* Основные переменные и стили для body */
 :root {
-  --bs-success-rgb: 94, 225, 82; /* Зеленый */
-  --bs-secondary-rgb: 172, 168, 168; /* Серый */
-  --bs-dark-rgb: 56, 54, 54; /* Темный фон компонентов */
-  --bs-body-color: #ACA8A8; /* Основной цвет текста */
-  --bs-body-bg: #383636; /* Основной фон страницы */
-  --bs-border-color: #716F6F; /* Цвет границ */
-  --sidebar-width: 220px; /* Ширина сайдбара */
+  --bs-success-rgb: 94, 225, 82;
+  /* Зеленый */
+  --bs-secondary-rgb: 172, 168, 168;
+  /* Серый */
+  --bs-dark-rgb: 56, 54, 54;
+  /* Темный фон компонентов */
+  --bs-body-color: #ACA8A8;
+  /* Основной цвет текста */
+  --bs-body-bg: #383636;
+  /* Основной фон страницы */
+  --bs-border-color: #716F6F;
+  /* Цвет границ */
+  --sidebar-width: 220px;
+  /* Ширина сайдбара */
 }
 
 body {
-  font-family: 'Inter', sans-serif; /* Убедитесь, что шрифт загружен */
+  font-family: 'Inter', sans-serif;
+  /* Убедитесь, что шрифт загружен */
 }
 
 /* Стили для сайдбара */
@@ -20,21 +28,26 @@ body {
   bottom: 0;
   left: 0;
   z-index: 100;
-  padding: 0; /* Убираем паддинг, логотип будет внутри */
+  padding: 0;
+
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
   background-color: var(--bs-body-bg);
   border-right: 1px solid var(--bs-border-color);
-  width: var(--sidebar-width); /* Фиксированная ширина */
+  width: var(--sidebar-width);
+
 }
 
 /* Контейнер для прокручиваемого содержимого сайдбара */
 .sidebar-sticky {
   position: relative;
   top: 0;
-  height: 100vh; /* Высота на весь экран */
-  padding-top: 1rem; /* Отступ сверху */
+  height: 100vh;
+
+  padding-top: 1rem;
+
   overflow-x: hidden;
-  overflow-y: auto; /* Прокрутка если контента много */
+  overflow-y: auto;
+
 }
 
 /* Логотип в сайдбаре */
@@ -44,38 +57,54 @@ body {
   padding: .5rem 1rem;
   color: var(--bs-body-color);
   text-decoration: none;
-  display: block; /* Чтобы занимал всю ширину */
-  text-align: center; /* Центрирование текста */
+  display: block;
+
+  text-align: center;
+
 }
-.quizrulet-brand-sidebar .text-success { color: #5ee152 !important; }
-.quizrulet-brand-sidebar .text-secondary { color: #ACA8A8 !important; }
+
+.quizrulet-brand-sidebar .text-success {
+  color: #5ee152 !important;
+}
+
+.quizrulet-brand-sidebar .text-secondary {
+  color: #ACA8A8 !important;
+}
 
 /* Ссылки навигации в сайдбаре */
 .sidebar .nav-link {
   font-weight: 500;
-  color: var(--bs-body-color); /* Цвет ссылок */
-  padding: .75rem 1.5rem; /* Отступы */
+  color: var(--bs-body-color);
+
+  padding: .75rem 1.5rem;
+
 }
 
 .sidebar .nav-link .fa,
 .sidebar .nav-link .fas {
-  margin-right: 8px; /* Отступ для иконок */
+  margin-right: 8px;
+
 }
 
 .sidebar .nav-link:hover {
-  color: #fff; /* Цвет при наведении */
-  background-color: #444; /* Фон при наведении */
+  color: #fff;
+
+  background-color: #444;
+
 }
 
 .sidebar .nav-link.active {
-  color: #fff; /* Цвет активной ссылки */
-  background-color: #555; /* Фон активной ссылки */
+  color: #fff;
+  /* Цвет активной ссылки */
+  background-color: #555;
+  /* Фон активной ссылки */
 }
 
 /* Основной контент */
 main {
   background-color: var(--bs-body-bg);
-  padding-left: var(--sidebar-width); /* Отступ слева равный ширине сайдбара */
+  padding-left: var(--sidebar-width);
+  /* Отступ слева равный ширине сайдбара */
   min-height: 100vh;
 }
 
@@ -88,7 +117,8 @@ main {
 
 /* Форма поиска */
 .search-form {
-  max-width: 300px; /* Ограничение ширины */
+  max-width: 300px;
+  /* Ограничение ширины */
 }
 
 /* Поле ввода поиска */
@@ -97,9 +127,11 @@ main {
   border: 1px solid #000;
   color: #fff;
 }
+
 .form-control-dark::placeholder {
   color: #ACA8A8;
 }
+
 .form-control-dark:focus {
   border-color: #5ee152;
   box-shadow: 0 0 0 0.25rem rgba(94, 225, 82, 0.25);
@@ -113,6 +145,7 @@ main {
   border: 1px solid #000;
   color: #ACA8A8;
 }
+
 .btn-search:hover {
   background-color: #555;
   border-color: #000;
@@ -125,21 +158,26 @@ main {
   color: #ACA8A8;
   background-color: var(--bs-body-bg);
 }
+
 .btn-create:hover {
   background-color: #444;
   border-color: var(--bs-border-color);
   color: #fff;
 }
+
 .btn-create svg path {
-  fill: #ACA8A8; /* Цвет иконки */
+  fill: #ACA8A8;
+  /* Цвет иконки */
 }
+
 .btn-create:hover svg path {
   fill: #fff;
 }
 
 /* Список модулей */
 .module-list {
-  padding-right: 1.5rem; /* Добавим отступ справа для контента */
+  padding-right: 1.5rem;
+  /* Добавим отступ справа для контента */
 }
 
 /* Карточка модуля */
@@ -147,122 +185,209 @@ main {
   background-color: var(--bs-body-bg);
   border: none;
   border-bottom: 2px solid var(--bs-border-color);
-  border-radius: 0; /* Убираем скругление для вида списка */
+  border-radius: 0;
+  /* Убираем скругление для вида списка */
   color: var(--bs-body-color);
-  padding: 1rem 0; /* Вертикальные отступы */
-  margin-bottom: 0.5rem; /* Небольшой отступ снизу */
+  padding: 1rem 0;
+  /* Вертикальные отступы */
+  margin-bottom: 0.5rem;
+  /* Небольшой отступ снизу */
 }
 
 /* Название модуля */
 .module-title {
-  flex-grow: 1; /* Занимает доступное пространство */
-  margin-right: 1rem; /* Отступ справа */
+  flex-grow: 1;
+  /* Занимает доступное пространство */
+  margin-right: 1rem;
+  /* Отступ справа */
 }
+
 .module-name-link {
   font-size: 1.5rem;
   color: var(--bs-body-color);
   text-decoration: none;
   font-weight: 500;
 }
+
 .module-name-link:hover {
   color: #fff;
 }
 
 /* Информация о прогрессе */
 .module-info {
-  font-size: 0.9rem; /* Уменьшим шрифт */
-  white-space: nowrap; /* Предотвращаем перенос */
+  font-size: 0.9rem;
+  /* Уменьшим шрифт */
+  white-space: nowrap;
+  /* Предотвращаем перенос */
 }
+
 .progress {
-  height: 8px; /* Уменьшим высоту прогресс-бара */
+  height: 8px;
+  /* Уменьшим высоту прогресс-бара */
   background-color: #716F6F;
-  border-radius: 4px; /* Скруглим прогресс-бар */
+  border-radius: 4px;
+  /* Скруглим прогресс-бар */
 }
+
 .progress-bar {
   background-color: #5ee152;
 }
 
 /* Действия с модулем (меню ...) */
 .module-actions {
-  margin-left: 1rem; /* Отступ слева */
+  margin-left: 1rem;
+  /* Отступ слева */
 }
 
 /* Кнопка меню (...) */
 .btn-menu {
   color: var(--bs-body-color);
-  padding: 0.3rem 0.6rem; /* Уменьшим паддинг */
+  padding: 0.3rem 0.6rem;
+  /* Уменьшим паддинг */
   background: transparent;
   border: none;
 }
-.btn-menu:hover, .btn-menu:focus {
+
+.btn-menu:hover,
+.btn-menu:focus {
   color: #fff;
   background-color: #444;
-  box-shadow: none; /* Убираем тень при фокусе */
+  box-shadow: none;
+  /* Убираем тень при фокусе */
 }
+
 .btn-menu i {
-  font-size: 1rem; /* Размер иконки */
+  font-size: 1rem;
+  /* Размер иконки */
+
+}
+
+.fa-bars {
+  display: none;
 }
 
 /* Выпадающее меню */
 .dropdown-menu {
   background-color: #383636;
   border: 1px solid #716F6F;
-  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); /* Тень */
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
+  /* Тень */
 }
+
 .dropdown-item {
   color: #ACA8A8;
   font-size: 0.9rem;
-  padding: .5rem 1rem; /* Отступы пунктов */
+  padding: .5rem 1rem;
+  /* Отступы пунктов */
 }
+
 .dropdown-item i {
-  width: 16px; /* Фиксированная ширина для иконок */
+  width: 16px;
+  /* Фиксированная ширина для иконок */
   text-align: center;
 }
-.dropdown-item:hover, .dropdown-item:focus {
+
+.dropdown-item:hover,
+.dropdown-item:focus {
   background-color: #444;
   color: #fff;
 }
+
 .dropdown-divider {
-  border-top-color: var(--bs-border-color); /* Цвет разделителя */
+  border-top-color: var(--bs-border-color);
+  /* Цвет разделителя */
 }
+
 .dropdown-item.text-danger:hover,
 .dropdown-item.text-danger:focus {
-  background-color: #dc3545; /* Красный фон для удаления */
+  background-color: #dc3545;
+  /* Красный фон для удаления */
   color: #fff;
+}
+
+#sidebarToggle {
+    display: none;
 }
 
 /* Адаптивность */
 @media (max-width: 767.98px) {
+
+  
   .sidebar {
-      position: static; /* Убираем фиксацию на мобильных */
-      width: 100%;
-      height: auto;
-      border-right: none;
-      border-bottom: 1px solid var(--bs-border-color);
+    position: fixed;
+    
+    top: 0;
+    left: calc(-1 * var(--sidebar-width));
+    
+    width: var(--sidebar-width);
+    
+    height: 100vh;
+    
+    z-index: 1030;
+    
+    transition: left 0.3s ease-in-out;
+    
+    border-right: 1px solid var(--bs-border-color);
   }
+
+  .sidebar.show {
+    left: 0;
+    
+  }
+
   main {
-      padding-left: 0; /* Убираем отступ */
+    padding-left: 0;
+   
   }
+
   .top-bar {
-      flex-direction: column; /* Элементы в столбец */
-      align-items: stretch !important; /* Растягиваем */
+    flex-direction: row;
+  
+    justify-content: space-between;
   }
+
   .search-form {
-      max-width: none; /* На всю ширину */
-      margin-bottom: 1rem !important;
+    display: none !important;
+  }
+
+  .module-list {
+    padding: 0 !important;
+    padding-bottom: 50px !important;
+  }
+
+  .module-title {
+    min-width: 100%;
   }
   .module-card {
-      flex-direction: column; /* Элементы в столбец */
-      align-items: flex-start !important; /* Выравнивание по левому краю */
+    
+    align-items: flex-start !important;
+    
   }
+
   .module-info {
-      margin-top: 0.5rem;
-      margin-bottom: 0.5rem !important;
-      margin-right: 0 !important;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem !important;
+    margin-right: 0 !important;
   }
+
   .module-actions {
-      margin-left: 0;
-      align-self: flex-end; /* Кнопку меню вправо */
+    margin-left: 0;
+    align-self: flex-end;
+    
+  }
+
+  .btn-create {
+    width: 80%;
+  }
+
+ 
+  #sidebarToggle {
+    display: block;
+    
+  }
+
+  .fa-bars {
+    display: flex;
   }
 }
 
@@ -271,35 +396,37 @@ main {
 }
 
 .btn-next-modal {
-    background-color: #5ee152;
+  background-color: #5ee152;
 }
 
 .btn-next-modal,
 .btn-back-modal {
-    border-radius: 5px;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .btn-back-modal {
-    background-color: #716F6F;
+  background-color: #716F6F;
 }
 
 .btn-back-modal:hover {
-    background-color: darkgrey; /* Темнее оригинального */
-    transform: scale(1.05);
+  background-color: darkgrey;
+  /* Темнее оригинального */
+  transform: scale(1.05);
 }
 
 .btn-next-modal:hover {
-    background-color: darkgreen; /* Темнее оригинального */
-    transform: scale(1.05);
+  background-color: darkgreen;
+  /* Темнее оригинального */
+  transform: scale(1.05);
 }
 
 #modal-universal {
-  
+
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
 }
 
 .username_text {
-width: fit-content;
+  width: fit-content;
 }

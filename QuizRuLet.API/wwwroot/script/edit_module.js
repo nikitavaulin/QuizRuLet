@@ -361,8 +361,8 @@ document.addEventListener('DOMContentLoaded', async function () {
   // Функция для обновления названия и описания модуля
   function updateModuleName(name, desc) {
     let moduleName = document.getElementById('module-name');
-    moduleName.setAttribute('data-bs-original-title', desc);
-    moduleName.innerHTML = `${name}
+    
+    moduleName.innerHTML = `<i class="fa-solid fa-bars"></i><div class="name-text" data-bs-toggle="tooltip" data-bs-placement="top" title="${desc}">${name}</div>
               <i
                 class="fa-solid fa-pen ms-2"
                 data-bs-toggle="modal"
@@ -524,4 +524,30 @@ document.addEventListener('DOMContentLoaded', async function () {
 
 
   updateSideBarSelected();
+
+
+
+  const sidebarToggle = document.querySelector('.fa-bars');
+  const sidebar = document.getElementById('sidebarMenu');
+  const mainContent = document.querySelector('main');
+
+  if (sidebarToggle && sidebar) {
+    sidebarToggle.addEventListener('click', function (event) {
+      // Предотвращаем "всплытие" события, чтобы клик по кнопке
+      // не вызывал немедленное закрытие сайдбара.
+      event.stopPropagation();
+      sidebar.classList.toggle('show');
+    });
+  }
+  
+  // Дополнительно: закрывать сайдбар при клике вне его области
+  document.addEventListener('click', function(event) {
+    // Проверяем, открыт ли сайдбар и был ли клик вне сайдбара и вне кнопки
+    const isClickInsideSidebar = sidebar.contains(event.target);
+    const isClickOnToggler = sidebarToggle.contains(event.target);
+
+    if (sidebar.classList.contains('show') && !isClickInsideSidebar && !isClickOnToggler) {
+        sidebar.classList.remove('show');
+    }
+  });
 });

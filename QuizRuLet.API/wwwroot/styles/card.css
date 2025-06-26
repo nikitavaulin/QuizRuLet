@@ -1,3 +1,5 @@
+
+
 .quizrulet-brand-sidebar {
     width: fit-content !important;
 }
@@ -109,4 +111,18 @@
 
 .count-not-learned {
     color: #F44336;
+}
+
+@media (max-width: 767.98px) {
+    .card-flip {
+        width: 80%;
+    }
+    .button-grey {
+        display: none;
+    }
+    .buttons {
+        width: 100%;
+        
+    }
+    
 }

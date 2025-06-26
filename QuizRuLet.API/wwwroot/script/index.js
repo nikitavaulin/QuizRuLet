@@ -205,4 +205,29 @@ document.addEventListener("DOMContentLoaded", async function (e) {
   });
   const userId = getUserID();
   await showListModules();
+
+
+  const sidebarToggle = document.getElementById('sidebarToggle');
+  const sidebar = document.getElementById('sidebarMenu');
+  const mainContent = document.querySelector('main');
+
+  if (sidebarToggle && sidebar) {
+    sidebarToggle.addEventListener('click', function (event) {
+      
+      event.stopPropagation();
+      sidebar.classList.toggle('show');
+    });
+  }
+  
+ 
+  document.addEventListener('click', function(event) {
+    
+    const isClickInsideSidebar = sidebar.contains(event.target);
+    const isClickOnToggler = sidebarToggle.contains(event.target);
+
+    if (sidebar.classList.contains('show') && !isClickInsideSidebar && !isClickOnToggler) {
+        sidebar.classList.remove('show');
+    }
+  });
+
 });
