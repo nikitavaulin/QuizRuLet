@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     try {
         document.getElementById('close-btn').addEventListener('click', function (e) {
             e.preventDefault();
-            window.location.href = `/index.html`;
+            window.location.href = `/module.html?id=${encodeURIComponent(moduleId)}`;
         })
     } catch { }
 });
