@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     try {
       await axios.delete(`/modules/${moduleId}`);
       await showListModules();
-    } catch (err) {
+    } catch (errpr) {
       console.error(err);
       showModal("Ошибка", 'Не удалось удалить модуль. Попробуйте ещё раз.');
     }
@@ -100,8 +100,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
       window.location.href = `/module_edit.html?id=${encodeURIComponent(moduleId)}`;
 
     } catch (err) {
-      console.error(err);
-      alert('Не удалось удалить модуль. Попробуйте ещё раз.');
+      checkError(error);
     }
 
   });

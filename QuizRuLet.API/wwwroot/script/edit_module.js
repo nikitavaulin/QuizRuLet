@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           }
         }
         catch {
-          showModal("Ошибка", "Не удалось сохранить карточки в модуле");
+          checkError(error);
           return;
         }
       }
@@ -161,24 +161,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           }
         }
         catch (error) {
-          if (error.response) {
-            // Сервер вернул ответ (например, 400, 409 и т.д.)
-            const { status, data } = error.response;
-            if (status === 400 || status === 409) {
-              showModal(
-                "Ошибка",
-                typeof data === "string" ? data + "\nПопробуйте выбрать оба разделителя" : JSON.stringify(data) + "\nПопробуйте выбрать оба разделителя"
-              );
-            } else {
-              showModal("Ошибка", "Неизвестная ошибка сервера");
-            }
-          } else if (error.request) {
-
-            showModal("Ошибка", "Сервер не отвечает");
-          } else {
-
-            showModal("Ошибка", "Произошла ошибка: " + error.message);
-          }
+          checkError(error);
         }
       }
     }
@@ -201,7 +184,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           showModal("Ошибка", "Длина конспекта не должна превышать 2500 символов");
           return;
         }
-        let previewText = "";
+        
         text = text.replace(/\r?\n/g, " ");
         text = text.replaceAll("\n", " ");
         try {
@@ -221,24 +204,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           }
         }
         catch (error) {
-          if (error.response) {
-            // Сервер вернул ответ (например, 400, 409 и т.д.)
-            const { status, data } = error.response;
-            if (status === 400 || status === 409) {
-              showModal(
-                "Ошибка",
-                typeof data === "string" ? data : JSON.stringify(data)
-              );
-            } else {
-              showModal("Ошибка", "Неизвестная ошибка сервера");
-            }
-          } else if (error.request) {
-
-            showModal("Ошибка", "Сервер не отвечает");
-          } else {
-
-            showModal("Ошибка", "Произошла ошибка: " + error.message);
-          }
+          checkError(error);
         }
         
       }
@@ -271,24 +237,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       }
     }
     catch (error) {
-      if (error.response) {
-        // Сервер вернул ответ (например, 400, 409 и т.д.)
-        const { status, data } = error.response;
-        if (status === 400 || status === 409) {
-          showModal(
-            "Ошибка",
-            typeof data === "string" ? data : JSON.stringify(data)
-          );
-        } else {
-          showModal("Ошибка", "Неизвестная ошибка сервера");
-        }
-      } else if (error.request) {
-
-        showModal("Ошибка", "Сервер не отвечает");
-      } else {
-
-        showModal("Ошибка", "Произошла ошибка: " + error.message);
-      }
+      checkError(error);
       return;
     }
   }
@@ -331,24 +280,7 @@ document.addEventListener('DOMContentLoaded', async function () {
           throw new Error('Ошибка при создании карточки');
         }
       } catch (error) {
-        if (error.response) {
-          // Сервер вернул ответ (например, 400, 409 и т.д.)
-          const { status, data } = error.response;
-          if (status === 400 || status === 409) {
-            showModal(
-              "Ошибка",
-              typeof data === "string" ? data : JSON.stringify(data)
-            );
-          } else {
-            showModal("Ошибка", "Неизвестная ошибка сервера");
-          }
-        } else if (error.request) {
-
-          showModal("Ошибка", "Сервер не отвечает");
-        } else {
-
-          showModal("Ошибка", "Произошла ошибка: " + error.message);
-        }
+        checkError(error);
       }
     });
   }
@@ -365,7 +297,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   // Инициализация переменных
 
   const cardListElement = document.querySelector('.sidebarList ul.nav.flex-column'); // Левый блок для списка карточек
-  const cardDetailsElement = document.querySelector('.card-show'); // Правый блок для деталей карточки
+  
 
   // Функция для получения списка карточек
   async function fetchCards() {
@@ -381,7 +313,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       }
     } catch (error) {
 
-      showModal("Ошибка", 'Произошла ошибка при загрузке карточек.');
+      checkError(error);
     }
   }
 
@@ -499,25 +431,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
       }
     } catch (error) {
-
-      if (error.response) {
-        // Сервер вернул ответ (например, 400, 409 и т.д.)
-        const { status, data } = error.response;
-        if (status === 400 || status === 409) {
-          showModal(
-            "Ошибка",
-            typeof data === "string" ? data : JSON.stringify(data)
-          );
-        } else {
-          showModal("Ошибка", "Неизвестная ошибка сервера");
-        }
-      } else if (error.request) {
-
-        showModal("Ошибка", "Сервер не отвечает");
-      } else {
-
-        showModal("Ошибка", "Произошла ошибка: " + error.message);
-      }
+      checkError(error);
     }
   });
 
@@ -539,24 +453,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       fetchCards();
     }
     catch (error) {
-      if (error.response) {
-        // Сервер вернул ответ (например, 400, 409 и т.д.)
-        const { status, data } = error.response;
-        if (status === 400 || status === 409) {
-          showModal(
-            "Ошибка",
-            typeof data === "string" ? data : JSON.stringify(data)
-          );
-        } else {
-          showModal("Ошибка", "Неизвестная ошибка сервера");
-        }
-      } else if (error.request) {
-
-        showModal("Ошибка", "Сервер не отвечает");
-      } else {
-
-        showModal("Ошибка", "Произошла ошибка: " + error.message);
-      }
+      checkError(error);
     }
   })
 
@@ -580,24 +477,7 @@ document.addEventListener('DOMContentLoaded', async function () {
       fetchCards();
     }
     catch (error) {
-      if (error.response) {
-        // Сервер вернул ответ (например, 400, 409 и т.д.)
-        const { status, data } = error.response;
-        if (status === 400 || status === 409) {
-          showModal(
-            "Ошибка",
-            typeof data === "string" ? data : JSON.stringify(data)
-          );
-        } else {
-          showModal("Ошибка", "Неизвестная ошибка сервера");
-        }
-      } else if (error.request) {
-
-        showModal("Ошибка", "Сервер не отвечает");
-      } else {
-
-        showModal("Ошибка", "Произошла ошибка: " + error.message);
-      }
+      checkError(error);
     }
 
   })

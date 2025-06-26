@@ -12,24 +12,7 @@ async function loginFunc(userLogin, userPass) {
     }
   }
   catch (error) {
-    if (error.response) {
-      // Сервер вернул ответ (например, 400, 409 и т.д.)
-      const { status, data } = error.response;
-      if (status === 400 || status === 409) {
-        showModal(
-          "Ошибка",
-          typeof data === "string" ? data : JSON.stringify(data)
-        );
-      } else {
-        showModal("Ошибка", "Неизвестная ошибка сервера");
-      }
-    } else if (error.request) {
-  
-      showModal("Ошибка", "Сервер не отвечает");
-    } else {
-  
-      showModal("Ошибка", "Произошла ошибка: " + error.message);
-    }
+    checkError(error);
   }
 }
 
@@ -66,26 +49,7 @@ if (regButton) {
         await loginFunc(login, pass);
       }
     } catch (error) {
-      if (error.response) {
-        // Сервер вернул ответ (например, 400, 409 и т.д.)
-        const { status, data } = error.response;
-
-
-        if (status === 400 || status === 409) {
-          showModal(
-            "Ошибка",
-            typeof data === "string" ? data : JSON.stringify(data)
-          );
-        } else {
-          showModal("Ошибка", "Неизвестная ошибка сервера");
-        }
-      } else if (error.request) {
-
-        showModal("Ошибка", "Сервер не отвечает");
-      } else {
-
-        showModal("Ошибка", "Произошла ошибка: " + error.message);
-      }
+      checkError(error);
     }
   });
 }

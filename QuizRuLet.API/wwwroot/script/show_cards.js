@@ -40,8 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.querySelector('.card-back').textContent = '';
             }
         } catch (error) {
-            showModal('Ошибка', 'Не удалось загрузить карточки');
-            console.error('Ошибка загрузки карточек:', error);
+            checkError(error);
         }
     }
 
@@ -116,8 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.location.href = `/gratz.html?id=${encodeURIComponent(moduleId)}`;
             }
         } catch (error) {
-            showModal('Ошибка', 'Не удалось сохранить изменения');
-            console.error('Ошибка при сохранении:', error);
+            checkError(error);
         }
     });
 
@@ -143,8 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.location.href = `/gratz.html?id=${encodeURIComponent(moduleId)}`;
             }
         } catch (error) {
-            showModal('Ошибка', 'Не удалось сохранить изменения');
-            console.error('Ошибка при сохранении:', error);
+            checkError(error);
         }
     });
 
@@ -170,8 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
         } catch (error) {
-            showModal('Ошибка', 'Не удалось сохранить изменения');
-            console.error('Ошибка при сохранении:', error);
+            checkError(error);
         }
     })
 
