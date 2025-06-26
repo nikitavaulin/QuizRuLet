@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         <div class="window p-4">
 
             <div class="modal-header align-items-center justify-content-center mb-4 d-flex">
-                <h5 class="modal-title">Превосходная работа!<br>Вы изучили весь модуль.</h5>
+                <h5 class="modal-title d-flex align-items-center justify-content-center">Превосходная работа!<br>Все карточки изучены.</h5>
                 
             </div>
             <div class="modal-body align-items-center justify-content-center d-flex p-2 mb-4">
