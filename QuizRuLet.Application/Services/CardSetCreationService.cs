@@ -3,14 +3,32 @@ using System.Reflection;
 using QuizRuLet.Core.Models;
 using QuizRuLet.Core.Abstractions;
 using System.Security.Cryptography.X509Certificates;
+using System.Runtime.InteropServices;
 
 namespace QuizRuLet.Application.Services;
 
 public class CardSetCreationService : ICardSetCreationService
 {
+
+    private (bool IsValid, string Error) ValidateSeparators(string inputData, string pairSeparator, string lineSeparator)
+    {
+        if (string.IsNullOrEmpty(pairSeparator) || string.IsNullOrEmpty(lineSeparator))
+        {
+            return (false, "Пожалуйста, введите оба разделителя.");
+        }
+        if(!(inputData.Contains(pairSeparator) && inputData.Contains(lineSeparator)))
+        {
+            return (false, "Заданный разделитель не содержится в введённом тексте.");
+        }
+        return (true, string.Empty);
+    }
+
     // Создание набора карточек
     public (List<Card>? Cards, string Error) Create(string inputData, string pairSeparator, string lineSeparator)
     {
+        var sepValidation = ValidateSeparators(inputData, pairSeparator, lineSeparator);
+        if (!sepValidation.IsValid) return (null, sepValidation.Error);
+        
         (List<Card>? Cards, string Error) result = (null, "");  // инициализация результата
 
         try
