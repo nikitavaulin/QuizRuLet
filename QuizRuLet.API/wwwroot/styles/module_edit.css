@@ -267,6 +267,7 @@ textarea {
     transform: translate(-50%, -50%);
     left: 50%;
     margin-bottom: 15px;
+    bottom: 5%;
   }
 
   .sidebar {
