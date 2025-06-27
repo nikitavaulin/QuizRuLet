@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function (e) {
-
-
-
-
+  // Получение значения cookie по имени
   function getCookie(name) {
     const cookies = document.cookie.split("; ");
     let decoded = null;
@@ -18,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     return decoded;
   }
 
+  // Извлечение ID пользователя из JWT токена
   function getUserIDFromJWT(token) {
     try {
       const parts = token.split(".");
@@ -39,6 +37,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     }
   }
 
+  // Получение ID пользователя из cookie
   function getUserID() {
     const token = getCookie("tasty-cookies");
 
@@ -49,6 +48,7 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     }
   }
 
+  // Запрос и отображение списка модулей пользователя
   async function showListModules() {
     if (userId === null) {
       window.location.href = "/login.html";
@@ -66,12 +66,11 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     modules.forEach((element) => {
       showModule(element.name, element.progress, element.id, element.countCards);
     });
-
   }
 
-
-  document.body.addEventListener('click', async function (e) {
-    const btn = e.target.closest('.delete-btn');
+  // Обработчик для удаления модуля
+  document.body.addEventListener("click", async function (e) {
+    const btn = e.target.closest(".delete-btn");
     if (!btn) return;
     const moduleId = btn.dataset.id
       || btn.closest('.module-card')?.dataset.id;
@@ -82,9 +81,8 @@ document.addEventListener("DOMContentLoaded", async function (e) {
       await showListModules();
     } catch (errpr) {
       console.error(err);
-      showModal("Ошибка", 'Не удалось удалить модуль. Попробуйте ещё раз.');
+      showModal("Ошибка", "Не удалось удалить модуль. Попробуйте ещё раз.");
     }
-
   });
 
 
@@ -102,9 +100,9 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     } catch (err) {
       checkError(error);
     }
-
   });
 
+  // Функция для отображения одного модуля в списке
   function showModule(name, progress, id, countCards) {
     const container = document.querySelector(".module-list");
 
@@ -135,6 +133,8 @@ document.addEventListener("DOMContentLoaded", async function (e) {
                 `;
     container.insertAdjacentHTML("beforeend", moduleHTML);
   }
+
+  // Функция для очистки всех cookies
   function clearAllCookies() {
     // Получаем все доступные куки для текущего домена
     const cookies = document.cookie.split(";");
@@ -154,19 +154,13 @@ document.addEventListener("DOMContentLoaded", async function (e) {
     window.location.href = "login.html";
   })
 
-
-
-
+  // Обработчик отправки формы для создания нового модуля
   const moduleForm = document.getElementById("moduleForm");
   moduleForm.addEventListener("submit", async function (e) {
     e.preventDefault();
     const name = document.getElementById("moduleName").value.trim();
     const desc = document.getElementById("moduleDesc").value.trim();
 
-
-
-
-    
     try {
       const response = await axios.post("/modules", {
         name: name,
@@ -175,53 +169,35 @@ document.addEventListener("DOMContentLoaded", async function (e) {
       });
     }
     catch (error) {
-      if (error.response) {
-        // Сервер вернул ответ (например, 400, 409 и т.д.)
-        const { status, data } = error.response;
-        if (status === 400 || status === 409) {
-          showModal(
-            "Ошибка",
-            typeof data === "string" ? data : JSON.stringify(data)
-          );
-        } else {
-          showModal("Ошибка", "Неизвестная ошибка сервера");
-        }
-      } else if (error.request) {
-
-        showModal("Ошибка", "Сервер не отвечает");
-      } else {
-
-        showModal("Ошибка", "Произошла ошибка: " + error.message);
-      }
+      checkError(error);
     }
     await showListModules();
 
-    // Очистить форму и закрыть модалку
     document.getElementById("moduleForm").reset();
     const modal = bootstrap.Modal.getInstance(
       document.getElementById("createModuleModal")
     );
     modal.hide();
   });
+
+  // Первоначальная загрузка данных пользователя и списка модулей
   const userId = getUserID();
   await showListModules();
 
-
-  const sidebarToggle = document.getElementById('sidebarToggle');
-  const sidebar = document.getElementById('sidebarMenu');
-  const mainContent = document.querySelector('main');
+  // Обработчик для переключения видимости боковой панели
+  const sidebarToggle = document.getElementById("sidebarToggle");
+  const sidebar = document.getElementById("sidebarMenu");
+  const mainContent = document.querySelector("main");
 
   if (sidebarToggle && sidebar) {
-    sidebarToggle.addEventListener('click', function (event) {
-      
+    sidebarToggle.addEventListener("click", function (event) {
       event.stopPropagation();
-      sidebar.classList.toggle('show');
+      sidebar.classList.toggle("show");
     });
   }
-  
- 
-  document.addEventListener('click', function(event) {
-    
+
+  // Обработчик для закрытия боковой панели при клике вне её
+  document.addEventListener("click", function (event) {
     const isClickInsideSidebar = sidebar.contains(event.target);
     const isClickOnToggler = sidebarToggle.contains(event.target);
 
@@ -229,5 +205,4 @@ document.addEventListener("DOMContentLoaded", async function (e) {
         sidebar.classList.remove('show');
     }
   });
-
 });

@@ -1,5 +1,3 @@
-
-
 async function loginFunc(userLogin, userPass) {
   try {
     const response = await axios.post("/login", {
@@ -21,7 +19,7 @@ const regButton = document.querySelector("#submitRegister");
 
 if (regButton) {
   regButton.addEventListener("click", async function register(e) {
-    //Обработать badRequest
+    
     e.preventDefault();
 
     const login = document.getElementById("loginInput").value.trim();
@@ -66,11 +64,6 @@ if (loginButton) {
       showModal("Ошибка", "Заполните все поля");
       return;
     }
-
-
-
     await loginFunc(loginValue, passValue);
-
-
   });
 }

@@ -1,27 +1,20 @@
-/* Основные переменные и стили для body */
+/* Определяет основные переменные CSS для всего документа. */
 :root {
   --bs-success-rgb: 94, 225, 82;
-  /* Зеленый */
   --bs-secondary-rgb: 172, 168, 168;
-  /* Серый */
   --bs-dark-rgb: 56, 54, 54;
-  /* Темный фон компонентов */
   --bs-body-color: #ACA8A8;
-  /* Основной цвет текста */
   --bs-body-bg: #383636;
-  /* Основной фон страницы */
   --bs-border-color: #716F6F;
-  /* Цвет границ */
   --sidebar-width: 220px;
-  /* Ширина сайдбара */
 }
 
+/* Задает базовый шрифт для всего тела документа. */
 body {
   font-family: 'Inter', sans-serif;
-  /* Убедитесь, что шрифт загружен */
 }
 
-/* Стили для сайдбара */
+/* Стили для боковой панели. */
 .sidebar {
   position: fixed;
   top: 0;
@@ -29,28 +22,23 @@ body {
   left: 0;
   z-index: 100;
   padding: 0;
-
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
   background-color: var(--bs-body-bg);
   border-right: 1px solid var(--bs-border-color);
   width: var(--sidebar-width);
-
 }
 
-/* Контейнер для прокручиваемого содержимого сайдбара */
+/* Контейнер для прокручиваемого содержимого боковой панели. */
 .sidebar-sticky {
   position: relative;
   top: 0;
   height: 100vh;
-
   padding-top: 1rem;
-
   overflow-x: hidden;
   overflow-y: auto;
-
 }
 
-/* Логотип в сайдбаре */
+/* Стилизует логотип в боковой панели. */
 .quizrulet-brand-sidebar {
   font-size: 1.8rem;
   font-weight: 500;
@@ -58,80 +46,76 @@ body {
   color: var(--bs-body-color);
   text-decoration: none;
   display: block;
-
   text-align: center;
-
 }
 
+/* Цвет успешного текста в логотипе. */
 .quizrulet-brand-sidebar .text-success {
   color: #5ee152 !important;
 }
 
+/* Вторичный цвет текста в логотипе. */
 .quizrulet-brand-sidebar .text-secondary {
   color: #ACA8A8 !important;
 }
 
-/* Ссылки навигации в сайдбаре */
+/* Стили для навигационных ссылок в боковой панели. */
 .sidebar .nav-link {
   font-weight: 500;
   color: var(--bs-body-color);
-
   padding: .75rem 1.5rem;
-
 }
 
+/* Стили для иконок внутри навигационных ссылок. */
 .sidebar .nav-link .fa,
 .sidebar .nav-link .fas {
   margin-right: 8px;
-
 }
 
+/* Стиль навигационной ссылки при наведении. */
 .sidebar .nav-link:hover {
   color: #fff;
-
   background-color: #444;
-
 }
 
+/* Стиль активной навигационной ссылки. */
 .sidebar .nav-link.active {
   color: #fff;
-  /* Цвет активной ссылки */
   background-color: #555;
-  /* Фон активной ссылки */
 }
 
-/* Основной контент */
+/* Основной контейнер контента. */
 main {
   background-color: var(--bs-body-bg);
   padding-left: var(--sidebar-width);
-  /* Отступ слева равный ширине сайдбара */
   min-height: 100vh;
 }
 
-/* Верхняя панель */
+/* Стили для верхней панели. */
 .top-bar {
   border-bottom: 1px solid var(--bs-border-color);
   background-color: var(--bs-body-bg);
   padding: 1rem 1.5rem;
 }
 
-/* Форма поиска */
+/* Ограничивает максимальную ширину формы поиска. */
 .search-form {
   max-width: 300px;
-  /* Ограничение ширины */
 }
 
-/* Поле ввода поиска */
+/* Стили для поля ввода в темной теме. */
 .form-control-dark {
   background-color: #716F6F;
   border: 1px solid #000;
   color: #fff;
 }
 
+/* Цвет плейсхолдера для темного поля ввода. */
 .form-control-dark::placeholder {
   color: #ACA8A8;
 }
 
+/* Стили для темного поля ввода в фокусе. */
 .form-control-dark:focus {
   border-color: #5ee152;
   box-shadow: 0 0 0 0.25rem rgba(94, 225, 82, 0.25);
@@ -139,69 +123,67 @@ main {
   color: #fff;
 }
 
-/* Кнопка поиска */
+/* Стили для кнопки поиска. */
 .btn-search {
   background-color: #716F6F;
   border: 1px solid #000;
   color: #ACA8A8;
 }
 
+/* Стиль кнопки поиска при наведении. */
 .btn-search:hover {
   background-color: #555;
   border-color: #000;
   color: #fff;
 }
 
-/* Кнопка "Создать модуль" */
+/* Стили для кнопки создания. */
 .btn-create {
   border: 1px solid var(--bs-border-color);
   color: #ACA8A8;
   background-color: var(--bs-body-bg);
 }
 
+/* Стиль кнопки создания при наведении. */
 .btn-create:hover {
   background-color: #444;
   border-color: var(--bs-border-color);
   color: #fff;
 }
 
+/* Цвет иконки SVG в кнопке создания. */
 .btn-create svg path {
   fill: #ACA8A8;
-  /* Цвет иконки */
 }
 
+/* Цвет иконки SVG в кнопке создания при наведении. */
 .btn-create:hover svg path {
   fill: #fff;
 }
 
-/* Список модулей */
+/* Стили для списка модулей. */
 .module-list {
   padding-right: 1.5rem;
-  /* Добавим отступ справа для контента */
 }
 
-/* Карточка модуля */
+/* Стили для карточки модуля. */
 .module-card {
   background-color: var(--bs-body-bg);
   border: none;
   border-bottom: 2px solid var(--bs-border-color);
   border-radius: 0;
-  /* Убираем скругление для вида списка */
   color: var(--bs-body-color);
   padding: 1rem 0;
-  /* Вертикальные отступы */
   margin-bottom: 0.5rem;
-  /* Небольшой отступ снизу */
 }
 
-/* Название модуля */
+/* Заголовок модуля. */
 .module-title {
   flex-grow: 1;
-  /* Занимает доступное пространство */
   margin-right: 1rem;
-  /* Отступ справа */
 }
 
+/* Ссылка на название модуля. */
 .module-name-link {
   font-size: 1.5rem;
   color: var(--bs-body-color);
@@ -209,196 +191,196 @@ main {
   font-weight: 500;
 }
 
+/* Стиль ссылки на название модуля при наведении. */
 .module-name-link:hover {
   color: #fff;
 }
 
-/* Информация о прогрессе */
+/* Стили для информационного блока модуля. */
 .module-info {
   font-size: 0.9rem;
-  /* Уменьшим шрифт */
   white-space: nowrap;
-  /* Предотвращаем перенос */
 }
 
+/* Стили для прогресс-бара. */
 .progress {
   height: 8px;
-  /* Уменьшим высоту прогресс-бара */
   background-color: #716F6F;
   border-radius: 4px;
-  /* Скруглим прогресс-бар */
 }
 
+/* Стили для заполненной части прогресс-бара. */
 .progress-bar {
   background-color: #5ee152;
 }
 
-/* Действия с модулем (меню ...) */
+/* Контейнер для действий с модулем. */
 .module-actions {
   margin-left: 1rem;
-  /* Отступ слева */
 }
 
-/* Кнопка меню (...) */
+/* Стили для кнопки меню. */
 .btn-menu {
   color: var(--bs-body-color);
   padding: 0.3rem 0.6rem;
-  /* Уменьшим паддинг */
   background: transparent;
   border: none;
 }
 
+/* Стиль кнопки меню при наведении или фокусе. */
 .btn-menu:hover,
 .btn-menu:focus {
   color: #fff;
   background-color: #444;
   box-shadow: none;
-  /* Убираем тень при фокусе */
 }
 
+/* Размер иконки в кнопке меню. */
 .btn-menu i {
   font-size: 1rem;
-  /* Размер иконки */
-
 }
 
+/* Скрывает иконку-гамбургер по умолчанию. */
 .fa-bars {
   display: none;
 }
 
-/* Выпадающее меню */
+/* Стили для выпадающего меню. */
 .dropdown-menu {
   background-color: #383636;
   border: 1px solid #716F6F;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
-  /* Тень */
 }
 
+/* Стили для элементов выпадающего меню. */
 .dropdown-item {
   color: #ACA8A8;
   font-size: 0.9rem;
   padding: .5rem 1rem;
-  /* Отступы пунктов */
 }
 
+/* Стили для иконок в элементах выпадающего меню. */
 .dropdown-item i {
   width: 16px;
-  /* Фиксированная ширина для иконок */
   text-align: center;
 }
 
+/* Стиль элемента выпадающего меню при наведении или фокусе. */
 .dropdown-item:hover,
 .dropdown-item:focus {
   background-color: #444;
   color: #fff;
 }
 
+/* Стили для разделителя в выпадающем меню. */
 .dropdown-divider {
   border-top-color: var(--bs-border-color);
-  /* Цвет разделителя */
 }
 
+/* Стиль для опасного элемента меню при наведении. */
 .dropdown-item.text-danger:hover,
 .dropdown-item.text-danger:focus {
   background-color: #dc3545;
-  /* Красный фон для удаления */
   color: #fff;
 }
 
+/* Скрывает переключатель боковой панели по умолчанию. */
 #sidebarToggle {
-    display: none;
+  display: none;
 }
 
-/* Адаптивность */
+/* Адаптивные стили для экранов шириной до 767.98px. */
 @media (max-width: 767.98px) {
 
-  
+  /* Стили для боковой панели на малых экранах. */
   .sidebar {
     position: fixed;
-    
     top: 0;
     left: calc(-1 * var(--sidebar-width));
-    
     width: var(--sidebar-width);
-    
     height: 100vh;
-    
     z-index: 1030;
-    
     transition: left 0.3s ease-in-out;
-    
     border-right: 1px solid var(--bs-border-color);
   }
 
+  /* Показывает боковую панель. */
   .sidebar.show {
     left: 0;
-    
   }
 
+  /* Сбрасывает отступ для основного контента. */
   main {
     padding-left: 0;
-   
   }
 
+  /* Стили для верхней панели на малых экранах. */
   .top-bar {
     flex-direction: row;
-  
     justify-content: space-between;
   }
 
+  /* Скрывает форму поиска на малых экранах. */
   .search-form {
     display: none !important;
   }
 
+  /* Стили для списка модулей на малых экранах. */
   .module-list {
     padding: 0 !important;
     padding-bottom: 50px !important;
   }
 
+  /* Минимальная ширина для заголовка модуля. */
   .module-title {
     min-width: 100%;
   }
+
+  /* Стили для карточки модуля на малых экранах. */
   .module-card {
-    
     align-items: flex-start !important;
-    
   }
 
+  /* Стили для информационного блока модуля на малых экранах. */
   .module-info {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem !important;
     margin-right: 0 !important;
   }
 
+  /* Стили для блока действий с модулем на малых экранах. */
   .module-actions {
     margin-left: 0;
     align-self: flex-end;
-    
   }
 
+  /* Ширина кнопки создания на малых экранах. */
   .btn-create {
     width: 80%;
   }
 
- 
+  /* Показывает переключатель боковой панели. */
   #sidebarToggle {
     display: block;
-    
   }
 
+  /* Показывает иконку-гамбургер. */
   .fa-bars {
     display: flex;
   }
 }
 
+/* Цвет плейсхолдера для полей формы. */
 .form-control::placeholder {
   color: var(--bs-border-color);
 }
 
+/* Стиль для кнопки "Далее" в модальном окне. */
 .btn-next-modal {
   background-color: #5ee152;
 }
 
+/* Общие стили для кнопок в модальном окне. */
 .btn-next-modal,
 .btn-back-modal {
   border-radius: 5px;
@@ -406,27 +388,29 @@ main {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Стиль для кнопки "Назад" в модальном окне. */
 .btn-back-modal {
   background-color: #716F6F;
 }
 
+/* Стиль кнопки "Назад" при наведении. */
 .btn-back-modal:hover {
   background-color: darkgrey;
-  /* Темнее оригинального */
   transform: scale(1.05);
 }
 
+/* Стиль кнопки "Далее" при наведении. */
 .btn-next-modal:hover {
   background-color: darkgreen;
-  /* Темнее оригинального */
   transform: scale(1.05);
 }
 
+/* Стили для универсального модального окна. */
 #modal-universal {
-
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.4);
 }
 
+/* Стили для текста с именем пользователя. */
 .username_text {
   width: fit-content;
 }

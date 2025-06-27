@@ -1,4 +1,4 @@
-/* Стили для страницы регистрации */
+/* Основные стили для тела страницы регистрации */
 body {
     background-color: #383636;
     color: #ACA8A8;
@@ -7,10 +7,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: 'Inter', sans-serif; /* Убедитесь, что шрифт загружен */
+    font-family: 'Inter', sans-serif;
 }
 
-/* Стилизация карточки формы */
+/* Стили для карточки формы регистрации */
 .card {
     background-color: #383636;
     border: 3px solid #5ee152;
@@ -18,14 +18,14 @@ body {
     color: #ACA8A8;
 }
 
-/* Стилизация полей ввода */
+/* Стили для полей ввода в форме */
 .form-control {
     background-color: #716F6F;
     border: 1px solid #000000;
     color: #ffffff;
 }
 
-/* Стилизация полей ввода при фокусе */
+/* Стили для полей ввода в фокусе */
 .form-control:focus {
     background-color: #716F6F;
     border-color: #5ee152;
@@ -33,25 +33,25 @@ body {
     color: #ffffff;
 }
 
-/* Стилизация меток полей */
+/* Стили для меток полей формы */
 .form-label {
     color: #ACA8A8;
 }
 
-/* Стилизация кнопки регистрации */
+/* Стили для кнопки регистрации */
 .btn-custom-register {
     background-color: #000000;
     color: #ffffff;
     border: none;
 }
 
-/* Стилизация кнопки регистрации при наведении */
+/* Стили для кнопки регистрации при наведении курсора */
 .btn-custom-register:hover {
     background-color: #222222;
     color: #ffffff;
 }
 
-/* Стилизация логотипа */
+/* Стили для логотипа */
 .quizrulet-brand {
     font-size: 2.5rem;
     font-weight: 500;
@@ -62,13 +62,13 @@ body {
 .quizrulet-brand .text-success { color: #5ee152 !important; }
 .quizrulet-brand .text-secondary { color: #ACA8A8 !important; }
 
-/* Стилизация ссылки на вход */
+/* Стили для ссылки на страницу входа */
 .login-link a {
     color: #ACA8A8;
     text-decoration: none;
 }
 
-/* Стилизация ссылки на вход при наведении */
+/* Стили для ссылки на страницу входа при наведении курсора */
 .login-link a:hover {
     color: #ffffff;
 }

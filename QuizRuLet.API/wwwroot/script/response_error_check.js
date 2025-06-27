@@ -1,7 +1,6 @@
 
 function checkError(error) {
     if (error.response) {
-        // Сервер вернул ответ (например, 400, 409 и т.д.)
         const { status, data } = error.response;
         if (status === 400) {
             showModal(

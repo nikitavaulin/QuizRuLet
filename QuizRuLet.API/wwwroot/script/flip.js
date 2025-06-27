@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (flipToggle && cardCheckbox) {
         flipToggle.addEventListener('click', function (e) {
-            e.preventDefault(); // предотвращаем переход по ссылке
+            e.preventDefault();
             cardCheckbox.checked = !cardCheckbox.checked;
         });
     } else {

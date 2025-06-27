@@ -1,3 +1,4 @@
+/* Стили для карточек */
 .card {
   --bs-card-border-color: var(--bs-body-bg);
   height: 100px;
@@ -7,51 +8,45 @@
   background-color: #716f6f;
   border-radius: 10px;
   border-color: var(--bs-body-bg);
+  border: 0px;
+  color: white;
 }
 
+/* Стили для бокового меню */
 #sidebarMenu {
   height: 100vh;
-  /* Высота на весь экран */
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  /* Предотвращаем прокрутку всего сайдбара */
 }
 
 .quizrulet-brand-sidebar {
   display: flex;
   border-bottom: solid 1px;
   height: auto;
-  /* Автоматическая высота для лого */
   overflow: visible;
-  /* Лого не должно скроллиться */
 }
 
 #sidebarMenu ul.nav.flex-column {
   flex: 1;
   overflow-y: auto;
-  /* Добавляем вертикальную прокрутку только для списка */
   padding-right: 5px;
-  /* Отступ для скроллбара */
 }
 
 #sidebarMenu .help {
   height: auto;
-  /* Автоматическая высота для блока справки */
   padding: 10px 0;
-  /* Отступы для блока справки */
   position: sticky;
   bottom: 0;
   background-color: inherit;
-  /* Наследуем цвет фона */
 }
 
 .sidebarList {
   max-height: calc(100vh - 150px);
-  /* Высота с учетом лого и справки 1*/
   overflow-y: scroll;
 }
 
+/* Стили для полей ввода текста в карточке */
 .card-termin,
 .card-meaning {
   min-height: 100%;
@@ -72,6 +67,7 @@
   color: white;
 }
 
+/* Стили для кнопок "Изучить" и "Импорт" */
 .btn-learn,
 .btn-import {
   background-color: #5ee152;
@@ -85,18 +81,21 @@
   color: black;
 }
 
+/* Стили для названия модуля */
 .module-name {
   font-size: 26px;
   display: flex;
   flex-direction: row;
 }
 
+/* Стили для всплывающих подсказок */
 .tooltip-inner {
   max-width: 300px;
   white-space: normal;
   color: white;
 }
 
+/* Стили для пошагового импорта в модальном окне */
 .step-number {
   display: inline-block;
   width: 30px;
@@ -136,6 +135,7 @@
   font-size: 16px;
 }
 
+/* Стили для кнопок навигации в модальном окне */
 .btn-next-modal {
   background-color: #5ee152;
 }
@@ -153,25 +153,20 @@
 
 .btn-back-modal:hover {
   background-color: darkgrey;
-  /* Темнее оригинального */
   transform: scale(1.05);
 }
 
 .btn-next-modal:hover {
   background-color: darkgreen;
-  /* Темнее оригинального */
   transform: scale(1.05);
 }
 
-/* button:hover{
-    background-color: grey;
-    
-} */
-
+/* Стили для описания модуля */
 #moduleDescription {
   resize: none;
 }
 
+/* Стили для нижних кнопок сохранения и удаления карточки */
 .buttons-bottom {
   position: absolute;
   bottom: 10%;
@@ -208,20 +203,12 @@
   background-color: #5ee152;
 }
 
-.card-body {
-  border: 0px;
-  color: white;
-
-}
-
+/* Общие стили для текстовых полей */
 textarea {
   color: white;
 }
 
-
-
-
-/* Выделение с рамкой */
+/* Стили для выделения и наведения на карточку */
 .card.selected {
   border: 2px solid #5ee152;
   border-radius: 10px;
@@ -232,6 +219,7 @@ textarea {
   box-shadow: 0 0 10px #5ee152;
 }
 
+/* Стили для кнопки создания новой карточки */
 #createNewCard {
   font-size: 20px;
   font-weight: bold;
@@ -239,6 +227,7 @@ textarea {
   border: 0px !important;
 }
 
+/* Стили для иконок */
 .fa-floppy-disk,
 .fa-trash,
 .fa-hourglass-start {
@@ -249,6 +238,7 @@ textarea {
   display: none !important;
 }
 
+/* Адаптивные стили для мобильных устройств */
 @media (max-width: 767.98px) {
   .module-name {
     min-width: 100%;
@@ -257,42 +247,44 @@ textarea {
     align-items: center;
     padding-bottom: 10px;
   }
+
   .buttons {
     display: flex;
     flex-direction: row !important;
     justify-content: space-evenly;
-    
   }
+
   .fa-bars {
     display: flex !important;
     margin-right: 10px;
   }
+
   .btn-import {
     margin-right: 5px;
   }
-  
+
   .buttons-bottom {
     transform: translate(-50%, -50%);
     left: 50%;
     margin-bottom: 15px;
   }
-  
+
   .sidebar {
     position: fixed;
     top: 0;
-    left: calc(-1 * var(--sidebar-width)); 
-    width: var(--sidebar-width); 
-    height: 100vh; 
-    z-index: 1030; 
-    transition: left 0.3s ease-in-out; 
+    left: calc(-1 * var(--sidebar-width));
+    width: var(--sidebar-width);
+    height: 100vh;
+    z-index: 1030;
+    transition: left 0.3s ease-in-out;
     border-right: 1px solid var(--bs-border-color);
   }
-  
+
   .sidebar.show {
-    left: 0; /* Показываем сайдбар, сдвигая его в видимую область */
+    left: 0;
   }
+
   .card-txt {
     height: 100%;
   }
-  
 }

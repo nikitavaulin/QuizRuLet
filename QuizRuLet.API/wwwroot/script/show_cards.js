@@ -32,10 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (cards.length === 0 && countNotLearned === 0){
                 window.location.href = `/gratz.html?id=${encodeURIComponent(moduleId)}`;
             }
-            // if (cards.length === 0) {
-            //     showModal("Сообщение", "Все карточки пройдены, режим изучения недоступен");
-            //     return;
-            // }
             if (cards.length > 0) {
                 showCard(cards[0]);
             } else {
@@ -57,17 +53,16 @@ document.addEventListener('DOMContentLoaded', function () {
         notLearnedPlace.textContent = countNotLearned;
         learnedPlace.textContent = countLearned;
     }
-    // Показываем текущую карточку
+
+    // Функция для отображения карточки
     function showCard(card) {
         updateCounter()
         const cardContainer = document.querySelector('.card-container');
 
-        // Удаляем предыдущую карточку
         const existingCard = cardContainer.querySelector('.card-flip');
         if (existingCard) {
             existingCard.remove();
         }
-        // Создаем новую карточку
         const cardHTML = `
         <label class="card-flip col-5">
         <input type="checkbox" class="flip-toggle" hidden>
@@ -83,7 +78,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const newCard = tempDiv.firstElementChild;
         cardContainer.appendChild(newCard);
 
-        // Активируем flip при клике
         const checkbox = newCard.querySelector('.flip-toggle');
         const cardInner = newCard.querySelector('.card-inner');
         if (checkbox && cardInner) {
@@ -95,8 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
     }
 
-
-
+    // Функция для отметки карточки как не выученной
     document.querySelector('.button-red').addEventListener('click', async () => {
         if (currentIndex >= cards.length) return;
         const card_inner = document.getElementById('card-inner');
@@ -122,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
+    // Функция для отметки карточки как выученной
     document.querySelector('.button-green').addEventListener('click', async () => {
         if (currentIndex >= cards.length) return;
         const card_inner = document.getElementById('card-inner');
@@ -131,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         countLearned++;
         countNotLearned--;
-        const currentCard = cards[currentIndex];    //Надо придумать откуда взять cardId
+        const currentCard = cards[currentIndex];
         currentCard.isLearned = true;
         await axios.patch(`/cards/update-flag/${cardId}`, { isLearned: true });
         try {
@@ -147,18 +140,11 @@ document.addEventListener('DOMContentLoaded', function () {
             checkError(error);
         }
     });
-
-   
-
-   
     
-
+    // Функция для перехода на страницу модуля
     document.querySelector('.close-btn').addEventListener('click', function () {
         window.location.href = `/module.html?id=${encodeURIComponent(moduleId)}`;
     } )
-
-
-
 
     loadCards();
 });
