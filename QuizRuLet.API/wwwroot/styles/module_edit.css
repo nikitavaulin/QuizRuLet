@@ -174,7 +174,7 @@
 
 .buttons-bottom {
   position: absolute;
-  bottom: 1%;
+  bottom: 10%;
   left: 88%;
   transform: translateX(-50%);
   display: flex;

@@ -141,10 +141,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 
         if (separatorLines.length === 0 || separator.length === 0) { showModal("Ошибка", "Выберите все разделители") }
 
+        text = text.replace(/\t/g, "*PAIR*");
         text = text.replace(/\r?\n/g, "*LINES*");
         text = text.replaceAll(separatorLines, "*LINES*");
         text = text.replaceAll(separator, "*PAIR*");
-
+        console.log(text);
         try {
           const response = await axios.post("/import", { // Адрес дописать
             data: text,
@@ -345,7 +346,8 @@ document.addEventListener('DOMContentLoaded', async function () {
 
       const cardBody = document.createElement('div');
       cardBody.classList.add('card-body'); // Добавляем класс для стилизации
-      cardBody.textContent = card.frontSide.slice(0,20)+"..."; // Отображаем переднюю сторону как название
+      
+      cardBody.textContent = card.frontSide.length > 15 ? card.frontSide.slice(0, 15) + '...' : card.frontSide; // Отображаем переднюю сторону как название
       cardBody.dataset.cardId = card.id; // Сохраняем ID карточки для дальнейшего использования
 
       // Обработчик клика на карточку
